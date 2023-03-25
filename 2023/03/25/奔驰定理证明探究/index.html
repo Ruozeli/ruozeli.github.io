@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://s2.loli.net/2023/03/25/hI4B52V7tbjfFpr.png">
 <meta property="og:image" content="https://s2.loli.net/2023/03/25/nH8bDRlUsGikVNo.png">
 <meta property="article:published_time" content="2023-03-25T07:51:23.000Z">
-<meta property="article:modified_time" content="2023-03-25T14:03:46.500Z">
+<meta property="article:modified_time" content="2023-03-25T14:12:10.989Z">
 <meta property="article:author" content="SytaemannZ">
 <meta property="article:tag" content="math">
 <meta name="twitter:card" content="summary">
@@ -192,7 +192,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-03-25 15:51:23 / Modified: 22:03:46" itemprop="dateCreated datePublished" datetime="2023-03-25T15:51:23+08:00">2023-03-25</time>
+      <time title="Created: 2023-03-25 15:51:23 / Modified: 22:12:10" itemprop="dateCreated datePublished" datetime="2023-03-25T15:51:23+08:00">2023-03-25</time>
     </span>
 
   
@@ -206,7 +206,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="奔驰定理证明探究"><a href="#奔驰定理证明探究" class="headerlink" title="奔驰定理证明探究"></a>奔驰定理证明探究</h4><h5 id="1-问题分析"><a href="#1-问题分析" class="headerlink" title="1. 问题分析"></a>1. 问题分析</h5><p><strong>奔驰定理: $O$是$\triangle ABC$内一点, 且$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$,<br>则$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z$.</strong><br>从这个形式很容易联想到三角形重心的性质, 即三角形重心满足$\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}&#x3D;\overrightarrow{0}$, $S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;1:1:1$, 应该可以通过重心的性质证明.</p>
+        <h4 id="奔驰定理证明探究"><a href="#奔驰定理证明探究" class="headerlink" title="奔驰定理证明探究"></a>奔驰定理证明探究</h4><h5 id="1-问题分析"><a href="#1-问题分析" class="headerlink" title="1. 问题分析"></a>1. 问题分析</h5><p><strong>奔驰定理: $O$是$\triangle ABC$内一点, 且$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$,<br>则$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z$.</strong></p>
+<p>从这个形式很容易联想到三角形重心的性质, 即三角形重心满足$\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}&#x3D;\overrightarrow{0}$, 		$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;1:1:1$, 应该可以通过重心的性质证明.</p>
 <h5 id="2-尝试证明"><a href="#2-尝试证明" class="headerlink" title="2. 尝试证明"></a>2. 尝试证明</h5><p><img src="https://s2.loli.net/2023/03/25/hI4B52V7tbjfFpr.png" alt="image.png|400"><br>如图, $O$是$\triangle A’B’C’$的重心, $A,B,C$分别为$OA’,OB’,OC’$上一点, 由于$\triangle A’B’C’$是任意的, $\triangle ABC$也为任意三角形. 由$\overrightarrow{OA’}+\overrightarrow{OB’}+\overrightarrow{OC’}&#x3D;\overrightarrow{0}$可得$\overrightarrow{OA’}&#x3D;x\cdot\overrightarrow{OA}$, $\overrightarrow{OB’}&#x3D;y\cdot\overrightarrow{OB}$, $\overrightarrow{OC’}&#x3D;z\cdot\overrightarrow{OC}$.<br>过$A$作$AG\perp BO$, $A’$作$A’G’\perp BO$, $C$作$CH\perp OB$, $C’$作$C’H’\perp OB$.<br>由相似得$AG&#x3D;\frac{1}{x}A’G’,CH&#x3D;\frac{1}{z}C’H’$, 又因为$A’G’&#x3D;C’H’$, 所以$CH:AG&#x3D;x:z$, 可得$S_{\triangle BOC}:S_{\triangle AOB}&#x3D;x:z$, 同理可证$S_{\triangle BOC}:S_{\triangle AOC}&#x3D;x:y$, 即$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z$.<br>以上是一些初步思考，并不是很严格的证明。</p>
 <h5 id="3-正式证明"><a href="#3-正式证明" class="headerlink" title="3. 正式证明"></a>3. 正式证明</h5><p>延长$OA,OB,OC$, 使$\overrightarrow{OA’}&#x3D;x\cdot\overrightarrow{OA}$, $\overrightarrow{OB’}&#x3D;y\cdot\overrightarrow{OB}$, $\overrightarrow{OC’}&#x3D;z\cdot\overrightarrow{OC}$.<br>由$O$是$\triangle A’B’C’$的重心, 可得:<br>$$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$$<br>$$S_{\triangle A’OB’}&#x3D;xy\cdot S_{\triangle AOB}&#x3D;S_{\triangle B’OC’}&#x3D;yz\cdot S_{\triangle BOC}&#x3D;S_{\triangle A’OC’}&#x3D;xz\cdot S_{\triangle AOC}$$<br>整理得$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z\quad\square$</p>
 <h5 id="4-另一种证明-面积比例推导"><a href="#4-另一种证明-面积比例推导" class="headerlink" title="4. 另一种证明(面积比例推导)"></a>4. 另一种证明(面积比例推导)</h5><p>仔细考虑即会发现上面的证明也不是很严格，充要性略有问题。于是我在网上找到了另一种证明方法。<br><img src="https://s2.loli.net/2023/03/25/nH8bDRlUsGikVNo.png" alt="image.png|400"><br>$O$为$\triangle ABC$内任意一点, 延长$AO$至$D$, 设$S_{\triangle AOB}&#x3D;S_1$, $S_{\triangle AOC}&#x3D;S_2$, $S_{\triangle BOC}&#x3D;S_3$. 易得:<br>$$\overrightarrow{AO}&#x3D;\frac{AO}{AD}\cdot\overrightarrow{AD}&#x3D;\frac{S_1+S_2}{S_1+S_2+S_3}\cdot\overrightarrow{AD}$$<br>$$\overrightarrow{AD}&#x3D;\frac{CD}{BC}\cdot\overrightarrow{AB}+\frac{BD}{BC}\cdot\overrightarrow{AC}&#x3D;\frac{S_2}{S_1+S_2}\cdot\overrightarrow{AB}+\frac{S_1}{S_1+S_2}\overrightarrow{AC}$$<br>联立可得:<br>$$<br>\begin{aligned}<br>\overrightarrow{AO}&amp;&#x3D;\frac{S_2}{S_1+S_2+S_3}\cdot\overrightarrow{AB}+\frac{S_1}{S_1+S_2+S_3}\overrightarrow{AC}\\<br>&amp;&#x3D;\frac{S_2}{S_1+S_2+S_3}\cdot(\overrightarrow{AO}+\overrightarrow{OB})+\frac{S_1}{S_1+S_2+S_3}(\overrightarrow{AO}+\overrightarrow{OC})<br>\end{aligned}<br>$$<br>整理得:<br>$$\frac{S_3}{S_1+S_2+S_3}\cdot\overrightarrow{OA}+\frac{S_2}{S_1+S_2+S_3}\cdot\overrightarrow{OB}+\frac{S_1}{S_1+S_2+S_3}\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$$<br>即$S_3:S_2:S_1&#x3D;x:y:z$, $S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z\quad\square$</p>
