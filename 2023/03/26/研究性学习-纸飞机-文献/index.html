@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://s2.loli.net/2023/03/26/lYjPZNREmefu6WI.png">
 <meta property="og:image" content="https://s2.loli.net/2023/03/26/LgpG1hv7J3l4jsu.png">
 <meta property="article:published_time" content="2023-03-26T00:47:32.000Z">
-<meta property="article:modified_time" content="2023-03-26T06:09:54.873Z">
+<meta property="article:modified_time" content="2023-03-26T06:19:49.742Z">
 <meta property="article:author" content="SytaemannZ">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="science">
@@ -194,7 +194,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-03-26 08:47:32 / Modified: 14:09:54" itemprop="dateCreated datePublished" datetime="2023-03-26T08:47:32+08:00">2023-03-26</time>
+      <time title="Created: 2023-03-26 08:47:32 / Modified: 14:19:49" itemprop="dateCreated datePublished" datetime="2023-03-26T08:47:32+08:00">2023-03-26</time>
     </span>
 
   
@@ -216,7 +216,7 @@
 <p>此模型考虑因素较多，同时也较好理解，但未知变量多，且多次积分，难以计算。本次研究将主要参考此模型，进行修改。</p>
 <h5 id="4-更复杂的数学模型"><a href="#4-更复杂的数学模型" class="headerlink" title="4. 更复杂的数学模型"></a>4. 更复杂的数学模型</h5><p>这是关注留空时间的数学模型<sup>[4]</sup>，<del>然而我看不懂</del>。<br>只能尽可能理解一下</p>
 <p>对于初速度:<br>$$v_x&#x3D;v\cdot cos\alpha,\quad v_y&#x3D;v\cdot sin\alpha$$<br>设上升到最大高度过程中水平与竖直方向分速度分别为$v_{x2},v_{y2}$, 则这一过程中水平与竖直方向分速度分别为:<br>$$\int(v_{x2}-v_0cos\alpha)dt,\quad\int(v_{y2}-v_0sin\alpha)dt$$<br>对于升力有:<br>$$F_L&#x3D;C_L\cdot\frac{1}{2}\rho V^2S&#x3D;[C_{L0}+\frac{\partial C_L}{\partial\alpha}\alpha]\frac{1}{2}\rho V^2S$$<br>对于阻力有:<br>$$F_D&#x3D;C_D\cdot\frac{1}{2}\rho V^2S&#x3D;[C_{D0}+\varepsilon C_L^2]\frac{1}{2}\rho V^2S$$<br>(偏微分+流体力学, 已经超越我的理解极限了)<br>得到推进力方程:<br>$$<br>\begin{cases}<br>F_x&#x3D;(C_Tcos\theta+C_x)\frac{1}{2}\rho(V_x^2+V_z^2)S\\<br>F_z&#x3D;(-C_Tsin\theta+C_z)\frac{1}{2}\rho(V_x^2+V_z^2)S+mg_0<br>\end{cases}<br>$$<br>(&#x2F;ﾟДﾟ)&#x2F;     $C_T$是什么???<br>如果四种力相互抵消，留空时间会更长:<br>$$\dot{s_1}&#x3D;\dot h&#x3D;v_0\cdot sin\alpha,\quad\dot{s_2}&#x3D;\dot l&#x3D;v_0\cdot cos\alpha$$<br>因此:<br>$$<br>\begin{bmatrix} \dot{s_1}\\ \dot{s_2} \end{bmatrix}<br>&#x3D;\begin{bmatrix} \dot{h}\\ \dot{l} \end{bmatrix}<br>&#x3D;\begin{bmatrix} v_0\cdot sin\alpha\\ v_0\cdot cos\alpha \end{bmatrix}<br>$$<br>(&#x2F;ﾟДﾟ)&#x2F; (&#x2F;ﾟДﾟ)&#x2F;     好吧我放弃了<del>(滚去补数学基础)</del></p>
-<h5 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h5><p>谈一谈看了这些论文的感想。<br>这些论文都出自不很正规的刊物，看完可以感觉到内容水的成分比较多。出现了扯不相关内容凑字数，给出公式但全程没用，甚至得出错误结论的情况。(比如某文明明研究纸飞机却扯了一堆Rankine-Hugoniot条件之类，实在不懂其用意)<br>难度较高的论文我不好评价，但其结果可信度大概也不高。<br>总之这些论文都只能作为简单参考，具体问题还要自己分析。<br>~~另一方面这些论文教会了我水报告~~~</p>
+<h5 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h5><p>谈一谈看了这些论文的感想。<br>这些论文都出自不很正规的刊物，看完可以感觉到内容水的成分比较多。出现了扯不相关内容凑字数，给出公式但全程没用，甚至得出错误结论的情况。(比如某文明明研究纸飞机却扯了一堆Rankine-Hugoniot条件之类，实在不懂其用意)<br>难度较高的论文我不好评价，但其结果可信度大概也不高。<br>总之这些论文都只能作为简单参考，具体问题还要自己分析。<br><del>另一方面这些论文教会了我水报告~</del></p>
 <h5 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h5><p>[1]尚余祥. 利用理论力学知识对纸飞机飞行距离的研究[J]. 科技风, 2019, 7: 225-227<br>[2]高吉, 贾文太. 纸飞机投掷的数学模型[J]. 科技风, 2019, 9: 77<br>[3]董晓红, 康平. 纸飞机的飞行原理数学建模[J]. 科技风, 2019, 11: 83<br>[4]王微, 赵明程. 基于重心与投掷角度对纸飞机留空时间影响的分析[J]. 菏泽学院学报, 2022, 10: 10-12</p>
 
     </div>
