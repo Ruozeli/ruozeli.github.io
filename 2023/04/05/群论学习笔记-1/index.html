@@ -19,28 +19,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-    <meta name="description" content="关键时刻的判决，下一步的规划">
+    <meta name="description" content="对群的初步认识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="研究性学习-纸飞机-3.sp.中期分析">
-<meta property="og:url" content="https://shengyangzhang.github.io/2023/04/04/%E7%A0%94%E7%A9%B6%E6%80%A7%E5%AD%A6%E4%B9%A0-%E7%BA%B8%E9%A3%9E%E6%9C%BA-%E4%B8%AD%E6%9C%9F%E5%88%86%E6%9E%90/index.html">
+<meta property="og:title" content="群论学习笔记-1.群的概念">
+<meta property="og:url" content="https://shengyangzhang.github.io/2023/04/05/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/index.html">
 <meta property="og:site_name" content="SytaemannZ">
-<meta property="og:description" content="关键时刻的判决，下一步的规划">
+<meta property="og:description" content="对群的初步认识">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-04T13:14:56.000Z">
-<meta property="article:modified_time" content="2023-04-05T00:20:14.033Z">
+<meta property="article:published_time" content="2023-04-05T02:48:30.000Z">
+<meta property="article:modified_time" content="2023-04-05T02:50:41.780Z">
 <meta property="article:author" content="SytaemannZ">
-<meta property="article:tag" content="science">
+<meta property="article:tag" content="math">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://shengyangzhang.github.io/2023/04/04/%E7%A0%94%E7%A9%B6%E6%80%A7%E5%AD%A6%E4%B9%A0-%E7%BA%B8%E9%A3%9E%E6%9C%BA-%E4%B8%AD%E6%9C%9F%E5%88%86%E6%9E%90/">
+<link rel="canonical" href="https://shengyangzhang.github.io/2023/04/05/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/04/04/%E7%A0%94%E7%A9%B6%E6%80%A7%E5%AD%A6%E4%B9%A0-%E7%BA%B8%E9%A3%9E%E6%9C%BA-%E4%B8%AD%E6%9C%9F%E5%88%86%E6%9E%90/","path":"2023/04/04/研究性学习-纸飞机-中期分析/","title":"研究性学习-纸飞机-3.sp.中期分析"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/04/05/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/","path":"2023/04/05/群论学习笔记-1/","title":"群论学习笔记-1.群的概念"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>研究性学习-纸飞机-3.sp.中期分析 | SytaemannZ</title>
+<title>群论学习笔记-1.群的概念 | SytaemannZ</title>
   
 
 
@@ -100,7 +100,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -113,7 +113,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E5%88%92%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">规划分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%8E%B0%E7%8A%B6%E4%B8%8E%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">现状与问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%84%E5%88%92"><span class="nav-number">1.2.</span> <span class="nav-text">规划</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%88%92"><span class="nav-number">1.2.1.</span> <span class="nav-text">基本规划</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%AF%95%E5%9B%BE%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.2.</span> <span class="nav-text">试图解决问题的说明</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -132,7 +131,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -164,7 +163,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/04/04/%E7%A0%94%E7%A9%B6%E6%80%A7%E5%AD%A6%E4%B9%A0-%E7%BA%B8%E9%A3%9E%E6%9C%BA-%E4%B8%AD%E6%9C%9F%E5%88%86%E6%9E%90/">
+    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/04/05/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -177,12 +176,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="研究性学习-纸飞机-3.sp.中期分析 | SytaemannZ">
-      <meta itemprop="description" content="关键时刻的判决，下一步的规划">
+      <meta itemprop="name" content="群论学习笔记-1.群的概念 | SytaemannZ">
+      <meta itemprop="description" content="对群的初步认识">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          研究性学习-纸飞机-3.sp.中期分析
+          群论学习笔记-1.群的概念
         </h1>
 
         <div class="post-meta-container">
@@ -192,15 +191,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2023-04-04 21:14:56" itemprop="dateCreated datePublished" datetime="2023-04-04T21:14:56+08:00">2023-04-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-05 08:20:14" itemprop="dateModified" datetime="2023-04-05T08:20:14+08:00">2023-04-05</time>
+      <time title="Created: 2023-04-05 10:48:30 / Modified: 10:50:41" itemprop="dateCreated datePublished" datetime="2023-04-05T10:48:30+08:00">2023-04-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -208,18 +201,18 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/research/" itemprop="url" rel="index"><span itemprop="name">research</span></a>
+          <a href="/categories/learning/" itemprop="url" rel="index"><span itemprop="name">learning</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/research/paper-airplane/" itemprop="url" rel="index"><span itemprop="name">paper airplane</span></a>
+          <a href="/categories/learning/Group-Theory/" itemprop="url" rel="index"><span itemprop="name">Group Theory</span></a>
         </span>
     </span>
 
   
 </div>
 
-            <div class="post-description">关键时刻的判决，下一步的规划</div>
+            <div class="post-description">对群的初步认识</div>
         </div>
       </header>
 
@@ -227,30 +220,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="规划分析"><a href="#规划分析" class="headerlink" title="规划分析"></a>规划分析</h4><p>处于奇妙的转折点的问题分析</p>
-<h5 id="现状与问题"><a href="#现状与问题" class="headerlink" title="现状与问题"></a>现状与问题</h5><p>写完中期报告，研究性学习的前半部分也就结束了<br>感觉确实是没有什么成果，不过是抄了几篇论文，做了几个不那么成功的实验罢了<br>为了使接下来的研究不继续水下去，必须做好充分的规划</p>
-<p>于是指出现有问题：</p>
-<ul>
-<li><del>一切不顺利想必是机关的阴谋吧</del></li>
-<li>首先，我太懒了(好吧这一直是最大问题)</li>
-<li>其次，实验的场地，器材问题<del>以及我的问题</del>导致实验精确度太差，以及实验时控制变量的完全失败导致分析角度不平衡</li>
-<li>再次，数学建模面临困难，文献里的模型似乎都不能用，大概只能参考其受力分析</li>
-<li>最后，不同研究方向没什么联系，各结论不易总结归纳</li>
-</ul>
-<h5 id="规划"><a href="#规划" class="headerlink" title="规划"></a>规划</h5><h6 id="基本规划"><a href="#基本规划" class="headerlink" title="基本规划"></a>基本规划</h6><p>接下来的研究主要分为三个部分：</p>
-<ul>
-<li>计算机仿真：通过CFD软件进行仿真，主要探究空气力学和形态影响，最低目标是完成瞬时状态的流体力学分析，较高目标是对整个过程进行分析，模拟出飞行轨迹</li>
-<li>数学建模：必不可少，且是研究重点，主要探究抛射角影响</li>
-<li>优化设计：提出优化设计的建议，自己设计大概是不可能了</li>
-</ul>
-<h6 id="试图解决问题的说明"><a href="#试图解决问题的说明" class="headerlink" title="试图解决问题的说明"></a>试图解决问题的说明</h6><ul>
-<li>由于实验的失败，取消了自己设计纸飞机的计划(设计了也没法验证)，改为提出优化设计的建议，大致可以参考John Collins的解说视频</li>
-<li>目前看到的数学模型都是基于牛顿运动定理，不涉及复杂的空气动力学，若将垂直翼面的力是为恒力，即可构建合力-加速度-速度-方向-合力的推导关系，从而迭代求解(自己动手，丰衣足食)</li>
-<li>实验控制变量的失败，使材质，重心等没有得到充分的研究，于是研究因素就被限制于理论部分的抛射角因素和仿真部分的形态因素，这也是没有办法的，不过本来抛射角和形态因素就更具研究价值</li>
-<li>不同研究方向确实是不易归纳，但这应该没人会在意吧，零散的结果也是结果</li>
-</ul>
-<p>好吧，就是这样，作为一个中期分析足够了<br>EL PSY KONGROO</p>
-
+        
     </div>
 
     
@@ -259,7 +229,7 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/science/" rel="tag"># science</a>
+              <a href="/tags/math/" rel="tag"># math</a>
           </div>
 
         
