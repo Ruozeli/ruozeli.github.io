@@ -21,13 +21,13 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
     <meta name="description" content="关于$e$的基础探究">
 <meta property="og:type" content="article">
-<meta property="og:title" content="$e$多个表达式推导">
+<meta property="og:title" content="e的多个表达式推导">
 <meta property="og:url" content="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/index.html">
 <meta property="og:site_name" content="SytaemannZ">
 <meta property="og:description" content="关于$e$的基础探究">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-30T03:36:28.000Z">
-<meta property="article:modified_time" content="2023-05-01T02:49:02.881Z">
+<meta property="article:modified_time" content="2023-05-01T03:02:51.086Z">
 <meta property="article:author" content="SytaemannZ">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="analysis">
@@ -38,10 +38,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/","path":"2023/04/30/e的多个表达式推导/","title":"$e$多个表达式推导"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/","path":"2023/04/30/e的多个表达式推导/","title":"e的多个表达式推导"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>$e$多个表达式推导 | SytaemannZ</title>
+<title>e的多个表达式推导 | SytaemannZ</title>
   
 
 
@@ -114,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#e-%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC"><span class="nav-number">1.</span> <span class="nav-text">$e$多个表达式推导</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E8%A1%A8%E8%BE%BE"><span class="nav-number">1.1.</span> <span class="nav-text">级数表达</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">极限表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%9A%84%E6%8E%A8%E5%B9%BF"><span class="nav-number">1.3.</span> <span class="nav-text">极限的推广</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#e-%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC"><span class="nav-number">1.</span> <span class="nav-text">$e$的多个表达式推导</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">级数表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">极限表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%9A%84%E6%8E%A8%E5%B9%BF"><span class="nav-number">1.3.</span> <span class="nav-text">极限的推广</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -178,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="$e$多个表达式推导 | SytaemannZ">
+      <meta itemprop="name" content="e的多个表达式推导 | SytaemannZ">
       <meta itemprop="description" content="关于$e$的基础探究">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          $e$多个表达式推导
+          e的多个表达式推导
         </h1>
 
         <div class="post-meta-container">
@@ -201,7 +201,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-01 10:49:02" itemprop="dateModified" datetime="2023-05-01T10:49:02+08:00">2023-05-01</time>
+      <time title="Modified: 2023-05-01 11:02:51" itemprop="dateModified" datetime="2023-05-01T11:02:51+08:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -224,8 +224,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="e-多个表达式推导"><a href="#e-多个表达式推导" class="headerlink" title="$e$多个表达式推导"></a>$e$多个表达式推导</h4><p>最近在读小平邦彦先生的《微积分入门》，感觉作为入门书难度有些太高。两周下来终于(<del>大概</del>)看完了实数和函数的基础部分。书中关于自然底数$e$的几个表达式的推导很有意思，于是写本篇记录一些推导过程。</p>
-<h5 id="级数表达"><a href="#级数表达" class="headerlink" title="级数表达"></a>级数表达</h5><p>定理(1)：如果以级数$\sum_{n&#x3D;1}^{\infty}a_n$的项的绝对值作为项的级数$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛，则原级数收敛。<br>证明：设$s_n&#x3D;\sum_{k&#x3D;1}^{n}a_k$，$\sigma_n&#x3D;\sum_{k&#x3D;1}^{n}\vert a_k\vert$，则：<br>$$\vert s_n-s_m\vert&#x3D;\vert\sum_{k&#x3D;m+1}^n a_k\vert\le\sum_{k&#x3D;m+1}^n\vert a_k\vert&#x3D;\vert\sigma_n-\sigma_m\vert\quad (m&lt;n)$$<br>根据Cauchy判别法，若{$\sigma_n$}收敛，则{$s_n$}也收敛。<br>当$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛时，称级数$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。</p>
+        <h4 id="e-的多个表达式推导"><a href="#e-的多个表达式推导" class="headerlink" title="$e$的多个表达式推导"></a>$e$的多个表达式推导</h4><p>最近在读小平邦彦先生的《微积分入门》，感觉作为入门书难度有些太高。两周下来终于(<del>大概</del>)看完了实数和函数的基础部分。书中关于自然底数$e$的几个表达式的推导很有意思，于是写本篇记录一些推导过程。</p>
+<h5 id="级数表达式"><a href="#级数表达式" class="headerlink" title="级数表达式"></a>级数表达式</h5><p>定理(1)：如果以级数$\sum_{n&#x3D;1}^{\infty}a_n$的项的绝对值作为项的级数$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛，则原级数收敛。<br>证明：设$s_n&#x3D;\sum_{k&#x3D;1}^{n}a_k$，$\sigma_n&#x3D;\sum_{k&#x3D;1}^{n}\vert a_k\vert$，则：<br>$$\vert s_n-s_m\vert&#x3D;\vert\sum_{k&#x3D;m+1}^n a_k\vert\le\sum_{k&#x3D;m+1}^n\vert a_k\vert&#x3D;\vert\sigma_n-\sigma_m\vert\quad (m&lt;n)$$<br>根据Cauchy判别法，若{$\sigma_n$}收敛，则{$s_n$}也收敛。<br>当$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛时，称级数$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。</p>
 <p>定理(2)：已知收敛级数$\sum_{n&#x3D;1}^{\infty}r_n,r_n&gt;0$，若存在自然数$m$使$n\ge m$时$\vert a_n\vert\le r_n$成立，则$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。<br>证明：设$n&gt;m$，则：<br>$$\sum_{k&#x3D;1}^{n}\vert a_k\vert\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{k&#x3D;m}^{n} r_k\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{n&#x3D;1}^{\infty} r_n&lt;+\infty$$<br>所以$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert&lt;+\infty$</p>
 <div class="admonition note"><p>幂级数：形如$\sum_{n=0}^{\infty}a_nx^n$的级数</p>
 </div>
