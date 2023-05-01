@@ -19,27 +19,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-    <meta name="description" content="Hello World !">
+    <meta name="description" content="关于$e$的基础探究">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://shengyangzhang.github.io/2023/02/18/hello-world/index.html">
+<meta property="og:title" content="$e$多个表达式推导">
+<meta property="og:url" content="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/index.html">
 <meta property="og:site_name" content="SytaemannZ">
-<meta property="og:description" content="Hello World !">
+<meta property="og:description" content="关于$e$的基础探究">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-18T07:23:41.000Z">
-<meta property="article:modified_time" content="2023-04-04T15:18:15.411Z">
+<meta property="article:published_time" content="2023-04-30T03:36:28.000Z">
+<meta property="article:modified_time" content="2023-05-01T02:49:02.881Z">
 <meta property="article:author" content="SytaemannZ">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="analysis">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://shengyangzhang.github.io/2023/02/18/hello-world/">
+<link rel="canonical" href="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/02/18/hello-world/","path":"2023/02/18/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/","path":"2023/04/30/e的多个表达式推导/","title":"$e$多个表达式推导"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | SytaemannZ</title>
+<title>$e$多个表达式推导 | SytaemannZ</title>
   
 
 
@@ -99,7 +101,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -112,6 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#e-%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC"><span class="nav-number">1.</span> <span class="nav-text">$e$多个表达式推导</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E8%A1%A8%E8%BE%BE"><span class="nav-number">1.1.</span> <span class="nav-text">级数表达</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">极限表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%9A%84%E6%8E%A8%E5%B9%BF"><span class="nav-number">1.3.</span> <span class="nav-text">极限的推广</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/02/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | SytaemannZ">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="$e$多个表达式推导 | SytaemannZ">
+      <meta itemprop="description" content="关于$e$的基础探究">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          $e$多个表达式推导
         </h1>
 
         <div class="post-meta-container">
@@ -191,19 +194,29 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-02-18 15:23:41" itemprop="dateCreated datePublished" datetime="2023-02-18T15:23:41+08:00">2023-02-18</time>
+      <time title="Created: 2023-04-30 11:36:28" itemprop="dateCreated datePublished" datetime="2023-04-30T11:36:28+08:00">2023-04-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-04 23:18:15" itemprop="dateModified" datetime="2023-04-04T23:18:15+08:00">2023-04-04</time>
+      <time title="Modified: 2023-05-01 10:49:02" itemprop="dateModified" datetime="2023-05-01T10:49:02+08:00">2023-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/problem-solving/" itemprop="url" rel="index"><span itemprop="name">problem solving</span></a>
+        </span>
     </span>
 
   
 </div>
 
+            <div class="post-description">关于$e$的基础探究</div>
         </div>
       </header>
 
@@ -211,7 +224,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Hello World !</p>
+        <h4 id="e-多个表达式推导"><a href="#e-多个表达式推导" class="headerlink" title="$e$多个表达式推导"></a>$e$多个表达式推导</h4><p>最近在读小平邦彦先生的《微积分入门》，感觉作为入门书难度有些太高。两周下来终于(<del>大概</del>)看完了实数和函数的基础部分。书中关于自然底数$e$的几个表达式的推导很有意思，于是写本篇记录一些推导过程。</p>
+<h5 id="级数表达"><a href="#级数表达" class="headerlink" title="级数表达"></a>级数表达</h5><p>定理(1)：如果以级数$\sum_{n&#x3D;1}^{\infty}a_n$的项的绝对值作为项的级数$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛，则原级数收敛。<br>证明：设$s_n&#x3D;\sum_{k&#x3D;1}^{n}a_k$，$\sigma_n&#x3D;\sum_{k&#x3D;1}^{n}\vert a_k\vert$，则：<br>$$\vert s_n-s_m\vert&#x3D;\vert\sum_{k&#x3D;m+1}^n a_k\vert\le\sum_{k&#x3D;m+1}^n\vert a_k\vert&#x3D;\vert\sigma_n-\sigma_m\vert\quad (m&lt;n)$$<br>根据Cauchy判别法，若{$\sigma_n$}收敛，则{$s_n$}也收敛。<br>当$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛时，称级数$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。</p>
+<p>定理(2)：已知收敛级数$\sum_{n&#x3D;1}^{\infty}r_n,r_n&gt;0$，若存在自然数$m$使$n\ge m$时$\vert a_n\vert\le r_n$成立，则$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。<br>证明：设$n&gt;m$，则：<br>$$\sum_{k&#x3D;1}^{n}\vert a_k\vert\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{k&#x3D;m}^{n} r_k\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{n&#x3D;1}^{\infty} r_n&lt;+\infty$$<br>所以$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert&lt;+\infty$</p>
+<div class="admonition note"><p>幂级数：形如$\sum_{n=0}^{\infty}a_nx^n$的级数</p>
+</div>
+
+<p>考虑幂级数$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$，其中$x$为任意实数。设$m$为$m\ge2\vert x\vert$的自然数，则对$n\ge m$：<br>$$\frac{\vert x\vert^n}{n!}&#x3D;\frac{\vert x\vert^m}{m!}\cdot\frac{\vert x\vert}{m+1}\cdot\frac{\vert x\vert}{m+2}\cdots\frac{\vert x\vert}{n}\le\frac{2^m\vert x\vert^m}{m!}(\frac{1}{2})^n$$<br>设$M&#x3D;2^m\vert x\vert^m&#x2F;m!$，则：<br>$$\sum_{n&#x3D;0}^{\infty}M(\frac{1}{2})^n&#x3D;2M&lt;+\infty$$<br>根据定理(2)，$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$绝对收敛。</p>
+<div class="admonition note"><p>常使用收敛性已知的标准级数，如等比级数$\sum_{n=1}^{\infty}ar^n,0&lt;r&lt;1$，与级数$\sum_{n=1}^{\infty}a_n$进行比较，证明其收敛性</p>
+</div>
+
+<p>特别地，当$x&#x3D;1$时，上述级数和用$e$表示：<br>$$e&#x3D;\sum_{n&#x3D;0}^{\infty}\frac{1}{n!}\approx2.71828\cdots$$</p>
+<h5 id="极限表达式"><a href="#极限表达式" class="headerlink" title="极限表达式"></a>极限表达式</h5><p>$e$通常定义为极限$\lim_{n\to\infty}(1+1&#x2F;n)^n$，这与上述的级数表达式相等，但显然这种表达式收敛更慢。<br>证明$e&#x3D;\lim_{n\to\infty}(1+1&#x2F;n)^n$：<br>设$e_n&#x3D;(1+1&#x2F;n)^n$，则根据二项式定理：<br>$$e_n&#x3D;1+\frac{n}{1!}\frac{1}{n}+\frac{n(n-1)}{2!}\frac{1}{n^2}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\cdots+\frac{1}{n^n}$$<br>设$a_{n,k}&#x3D;\frac{n(n-1)\cdots(n-k+1)}{k!}\frac{1}{n^k}$，则：<br>$$e_n&#x3D;1+\sum_{k&#x3D;1}^{n}a_{n,k}$$<br>$$a_{n,k}&#x3D;\frac{1}{k!}(1-\frac{1}{n})(1-\frac{2}{n})\cdots(1-\frac{k-1}{n})$$<br>$$a_{n,k}&lt;a_{n+1,k}&lt;\frac{1}{k!}$$<br>所以：<br>$$e_n&lt;e_{n+1}&lt;1+\sum_{k&#x3D;1}^{\infty}\frac{1}{k!}&#x3D;e$$<br>{$e_n$}是单调递增数列且$\lim_{n\to\infty}e_n\le e$<br>因为$\lim_{n\to\infty}a_{n,k}&#x3D;1&#x2F;k!$，所以对任意自然数$m$：<br>$$\lim_{n\to\infty}e_n\ge\lim_{n\to\infty}(1+\sum_{k&#x3D;1}^{m}a_{n,k})&#x3D;1+\sum_{k&#x3D;1}^{m}\frac{1}{k!}&#x3D;e$$<br>所以：<br>$$\lim_{n\to\infty}e_n&#x3D;\lim_{n\to\infty}(1+\frac{1}{n})^n&#x3D;e$$</p>
+<h5 id="极限的推广"><a href="#极限的推广" class="headerlink" title="极限的推广"></a>极限的推广</h5><p>将上述极限中的自然数$n$换为实数$t$：<br>$$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$$<br>证明：取满足$n\le t&lt;n+1$的自然数$n$，则：<br>$$(1+\frac{1}{n+1})^n&lt;(1+\frac{1}{t})^t&lt;(1+\frac{1}{n})^{n+1}$$<br>当$t\to+\infty$时，$n\to\infty$，且：<br>$$\lim_{n\to\infty}(1+\frac{1}{n+1})^n&#x3D;e$$<br>$$\lim_{n\to\infty}(1+\frac{1}{n})^{n+1}&#x3D;e$$<br>所以$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$</p>
+<p>将$s&#x3D;t-1$代入原式可得：<br>$$\lim_{t\to+\infty}(1-\frac{1}{t})^{-t}&#x3D;\lim_{s\to+\infty}(1+\frac{1}{s})^s&#x3D;e$$<br>对于$x&gt;0$，令$s&#x3D;tx$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^{tx}&#x3D;\lim_{s\to+\infty}(1+\frac{x}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>对于$x&lt;0$，令$y&#x3D;-x,s&#x3D;ty$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1-\frac{1}{t})^{-tx}&#x3D;\lim_{s\to+\infty}(1-\frac{y}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>因此可得$e^x$的级数表示：<br>$$e^x&#x3D;\sum_{n&#x3D;0}^{\infty}\frac{x^n}{n!}$$</p>
 
     </div>
 
@@ -220,16 +246,20 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/analysis/" rel="tag"># analysis</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2023/04/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" rel="prev" title="群论学习笔记-2.置换群">
+                  <i class="fa fa-chevron-left"></i> 群论学习笔记-2.置换群
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/02/19/%E8%AE%B0%E4%B8%80%E9%81%93%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E9%A2%98/" rel="next" title="记一道三角函数题">
-                  记一道三角函数题 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
