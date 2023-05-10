@@ -19,29 +19,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-    <meta name="description" content="自然底数$e$的几种表达式">
+    <meta name="description" content="关于循环群">
 <meta property="og:type" content="article">
-<meta property="og:title" content="e的多个表达式推导">
-<meta property="og:url" content="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/index.html">
+<meta property="og:title" content="群论学习笔记-4.循环群">
+<meta property="og:url" content="https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/index.html">
 <meta property="og:site_name" content="SytaemannZ">
-<meta property="og:description" content="自然底数$e$的几种表达式">
+<meta property="og:description" content="关于循环群">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-30T03:36:28.000Z">
-<meta property="article:modified_time" content="2023-05-10T03:33:00.220Z">
+<meta property="og:image" content="https://s2.loli.net/2023/04/16/Wz1LIFuqv95eyVx.png">
+<meta property="og:image" content="https://s2.loli.net/2023/05/10/2BwR1uMEvCOIHxP.png">
+<meta property="article:published_time" content="2023-05-10T02:46:43.000Z">
+<meta property="article:modified_time" content="2023-05-10T07:05:44.409Z">
 <meta property="article:author" content="SytaemannZ">
 <meta property="article:tag" content="math">
-<meta property="article:tag" content="analysis">
+<meta property="article:tag" content="group">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/04/16/Wz1LIFuqv95eyVx.png">
 
 
-<link rel="canonical" href="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+<link rel="canonical" href="https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/","path":"2023/04/30/e的多个表达式推导/","title":"e的多个表达式推导"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/","path":"2023/05/10/群论学习笔记-4/","title":"群论学习笔记-4.循环群"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>e的多个表达式推导 | SytaemannZ</title>
+<title>群论学习笔记-4.循环群 | SytaemannZ</title>
   
 
 
@@ -114,7 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#e-%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC"><span class="nav-number">1.</span> <span class="nav-text">$e$的多个表达式推导</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">级数表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">极限表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%9A%84%E6%8E%A8%E5%B9%BF"><span class="nav-number">1.3.</span> <span class="nav-text">极限的推广</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%BE%AA%E7%8E%AF%E7%BE%A4"><span class="nav-number">1.</span> <span class="nav-text">关于循环群</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BE%A4"><span class="nav-number">1.1.</span> <span class="nav-text">循环群</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3"><span class="nav-number">1.1.1.</span> <span class="nav-text">直观理解</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">代数定义</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BE%A4%E7%9A%84%E5%AD%90%E7%BE%A4"><span class="nav-number">1.1.3.</span> <span class="nav-text">循环群的子群</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -165,7 +168,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -178,12 +181,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="e的多个表达式推导 | SytaemannZ">
-      <meta itemprop="description" content="自然底数$e$的几种表达式">
+      <meta itemprop="name" content="群论学习笔记-4.循环群 | SytaemannZ">
+      <meta itemprop="description" content="关于循环群">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          e的多个表达式推导
+          群论学习笔记-4.循环群
         </h1>
 
         <div class="post-meta-container">
@@ -193,15 +196,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2023-04-30 11:36:28" itemprop="dateCreated datePublished" datetime="2023-04-30T11:36:28+08:00">2023-04-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-10 11:33:00" itemprop="dateModified" datetime="2023-05-10T11:33:00+08:00">2023-05-10</time>
+      <time title="Created: 2023-05-10 10:46:43 / Modified: 15:05:44" itemprop="dateCreated datePublished" datetime="2023-05-10T10:46:43+08:00">2023-05-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -209,14 +206,18 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/problem-solving/" itemprop="url" rel="index"><span itemprop="name">problem solving</span></a>
+          <a href="/categories/learning/" itemprop="url" rel="index"><span itemprop="name">learning</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/learning/Group-Theory/" itemprop="url" rel="index"><span itemprop="name">Group Theory</span></a>
         </span>
     </span>
 
   
 </div>
 
-            <div class="post-description">自然底数$e$的几种表达式</div>
+            <div class="post-description">关于循环群</div>
         </div>
       </header>
 
@@ -224,20 +225,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="e-的多个表达式推导"><a href="#e-的多个表达式推导" class="headerlink" title="$e$的多个表达式推导"></a>$e$的多个表达式推导</h4><p>最近在读小平邦彦先生的《微积分入门》，感觉作为入门书难度有些太高。两周下来终于(<del>大概</del>)看完了实数和函数的基础部分。书中关于自然底数$e$的几个表达式的推导很有意思，于是写本篇记录一些推导过程。</p>
-<h5 id="级数表达式"><a href="#级数表达式" class="headerlink" title="级数表达式"></a>级数表达式</h5><p>定理(1)：如果以级数$\sum_{n&#x3D;1}^{\infty}a_n$的项的绝对值作为项的级数$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛，则原级数收敛。<br>证明：设$s_n&#x3D;\sum_{k&#x3D;1}^{n}a_k$，$\sigma_n&#x3D;\sum_{k&#x3D;1}^{n}\vert a_k\vert$，则：<br>$$\vert s_n-s_m\vert&#x3D;\vert\sum_{k&#x3D;m+1}^n a_k\vert\le\sum_{k&#x3D;m+1}^n\vert a_k\vert&#x3D;\vert\sigma_n-\sigma_m\vert\quad (m&lt;n)$$<br>根据Cauchy判别法，若{$\sigma_n$}收敛，则{$s_n$}也收敛。<br>当$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛时，称级数$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。</p>
-<p>定理(2)：已知收敛级数$\sum_{n&#x3D;1}^{\infty}r_n,r_n&gt;0$，若存在自然数$m$使$n\ge m$时$\vert a_n\vert\le r_n$成立，则$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。<br>证明：设$n&gt;m$，则：<br>$$\sum_{k&#x3D;1}^{n}\vert a_k\vert\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{k&#x3D;m}^{n} r_k\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{n&#x3D;1}^{\infty} r_n&lt;+\infty$$<br>所以$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert&lt;+\infty$</p>
-<div class="admonition note"><p>幂级数：形如$\sum_{n=0}^{\infty}a_nx^n$的级数</p>
+        <h4 id="关于循环群"><a href="#关于循环群" class="headerlink" title="关于循环群"></a>关于循环群</h4><h5 id="循环群"><a href="#循环群" class="headerlink" title="循环群"></a>循环群</h5><h6 id="直观理解"><a href="#直观理解" class="headerlink" title="直观理解"></a>直观理解</h6><p>可以把循环群看作一个中心对称平面几何图形的旋转作用构成的群，例如旋转一个六叶风车，可以得到循环群$C_6$：<br><img src="https://s2.loli.net/2023/04/16/Wz1LIFuqv95eyVx.png" alt="Drawing 2023-04-16 09.01.16.excalidraw.png|400"></p>
+<h6 id="代数定义"><a href="#代数定义" class="headerlink" title="代数定义"></a>代数定义</h6><p>若群$G$的每个元素都能表示为一个固定元素$a$的方幂，则$G$为由$a$生成的循环群，记作&lt;$a$&gt;，$a$称为&lt;$a$&gt;的一个生成元。</p>
+<ul>
+<li>若$a$是无限阶元素，&lt;$a$&gt;&#x3D;{$\cdots,a^{-3},a^{-2},a^{-1},e,a,a^2,a^3,\cdots$}</li>
+<li>若$a$是$n$阶元素，&lt;$a$&gt;&#x3D;{$e,a,a^2,\cdots,a^{n-1}$}，为$n$阶循环群($C_n$)</li>
+</ul>
+<p>很容易看出，所有循环群都是交换群，所以循环群可由加法表示。例如，$C_6$可以表示为模6加法群&lt;$\mathbb{Z}_6,+$&gt;&#x3D;{0,1,2,3,4,5}，$\mathbb{Z}$上的加法群为无限循环群。</p>
+<p>循环群的生成元不唯一：<br>设&lt;$a$&gt;是$a$生成的循环群，设$a^l$也为生成元，则$a$可表示为$(a^l)^m&#x3D;a^{lm}$</p>
+<ul>
+<li>若&lt;$a$&gt;是无限循环群，由于群的无限性，$lm&#x3D;1$，易得$l&#x3D;\pm1$，即无限循环群共有2个生成元：$a$和$a^{-1}$</li>
+<li>若&lt;$a$&gt;是$n$阶循环群，则$n\mid lm-1$，可得$l,n$互素；若$l,n$互素，那么存在整数$u,v$使$un+vl&#x3D;1$，$a&#x3D;(a^l)^{v}&#x3D;a^{1-un}$，可得$a^l$也为生成元，即$a^l$为生成元的充要条件是$l,n$互素，所以&lt;$a$&gt;共有$\phi(n)$个生成元</li>
+</ul>
+<div class="admonition note"><p>$\phi(n)$为欧拉函数，表示小于等于正整数$n$且与$n$互素的正整数的数目</p>
 </div>
 
-<p>考虑幂级数$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$，其中$x$为任意实数。设$m$为$m\ge2\vert x\vert$的自然数，则对$n\ge m$：<br>$$\frac{\vert x\vert^n}{n!}&#x3D;\frac{\vert x\vert^m}{m!}\cdot\frac{\vert x\vert}{m+1}\cdot\frac{\vert x\vert}{m+2}\cdots\frac{\vert x\vert}{n}\le\frac{2^m\vert x\vert^m}{m!}(\frac{1}{2})^n$$<br>设$M&#x3D;2^m\vert x\vert^m&#x2F;m!$，则：<br>$$\sum_{n&#x3D;0}^{\infty}M(\frac{1}{2})^n&#x3D;2M&lt;+\infty$$<br>根据定理(2)，$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$绝对收敛。</p>
-<div class="admonition note"><p>常使用收敛性已知的标准级数，如等比级数$\sum_{n=1}^{\infty}ar^n,0&lt;r&lt;1$，与级数$\sum_{n=1}^{\infty}a_n$进行比较，证明其收敛性</p>
-</div>
-
-<p>特别地，当$x&#x3D;1$时，上述级数和用$e$表示：<br>$$e&#x3D;\sum_{n&#x3D;0}^{\infty}\frac{1}{n!}\approx2.71828\cdots$$</p>
-<h5 id="极限表达式"><a href="#极限表达式" class="headerlink" title="极限表达式"></a>极限表达式</h5><p>$e$通常定义为极限$\lim_{n\to\infty}(1+1&#x2F;n)^n$，这与上述的级数表达式相等，但显然这种表达式收敛更慢。<br>证明$e&#x3D;\lim_{n\to\infty}(1+1&#x2F;n)^n$：<br>设$e_n&#x3D;(1+1&#x2F;n)^n$，则根据二项式定理：<br>$$e_n&#x3D;1+\frac{n}{1!}\frac{1}{n}+\frac{n(n-1)}{2!}\frac{1}{n^2}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\cdots+\frac{1}{n^n}$$<br>设$a_{n,k}&#x3D;\frac{n(n-1)\cdots(n-k+1)}{k!}\frac{1}{n^k}$，则：<br>$$e_n&#x3D;1+\sum_{k&#x3D;1}^{n}a_{n,k}$$<br>$$a_{n,k}&#x3D;\frac{1}{k!}(1-\frac{1}{n})(1-\frac{2}{n})\cdots(1-\frac{k-1}{n})$$<br>$$a_{n,k}&lt;a_{n+1,k}&lt;\frac{1}{k!}$$<br>所以：<br>$$e_n&lt;e_{n+1}&lt;1+\sum_{k&#x3D;1}^{\infty}\frac{1}{k!}&#x3D;e$$<br>{$e_n$}是单调递增数列且$\lim_{n\to\infty}e_n\le e$<br>因为$\lim_{n\to\infty}a_{n,k}&#x3D;1&#x2F;k!$，所以对任意自然数$m$：<br>$$\lim_{n\to\infty}e_n\ge\lim_{n\to\infty}(1+\sum_{k&#x3D;1}^{m}a_{n,k})&#x3D;1+\sum_{k&#x3D;1}^{m}\frac{1}{k!}&#x3D;e$$<br>所以：<br>$$\lim_{n\to\infty}e_n&#x3D;\lim_{n\to\infty}(1+\frac{1}{n})^n&#x3D;e$$</p>
-<h5 id="极限的推广"><a href="#极限的推广" class="headerlink" title="极限的推广"></a>极限的推广</h5><p>将上述极限中的自然数$n$换为实数$t$：<br>$$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$$<br>证明：取满足$n\le t&lt;n+1$的自然数$n$，则：<br>$$(1+\frac{1}{n+1})^n&lt;(1+\frac{1}{t})^t&lt;(1+\frac{1}{n})^{n+1}$$<br>当$t\to+\infty$时，$n\to\infty$，且：<br>$$\lim_{n\to\infty}(1+\frac{1}{n+1})^n&#x3D;e$$<br>$$\lim_{n\to\infty}(1+\frac{1}{n})^{n+1}&#x3D;e$$<br>所以$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$</p>
-<p>将$s&#x3D;t-1$代入原式可得：<br>$$\lim_{t\to+\infty}(1-\frac{1}{t})^{-t}&#x3D;\lim_{s\to+\infty}(1+\frac{1}{s})^s&#x3D;e$$<br>对于$x&gt;0$，令$s&#x3D;tx$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^{tx}&#x3D;\lim_{s\to+\infty}(1+\frac{x}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>对于$x&lt;0$，令$y&#x3D;-x,s&#x3D;ty$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1-\frac{1}{t})^{-tx}&#x3D;\lim_{s\to+\infty}(1-\frac{y}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>因此可得$e^x$的级数表示：<br>$$e^x&#x3D;\sum_{n&#x3D;0}^{\infty}\frac{x^n}{n!}$$</p>
+<h6 id="循环群的子群"><a href="#循环群的子群" class="headerlink" title="循环群的子群"></a>循环群的子群</h6><p>取&lt;$a$&gt;中任意元素$a^k$可生成循环群&lt;$a^k$&gt;。这样生成的&lt;$a^k$&gt;是&lt;$a$&gt;的子群，且&lt;$a$&gt;的子群都可由这种方法生成。</p>
+<p>从凯莱图来看，循环群子群的构造就是将原群中多个连续作用的箭头合并为一个箭头，来连接部分元素。例如$C_6$的子群：<br><img src="https://s2.loli.net/2023/05/10/2BwR1uMEvCOIHxP.png" alt="Drawing 2023-05-10 12.41.27.excalidraw.png|400"><br>观察子群的阶数可知，有限循环群子群的阶数是其自身阶数的正因子，因而循环群子群的个数等于循环群阶数正因子的个数。而无限循环群的非单位子群都是无限循环群。</p>
+<p>证明：设$H$是循环群&lt;$a$&gt;的一个子群，若$H$是单位子群，则$H$显然是循环群，若$H$不是单位子群，设$a^m$是$H$中最小的$a$的正方幂，可证$H&#x3D;$&lt;$a^m$&gt;：<br>任取$H$中一个元素$a^l$，存在整数$q,r$满足$l&#x3D;qm+r$，$0\le r&lt;m$，于是：<br>$$a^l(a^{-m})^q&#x3D;a^r\in H$$<br>由于$a^m$是最小的$a$的正方幂，$0\le r&lt;m$，可知$r&#x3D;0$，则$a^l&#x3D;(a^m)^q$，所以$H&#x3D;$&lt;$a^m$&gt;，于是得证循环群的子群都为循环群。</p>
+<p>因为无限循环群中的非单位元素都是无限阶元素，所以无限循环群的非单位子群也都是无限循环群。<br>对于$n$阶循环群&lt;$a$&gt;及其子群&lt;$a^m$&gt;，由上述证明很容易得到$m$能整除$n$，于是$a^m$的阶为$n&#x2F;m$，&lt;$a^m$&gt;的阶也为$n&#x2F;m$。</p>
 
     </div>
 
@@ -248,21 +254,18 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/math/" rel="tag"># math</a>
-              <a href="/tags/analysis/" rel="tag"># analysis</a>
+              <a href="/tags/group/" rel="tag"># group</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/04/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" rel="prev" title="群论学习笔记-2.置换群">
-                  <i class="fa fa-chevron-left"></i> 群论学习笔记-2.置换群
+                <a href="/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/" rel="prev" title="群论学习笔记-3.子群">
+                  <i class="fa fa-chevron-left"></i> 群论学习笔记-3.子群
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/" rel="next" title="群论学习笔记-3.子群">
-                  群论学习笔记-3.子群 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
