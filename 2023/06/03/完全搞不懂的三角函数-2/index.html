@@ -19,29 +19,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-    <meta name="description" content="子群及其判定条件">
+    <meta name="description" content="与三角函数殊死搏斗的第二周">
 <meta property="og:type" content="article">
-<meta property="og:title" content="群论学习笔记-3.子群">
-<meta property="og:url" content="https://shengyangzhang.github.io/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/index.html">
+<meta property="og:title" content="完全搞不懂的三角函数-2">
+<meta property="og:url" content="https://shengyangzhang.github.io/2023/06/03/%E5%AE%8C%E5%85%A8%E6%90%9E%E4%B8%8D%E6%87%82%E7%9A%84%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0-2/index.html">
 <meta property="og:site_name" content="SytaemannZ">
-<meta property="og:description" content="子群及其判定条件">
+<meta property="og:description" content="与三角函数殊死搏斗的第二周">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-07T03:48:56.000Z">
-<meta property="article:modified_time" content="2023-05-07T06:36:43.371Z">
+<meta property="article:published_time" content="2023-06-03T12:34:27.000Z">
+<meta property="article:modified_time" content="2023-06-04T04:14:06.041Z">
 <meta property="article:author" content="SytaemannZ">
-<meta property="article:tag" content="math">
-<meta property="article:tag" content="group">
+<meta property="article:tag" content="trigonometry">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://shengyangzhang.github.io/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/">
+<link rel="canonical" href="https://shengyangzhang.github.io/2023/06/03/%E5%AE%8C%E5%85%A8%E6%90%9E%E4%B8%8D%E6%87%82%E7%9A%84%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0-2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/","path":"2023/05/07/群论学习笔记-3/","title":"群论学习笔记-3.子群"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/06/03/%E5%AE%8C%E5%85%A8%E6%90%9E%E4%B8%8D%E6%87%82%E7%9A%84%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0-2/","path":"2023/06/03/完全搞不懂的三角函数-2/","title":"完全搞不懂的三角函数-2"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>群论学习笔记-3.子群 | SytaemannZ</title>
+<title>完全搞不懂的三角函数-2 | SytaemannZ</title>
   
 
 
@@ -114,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%AD%90%E7%BE%A4"><span class="nav-number">1.</span> <span class="nav-text">关于子群</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A4%E5%AE%9A%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">判定条件</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%A4%E5%AE%9A%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text">基本判定条件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E5%AD%90%E7%BE%A4%E5%88%A4%E5%AE%9A%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">有限子群判定条件</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E4%BE%8B%E5%AD%90"><span class="nav-number">1.3.</span> <span class="nav-text">一些例子</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">三角函数题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98-%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%8F%98%E6%8D%A2"><span class="nav-number">1.1.</span> <span class="nav-text">第一题(三角恒等变换)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98"><span class="nav-number">1.2.</span> <span class="nav-text">第二题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%97%AE"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一问</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%97%AE"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二问</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%84%9F%E6%83%B3"><span class="nav-number">1.3.</span> <span class="nav-text">感想</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -165,7 +164,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/">
+    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/06/03/%E5%AE%8C%E5%85%A8%E6%90%9E%E4%B8%8D%E6%87%82%E7%9A%84%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -178,12 +177,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="群论学习笔记-3.子群 | SytaemannZ">
-      <meta itemprop="description" content="子群及其判定条件">
+      <meta itemprop="name" content="完全搞不懂的三角函数-2 | SytaemannZ">
+      <meta itemprop="description" content="与三角函数殊死搏斗的第二周">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          群论学习笔记-3.子群
+          完全搞不懂的三角函数-2
         </h1>
 
         <div class="post-meta-container">
@@ -193,9 +192,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-05-07 11:48:56 / Modified: 14:36:43" itemprop="dateCreated datePublished" datetime="2023-05-07T11:48:56+08:00">2023-05-07</time>
+      <time title="Created: 2023-06-03 20:34:27" itemprop="dateCreated datePublished" datetime="2023-06-03T20:34:27+08:00">2023-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-06-04 12:14:06" itemprop="dateModified" datetime="2023-06-04T12:14:06+08:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -203,18 +208,14 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/learning/" itemprop="url" rel="index"><span itemprop="name">learning</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/learning/Group-Theory/" itemprop="url" rel="index"><span itemprop="name">Group Theory</span></a>
+          <a href="/categories/problem-solving/" itemprop="url" rel="index"><span itemprop="name">problem solving</span></a>
         </span>
     </span>
 
   
 </div>
 
-            <div class="post-description">子群及其判定条件</div>
+            <div class="post-description">与三角函数殊死搏斗的第二周</div>
         </div>
       </header>
 
@@ -222,38 +223,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="关于子群"><a href="#关于子群" class="headerlink" title="关于子群"></a>关于子群</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>$G$是一个群，若$G$的一个子群$H$对$G$的运算构成一个群，则称$H$是$G$的一个子群，若$H\not&#x3D;G$，则$H$是$G$的一个真子群。<br>用$H\le G$表示$H$是$G$的子群，$H&lt;G$表示$H$是$G$的真子群。<br>任何群$G$都有两个明显的子群：</p>
-<ul>
-<li>由单位元构成的子群{$e$}，称为$G$的单位子群</li>
-<li>群$G$本身，称为$G$的平凡子群</li>
-</ul>
-<p>其他子群(若存在)称为$G$的非平凡子群。</p>
-<p>例如：</p>
-<ul>
-<li>加法群 $C&gt;R&gt;Q&gt;Z$</li>
-<li>乘法群 $C^*&gt;R^*&gt;Q^*$</li>
-<li>$n$元交错群$A_n$是$n$元对称群$S_n$的子群</li>
-<li>任意$n$元置换群都是$n$元对称群的子群</li>
-</ul>
-<h5 id="判定条件"><a href="#判定条件" class="headerlink" title="判定条件"></a>判定条件</h5><h6 id="基本判定条件"><a href="#基本判定条件" class="headerlink" title="基本判定条件"></a>基本判定条件</h6><p>$H$是群$G$的非空子集，$H$是$G$的子群的充要条件是：</p>
-<ul>
-<li>如果$a,b\in H$，则$ab\in H$</li>
-<li>如果$a\in H$，则$a^{-1}\in H$</li>
-</ul>
-<p>以上两个条件可以综合为一条：</p>
-<ul>
-<li>如果$a,b\in H$，则$ab^{-1}\in H$</li>
-</ul>
-<p>证明：令$b&#x3D;a$，则$aa^{-1}&#x3D;e\in H$，所以对$b\in H$，$eb^{-1}&#x3D;b^{-1}\in H$，即满足上述条件一，可得$b^{-1}\in H$，因此$a(b^{-1})^{-1}&#x3D;ab\in H$，满足上述条件二。</p>
-<h6 id="有限子群判定条件"><a href="#有限子群判定条件" class="headerlink" title="有限子群判定条件"></a>有限子群判定条件</h6><p>$H$是群$G$的有限非空子集，$H$是$G$的子群的充要条件是$H$对$G$的运算封闭，即：</p>
-<ul>
-<li>如果$a,b\in H$，则$ab\in H$</li>
-</ul>
-<p>这个条件去掉了基本条件中的条件二。事实上，由于$H$是有限的，必存在自然数$l,m$使$a^l&#x3D;a^m$且$l&gt;m+1$，于是$l-m-1$是正整数，则$a^{l-m-1}&#x3D;a^{-1}\in H$，由此就推出了基本条件中的条件二。</p>
-<h5 id="一些例子"><a href="#一些例子" class="headerlink" title="一些例子"></a>一些例子</h5><p>整数加法群的$Z$中任意一个元素$n$的一切倍数构成的集合记作$nZ$，是$Z$的子群：<br>$$nZ&#x3D;{kn\mid k&#x3D;0,\pm1,\pm2,\cdots}$$</p>
-<p>$a$是群$G$的元素，&lt;$a$&gt;表示$a$的所有方幂构成的集合。显然，&lt;$a$&gt;是$G$的子群：<br>称&lt;$a$&gt;为$G$的由$a$生成的循环子群，$a$称为它的生成元，&lt;$a$&gt;的阶等于$a$的阶。</p>
-<p>$Z(G)$表示群$G$中与所有元素都可交换的元素：$Z(G)&#x3D;${$a\mid ax&#x3D;xa,x\in G$}。显然$Z(G)$是群$G$的子群。<br>$Z(G)$称为群$G$的中心，$Z(G)$的元素称为群$G$的中心元素。若群$G$的中心是单位子群，则群$G$是无中心的；群$G$是交换群的充要条件是$Z(G)&#x3D;G$</p>
-<p>设$H_1,H_2$是$G$的两个子群，则$H_1,H_2$的交$H_1\cap H_2$是$G$的子群。</p>
+        <h4 id="三角函数题"><a href="#三角函数题" class="headerlink" title="三角函数题"></a>三角函数题</h4><h5 id="第一题-三角恒等变换"><a href="#第一题-三角恒等变换" class="headerlink" title="第一题(三角恒等变换)"></a>第一题(三角恒等变换)</h5><p>求证：$\tan25°\tan35°\tan85°&#x3D;\tan75°$</p>
+<p>这题关键是要注意到$25°&#x3D;60°-35°&#x3D;85°-60°$，从这里入手直接展开化简，就能得到：<br>$$<br>\begin{aligned}<br>&amp;\tan25°\tan(60°-25°)\tan(60°+25°)\\<br>&#x3D;&amp;\tan25°\cdot\frac{\tan60°-\tan25°}{1+\tan60°\tan25°}\cdot\frac{\tan60°+\tan25°}{1-\tan60°\tan25°}\\<br>&#x3D;&amp;\tan25°\cdot\frac{\tan^260°-\tan^225°}{1-\tan^260°\tan^225°}\\<br>&#x3D;&amp;\frac{\tan^325°-3\tan25°}{3\tan^225°-1}\\<br>\end{aligned}<br>$$<br>这恰好是三倍角公式：<br>$$\tan3\alpha&#x3D;\frac{\tan^3\alpha-3\tan\alpha}{3\tan^2\alpha-1}$$<br>于是可证原式$&#x3D;75°$<br>也可以分别考虑$\sin25°\sin35°\sin85°$和$\cos25°\cos35°\cos85°$，这样就可以使用$\sin^2\alpha-\sin^2\beta&#x3D;\sin(\alpha+\beta)\sin(\alpha-\beta)$，得到：<br>$$<br>\begin{aligned}<br>&amp;\sin25°\sin(60°-25°)\sin(60°+25°)\\<br>&#x3D;&amp;\sin25°(\sin^260°-\sin^225°)\\<br>&#x3D;&amp;-\sin^325°+\frac{3}{4}\sin25°\\<br>&#x3D;&amp;\frac{1}{4}\sin75°\\<br>\end{aligned}<br>$$<br>同理可得$\cos25°\cos35°\cos85°&#x3D;1&#x2F;4\cos75°$<br>从此题可以得到结论：<br>$$4\sin\alpha\sin(\frac{\pi}{3}+\alpha)\sin(\frac{\pi}{3}-\alpha)&#x3D;\sin3\alpha$$<br>$$4\cos\alpha\cos(\frac{\pi}{3}+\alpha)\cos(\frac{\pi}{3}-\alpha)&#x3D;\cos3\alpha$$<br>$$\tan\alpha\tan(\frac{\pi}{3}+\alpha)\tan(\frac{\pi}{3}-\alpha)&#x3D;\tan3\alpha$$</p>
+<h5 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h5><p>$\triangle ABC$中，$A,B,C$对边分别为$a,b,c$，$\sin A&#x3D;\cos B&#x3D;\tan C$</p>
+<h6 id="第一问"><a href="#第一问" class="headerlink" title="第一问"></a>第一问</h6><p>求$2A+C$</p>
+<p>题设等式给出了$\tan C$的范围$(0,1)$，由此可得$C\in(0,\pi&#x2F;4)$，于是$A+B&gt;3\pi&#x2F;4$，又由$\sin A&#x3D;\cos B$，易得$A-B&#x3D;\pi&#x2F;2$，所以$2A&#x3D;2B+\pi$，$C&#x3D;\pi-A-B&#x3D;\pi&#x2F;2-2B$，$2A+C&#x3D;3\pi&#x2F;2$<br>第一小问还是很简单的，关键在于对$C$的范围的基本把握。</p>
+<h6 id="第二问"><a href="#第二问" class="headerlink" title="第二问"></a>第二问</h6><p>求证：$c&gt;b&gt;\frac{2}{5}a$</p>
+<p>由(1)得：<br>$$<br>\begin{cases}<br>A&#x3D;B+\pi&#x2F;2\\<br>C&#x3D;\pi&#x2F;2-2B\\<br>\end{cases}<br>$$<br>分析：若$c&gt;b&gt;\frac{2}{5}a$，则：</p>
+<ol>
+<li>由$c&gt;b$ 得 $C&gt;B$<br> $\pi&#x2F;2-2B&gt;B\quad\Rightarrow\quad B&lt;\pi&#x2F;6$<br> $\sin B&lt;1&#x2F;2$</li>
+<li>由$b&gt;\frac{2}{5}a$ 得 $\sin B&gt;\frac{2}{5}\sin A&#x3D;\frac{2}{5}\cos B$<br> $\tan B&gt;\frac{2}{5}$<br> $\sin B&gt;\frac{2}{29}\sqrt{29}$</li>
+</ol>
+<p>由$\cos B&#x3D;\tan C$可得出关于$\sin B$的方程：<br>$$\cos B&#x3D;\tan(\frac{\pi}{2}-2B)&#x3D;\frac{1}{\tan2B}&#x3D;\frac{1-\tan^2B}{2\tan B}$$<br>$$2\sin^2B&#x3D;1-\tan^2B$$<br>$$\frac{\sin^2B}{1-\sin^2B}+2\sin B-1&#x3D;0$$<br>$$-2\sin^3B+2\sin^2B+2\sin B-1&#x3D;0$$<br>令$t&#x3D;\sin B\in(0,\sqrt{2}&#x2F;2)$：<br>$$f(t)&#x3D;-2t^3+2t^2+2t-1\quad t\in(0,\frac{\sqrt{2}}{2})$$<br>于是问题转化为求$f(t)&#x3D;0$的根的范围，那就很简单了<br>$$<br>\begin{align*}<br>&amp;f(\frac{1}{2})&#x3D;\frac{1}{4}&gt;0\\<br>&amp;f(\frac{2}{29}\sqrt{29})&#x3D;\frac{100\sqrt{29}}{841}-\frac{21}{29}&lt;0<br>\end{align*}<br>$$<br>显然函数在定义域连续，那么根据介值定理，$f(t)&#x3D;0$有一个根$t_0$满足$\frac{2}{29}\sqrt{29}&lt;t_0&lt;\frac{1}{2}$<br>即$\frac{2}{29}\sqrt{29}&lt;\sin B&lt;\frac{1}{2}$，于是得证。<br>(这里本应详细说明单调性，以证明$(0,\frac{2}{29}\sqrt{29})\cup(\frac{1}{2},\frac{\sqrt{2}}{2})$不存在根，但我懒得写了)</p>
+<h5 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h5><p>还是谈谈感想<br>对于三角恒等变换的难题，一定要多记公式，三倍角公式是必须记住的<br>还有就是要抓住特殊角和角度之间的关系，特别是和差关系<br>对于求范围和比大小，这次的题目又提供了一种思路，即结合函数，这在三个角可由一个角表示时较常用，需要注意。</p>
 
     </div>
 
@@ -263,22 +245,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/math/" rel="tag"># math</a>
-              <a href="/tags/group/" rel="tag"># group</a>
+              <a href="/tags/trigonometry/" rel="tag"># trigonometry</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/" rel="prev" title="e的多个表达式推导">
-                  <i class="fa fa-chevron-left"></i> e的多个表达式推导
+                <a href="/2023/05/27/%E5%AE%8C%E5%85%A8%E6%90%9E%E4%B8%8D%E6%87%82%E7%9A%84%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0-1/" rel="prev" title="完全搞不懂的三角函数-1">
+                  <i class="fa fa-chevron-left"></i> 完全搞不懂的三角函数-1
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/" rel="next" title="群论学习笔记-4.循环群">
-                  群论学习笔记-4.循环群 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
