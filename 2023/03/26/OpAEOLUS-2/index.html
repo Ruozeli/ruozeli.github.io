@@ -19,33 +19,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-    <meta name="description" content="OperationAEOLUS-从数学建模入手">
+    <meta name="description" content="OperationAEOLUS-分析论文中的数学模型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpAEOLUS-2.已有研究总结">
+<meta property="og:title" content="OpAEOLUS-2.数学模型">
 <meta property="og:url" content="https://shengyangzhang.github.io/2023/03/26/OpAEOLUS-2/index.html">
-<meta property="og:site_name" content="Asymatiza">
-<meta property="og:description" content="OperationAEOLUS-从数学建模入手">
+<meta property="og:site_name" content="Asymatiza&#39;s Blog">
+<meta property="og:description" content="OperationAEOLUS-分析论文中的数学模型">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2023/03/26/S9f8m2gOwCMF1UI.png">
-<meta property="og:image" content="https://s2.loli.net/2023/03/26/lYjPZNREmefu6WI.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/15/ENVRASfeqP8JHpZ.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/15/GOKmjfc1UCnFdEP.png">
 <meta property="og:image" content="https://s2.loli.net/2023/03/26/LgpG1hv7J3l4jsu.png">
 <meta property="article:published_time" content="2023-03-26T00:47:32.000Z">
-<meta property="article:modified_time" content="2023-06-06T11:34:37.655Z">
+<meta property="article:modified_time" content="2023-07-17T02:32:47.524Z">
 <meta property="article:author" content="Asymatiza">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2023/03/26/S9f8m2gOwCMF1UI.png">
+<meta name="twitter:image" content="https://s2.loli.net/2023/07/15/ENVRASfeqP8JHpZ.png">
 
 
 <link rel="canonical" href="https://shengyangzhang.github.io/2023/03/26/OpAEOLUS-2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/03/26/OpAEOLUS-2/","path":"2023/03/26/OpAEOLUS-2/","title":"OpAEOLUS-2.已有研究总结"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/03/26/OpAEOLUS-2/","path":"2023/03/26/OpAEOLUS-2/","title":"OpAEOLUS-2.数学模型"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>OpAEOLUS-2.已有研究总结 | Asymatiza</title>
+<title>OpAEOLUS-2.数学模型 | Asymatiza's Blog</title>
   
 
 
@@ -78,7 +78,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Asymatiza</p>
+      <p class="site-title">Asymatiza's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
@@ -118,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%81%A8%E3%81%82%E3%82%8B%E4%B8%8D%E7%A7%91%E5%AD%A6%E3%81%AE%E8%AE%BA%E6%96%87%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">とある不科学の论文分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E5%8F%97%E5%8A%9B%E5%88%86%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">简单受力分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%BD%A8%E8%BF%B9%E6%96%B9%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">简单轨迹方程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.3.</span> <span class="nav-text">较复杂的数学模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.</span> <span class="nav-text">更复杂的数学模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.6.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%81%A8%E3%81%82%E3%82%8B%E4%B8%8D%E7%A7%91%E5%AD%A6%E3%81%AE%E8%AE%BA%E6%96%87%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">とある不科学の论文分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%AE%80%E5%8D%95%E5%8F%97%E5%8A%9B%E5%88%86%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">1. 简单受力分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%AE%80%E5%8D%95%E8%BD%A8%E8%BF%B9%E6%96%B9%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">2. 简单轨迹方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.3.</span> <span class="nav-text">3. 较复杂的数学模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.</span> <span class="nav-text">4. 更复杂的数学模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">5. 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%8F%82%E8%80%83"><span class="nav-number">1.6.</span> <span class="nav-text">6. 参考</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -131,7 +131,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,17 +177,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Asymatiza">
+      <meta itemprop="name" content="Asymatiza's Blog">
       <meta itemprop="description" content="一个摆烂高中生的博客">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="OpAEOLUS-2.已有研究总结 | Asymatiza">
-      <meta itemprop="description" content="OperationAEOLUS-从数学建模入手">
+      <meta itemprop="name" content="OpAEOLUS-2.数学模型 | Asymatiza's Blog">
+      <meta itemprop="description" content="OperationAEOLUS-分析论文中的数学模型">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          OpAEOLUS-2.已有研究总结
+          OpAEOLUS-2.数学模型
         </h1>
 
         <div class="post-meta-container">
@@ -217,7 +217,7 @@
   
 </div>
 
-            <div class="post-description">OperationAEOLUS-从数学建模入手</div>
+            <div class="post-description">OperationAEOLUS-分析论文中的数学模型</div>
         </div>
       </header>
 
@@ -225,16 +225,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="とある不科学の论文分析"><a href="#とある不科学の论文分析" class="headerlink" title="とある不科学の论文分析"></a>とある不科学の论文分析</h4><p>分析已有研究对纸飞机的数学建模，<del>以及吐槽</del></p>
-<h5 id="简单受力分析"><a href="#简单受力分析" class="headerlink" title="简单受力分析"></a>简单受力分析</h5><p><img src="https://s2.loli.net/2023/03/26/S9f8m2gOwCMF1UI.png" alt="image.png|400"><br>如图, 可得<sup>[1][2]</sup>:<br>$$F_v&#x3D;F\sin\theta$$<br>$$F_L&#x3D;F_v\cos\theta&#x3D;F\sin\theta\cdot\cos\theta&#x3D;F\sin2\theta$$<br>$$F_D&#x3D;F_v\sin\theta&#x3D;F\sin\theta\cdot\sin\theta&#x3D;F\sin^2\theta$$<br>可知当$\theta&#x3D;45°$时$F_L$取到最大值，有文献直接由此得出抛射角为45°最佳，实则不可，纸飞机方向时刻发生变化，而这种分析仅针对瞬时，只能作为简单参考。</p>
-<h5 id="简单轨迹方程"><a href="#简单轨迹方程" class="headerlink" title="简单轨迹方程"></a>简单轨迹方程</h5><p>对纸飞机竖直平面中位置分析, 可得<sup>[3]</sup>:<br>$$<br>\begin{cases}<br>x(t)&#x3D;vt\cdot\cos\theta\\<br>y(t)&#x3D;vt\cdot\sin\theta-\frac{gt^2}{2}<br>\end{cases}<br>$$<br>可得纸飞机轨迹方程为:<br>$$y&#x3D;x\cdot\tan\theta-\frac{x^2g}{2v^2\cos^2\theta}$$<br>求导得:<br>$$y’&#x3D;\tan\theta-\frac{xg}{v^2\cos^2\theta}$$<br>当$v’&#x3D;0$时, $x&#x3D;\frac{v^2}{2g}\sin^2\theta$, 当$\theta&#x3D;45°$时, $x_{max}&#x3D;\frac{v^2}{2g}$, 由此得最佳抛射角为45°.</p>
+        <h2 id="とある不科学の论文分析"><a href="#とある不科学の论文分析" class="headerlink" title="とある不科学の论文分析"></a>とある不科学の论文分析</h2><p>分析已有研究对纸飞机的数学建模，<del>以及吐槽</del></p>
+<h3 id="1-简单受力分析"><a href="#1-简单受力分析" class="headerlink" title="1. 简单受力分析"></a>1. 简单受力分析</h3><img src="https://s2.loli.net/2023/07/15/ENVRASfeqP8JHpZ.png" width="50%" height="50%" />
+
+<p>如图, 可得<sup>[1][2]</sup>:<br>$$F_v&#x3D;F\sin\theta$$<br>$$F_L&#x3D;F_v\cos\theta&#x3D;F\sin\theta\cdot\cos\theta&#x3D;\frac{1}{2}F\sin2\theta$$<br>$$F_D&#x3D;F_v\sin\theta&#x3D;F\sin\theta\cdot\sin\theta&#x3D;F\sin^2\theta$$<br>可知当$\theta&#x3D;45°$时$F_L$取到最大值，有文献直接由此得出抛射角为45°最佳，实则不可，纸飞机方向时刻发生变化，而这种分析仅针对瞬时，只能作为简单参考。</p>
+<h3 id="2-简单轨迹方程"><a href="#2-简单轨迹方程" class="headerlink" title="2. 简单轨迹方程"></a>2. 简单轨迹方程</h3><p>对纸飞机竖直平面中位置分析, 可得<sup>[3]</sup>:<br>$$<br>\begin{cases}<br>x(t)&#x3D;vt\cdot\cos\theta\<br>y(t)&#x3D;vt\cdot\sin\theta-\frac{gt^2}{2}<br>\end{cases}<br>$$<br>可得纸飞机轨迹方程为:<br>$$y&#x3D;x\cdot\tan\theta-\frac{x^2g}{2v^2\cos^2\theta}$$<br>求导得:<br>$$y’&#x3D;\tan\theta-\frac{xg}{v^2\cos^2\theta}$$<br>当$v’&#x3D;0$时, $x&#x3D;\frac{v^2}{2g}\sin^2\theta$, 当$\theta&#x3D;45°$时, $x_{max}&#x3D;\frac{v^2}{2g}$, 由此得最佳抛射角为45°.</p>
 <p>这样的推导逻辑上没有问题，但考虑因素太少，把纸飞机飞行理想化为简单抛体运动，结果误差极大。对于纸飞机这种质量、初速度小的飞行体，考虑空气升阻力是必要的。</p>
-<h5 id="较复杂的数学模型"><a href="#较复杂的数学模型" class="headerlink" title="较复杂的数学模型"></a>较复杂的数学模型</h5><p><img src="https://s2.loli.net/2023/03/26/lYjPZNREmefu6WI.png" alt="image.png|400"><br>上升阶段y方向:<br>$$G+F_D\cdot\sin\theta-F_L\cdot\cos\theta&#x3D;ma_{1y}$$<br>$$v_{0y}&#x3D;v_0\cdot\sin\theta$$<br>$$v_{1y}&#x3D;v_{0y}-\int_{0}^{t_1} a_{1y}\cdot tdt$$<br>$$h&#x3D;h_0+\int_{0}^{t_1} v_{1y}\cdot tdt$$<br>下降阶段y方向:<br>$$G-F_D\cdot\sin\beta-F_L\cdot\cos\beta&#x3D;ma_{2y}$$<br>$$v_{2y}&#x3D;\int_{0}^{t_2} a_{2y}\cdot tdt$$<br>$$h&#x3D;\int_{0}^{t_2} v_{2y}\cdot tdt$$<br>上升阶段x方向:<br>$$F_D\cdot\cos\theta+F_L\cdot\sin\theta&#x3D;ma_{1x}$$<br>$$v_{0x}&#x3D;v_0\cdot\cos\theta$$<br>$$v_{1x}&#x3D;v_{0x}-\int_{0}^{t_1} a_{1x}\cdot tdt$$<br>$$s_1&#x3D;\int_{0}^{t_1} v_{1x}\cdot tdt$$<br>下降阶段x方向:<br>$$F_L\cdot\sin\beta-F_D\cdot\cos\beta&#x3D;ma_{2x}$$<br>$$v_{2x}&#x3D;\int_{0}^{t_2} a_{2x}\cdot tdt$$<br>$$s_2&#x3D;\int_{0}^{t_2} v_{2x}\cdot tdt$$<br>最终得到$s&#x3D;s_1+s_2$. <sup>[1]</sup> (部分过程有修改)<br>同时，分析过程可得轨迹大约是:<br><img src="https://s2.loli.net/2023/03/26/LgpG1hv7J3l4jsu.png" alt="image.png|400"><br>与现实情况基本符合</p>
+<h3 id="3-较复杂的数学模型"><a href="#3-较复杂的数学模型" class="headerlink" title="3. 较复杂的数学模型"></a>3. 较复杂的数学模型</h3><img src="https://s2.loli.net/2023/07/15/GOKmjfc1UCnFdEP.png" width="50%" height="50%" />
+
+<p>上升阶段y方向:<br>$$G+F_D\cdot\sin\theta-F_L\cdot\cos\theta&#x3D;ma_{1y}$$<br>$$v_{0y}&#x3D;v_0\cdot\sin\theta$$<br>$$v_{1y}&#x3D;v_{0y}-\int_{0}^{t_1} a_{1y}\cdot tdt$$<br>$$h&#x3D;h_0+\int_{0}^{t_1} v_{1y}\cdot tdt$$<br>下降阶段y方向:<br>$$G-F_D\cdot\sin\beta-F_L\cdot\cos\beta&#x3D;ma_{2y}$$<br>$$v_{2y}&#x3D;\int_{0}^{t_2} a_{2y}\cdot tdt$$<br>$$h&#x3D;\int_{0}^{t_2} v_{2y}\cdot tdt$$<br>上升阶段x方向:<br>$$F_D\cdot\cos\theta+F_L\cdot\sin\theta&#x3D;ma_{1x}$$<br>$$v_{0x}&#x3D;v_0\cdot\cos\theta$$<br>$$v_{1x}&#x3D;v_{0x}-\int_{0}^{t_1} a_{1x}\cdot tdt$$<br>$$s_1&#x3D;\int_{0}^{t_1} v_{1x}\cdot tdt$$<br>下降阶段x方向:<br>$$F_L\cdot\sin\beta-F_D\cdot\cos\beta&#x3D;ma_{2x}$$<br>$$v_{2x}&#x3D;\int_{0}^{t_2} a_{2x}\cdot tdt$$<br>$$s_2&#x3D;\int_{0}^{t_2} v_{2x}\cdot tdt$$<br>最终得到$s&#x3D;s_1+s_2$. <sup>[1]</sup> (部分过程有修改)<br>同时，分析过程可得轨迹大约是:<br><img src="https://s2.loli.net/2023/03/26/LgpG1hv7J3l4jsu.png" width="50%" height="50%" /><br>与现实情况基本符合</p>
 <p>此模型考虑因素较多，同时也较好理解，但未知变量多，且多次积分，难以计算。本次研究将主要参考此模型进行修改，得出更好的数学模型。</p>
-<h5 id="更复杂的数学模型"><a href="#更复杂的数学模型" class="headerlink" title="更复杂的数学模型"></a>更复杂的数学模型</h5><p>这是关注留空时间的数学模型<sup>[4]</sup>，<del>然而我看不懂</del>。<br>只能尽可能理解一下</p>
-<p>对于初速度:<br>$$v_x&#x3D;v\cdot\cos\alpha,\quad v_y&#x3D;v\cdot\sin\alpha$$<br>设上升到最大高度过程中水平与竖直方向分速度分别为$v_{x2},v_{y2}$, 则这一过程中水平与竖直方向分速度分别为:<br>$$\int(v_{x2}-v_0\cos\alpha)dt,\quad\int(v_{y2}-v_0\sin\alpha)dt$$<br>对于升力有:<br>$$F_L&#x3D;C_L\cdot\frac{1}{2}\rho V^2S&#x3D;[C_{L0}+\frac{\partial C_L}{\partial\alpha}\alpha]\frac{1}{2}\rho V^2S$$<br>对于阻力有:<br>$$F_D&#x3D;C_D\cdot\frac{1}{2}\rho V^2S&#x3D;[C_{D0}+\varepsilon C_L^2]\frac{1}{2}\rho V^2S$$<br>(偏微分+流体力学, 已经超越我的理解极限了)<br>得到推进力方程:<br>$$<br>\begin{cases}<br>F_x&#x3D;(C_T\cos\theta+C_x)\frac{1}{2}\rho(V_x^2+V_z^2)S\\<br>F_z&#x3D;(-C_T\sin\theta+C_z)\frac{1}{2}\rho(V_x^2+V_z^2)S+mg_0<br>\end{cases}<br>$$<br>(&#x2F;ﾟДﾟ)&#x2F;     $C_T$是什么???<br>如果四种力相互抵消，留空时间会更长:<br>$$\dot{s_1}&#x3D;\dot h&#x3D;v_0\cdot\sin\alpha,\quad\dot{s_2}&#x3D;\dot l&#x3D;v_0\cdot\cos\alpha$$<br>因此:<br>$$<br>\begin{bmatrix} \dot{s_1}\\ \dot{s_2} \end{bmatrix}<br>&#x3D;\begin{bmatrix} \dot{h}\\ \dot{l} \end{bmatrix}<br>&#x3D;\begin{bmatrix} v_0\cdot\sin\alpha\\ v_0\cdot\cos\alpha \end{bmatrix}<br>$$<br>(&#x2F;ﾟДﾟ)&#x2F; (&#x2F;ﾟДﾟ)&#x2F;     好吧我放弃了<del>(滚去补数学基础)</del></p>
-<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>谈一谈看了这些论文的感想。<br>这些论文都出自不很正规的刊物，看完可以感觉到内容水的成分比较多。出现了扯不相关内容凑字数，给出公式但全程没有用的情况。<br>看来这些论文都只能作为简单参考，具体问题还要自己分析。</p>
-<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p>[1]尚余祥. 利用理论力学知识对纸飞机飞行距离的研究[J]. 科技风, 2019, 7: 225-227<br>[2]高吉, 贾文太. 纸飞机投掷的数学模型[J]. 科技风, 2019, 9: 77<br>[3]董晓红, 康平. 纸飞机的飞行原理数学建模[J]. 科技风, 2019, 11: 83<br>[4]王微, 赵明程. 基于重心与投掷角度对纸飞机留空时间影响的分析[J]. 菏泽学院学报, 2022, 10: 10-12</p>
+<h3 id="4-更复杂的数学模型"><a href="#4-更复杂的数学模型" class="headerlink" title="4. 更复杂的数学模型"></a>4. 更复杂的数学模型</h3><p>这是关注留空时间的数学模型<sup>[4]</sup>，<del>然而我看不懂</del>。<br>只能尽可能理解一下</p>
+<p>对于初速度:<br>$$v_x&#x3D;v\cdot\cos\alpha,\quad v_y&#x3D;v\cdot\sin\alpha$$<br>设上升到最大高度过程中水平与竖直方向分速度分别为$v_{x2},v_{y2}$, 则这一过程中水平与竖直方向分速度分别为:<br>$$\int(v_{x2}-v_0\cos\alpha)dt,\quad\int(v_{y2}-v_0\sin\alpha)dt$$<br>对于升力有:<br>$$F_L&#x3D;C_L\cdot\frac{1}{2}\rho V^2S&#x3D;[C_{L0}+\frac{\partial C_L}{\partial\alpha}\alpha]\frac{1}{2}\rho V^2S$$<br>对于阻力有:<br>$$F_D&#x3D;C_D\cdot\frac{1}{2}\rho V^2S&#x3D;[C_{D0}+\varepsilon C_L^2]\frac{1}{2}\rho V^2S$$<br>(偏微分+流体力学, 已经超越我的理解极限了)<br>得到推进力方程:<br>$$<br>\begin{cases}<br>F_x&#x3D;(C_T\cos\theta+C_x)\frac{1}{2}\rho(V_x^2+V_z^2)S\\<br>F_z&#x3D;(-C_T\sin\theta+C_z)\frac{1}{2}\rho(V_x^2+V_z^2)S+mg_0<br>\end{cases}<br>$$<br>(&#x2F;ﾟДﾟ)&#x2F;     $C_T$是什么???<br>如果四种力相互抵消，留空时间会更长:<br>$$\dot{s_1}&#x3D;\dot h&#x3D;v_0\cdot\sin\alpha,\quad\dot{s_2}&#x3D;\dot l&#x3D;v_0\cdot\cos\alpha$$<br>因此:<br>$$<br>\begin{bmatrix} \dot{s_1}\\dot{s_2} \end{bmatrix}<br>&#x3D;\begin{bmatrix} \dot{h}\\dot{l} \end{bmatrix}<br>&#x3D;\begin{bmatrix} v_0\cdot\sin\alpha\\v_0\cdot\cos\alpha \end{bmatrix}<br>$$<br>(&#x2F;ﾟДﾟ)&#x2F; (&#x2F;ﾟДﾟ)&#x2F;     好吧我放弃了<del>(滚去补数学基础)</del></p>
+<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><p>谈一谈看了这些论文的感想。<br>这些论文都出自不很正规的刊物，看完可以感觉到内容水的成分比较多。出现了扯不相关内容凑字数，给出公式但全程没有用的情况。<br>看来这些论文都只能作为简单参考，具体问题还要自己分析。</p>
+<h3 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h3><p>[1]尚余祥. 利用理论力学知识对纸飞机飞行距离的研究[J]. 科技风, 2019, 7: 225-227<br>[2]高吉, 贾文太. 纸飞机投掷的数学模型[J]. 科技风, 2019, 9: 77<br>[3]董晓红, 康平. 纸飞机的飞行原理数学建模[J]. 科技风, 2019, 11: 83<br>[4]王微, 赵明程. 基于重心与投掷角度对纸飞机留空时间影响的分析[J]. 菏泽学院学报, 2022, 10: 10-12</p>
 
     </div>
 
