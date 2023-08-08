@@ -21,8 +21,8 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
     <meta name="description" content="容纳多个圆(不重叠)的三角形面积最小值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多个圆的最小外切三角形">
-<meta property="og:url" content="https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2/index.html">
+<meta property="og:title" content="多个圆的最小外切三角形-1">
+<meta property="og:url" content="https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/index.html">
 <meta property="og:site_name" content="Asymatiza&#39;s Blog">
 <meta property="og:description" content="容纳多个圆(不重叠)的三角形面积最小值">
 <meta property="og:locale" content="zh_CN">
@@ -37,21 +37,21 @@
 <meta property="og:image" content="https://s2.loli.net/2023/08/01/W7BK6tduSjimsgr.png">
 <meta property="og:image" content="https://s2.loli.net/2023/08/02/aK43wljYc9Z8qng.png">
 <meta property="article:published_time" content="2023-08-01T09:12:54.000Z">
-<meta property="article:modified_time" content="2023-08-02T07:15:26.811Z">
+<meta property="article:modified_time" content="2023-08-08T07:24:31.166Z">
 <meta property="article:author" content="Asymatiza">
 <meta property="article:tag" content="geometry">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2023/08/01/KVpRz4xoDi73ANg.png">
 
 
-<link rel="canonical" href="https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2/">
+<link rel="canonical" href="https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2/","path":"2023/08/01/多个圆的最小外切三角形/","title":"多个圆的最小外切三角形"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/","path":"2023/08/01/多个圆的最小外切三角形-1/","title":"多个圆的最小外切三角形-1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>多个圆的最小外切三角形 | Asymatiza's Blog</title>
+<title>多个圆的最小外切三角形-1 | Asymatiza's Blog</title>
   
 
 
@@ -124,7 +124,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">1. 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%80%E4%B8%AA%E5%9C%86"><span class="nav-number">2.</span> <span class="nav-text">2. 一个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A5%E6%A0%BC%E8%AF%81%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text">严格证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E7%9B%B4%E8%A7%82"><span class="nav-number">2.2.</span> <span class="nav-text">几何直观</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%B8%A4%E4%B8%AA%E5%9C%86"><span class="nav-number">3.</span> <span class="nav-text">3. 两个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80"><span class="nav-number">3.1.</span> <span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C"><span class="nav-number">3.2.</span> <span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83"><span class="nav-number">3.3.</span> <span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%B8%89%E4%B8%AA%E5%9C%86"><span class="nav-number">4.</span> <span class="nav-text">4. 三个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80-1"><span class="nav-number">4.1.</span> <span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C-1"><span class="nav-number">4.2.</span> <span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89"><span class="nav-number">4.3.</span> <span class="nav-text">情况三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83-1"><span class="nav-number">4.4.</span> <span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%9B%9B%E3%80%81%E4%BA%94%E3%80%81%E5%85%AD"><span class="nav-number">5.</span> <span class="nav-text">5. 四、五、六</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80-2"><span class="nav-number">5.1.</span> <span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C-2"><span class="nav-number">5.2.</span> <span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89-1"><span class="nav-number">5.3.</span> <span class="nav-text">情况三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-What-about-100%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">6. What about 100？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E4%B8%8D%E7%AD%89%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">7.</span> <span class="nav-text">7. 不等大的情况</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%9C%86"><span class="nav-number">2.</span> <span class="nav-text">一个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A5%E6%A0%BC%E8%AF%81%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text">严格证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E7%9B%B4%E8%A7%82"><span class="nav-number">2.2.</span> <span class="nav-text">几何直观</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E5%9C%86"><span class="nav-number">3.</span> <span class="nav-text">两个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80"><span class="nav-number">3.1.</span> <span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C"><span class="nav-number">3.2.</span> <span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83"><span class="nav-number">3.3.</span> <span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E5%9C%86"><span class="nav-number">4.</span> <span class="nav-text">三个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80-1"><span class="nav-number">4.1.</span> <span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C-1"><span class="nav-number">4.2.</span> <span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89"><span class="nav-number">4.3.</span> <span class="nav-text">情况三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83-1"><span class="nav-number">4.4.</span> <span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BA%94%E3%80%81%E5%85%AD"><span class="nav-number">5.</span> <span class="nav-text">四、五、六</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80-2"><span class="nav-number">5.1.</span> <span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C-2"><span class="nav-number">5.2.</span> <span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89-1"><span class="nav-number">5.3.</span> <span class="nav-text">情况三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-about-100%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">What about 100？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E7%AD%89%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">7.</span> <span class="nav-text">不等大的情况</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -137,7 +137,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2/">
+    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -188,12 +188,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="多个圆的最小外切三角形 | Asymatiza's Blog">
+      <meta itemprop="name" content="多个圆的最小外切三角形-1 | Asymatiza's Blog">
       <meta itemprop="description" content="容纳多个圆(不重叠)的三角形面积最小值">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          多个圆的最小外切三角形
+          多个圆的最小外切三角形-1
         </h1>
 
         <div class="post-meta-container">
@@ -227,23 +227,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h2><p>看到一个很有意思的问题：<br><em>把面积分别为1，2，3…99，100的100个圆平铺在一个三角形里，这个三角形至少有多大？ <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/612605604">https://www.zhihu.com/question/612605604</a></em></p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>看到一个很有意思的问题：<br><em>把面积分别为1，2，3…99，100的100个圆平铺在一个三角形里，这个三角形至少有多大？ <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/612605604">https://www.zhihu.com/question/612605604</a></em></p>
 <p>然后我就联想到了这个：<br><img src="https://s2.loli.net/2023/08/01/KVpRz4xoDi73ANg.png" width="50%" height="50%" /></p>
 <p>天知道这是怎么算出来的……</p>
-<p>虽然知道肯定解决不了这个问题，但觉得很有趣，就稍微研究一下。<br>由于大小不同的圆过于复杂，这里先考虑大小相等的圆。</p>
-<h2 id="2-一个圆"><a href="#2-一个圆" class="headerlink" title="2. 一个圆"></a>2. 一个圆</h2><h3 id="严格证明"><a href="#严格证明" class="headerlink" title="严格证明"></a>严格证明</h3><p>先考虑一个圆。<br>一个圆的外切三角形面积最小值很好求，设圆半径为$r$，三角形三个角为$A,B,C$，对边分别为$a,b,c$，于是$S&#x3D;1&#x2F;2\cdot r(a+b+c)$，同时可以用$r$和三个角表示三边：<br>$$<br>\begin{aligned}<br>a&#x3D;r\cot\frac{B}{2}+r\cot\frac{C}{2}\\<br>b&#x3D;r\cot\frac{A}{2}+r\cot\frac{C}{2}\\<br>c&#x3D;r\cot\frac{A}{2}+r\cot\frac{B}{2}<br>\end{aligned}<br>$$<br>所以$S&#x3D;r^2(\cot\frac{A}{2}+\cot\frac{B}{2}+\cot\frac{C}{2})$，余切函数在$(0,\pi&#x2F;2)$是凸函数，直接用琴生不等式就可以得到：<br>$$S_{min}&#x3D;3r^2\cot\frac{A+B+C}{6}&#x3D;3\sqrt{3}r^2$$<br>此时$A&#x3D;B&#x3D;C$，是等边三角形。</p>
+<p>这个问题的本质大概就是寻找多个圆的最小外切三角形(显然必须相切，不然就不能最小，且每个圆也最好是相切的)，在网上查了一下，没发现什么相关信息g感觉很有趣，那就稍微研究一下。<br>由于大小不同的圆过于复杂，这里先考虑大小相等的圆。</p>
+<h2 id="一个圆"><a href="#一个圆" class="headerlink" title="一个圆"></a>一个圆</h2><h3 id="严格证明"><a href="#严格证明" class="headerlink" title="严格证明"></a>严格证明</h3><p>先考虑一个圆。<br>一个圆的外切三角形面积最小值很好求，设圆半径为$r$，三角形三个角为$A,B,C$，对边分别为$a,b,c$，于是$S&#x3D;1&#x2F;2\cdot r(a+b+c)$，同时可以用$r$和三个角表示三边：<br>$$<br>\begin{aligned}<br>a&#x3D;r\cot\frac{B}{2}+r\cot\frac{C}{2}\\<br>b&#x3D;r\cot\frac{A}{2}+r\cot\frac{C}{2}\\<br>c&#x3D;r\cot\frac{A}{2}+r\cot\frac{B}{2}<br>\end{aligned}<br>$$<br>所以$S&#x3D;r^2(\cot\frac{A}{2}+\cot\frac{B}{2}+\cot\frac{C}{2})$，余切函数在$(0,\pi&#x2F;2)$是凸函数，直接用琴生不等式就可以得到：<br>$$S_{min}&#x3D;3r^2\cot\frac{A+B+C}{6}&#x3D;3\sqrt{3}r^2$$<br>此时$A&#x3D;B&#x3D;C$，是等边三角形。</p>
 <h3 id="几何直观"><a href="#几何直观" class="headerlink" title="几何直观"></a>几何直观</h3><p>虽然使用琴生不等式很简单，但似乎不易推广到多个圆的情况，所以我想到了一种借助几何直观的方法。<br>当然这种方法很不严格，只是投机取巧的做法罢了，谈不上证明。<br><img src="https://s2.loli.net/2023/08/01/nq7EfbFt2wZ58Lz.png" alt="image.png|400"><br>如图，固定两条切线$AC$和$AB$，观察第三条切线$BC$，不妨设$CD&gt;BD$。作圆的切线$MN$，且切点为$MN$中点，作$NE\parallel MB$。<br>显然$\triangle MDB\sim\triangle NDE$，因为$ND&gt;MD$，所以$S_{\triangle MDB}&lt;S_{\triangle NDE}$，那么$S_{\triangle MDB}&lt;S_{\triangle NDC}$，$S_{\triangle AMN}&lt;S_{\triangle ABC}$，可知$\triangle AMN$面积最小。由于对称性，三边切点都是中点时面积最小，此时外切三角形是等边三角形。</p>
-<h2 id="3-两个圆"><a href="#3-两个圆" class="headerlink" title="3. 两个圆"></a>3. 两个圆</h2><p>分成两种情况考虑，一是一边与两个圆相切，二是三边都只与一个圆相切。(至于为什么是两种，请显然。)</p>
+<h2 id="两个圆"><a href="#两个圆" class="headerlink" title="两个圆"></a>两个圆</h2><p>分成两种情况考虑，一是一边与两个圆相切，二是三边都只与一个圆相切。(至于为什么是两种，请显然。)</p>
 <h3 id="情况一"><a href="#情况一" class="headerlink" title="情况一"></a>情况一</h3><p>本来想直接建系算的，但计算太复杂，超出了我的能力范围。(算出来大概也求不了最值)<br>那就故技重施，取切点为中点的情况：<br><img src="https://s2.loli.net/2023/08/01/K1y3CEqXsVJfoUL.png" alt="image.png|400"><br>很容易就能看出此时三角形为等腰直角三角形，面积$S&#x3D;(6+4\sqrt{2})r^2\approx11.657r^2$。</p>
 <h3 id="情况二"><a href="#情况二" class="headerlink" title="情况二"></a>情况二</h3><p>还是一样的方法，但计算繁琐一些。<br><img src="https://s2.loli.net/2023/08/01/EeGd5YOIMtfcUZ9.png" alt="image.png|400"><br>设底边长为$2x$，根据勾股定理列方程：<br>$$(\sqrt{(3r)^2+x^2}+3r)^2+x^2&#x3D;(2\sqrt{(3r)^2+x^2-r^2})^2$$<br>解得$x&#x3D;\sqrt{\frac{1}{2}(3\sqrt{17}-5)}r$，于是可以算出面积：<br>$$S&#x3D;\frac{\sqrt{6\sqrt{17}-10}\cdot(\sqrt{17}+9)}{4}r^2\approx12.595r^2$$</p>
 <h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p>那么就可以对比面积了，显然第一种情况面积更小一些。于是得出结论：两个圆的最小外切三角形是等腰直角三角形，面积最小值$S&#x3D;(6+4\sqrt{2})r^2$。<br>虽然不能严格证明，但这确实是我找到的最小了。</p>
 <p>还有一个问题是：为什么情况一比情况二面积小？<br>两种情况都是等腰三角形，可以从中间切开考虑，得到两个直角三角形都包含了一个圆，情况二的空隙更大一些，直觉上说就是这样(唉说了跟没说一样)。</p>
 <p><strong>提出猜想1</strong>：情况一面积始终比情况二小，且两情况的差距会随圆个数的增加而增加。</p>
-<h2 id="4-三个圆"><a href="#4-三个圆" class="headerlink" title="4. 三个圆"></a>4. 三个圆</h2><p>这里要分3种情况考虑：</p>
+<h2 id="三个圆"><a href="#三个圆" class="headerlink" title="三个圆"></a>三个圆</h2><p>这里要分3种情况考虑：</p>
 <ol>
 <li>类似上述情况一</li>
 <li>类似上述情况二</li>
-<li>二维最密堆积式排列，外切等边三角形</li>
+<li>平面六角密堆积式排列，外切等边三角形</li>
 </ol>
 <p>从直觉来看，显然情况3是最小的，且情况1小于情况2，但我没有什么简单的比较方法，那就干脆全部算出来好了(顺便锻炼计算能力)。</p>
 <h3 id="情况一-1"><a href="#情况一-1" class="headerlink" title="情况一"></a>情况一</h3><p>直接建系如图，并设圆的半径为1.<br><img src="https://s2.loli.net/2023/08/01/5RgahsFXtyZDz8m.png" alt="image.png|400"><br>设$A$点坐标$(0,a)$，$B$点$(b,0)$，$AB$中点$C$坐标$(b&#x2F;2,a&#x2F;2)$，可得$AB$的解析式：<br>$$AB:y&#x3D;-\frac{a}{b}x+a$$<br>$AB$与圆在$C$点相切时，$OC\perp AB$，由此可以算出$OC$的解析式：<br>$$OC:y&#x3D;\frac{b}{a}x+\frac{a^2-b^2}{2a}$$<br>根据”$OC$过点$O$”和”$C$在圆$O$上”列出方程：<br>$$<br>\begin{align*}<br>2\cdot\frac{b}{a}+\frac{a^2-b^2}{2a}&#x3D;1\\<br>(\frac{1}{2}b-2)^2+(\frac{1}{2}a-1)^2&#x3D;1<br>\end{align*}<br>$$<br>整理一下就出现了喜闻乐见的一元四次方程：<br>$$x^4-12 x^3+49 x^2-80 x+48&#x3D;0$$<br>这、完全不会解。<br>没关系，还有Wolfram|Alpha，轻松得到答案为：<br>$$b&#x3D;\frac{1}{3} \left(\sqrt[3]{3 \sqrt{183}+62}+\sqrt[3]{62-3 \sqrt{183}}+8\right)\approx5.15276$$<br>继续代回式子，得到：<br>$$S&#x3D;ab\approx18.727$$<br>所以$S\approx18.727r^2$</p>
@@ -256,20 +256,20 @@
 <p>前10个三角形数为：1, 3, 6, 10, 15, 21, 28, 36, 45, 55</p>
 </div>
 
-<h2 id="5-四、五、六"><a href="#5-四、五、六" class="headerlink" title="5. 四、五、六"></a>5. 四、五、六</h2><p>经过以上的探究，总结出两条经验：</p>
+<h2 id="四、五、六"><a href="#四、五、六" class="headerlink" title="四、五、六"></a>四、五、六</h2><p>经过以上的探究，总结出两条经验：</p>
 <ol>
 <li>若某条线段仅与一个圆相切，尽量使切点在切线段的中点</li>
-<li>尽量排列紧密，最好以二维最密堆叠的形式排列</li>
+<li>尽量排列紧密，最好以平面六角密堆积式排列</li>
 </ol>
 <p>接下来对四、五、六个圆的情况进行分析。为方便起见，接下来默认$r&#x3D;1$。</p>
-<h3 id="情况一-2"><a href="#情况一-2" class="headerlink" title="情况一"></a>情况一</h3><p>六个圆用最密堆叠的形式排列，形成的外切三角形同时也可容纳四个或五个圆：<br><img src="https://s2.loli.net/2023/08/01/MBemtcdriaCq32w.png" alt="image.png|400"><br>这时候直接代公式就可以了，$k&#x3D;3$：<br>$$<br>\begin{aligned}<br>S&amp;&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6\\<br>&amp;&#x3D;9\sqrt{3}+18-6\sqrt{3}+4\sqrt{3}-6\\<br>&amp;&#x3D;12+7\sqrt{3}\\<br>&amp;\approx24.124<br>\end{aligned}<br>$$</p>
+<h3 id="情况一-2"><a href="#情况一-2" class="headerlink" title="情况一"></a>情况一</h3><p>六个圆用平面六角密堆积式排列，形成的外切三角形同时也可容纳四个或五个圆：<br><img src="https://s2.loli.net/2023/08/01/MBemtcdriaCq32w.png" alt="image.png|400"><br>这时候直接代公式就可以了，$k&#x3D;3$：<br>$$<br>\begin{aligned}<br>S&amp;&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6\\<br>&amp;&#x3D;9\sqrt{3}+18-6\sqrt{3}+4\sqrt{3}-6\\<br>&amp;&#x3D;12+7\sqrt{3}\\<br>&amp;\approx24.124<br>\end{aligned}<br>$$</p>
 <h3 id="情况二-2"><a href="#情况二-2" class="headerlink" title="情况二"></a>情况二</h3><p>对于四个或五个圆，还有另一种面积较小的情况如图，切点$C$为$AB$中点。<br><img src="https://s2.loli.net/2023/08/01/vBFcJgYLuhiwHxs.png" alt="image.png|400"><br>还是建系计算，思路与前述相同。<br>设$A(0,a)$，$B(b,0)$，可以列出方程：<br>$$<br>\begin{align*}<br>\frac{b}{a}+\frac{a^2-b^2}{2a}&#x3D;3\\<br>(\frac{1}{2}b-1)^2+(\frac{1}{2}a-3)^2&#x3D;1<br>\end{align*}<br>$$<br>根式解很复杂，所以就直接写近似结果了：$b\approx3.759$，$S\approx26.132&gt;24.124$</p>
-<p>情况一在空缺两位的情况下，空间利用率仍比情况二高，再一次展现了二维最密堆叠形式的优越性。事实上，观察情况二的图可知情况一等价于下层两圆移至两边，可以在底不变甚至减小的情况下减小高，如此能够减小面积就不显奇怪了。</p>
+<p>情况一在空缺两位的情况下，空间利用率仍比情况二高，再一次展现了平面六角密堆积式的优越性。事实上，观察情况二的图可知情况一等价于下层两圆移至两边，可以在底不变甚至减小的情况下减小高，如此能够减小面积就不显奇怪了。</p>
 <h3 id="情况三-1"><a href="#情况三-1" class="headerlink" title="情况三"></a>情况三</h3><p>当然，情况一虽排列合理，但终究空缺两位，对于四个圆，很容易发现更小的外切三角形，即图中左下的直角三角形：<br><img src="https://s2.loli.net/2023/08/01/W7BK6tduSjimsgr.png" alt="image.png|400"><br>观察图形可只此直角三角形恰为10个圆的最小外切三角形的一半，于是可以用前述方法先求大等边三角形的面积，除以2即为直角三角形面积：<br>$$<br>\begin{aligned}<br>S&amp;&#x3D;(\sqrt{3}n^2+(6-2\sqrt{3})n+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;(16\sqrt{3}+24-8\sqrt{3}+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;9+6\sqrt{3}\\<br>&amp;\approx19.392<br>\end{aligned}<br>$$</p>
 <p>对于像4这样可以形成等边三角形的一半的数，不妨称其为半三角形数。半三角形数就是三角形数减去分割线通过的圆，再除以二。由此可以得到半三角形数的公式：<br>$$<br>a&#x3D;\begin{cases}<br>n^2&#x2F;4,\quad n\to \rm even\\<br>(n^2-1)&#x2F;4,\quad n\to \rm odd<br>\end{cases}<br>$$<br>此时突然发现6也是半三角形数：$6&#x3D;(5^2-1)&#x2F;4$，于是作出6个圆的外切直角三角形：<br><img src="https://s2.loli.net/2023/08/02/aK43wljYc9Z8qng.png" alt="image.png|400"><br>然后用和前面一样的方法计算面积：<br>$$<br>\begin{aligned}<br>S&amp;&#x3D;(\sqrt{3}n^2+(6-2\sqrt{3})n+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;(25\sqrt{3}+30-10\sqrt{3}+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;12+9.5\sqrt{3}\\<br>&amp;\approx28.454<br>\end{aligned}<br>$$<br>明显比上面的情况一大。</p>
 <p>同时是三角形数和半三角形数的情况不多见，可通过解方程$n^2&#x2F;4&#x3D;k(k+1)&#x2F;2$或$(n^2-1)&#x2F;4&#x3D;k(k+1)&#x2F;2$得到。<br>1000以下共有如下几组解($n$表示半三角形层数，$k$表示三角形层数，$c$表示对应圆的个数)：<br>$$<br>\begin{align*}<br>n&#x3D;2,k&amp;&#x3D;1,c&#x3D;1\\<br>n&#x3D;12,k&amp;&#x3D;8,c&#x3D;36\\<br>n&#x3D;70,k&amp;&#x3D;49,c&#x3D;1225\\<br>n&#x3D;408,k&amp;&#x3D;288,c&#x3D;41616<br>\end{align*}<br>$$<br>或：<br>$$<br>\begin{align*}<br>n&#x3D;5,k&amp;&#x3D;3,c&#x3D;6\\<br>n&#x3D;29,k&amp;&#x3D;20,c&#x3D;210\\<br>n&#x3D;169,k&amp;&#x3D;119,c&#x3D;7140\\<br>n&#x3D;985,k&amp;&#x3D;696,c&#x3D;242556<br>\end{align*}<br>$$<br>除去相等的情况，三角形数和半三角形数分布很不均匀。两个三角形数之间的半三角形数分布不均，因此对于三角形数个圆，不能确定究竟是其排成的直角三角形，还是稍大于其的三角形数排成的等边三角形面积更小。<br>例如，4个圆排成的直角三角形面积小于6个圆排成的等边三角形，而9个圆排成的直角三角形面积(约39.249)大于10个圆排成的等边三角形(约38.785).<br><strong>提出猜想3</strong>：在猜想2的基础上，对于上述半三角形数个圆(不等于某个三角形数)，最小外切三角形可能为等边三角形的一半(带60°的直角三角形)，面积为：<br>$$S&#x3D;\frac{\sqrt{3}}{2}n^2+(3-\sqrt{3})n+2\sqrt{3}-3$$<br>也可能为稍大于其的三角形数排成的等边三角形，面积为：<br>$$S&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6$$<br>不需要考虑其他的情况。</p>
-<h2 id="6-What-about-100？"><a href="#6-What-about-100？" class="headerlink" title="6. What about 100？"></a>6. What about 100？</h2><p>虽然没有得到一般的结论(甚至特殊的结论也没有证明)，但对这个问题大致了解并提出猜想后，100个圆的情况也大致可以算出了。<br>100恰是半三角形数，于是根据猜想3，只需算100个圆排成的直角三角形面积和105个圆排成的等边三角形面积，分别为：<br>$$S_1&#x3D;\frac{\sqrt{3}}{2}n^2+(3-\sqrt{3})n+2\sqrt{3}-3&#x3D;57+182\sqrt{3}\approx372.233$$<br>$$S_2&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6&#x3D;78+172\sqrt{3}\approx375.913$$<br>大概就可以得到最小面积$S_1&#x3D;57+182\sqrt{3}\approx372.233$。</p>
-<h2 id="7-不等大的情况"><a href="#7-不等大的情况" class="headerlink" title="7. 不等大的情况"></a>7. 不等大的情况</h2><p>不等大的情况比等大的复杂很多，关键在于圆与圆相切的方式更多样，需要考虑的情况多得多。需要注意的是不能太高估空隙的容纳能力，本来我以为大圆相切产生的空隙足够将小圆全部容纳其内，结果发现面积为100、99、98的三个圆相切产生的空隙仅能容纳面积大约为2.369的小圆，面积为100、99、98、97的四个圆相切产生的空隙也只能至多容纳面积大约为16.7的圆。<br>对于这个问题我还完全没有思路，还得留到以后解决。</p>
+<h2 id="What-about-100？"><a href="#What-about-100？" class="headerlink" title="What about 100？"></a>What about 100？</h2><p>虽然没有得到一般的结论(甚至特殊的结论也没有证明)，但对这个问题大致了解并提出猜想后，100个圆的情况也大致可以算出了。<br>100恰是半三角形数，于是根据猜想3，只需算100个圆排成的直角三角形面积和105个圆排成的等边三角形面积，分别为：<br>$$S_1&#x3D;\frac{\sqrt{3}}{2}n^2+(3-\sqrt{3})n+2\sqrt{3}-3&#x3D;57+182\sqrt{3}\approx372.233$$<br>$$S_2&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6&#x3D;78+172\sqrt{3}\approx375.913$$<br>大概就可以得到最小面积$S_1&#x3D;57+182\sqrt{3}\approx372.233$。</p>
+<h2 id="不等大的情况"><a href="#不等大的情况" class="headerlink" title="不等大的情况"></a>不等大的情况</h2><p>不等大的情况比等大的复杂很多，关键在于圆与圆相切的方式更多样，需要考虑的情况多得多。需要注意的是不能太高估空隙的容纳能力，本来我以为大圆相切产生的空隙足够将小圆全部容纳其内，结果发现面积为100、99、98的三个圆相切产生的空隙仅能容纳面积大约为2.369的小圆，面积为100、99、98、97的四个圆相切产生的空隙也只能至多容纳面积大约为16.7的圆。<br>对于这个问题我还完全没有思路，还得留到以后解决。</p>
 
     </div>
 
@@ -291,6 +291,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/08/07/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-2/" rel="next" title="多个圆的最小外切三角形-2">
+                  多个圆的最小外切三角形-2 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
