@@ -19,28 +19,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-    <meta name="description" content="自然底数$e$的几种表达式">
+    <meta name="description" content="推导欧拉公式，并写出巴塞尔问题的一种解法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="$e$的多个表达式推导">
-<meta property="og:url" content="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/index.html">
+<meta property="og:title" content="从欧拉公式到巴塞尔问题">
+<meta property="og:url" content="https://shengyangzhang.github.io/2023/08/14/%E4%BB%8E%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E5%B0%94%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Asymatiza&#39;s Blog">
-<meta property="og:description" content="自然底数$e$的几种表达式">
+<meta property="og:description" content="推导欧拉公式，并写出巴塞尔问题的一种解法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-30T03:36:28.000Z">
-<meta property="article:modified_time" content="2023-08-14T05:18:01.535Z">
+<meta property="og:image" content="https://s2.loli.net/2023/08/14/97IqAruQLdSK8fj.png">
+<meta property="article:published_time" content="2023-08-14T09:10:12.000Z">
+<meta property="article:modified_time" content="2023-08-14T09:15:22.046Z">
 <meta property="article:author" content="Asymatiza">
 <meta property="article:tag" content="analysis">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/08/14/97IqAruQLdSK8fj.png">
 
 
-<link rel="canonical" href="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+<link rel="canonical" href="https://shengyangzhang.github.io/2023/08/14/%E4%BB%8E%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E5%B0%94%E9%97%AE%E9%A2%98/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/","path":"2023/04/30/e的多个表达式推导/","title":"$e$的多个表达式推导"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/08/14/%E4%BB%8E%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E5%B0%94%E9%97%AE%E9%A2%98/","path":"2023/08/14/从欧拉公式到巴塞尔问题/","title":"从欧拉公式到巴塞尔问题"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>$e$的多个表达式推导 | Asymatiza's Blog</title>
+<title>从欧拉公式到巴塞尔问题 | Asymatiza's Blog</title>
   
 
 
@@ -113,7 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">级数表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">极限表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%9A%84%E6%8E%A8%E5%B9%BF"><span class="nav-number">3.</span> <span class="nav-text">极限的推广</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">欧拉函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%BC%A6%E5%87%BD%E6%95%B0%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">正弦函数因式分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B4%E5%A1%9E%E5%B0%94%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">巴塞尔问题</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,7 +166,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/08/14/%E4%BB%8E%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E5%B0%94%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -177,12 +179,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="$e$的多个表达式推导 | Asymatiza's Blog">
-      <meta itemprop="description" content="自然底数$e$的几种表达式">
+      <meta itemprop="name" content="从欧拉公式到巴塞尔问题 | Asymatiza's Blog">
+      <meta itemprop="description" content="推导欧拉公式，并写出巴塞尔问题的一种解法">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          $e$的多个表达式推导
+          从欧拉公式到巴塞尔问题
         </h1>
 
         <div class="post-meta-container">
@@ -193,7 +195,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-30 11:36:28" itemprop="dateCreated datePublished" datetime="2023-04-30T11:36:28+08:00">2023-04-30</time>
+      <time title="Created: 2023-08-14 17:10:12" itemprop="dateCreated datePublished" datetime="2023-08-14T17:10:12+08:00">2023-08-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -208,7 +210,7 @@
   
 </div>
 
-            <div class="post-description">自然底数$e$的几种表达式</div>
+            <div class="post-description">推导欧拉公式，并写出巴塞尔问题的一种解法</div>
         </div>
       </header>
 
@@ -216,20 +218,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>最近在读小平邦彦先生的《微积分入门》，感觉作为入门书难度有些太高。两周下来终于(<del>大概</del>)看完了实数和函数的基础部分。书中关于自然底数$e$的几个表达式的推导很有意思，于是写本篇记录一些推导过程。</p>
-<h2 id="级数表达式"><a href="#级数表达式" class="headerlink" title="级数表达式"></a>级数表达式</h2><p>定理(1)：如果以级数$\sum_{n&#x3D;1}^{\infty}a_n$的项的绝对值作为项的级数$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛，则原级数收敛。<br>证明：设$s_n&#x3D;\sum_{k&#x3D;1}^{n}a_k$，$\sigma_n&#x3D;\sum_{k&#x3D;1}^{n}\vert a_k\vert$，则：<br>$$\vert s_n-s_m\vert&#x3D;\vert\sum_{k&#x3D;m+1}^n a_k\vert\le\sum_{k&#x3D;m+1}^n\vert a_k\vert&#x3D;\vert\sigma_n-\sigma_m\vert\quad (m&lt;n)$$<br>根据Cauchy判别法，若{$\sigma_n$}收敛，则{$s_n$}也收敛。<br>当$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛时，称级数$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。</p>
-<p>定理(2)：已知收敛级数$\sum_{n&#x3D;1}^{\infty}r_n,r_n&gt;0$，若存在自然数$m$使$n\ge m$时$\vert a_n\vert\le r_n$成立，则$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。<br>证明：设$n&gt;m$，则：<br>$$\sum_{k&#x3D;1}^{n}\vert a_k\vert\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{k&#x3D;m}^{n} r_k\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{n&#x3D;1}^{\infty} r_n&lt;+\infty$$<br>所以$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert&lt;+\infty$</p>
-<div class="admonition note"><p>幂级数：形如$\sum_{n=0}^{\infty}a_nx^n$的级数</p>
-</div>
-
-<p>考虑幂级数$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$，其中$x$为任意实数。设$m$为$m\ge2\vert x\vert$的自然数，则对$n\ge m$：<br>$$\frac{\vert x\vert^n}{n!}&#x3D;\frac{\vert x\vert^m}{m!}\cdot\frac{\vert x\vert}{m+1}\cdot\frac{\vert x\vert}{m+2}\cdots\frac{\vert x\vert}{n}\le\frac{2^m\vert x\vert^m}{m!}(\frac{1}{2})^n$$<br>设$M&#x3D;2^m\vert x\vert^m&#x2F;m!$，则：<br>$$\sum_{n&#x3D;0}^{\infty}M(\frac{1}{2})^n&#x3D;2M&lt;+\infty$$<br>根据定理(2)，$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$绝对收敛。</p>
-<div class="admonition note"><p>常使用收敛性已知的标准级数，如等比级数$\sum_{n=1}^{\infty}ar^n,0&lt;r&lt;1$，与级数$\sum_{n=1}^{\infty}a_n$进行比较，证明其收敛性</p>
-</div>
-
-<p>特别地，当$x&#x3D;1$时，上述级数和用$e$表示：<br>$$e&#x3D;\sum_{n&#x3D;0}^{\infty}\frac{1}{n!}\approx2.71828\cdots$$</p>
-<h2 id="极限表达式"><a href="#极限表达式" class="headerlink" title="极限表达式"></a>极限表达式</h2><p>$e$通常定义为极限$\lim_{n\to\infty}(1+1&#x2F;n)^n$，这与上述的级数表达式相等，但显然这种表达式收敛更慢。<br>证明$e&#x3D;\lim_{n\to\infty}(1+1&#x2F;n)^n$：<br>设$e_n&#x3D;(1+1&#x2F;n)^n$，则根据二项式定理：<br>$$e_n&#x3D;1+\frac{n}{1!}\frac{1}{n}+\frac{n(n-1)}{2!}\frac{1}{n^2}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\cdots+\frac{1}{n^n}$$<br>设$a_{n,k}&#x3D;\frac{n(n-1)\cdots(n-k+1)}{k!}\frac{1}{n^k}$，则：<br>$$e_n&#x3D;1+\sum_{k&#x3D;1}^{n}a_{n,k}$$<br>$$a_{n,k}&#x3D;\frac{1}{k!}(1-\frac{1}{n})(1-\frac{2}{n})\cdots(1-\frac{k-1}{n})$$<br>$$a_{n,k}&lt;a_{n+1,k}&lt;\frac{1}{k!}$$<br>所以：<br>$$e_n&lt;e_{n+1}&lt;1+\sum_{k&#x3D;1}^{\infty}\frac{1}{k!}&#x3D;e$$<br>{$e_n$}是单调递增数列且$\lim_{n\to\infty}e_n\le e$<br>因为$\lim_{n\to\infty}a_{n,k}&#x3D;1&#x2F;k!$，所以对任意自然数$m$：<br>$$\lim_{n\to\infty}e_n\ge\lim_{n\to\infty}(1+\sum_{k&#x3D;1}^{m}a_{n,k})&#x3D;1+\sum_{k&#x3D;1}^{m}\frac{1}{k!}&#x3D;e$$<br>所以：<br>$$\lim_{n\to\infty}e_n&#x3D;\lim_{n\to\infty}(1+\frac{1}{n})^n&#x3D;e$$</p>
-<h2 id="极限的推广"><a href="#极限的推广" class="headerlink" title="极限的推广"></a>极限的推广</h2><p>将上述极限中的自然数$n$换为实数$t$：<br>$$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$$<br>证明：取满足$n\le t&lt;n+1$的自然数$n$，则：<br>$$(1+\frac{1}{n+1})^n&lt;(1+\frac{1}{t})^t&lt;(1+\frac{1}{n})^{n+1}$$<br>当$t\to+\infty$时，$n\to\infty$，且：<br>$$\lim_{n\to\infty}(1+\frac{1}{n})^{n+1}&#x3D;\lim_{n\to\infty}(1+\frac{1}{n})^{n}(1+\frac{1}{n})&#x3D;e$$<br>$$\lim_{n\to\infty}(1+\frac{1}{n+1})^n&#x3D;\lim_{n\to\infty}(1+\frac{1}{n+1})^{n+1}&#x2F;(1+\frac{1}{n+1})&#x3D;e$$<br>所以$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$</p>
-<p>将$s&#x3D;t-1$代入原式可得：<br>$$\lim_{t\to+\infty}(1-\frac{1}{t})^{-t}&#x3D;\lim_{s\to+\infty}(1+\frac{1}{s})^s&#x3D;e$$<br>对于$x&gt;0$，令$s&#x3D;tx$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^{tx}&#x3D;\lim_{s\to+\infty}(1+\frac{x}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>对于$x&lt;0$，令$y&#x3D;-x,s&#x3D;ty$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1-\frac{1}{t})^{-tx}&#x3D;\lim_{s\to+\infty}(1-\frac{y}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>所以$e^x&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$</p>
+        <h2 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h2><p>《微积分入门》使用欧拉公式严格地定义了三角函数，这里只参考原书推导欧拉公式，不重新定义三角函数。</p>
+<p>定义复数$e&#x3D;\cos(\theta)+\mathrm{i}\sin(\theta)$，$\vert e\vert^2&#x3D;\cos^2(\theta)+\sin^2(\theta)&#x3D;1$。这个复数$e$并不是实际的数，而是表示一种变换，用这个复数来表示复平面的旋转：<br>$$R_e: z\to z’&#x3D;e\cdot z$$<br>需要确定的就是复数$e$关于角$\theta$的非三角函数形式的函数$e(\theta)$。<br>首先，旋转两次的复合可以用$e$的乘积表示，而对于旋转的角，则是相加，由此可得：<br>$$e(\theta+\varphi)&#x3D;e(\theta)\cdot e(\varphi)\quad(1)$$<br>令$\varphi&#x3D;0$，可得$e(\theta+0)&#x3D;e(\theta)\cdot e(0)$，于是得到：<br>$$e(0)&#x3D;1$$<br>令$\varphi&#x3D;-\theta$，可得$e(0)&#x3D;e(\theta)\cdot e(-\theta)$，于是得到：<br>$$e(-\theta)&#x3D;\frac{1}{e(\theta)}&#x3D;\overline{e(\theta)}$$<br>同时很容易得到：对于正整数$n$，$e(n\theta)&#x3D;e(\theta)^n$，所以：<br>$$e(\theta)&#x3D;e(\frac{\theta}{n})^n$$<br>当$n\to\infty$时，$\theta&#x2F;n\to0$，$e(\theta&#x2F;n)\to1$，令：<br>$$e(\frac{\theta}{n})&#x3D;1+\sigma_n,\quad\sigma_n\to0$$<br>则：<br>$$e(\theta)&#x3D;(1+\sigma_n)^n$$<br>此时，观察$1\cdot e(\theta&#x2F;n)&#x3D;e(\theta&#x2F;n)$：<br><img src="https://s2.loli.net/2023/08/14/97IqAruQLdSK8fj.png" alt="image.png|400"><br>可以看到，$e(\theta&#x2F;n)$很接近$1+(\theta&#x2F;n)\mathrm{i}$，于是设：<br>$$\sigma_n&#x3D;\frac{1}{n}(\tau_n+\theta\mathrm{i}),\quad\tau_n\to0$$<br>(加上一个很小的$\tau$是为了严格性)<br>于是得到：<br>$$e(\theta)&#x3D;(1+\frac{\theta\mathrm{i}}{n}+\frac{\tau}{n})^n&#x3D;(1+\frac{\theta\mathrm{i}}{n})^n(1+\frac{z_n}{n})^n$$<br>其中：<br>$$z_n&#x3D;\frac{\tau_n}{1+\theta\mathrm{i}&#x2F;n}\to0$$<br>引理1：对于复数列{$z_n$}，若$\lim_{n\to\infty}z_n&#x3D;0$，那么$\lim_{n\to\infty}(1+z_n&#x2F;n)^n&#x3D;1$。具体证明不再赘述，见《微积分入门》。<br>由此引理可得：<br>$$e(\theta)&#x3D;\lim_{n\to\infty}(1+\frac{\theta\mathrm{i}}{n})^n$$<br>可以证明此函数是绝对值为1的连续复值函数，且满足条件(1)，具体见《微积分入门》。<br>又由$e^z&#x3D;\lim_{n\to\infty}(1+z&#x2F;n)^n$，可得：<br>$$e(\theta)&#x3D;\lim_{n\to\infty}(1+\frac{\theta\mathrm{i}}{n})^n&#x3D;e^{\mathrm{i}\theta}&#x3D;\cos(\theta)+\mathrm{i}\sin(\theta)$$<br>这就是欧拉公式。</p>
+<p>因为$\lim_{n\to\infty}(1+z&#x2F;n)^n&#x3D;\sum_{n&#x3D;0}^{\infty}z^n&#x2F;n!$，所以：<br>$$e(\theta)&#x3D;1+\sum_{n&#x3D;1}^{\infty}\frac{(\mathrm{i}\theta)^n}{n!}&#x3D;1+\frac{\mathrm{i}\theta}{1!}-\frac{\theta^2}{2!}-\frac{\mathrm{i}\theta^3}{3!}+\frac{\theta^4}{4!}+\cdots$$<br>很容易得到正余弦函数的泰勒展开：<br>$$<br>\begin{cases}<br>\cos(\theta)&#x3D;1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\frac{\theta^6}{6!}+\cdots\\<br>\sin(\theta)&#x3D;\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\frac{\theta^7}{7!}+\cdots<br>\end{cases}<br>$$</p>
+<h2 id="正弦函数因式分解"><a href="#正弦函数因式分解" class="headerlink" title="正弦函数因式分解"></a>正弦函数因式分解</h2><p>因为$\sin(\pi)&#x3D;0$，所以可以将正弦函数因式分解为：<br>$$\sin(x)&#x3D;ax(x+\pi)(x-\pi)(x+2\pi)(x-2\pi)\cdots$$<br>注意到极限：<br>$$\lim_{x\to0}\frac{\sin(x)}{x}&#x3D;1$$<br>于是将上式两边除以$x$并取极限：<br>$$1&#x3D;a\pi(-\pi)(2\pi)(-2\pi)\cdots$$<br>所以：<br>$$a&#x3D;\frac{1}{\pi(-\pi)(2\pi)(-2\pi)\cdots}$$<br>代回原式：<br>$$\sin(x)&#x3D;x(1+\frac{x}{\pi})(1-\frac{x}{\pi})(1+\frac{x}{2\pi})(1-\frac{x}{2\pi})\cdots$$</p>
+<h2 id="巴塞尔问题"><a href="#巴塞尔问题" class="headerlink" title="巴塞尔问题"></a>巴塞尔问题</h2><p>巴塞尔问题即为求如下级数的值：<br>$$\sum_{n&#x3D;1}^{\infty}\frac{1}{n^2}&#x3D;1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots$$<br>这个问题有很多解法，这里写一种使用正弦函数的解法。</p>
+<p>现在，有两个正弦函数的表达式：<br>$$<br>\begin{aligned}<br>\sin(x)&#x3D;&amp;x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots\\<br>\sin(x)&#x3D;&amp;x(1+\frac{x}{\pi})(1-\frac{x}{\pi})(1+\frac{x}{2\pi})(1-\frac{x}{2\pi})\cdots<br>\end{aligned}<br>$$<br>将下式展开：<br>$$<br>\begin{aligned}<br>\sin(x)&#x3D;&amp;x(1+\frac{x}{\pi})(1-\frac{x}{\pi})(1+\frac{x}{2\pi})(1-\frac{x}{2\pi})\cdots\\<br>&#x3D;&amp;x(1-\frac{x^2}{\pi^2})(1-\frac{x^2}{4\pi^2})(1-\frac{x^2}{9\pi^2})\cdots\<br>&#x3D;&amp;<a href="1-%5Cfrac%7Bx%5E2%7D%7B16%5Cpi%5E2%7D">x-(\frac{x^3}{\pi^2}+\frac{x^3}{4\pi^2}+\frac{x^3}{9\pi^2})+(\frac{x^5}{4\pi^4}+\frac{x^5}{9\pi^4}+\frac{x^5}{36\pi^4})-\frac{x^7}{36\pi^6}</a>\cdots\<br>&#x3D;&amp;x-\sum_{n&#x3D;1}^{\infty}\frac{x^3}{n^2\pi}+ax^5-bx^7+\cdots<br>\end{aligned}<br>$$<br>比较$x$的次数可得到等式：<br>$$-\frac{x^3}{3!}&#x3D;-\frac{x^3}{6}&#x3D;-\sum_{n&#x3D;1}^{\infty}\frac{x^3}{n^2\pi}$$<br>于是得到：<br>$$\sum_{n&#x3D;1}^{\infty}\frac{1}{n^2}&#x3D;1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots&#x3D;\frac{\pi^2}{6}$$</p>
 
     </div>
 
@@ -246,14 +240,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/04/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" rel="prev" title="群论学习笔记-2.置换群">
-                  <i class="fa fa-chevron-left"></i> 群论学习笔记-2.置换群
+                <a href="/2023/08/07/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-2/" rel="prev" title="多个圆的最小外切三角形-2">
+                  <i class="fa fa-chevron-left"></i> 多个圆的最小外切三角形-2
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/" rel="next" title="群论学习笔记-3.子群">
-                  群论学习笔记-3.子群 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
