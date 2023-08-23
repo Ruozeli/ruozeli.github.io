@@ -27,7 +27,7 @@
 <meta property="og:description" content="与三角函数殊死搏斗的第二周">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-03T12:34:27.000Z">
-<meta property="article:modified_time" content="2023-08-01T02:07:17.250Z">
+<meta property="article:modified_time" content="2023-08-18T14:41:38.049Z">
 <meta property="article:author" content="Asymatiza">
 <meta property="article:tag" content="trigonometry">
 <meta name="twitter:card" content="summary">
@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -137,7 +137,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -217,7 +217,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="第一题-三角恒等变换"><a href="#第一题-三角恒等变换" class="headerlink" title="第一题(三角恒等变换)"></a>第一题(三角恒等变换)</h2><p>求证：$\tan25°\tan35°\tan85°&#x3D;\tan75°$</p>
-<p>这题关键是要注意到$25°&#x3D;60°-35°&#x3D;85°-60°$，从这里入手直接展开化简，就能得到：<br>$$<br>\begin{aligned}<br>&amp;\tan25°\tan(60°-25°)\tan(60°+25°)\\<br>&#x3D;&amp;\tan25°\cdot\frac{\tan60°-\tan25°}{1+\tan60°\tan25°}\cdot\frac{\tan60°+\tan25°}{1-\tan60°\tan25°}\\<br>&#x3D;&amp;\tan25°\cdot\frac{\tan^260°-\tan^225°}{1-\tan^260°\tan^225°}\\<br>&#x3D;&amp;\frac{\tan^325°-3\tan25°}{3\tan^225°-1}\\<br>\end{aligned}<br>$$<br>这恰好是三倍角公式：<br>$$\tan3\alpha&#x3D;\frac{\tan^3\alpha-3\tan\alpha}{3\tan^2\alpha-1}$$<br>于是可证原式$&#x3D;75°$<br>也可以分别考虑$\sin25°\sin35°\sin85°$和$\cos25°\cos35°\cos85°$，这样就可以使用$\sin^2\alpha-\sin^2\beta&#x3D;\sin(\alpha+\beta)\sin(\alpha-\beta)$，得到：<br>$$<br>\begin{aligned}<br>&amp;\sin25°\sin(60°-25°)\sin(60°+25°)\\<br>&#x3D;&amp;\sin25°(\sin^260°-\sin^225°)\\<br>&#x3D;&amp;-\sin^325°+\frac{3}{4}\sin25°\\<br>&#x3D;&amp;\frac{1}{4}\sin75°\\<br>\end{aligned}<br>$$<br>同理可得$\cos25°\cos35°\cos85°&#x3D;1&#x2F;4\cos75°$<br>从此题可以得到结论：<br>$$4\sin\alpha\sin(\frac{\pi}{3}+\alpha)\sin(\frac{\pi}{3}-\alpha)&#x3D;\sin3\alpha$$<br>$$4\cos\alpha\cos(\frac{\pi}{3}+\alpha)\cos(\frac{\pi}{3}-\alpha)&#x3D;\cos3\alpha$$<br>$$\tan\alpha\tan(\frac{\pi}{3}+\alpha)\tan(\frac{\pi}{3}-\alpha)&#x3D;\tan3\alpha$$</p>
+<p>这题关键是要注意到$25°&#x3D;60°-35°&#x3D;85°-60°$，从这里入手直接展开化简，就能得到：<br>$$<br>\begin{aligned}<br>&amp;\tan25°\tan(60°-25°)\tan(60°+25°)\\<br>&#x3D;&amp;\tan25°\cdot\frac{\tan60°-\tan25°}{1+\tan60°\tan25°}\cdot\frac{\tan60°+\tan25°}{1-\tan60°\tan25°}\\<br>&#x3D;&amp;\tan25°\cdot\frac{\tan^260°-\tan^225°}{1-\tan^260°\tan^225°}\\<br>&#x3D;&amp;\frac{\tan^325°-3\tan25°}{3\tan^225°-1}\\<br>\end{aligned}<br>$$<br>这恰好是三倍角公式：<br>$$\tan3\alpha&#x3D;\frac{\tan^3\alpha-3\tan\alpha}{3\tan^2\alpha-1}$$<br>于是可证原式$&#x3D;\tan75°$<br>也可以分别考虑$\sin25°\sin35°\sin85°$和$\cos25°\cos35°\cos85°$，这样就可以使用$\sin^2\alpha-\sin^2\beta&#x3D;\sin(\alpha+\beta)\sin(\alpha-\beta)$，得到：<br>$$<br>\begin{aligned}<br>&amp;\sin25°\sin(60°-25°)\sin(60°+25°)\\<br>&#x3D;&amp;\sin25°(\sin^260°-\sin^225°)\\<br>&#x3D;&amp;-\sin^325°+\frac{3}{4}\sin25°\\<br>&#x3D;&amp;\frac{1}{4}\sin75°\\<br>\end{aligned}<br>$$<br>同理可得$\cos25°\cos35°\cos85°&#x3D;1&#x2F;4\cos75°$<br>从此题可以得到结论：<br>$$4\sin\alpha\sin(\frac{\pi}{3}+\alpha)\sin(\frac{\pi}{3}-\alpha)&#x3D;\sin3\alpha$$<br>$$4\cos\alpha\cos(\frac{\pi}{3}+\alpha)\cos(\frac{\pi}{3}-\alpha)&#x3D;\cos3\alpha$$<br>$$\tan\alpha\tan(\frac{\pi}{3}+\alpha)\tan(\frac{\pi}{3}-\alpha)&#x3D;\tan3\alpha$$</p>
 <h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p>$\triangle ABC$中，$A,B,C$对边分别为$a,b,c$，$\sin A&#x3D;\cos B&#x3D;\tan C$</p>
 <h3 id="第一问"><a href="#第一问" class="headerlink" title="第一问"></a>第一问</h3><p>求$2A+C$</p>
 <p>题设等式给出了$\tan C$的范围$(0,1)$，由此可得$C\in(0,\pi&#x2F;4)$，于是$A+B&gt;3\pi&#x2F;4$，又由$\sin A&#x3D;\cos B$，易得$A-B&#x3D;\pi&#x2F;2$，所以$2A&#x3D;2B+\pi$，$C&#x3D;\pi-A-B&#x3D;\pi&#x2F;2-2B$，$2A+C&#x3D;3\pi&#x2F;2$<br>第一小问还是很简单的，关键在于对$C$的范围的基本把握。</p>
