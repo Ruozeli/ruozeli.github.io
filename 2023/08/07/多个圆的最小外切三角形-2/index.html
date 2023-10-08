@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://s2.loli.net/2023/08/07/bYxXFvcRi2ZqU8Q.png">
 <meta property="og:image" content="https://s2.loli.net/2023/08/08/UTvVbp6fR2uc8Eg.png">
 <meta property="article:published_time" content="2023-08-07T02:43:28.000Z">
-<meta property="article:modified_time" content="2023-09-16T07:00:03.484Z">
+<meta property="article:modified_time" content="2023-10-07T14:59:29.466Z">
 <meta property="article:author" content="Asymatiza">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="geometry">
@@ -124,7 +124,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9B%9E%E9%A1%BE"><span class="nav-text">1. 回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AF%B9%E6%95%B0%E5%88%97%E7%9A%84%E6%8E%A2%E7%A9%B6"><span class="nav-text">2. 对数列的探究</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E7%AD%89%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">相等的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E9%9D%A2%E7%A7%AF"><span class="nav-text">比较面积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9B%9E%E5%BD%92%E5%87%A0%E4%BD%95"><span class="nav-text">3. 回归几何</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9B%9E%E9%A1%BE"><span class="nav-text">1. 回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AF%B9%E6%95%B0%E5%88%97%E7%9A%84%E6%8E%A2%E7%A9%B6"><span class="nav-text">2. 对数列的探究</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E7%AD%89%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">相等的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%80%92%E6%8E%A8"><span class="nav-text">一些递推</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E9%9D%A2%E7%A7%AF"><span class="nav-text">比较面积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9B%9E%E5%BD%92%E5%87%A0%E4%BD%95"><span class="nav-text">3. 回归几何</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -137,7 +137,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -240,41 +240,9 @@
 <h3 id="相等的情况"><a href="#相等的情况" class="headerlink" title="相等的情况"></a>相等的情况</h3><p>要研究两个数列数值的大小关系，可以从某一个相等的值开始考虑。<br>设$a_k&#x3D;b_n$，则可以得到$n$与$k$的关系：$① n&#x3D;\sqrt{2k^2+2k}$或$②n&#x3D;\sqrt{2k^2+2k+1}$，这两个式子包含了$n$的奇偶性信息，由于$k$是整数，①式得到的$n$必然是偶数，②式得到的$n$必然是奇数。但是两式中$k$的奇偶性没有限制，前4组$n$与$k$为：<br>$$<br>\begin{align*}<br>5&amp;&#x3D;\sqrt{2\times3^2+2\times3+1}\\<br>12&amp;&#x3D;\sqrt{2\times8^2+2\times8}\\<br>29&amp;&#x3D;\sqrt{2\times20^2+2\times20+1}\\<br>70&amp;&#x3D;\sqrt{2\times49^2+2\times49}<br>\end{align*}<br>$$<br>整体观察数据，发现<br>$$<br>\begin{align*}<br>2\nmid n,\quad2\nmid k\\<br>2\mid n,\quad2\mid k\\<br>2\nmid n,\quad2\mid k\\<br>2\mid n,\quad2\nmid k<br>\end{align*}<br>$$<br>这4种情况周期性出现。</p>
 <img src="https://s2.loli.net/2023/08/07/fgH7ZCil2QOdXAj.png" width="75%" height="75%" />
 如图，$\sqrt{2x^2+2x}$和$\sqrt{2x^2+2x+1}$是$\sqrt2(x+1/2)$的两条渐近线，而一组$n$与$k$就表示这两条渐近线上的一个整点(整点$(1,2)$不算)。这似乎与$\sqrt2$的连分数表示有关系，结论应该可以用相关知识证明，但我对数论了解不多，就不继续了。
-显然，由于两条渐近线上的整点是无穷多的，$a_k=b_n$的数量也是**无穷的**，但出现间隔越来越大。
-### 一些递推
-当$a_k=b_n$时，写出$n$和$k$关于$a_k$和$b_n$的关系式：
-$$k=\sqrt{2a_k+1/4}-1/2$$
-$$
-n=\begin{cases}
-2\sqrt{b_n},\quad 2\mid n\\\\
-2\sqrt{b_n+1/4},\quad 2\nmid n
-\end{cases}
-$$
-代入递推式：
-$$a_{k+1}=a_k+\sqrt{2a_k+1/4}+1/2$$
-$$
-b_{n+1}=\begin{cases}
-b_n+\sqrt{b_n},\quad 2\mid n\\\\
-b_n+\sqrt{b_n+1/4}+1/2,\quad 2\nmid n
-\end{cases}
-$$
-因为$a_k=b_n$，所以$\sqrt{2a_k+1/4}+1/2>\sqrt{b_n}$，$\sqrt{2a_k+1/4}+1/2>\sqrt{b_n+1/4}+1/2$，可知$b_{n+1}<a_{k+1}$。将这个结果再代回递推式，又可以得到$b_{n+2}<a_{k+2}$。当然，这些都是显而易见的，比较$b_{n+2}$和$a_{k+1}$的大小则计算稍繁琐，
-$$
-b_{n+2}=\begin{cases}
-b_n+\sqrt{b_n}+\sqrt{b_n+\sqrt{b_n}+1/4}+1/2,\quad 2\mid n\\\\
-b_n+\sqrt{b_n+1/4}+\sqrt{b_n+\sqrt{b_n+1/4}+1/2}+1/2,\quad 2\nmid n
-\end{cases}
-$$
-因为$a_k=b_n>0$，所以：
-$$
-\begin{align*} 
-\sqrt{2a_k+1/4}&<\sqrt{b_n}+\sqrt{b_n+\sqrt{b_n}+1/4}\\\\
-\sqrt{2a_k+1/4}&<\sqrt{b_n+1/4}+\sqrt{b_n+\sqrt{b_n+1/4}+1/2}
-\end{align*}
-$$
-所以$b_{n+2}>a_{k+1}$。
-若条件改为$a_k<b_n$，根据上式仍能得到$b_{n+2}>a_{k+1}$，于是可知**不存在2个三角形数之间存在3个半三角形数的情况**，即2个三角形数之间存在1至2个半三角形数。
+显然，由于两条渐近线上的整点是无穷多的，$a_k=b_n$的数量也是无穷的，但出现间隔越来越大。
 
+<h3 id="一些递推"><a href="#一些递推" class="headerlink" title="一些递推"></a>一些递推</h3><p>当$a_k&#x3D;b_n$时，写出$n$和$k$关于$a_k$和$b_n$的关系式：<br>$$k&#x3D;\sqrt{2a_k+1&#x2F;4}-1&#x2F;2$$<br>$$<br>n&#x3D;\begin{cases}<br>2\sqrt{b_n},\quad 2\mid n\\<br>2\sqrt{b_n+1&#x2F;4},\quad 2\nmid n<br>\end{cases}<br>$$<br>代入递推式：<br>$$a_{k+1}&#x3D;a_k+\sqrt{2a_k+1&#x2F;4}+1&#x2F;2$$<br>$$<br>b_{n+1}&#x3D;\begin{cases}<br>b_n+\sqrt{b_n},\quad 2\mid n\\<br>b_n+\sqrt{b_n+1&#x2F;4}+1&#x2F;2,\quad 2\nmid n<br>\end{cases}<br>$$<br>因为$a_k&#x3D;b_n$，所以$\sqrt{2a_k+1&#x2F;4}+1&#x2F;2&gt;\sqrt{b_n}$，$\sqrt{2a_k+1&#x2F;4}+1&#x2F;2&gt;\sqrt{b_n+1&#x2F;4}+1&#x2F;2$，可知$b_{n+1}&lt;a_{k+1}$。将这个结果再代回递推式，又可以得到$b_{n+2}&lt;a_{k+2}$。当然，这些都是显而易见的，比较$b_{n+2}$和$a_{k+1}$的大小则计算稍繁琐，<br>$$<br>b_{n+2}&#x3D;\begin{cases}<br>b_n+\sqrt{b_n}+\sqrt{b_n+\sqrt{b_n}+1&#x2F;4}+1&#x2F;2,\quad 2\mid n\\<br>b_n+\sqrt{b_n+1&#x2F;4}+\sqrt{b_n+\sqrt{b_n+1&#x2F;4}+1&#x2F;2}+1&#x2F;2,\quad 2\nmid n<br>\end{cases}<br>$$<br>因为$a_k&#x3D;b_n&gt;0$，所以：<br>$$<br>\begin{align*}<br>\sqrt{2a_k+1&#x2F;4}&amp;&lt;\sqrt{b_n}+\sqrt{b_n+\sqrt{b_n}+1&#x2F;4}\\<br>\sqrt{2a_k+1&#x2F;4}&amp;&lt;\sqrt{b_n+1&#x2F;4}+\sqrt{b_n+\sqrt{b_n+1&#x2F;4}+1&#x2F;2}<br>\end{align*}<br>$$<br>所以$b_{n+2}&gt;a_{k+1}$。<br>若条件改为$a_k&lt;b_n$，根据上式仍能得到$b_{n+2}&gt;a_{k+1}$，于是可知<strong>不存在2个三角形数之间存在3个半三角形数的情况</strong>，即2个三角形数之间存在1至2个半三角形数。</p>
 <p>之后可继续代回递推式计算，比较大小，但计算太复杂，就不算下去了。<br>直接观察数据可知，当$k&#x3D;3$，$n&#x3D;5$时，<br>$$<br>\begin{align*}<br>a_k&#x3D;b_n\\<br>a_k&lt;b_{n+1}&lt;a_{k+1}\\<br>a_{k+1}&lt;b_{n+2}&lt;a_{k+2}\\<br>a_{k+2}&lt;b_{n+3}&lt;\textcolor{red}{b_{n+4}}&lt;a_{k+3}\\<br>\cdots<br>\end{align*}<br>$$<br>对其他满足$a_k&#x3D;b_n$的$k$和$n$，结果也大致如此，这样的规律是否恒成立？何时2个三角形数之间存在2个半三角形数？<br>比对面积大小，发现当2个三角形数之间存在2个半三角形数时，较小的半三角形数对应面积小于大三角形数对应面积，而较大的半三角形数对应面积大于大三角形数对应面积，是否必然如此？<br>这些问题留到以后考虑吧。</p>
 <h3 id="比较面积"><a href="#比较面积" class="headerlink" title="比较面积"></a>比较面积</h3><p>接下来写出$S_k$和$S_n$与$c$的关系式。<br>若$c&#x3D;a_k&#x3D;k(k+1)&#x2F;2$，则$k&#x3D;\sqrt{2a_k+1&#x2F;4}-1&#x2F;2$，代入到面积公式中：<br>$$S_k&#x3D;2\sqrt3a_k+(6-3\sqrt3)\sqrt{2a_k+1&#x2F;4}+11\sqrt3&#x2F;2-9$$<br>若$c&#x3D;b_n$，则<br>$$<br>n&#x3D;\begin{cases}<br>2\sqrt{b_n},\quad 2\mid n\\<br>2\sqrt{b_n+1&#x2F;4},\quad 2\nmid n<br>\end{cases}<br>$$<br>代入到面积公式：<br>$$<br>S_n&#x3D;\begin{cases}<br>2\sqrt3b_n+(6-2\sqrt3)\sqrt{b_n}+2\sqrt3-3,\quad 2\mid n\\<br>2\sqrt3b_n+(6-2\sqrt3)\sqrt{b_n+1&#x2F;4}+5\sqrt3&#x2F;2-3,\quad 2\nmid n<br>\end{cases}<br>$$<br>本来以为这两条曲线也是某条曲线的渐近线，但其实两个函数差的极限是$\sqrt{3}&#x2F;2$，并不是渐近线。<br><img src="https://s2.loli.net/2023/08/07/kgDo1rvjUAszT74.png" width="75%" height="75%" /><br>这张图清晰的反映了面积与圆数量的接近正比的关系($1&#x2F;2$次项几乎可忽略)，并且这条曲线斜率很大(注意图中横纵坐标比值是$1:4$)。</p>
 <p>先看最简单的情况：$c&#x3D;a_k&#x3D;b_n$，设：<br>$$<br>f(c)&#x3D;S_n-S_k&#x3D;\begin{cases}<br>(6-2\sqrt3)\sqrt{c}-(6-3\sqrt3)\sqrt{2c+1&#x2F;4}-7\sqrt3&#x2F;2+6,\quad 2\mid n\\<br>(6-2\sqrt3)\sqrt{c+1&#x2F;4}-(6-3\sqrt3)\sqrt{2c+1&#x2F;4}-3\sqrt3+6,\quad 2\nmid n<br>\end{cases}<br>$$<br>若$2\mid n$，当$c&gt;0.04348\cdots$时，$f(c)&gt;0$；若$2\nmid n$，$f(c)$恒大于0.<br>所以当$c&#x3D;a_k&#x3D;b_n$，$S_k&lt;S_n$</p>
