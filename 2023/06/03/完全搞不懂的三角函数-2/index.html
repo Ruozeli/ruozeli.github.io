@@ -27,7 +27,7 @@
 <meta property="og:description" content="与三角函数殊死搏斗的第二周">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-03T12:34:27.000Z">
-<meta property="article:modified_time" content="2023-09-16T04:25:37.292Z">
+<meta property="article:modified_time" content="2023-10-21T13:09:06.299Z">
 <meta property="article:author" content="Asymatiza">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="trigonometry">
@@ -228,7 +228,7 @@
 <li>由$c&gt;b$ 得 $C&gt;B$<br> $\pi&#x2F;2-2B&gt;B\quad\Rightarrow\quad B&lt;\pi&#x2F;6$<br> $\sin B&lt;1&#x2F;2$</li>
 <li>由$b&gt;\frac{2}{5}a$ 得 $\sin B&gt;\frac{2}{5}\sin A&#x3D;\frac{2}{5}\cos B$<br> $\tan B&gt;\frac{2}{5}$<br> $\sin B&gt;\frac{2}{29}\sqrt{29}$</li>
 </ol>
-<p>由$\cos B&#x3D;\tan C$可得出关于$\sin B$的方程：<br>$$\cos B&#x3D;\tan(\frac{\pi}{2}-2B)&#x3D;\frac{1}{\tan2B}&#x3D;\frac{1-\tan^2B}{2\tan B}$$<br>$$2\sin^2B&#x3D;1-\tan^2B$$<br>$$\frac{\sin^2B}{1-\sin^2B}+2\sin B-1&#x3D;0$$<br>$$-2\sin^3B+2\sin^2B+2\sin B-1&#x3D;0$$<br>令$t&#x3D;\sin B\in(0,\sqrt{2}&#x2F;2)$：<br>$$f(t)&#x3D;-2t^3+2t^2+2t-1\quad t\in(0,\frac{\sqrt{2}}{2})$$<br>于是问题转化为求$f(t)&#x3D;0$的根的范围，那就很简单了<br>$$<br>\begin{align*}<br>&amp;f(\frac{1}{2})&#x3D;\frac{1}{4}&gt;0\\<br>&amp;f(\frac{2}{29}\sqrt{29})&#x3D;\frac{100\sqrt{29}}{841}-\frac{21}{29}&lt;0<br>\end{align*}<br>$$<br>显然函数在定义域连续，那么根据介值定理，$f(t)&#x3D;0$有一个根$t_0$满足$\frac{2}{29}\sqrt{29}&lt;t_0&lt;\frac{1}{2}$<br>即$\frac{2}{29}\sqrt{29}&lt;\sin B&lt;\frac{1}{2}$，于是得证。<br>(这里本应详细说明单调性，以证明$(0,\frac{2}{29}\sqrt{29})\cup(\frac{1}{2},\frac{\sqrt{2}}{2})$不存在根，但我懒得写了)</p>
+<p>由$\cos B&#x3D;\tan C$可得出关于$\sin B$的方程：<br>$$<br>\begin{align*}<br>\cos B&#x3D;\tan(\frac{\pi}{2}-2B)&#x3D;\frac{1}{\tan2B}&#x3D;\frac{1-\tan^2B}{2\tan B}\Rightarrow 2\sin^2B&#x3D;1-\tan^2B \\<br>\frac{\sin^2B}{1-\sin^2B}+2\sin B-1&#x3D;0\Rightarrow-2\sin^3B+2\sin^2B+2\sin B-1&#x3D;0<br>\end{align*}<br>$$<br>令$t&#x3D;\sin B\in(0,\sqrt{2}&#x2F;2)$：<br>$$f(t)&#x3D;-2t^3+2t^2+2t-1\quad t\in(0,\frac{\sqrt{2}}{2})$$<br>于是问题转化为求$f(t)&#x3D;0$的根的范围，那就很简单了<br>$$<br>\begin{align*}<br>&amp;f(\frac{1}{2})&#x3D;\frac{1}{4}&gt;0\\<br>&amp;f(\frac{2}{29}\sqrt{29})&#x3D;\frac{100\sqrt{29}}{841}-\frac{21}{29}&lt;0<br>\end{align*}<br>$$<br>显然函数在定义域连续，那么根据介值定理，$f(t)&#x3D;0$有一个根$t_0$满足$\frac{2}{29}\sqrt{29}&lt;t_0&lt;\frac{1}{2}$<br>即$\frac{2}{29}\sqrt{29}&lt;\sin B&lt;\frac{1}{2}$，于是得证。<br>(这里本应详细说明单调性，以证明$(0,\frac{2}{29}\sqrt{29})\cup(\frac{1}{2},\frac{\sqrt{2}}{2})$不存在根，但我懒得写了)</p>
 <h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>还是谈谈感想<br>对于三角恒等变换的难题，一定要多记公式，三倍角公式是必须记住的<br>还有就是要抓住特殊角和角度之间的关系，特别是和差关系<br>对于求范围和比大小，这次的题目又提供了一种思路，即结合函数，这在三个角可由一个角表示时较常用，需要注意。</p>
 
     </div>
