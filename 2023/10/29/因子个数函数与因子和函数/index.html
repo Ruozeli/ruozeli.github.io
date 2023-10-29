@@ -19,32 +19,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shengyangzhang.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-    <meta name="description" content="关于循环群">
+    <meta name="description" content="因子个数函数与因子和函数，证明及简单应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="群论学习笔记-4.循环群">
-<meta property="og:url" content="https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/index.html">
+<meta property="og:title" content="因子个数函数与因子和函数">
+<meta property="og:url" content="https://shengyangzhang.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E4%B8%AA%E6%95%B0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Asymatiza&#39;s Blog">
-<meta property="og:description" content="关于循环群">
+<meta property="og:description" content="因子个数函数与因子和函数，证明及简单应用">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2023/04/16/Wz1LIFuqv95eyVx.png">
-<meta property="og:image" content="https://s2.loli.net/2023/05/10/2BwR1uMEvCOIHxP.png">
-<meta property="article:published_time" content="2023-05-10T02:46:43.000Z">
-<meta property="article:modified_time" content="2023-09-16T09:04:34.670Z">
+<meta property="article:published_time" content="2023-10-29T03:28:57.000Z">
+<meta property="article:modified_time" content="2023-10-29T03:30:56.659Z">
 <meta property="article:author" content="Asymatiza">
 <meta property="article:tag" content="math">
-<meta property="article:tag" content="group">
+<meta property="article:tag" content="number">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2023/04/16/Wz1LIFuqv95eyVx.png">
 
 
-<link rel="canonical" href="https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/">
+<link rel="canonical" href="https://shengyangzhang.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E4%B8%AA%E6%95%B0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/","path":"2023/05/10/群论学习笔记-4/","title":"群论学习笔记-4.循环群"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://shengyangzhang.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E4%B8%AA%E6%95%B0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B0/","path":"2023/10/29/因子个数函数与因子和函数/","title":"因子个数函数与因子和函数"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>群论学习笔记-4.循环群 | Asymatiza's Blog</title>
+<title>因子个数函数与因子和函数 | Asymatiza's Blog</title>
   
 
 
@@ -117,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3"><span class="nav-text">直观理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="nav-text">代数定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BE%A4%E7%9A%84%E5%AD%90%E7%BE%A4"><span class="nav-text">循环群的子群</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E7%AE%97%E6%9C%AF%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-text">0. 算术基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9B%A0%E5%AD%90%E4%B8%AA%E6%95%B0%E5%87%BD%E6%95%B0"><span class="nav-text">1. 因子个数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B9%98%E6%80%A7%E5%87%BD%E6%95%B0"><span class="nav-text">2. 乘性函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-text">3. 因子和函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%BA%94%E7%94%A8-%E5%AE%8C%E5%85%A8%E6%95%B0"><span class="nav-text">4. 应用-完全数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%8E%A8%E5%B9%BF-%E4%B8%80%E9%81%93%E4%B9%A0%E9%A2%98"><span class="nav-text">5. 推广(一道习题)</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/05/10/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/">
+    <link itemprop="mainEntityOfPage" href="https://shengyangzhang.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E4%B8%AA%E6%95%B0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -181,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="群论学习笔记-4.循环群 | Asymatiza's Blog">
-      <meta itemprop="description" content="关于循环群">
+      <meta itemprop="name" content="因子个数函数与因子和函数 | Asymatiza's Blog">
+      <meta itemprop="description" content="因子个数函数与因子和函数，证明及简单应用">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          群论学习笔记-4.循环群
+          因子个数函数与因子和函数
         </h1>
 
         <div class="post-meta-container">
@@ -197,7 +194,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-05-10 10:46:43" itemprop="dateCreated datePublished" datetime="2023-05-10T10:46:43+08:00">2023-05-10</time>
+      <time title="Created: 2023-10-29 11:28:57" itemprop="dateCreated datePublished" datetime="2023-10-29T11:28:57+08:00">2023-10-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -209,14 +206,14 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Learning/Group-Theory/" itemprop="url" rel="index"><span itemprop="name">Group Theory</span></a>
+          <a href="/categories/Learning/Number-Theory/" itemprop="url" rel="index"><span itemprop="name">Number Theory</span></a>
         </span>
     </span>
 
   
 </div>
 
-            <div class="post-description">关于循环群</div>
+            <div class="post-description">因子个数函数与因子和函数，证明及简单应用</div>
         </div>
       </header>
 
@@ -224,25 +221,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="直观理解"><a href="#直观理解" class="headerlink" title="直观理解"></a>直观理解</h2><p>可以把循环群看作一个中心对称平面几何图形的旋转作用构成的群，例如旋转一个六叶风车，可以得到循环群$C_6$：<br><img src="https://s2.loli.net/2023/04/16/Wz1LIFuqv95eyVx.png" alt="Drawing 2023-04-16 09.01.16.excalidraw.png|400"></p>
-<h2 id="代数定义"><a href="#代数定义" class="headerlink" title="代数定义"></a>代数定义</h2><p>若群$G$的每个元素都能表示为一个固定元素$a$的方幂，则$G$为由$a$生成的循环群，记作$\langle a\rangle$，$a$称为$\langle a\rangle$的一个生成元。</p>
-<ul>
-<li>若$a$是无限阶元素，$\langle a\rangle&#x3D;\{\cdots,a^{-3},a^{-2},a^{-1},e,a,a^2,a^3,\cdots\}$</li>
-<li>若$a$是$n$阶元素，$\langle a\rangle&#x3D;\{e,a,a^2,\cdots,a^{n-1}\}$，为$n$阶循环群($C_n$)</li>
-</ul>
-<p>很容易看出，所有循环群都是交换群，所以循环群可由加法表示。例如，$C_6$可以表示为模6加法群$\langle\mathbb{Z}_6,+\rangle&#x3D;\{0,1,2,3,4,5\}$，$\mathbb{Z}$上的加法群为无限循环群。</p>
-<p>循环群的生成元不唯一：<br>设$\langle a\rangle$是$a$生成的循环群，设$a^l$也为生成元，则$a$可表示为$(a^l)^m&#x3D;a^{lm}$</p>
-<ul>
-<li>若$\langle a\rangle$是无限循环群，由于群的无限性，$lm&#x3D;1$，易得$l&#x3D;\pm1$，即无限循环群共有2个生成元：$a$和$a^{-1}$</li>
-<li>若$\langle a\rangle$是$n$阶循环群，则$n\mid lm-1$，可得$l,n$互素；若$l,n$互素，那么存在整数$u,v$使$un+vl&#x3D;1$，$a&#x3D;(a^l)^{v}&#x3D;a^{1-un}$，可得$a^l$也为生成元，即$a^l$为生成元的充要条件是$l,n$互素，所以$\langle a\rangle$共有$\phi(n)$个生成元</li>
-</ul>
-<div class="admonition note"><p>$\phi(n)$为欧拉函数，表示小于等于正整数$n$且与$n$互素的正整数的数目</p>
-</div>
-
-<h2 id="循环群的子群"><a href="#循环群的子群" class="headerlink" title="循环群的子群"></a>循环群的子群</h2><p>取$\langle a\rangle$中任意元素$a^k$可生成循环群$\langle a^k\rangle$。这样生成的$\langle a^k\rangle$是$\langle a\rangle$的子群，且$\langle a\rangle$的子群都可由这种方法生成。</p>
-<p>从凯莱图来看，循环群子群的构造就是将原群中多个连续作用的箭头合并为一个箭头，来连接部分元素。例如$C_6$的子群：<br><img src="https://s2.loli.net/2023/05/10/2BwR1uMEvCOIHxP.png" alt="Drawing 2023-05-10 12.41.27.excalidraw.png|400"><br>观察子群的阶数可知，有限循环群子群的阶数是其自身阶数的正因子，因而循环群子群的个数等于循环群阶数正因子的个数。而无限循环群的非单位子群都是无限循环群。</p>
-<p>证明：设$H$是循环群$\langle a\rangle$的一个子群，若$H$是单位子群，则$H$显然是循环群，若$H$不是单位子群，设$a^m$是$H$中最小的$a$的正方幂，可证$H&#x3D;\langle a^m\rangle$：<br>任取$H$中一个元素$a^l$，存在整数$q,r$满足$l&#x3D;qm+r$，$0\le r&lt;m$，于是：<br>$$a^l(a^{-m})^q&#x3D;a^r\in H$$<br>由于$a^m$是最小的$a$的正方幂，$0\le r&lt;m$，可知$r&#x3D;0$，则$a^l&#x3D;(a^m)^q$，所以$H&#x3D;\langle a^m\rangle$，于是得证循环群的子群都为循环群。</p>
-<p>因为无限循环群中的非单位元素都是无限阶元素，所以无限循环群的非单位子群也都是无限循环群。<br>对于$n$阶循环群$\langle a\rangle$及其子群$\langle a^m\rangle$，由上述证明很容易得到$m$能整除$n$，于是$a^m$的阶为$n&#x2F;m$，$\langle a^m\rangle$的阶也为$n&#x2F;m$。</p>
+        <p>最近在学初等数论，记一些有意思的东西。<br>主要参考孙智宏《数和数列》以及Kenneth H. Rosen《初等数论及其应用》</p>
+<h2 id="0-算术基本定理"><a href="#0-算术基本定理" class="headerlink" title="0. 算术基本定理"></a>0. 算术基本定理</h2><p>似乎数学的每一个分支都有基本定理，算术也不例外。<br><strong>算术基本定理</strong>：$n$为大于1的自然数，在不计次序的情况下，$n$可唯一地表示为有限个素数的乘积。<br>结论是trivial的，就不证明了。<br>由算术基本定理，定义$n$的<strong>标准分解式</strong>：<br>$$n&#x3D;p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdots p_r^{\alpha_r}$$<br>其中$p_1,p_2,\cdots,p_r$为素数且$p_1&lt;p_2&lt;\cdots&lt;p_r$</p>
+<h2 id="1-因子个数函数"><a href="#1-因子个数函数" class="headerlink" title="1. 因子个数函数"></a>1. 因子个数函数</h2><p>定义因子个数函数$\tau(n)$为正整数$n$的正因子个数，因子和函数$\sigma(n)$为$n$的所有正因子的和。</p>
+<p>由正整数$n$的标准分解式$n&#x3D;p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdots p_r^{\alpha_r}$可知，$n$的所有因子形如$p_1^{\beta_1}\cdot p_2^{\beta_2}\cdots p_r^{\beta_r}$，其中$\beta_i\in{0,1,2,\cdots,\alpha_i}$，由于$p_1,p_2,\cdots,p_r$是$r$个素因子，$\beta_i$有$\alpha_i+1$种可能，根据简单的排列组合知识，容易得到因子个数函数：<br>$$\tau(n)&#x3D;\sum_{d\mid n}1&#x3D;(\alpha_1+1)(\alpha_2+1)\cdots(\alpha_r+1)&#x3D;\prod_{i&#x3D;1}^r(a_i+1)$$<br>相比因子个数函数，因子和函数不那么容易得到，需先证明相关结论。</p>
+<h2 id="2-乘性函数"><a href="#2-乘性函数" class="headerlink" title="2. 乘性函数"></a>2. 乘性函数</h2><p>乘性函数指定义在正整数集合上的函数$f$，对任意互素的$m,n$，都有$f(mn)&#x3D;f(m)f(n)$。可以证明，因子个数函数与因子和函数都为乘性函数。</p>
+<p><strong>定理</strong>：如果$f$是乘性函数，则$f$的和函数也为乘性函数，即$F(n)&#x3D;\sum_{d\mid n}f(d)$是乘性函数。<br><strong>证明</strong>：设$m,n$是互素的自然数，则$F(mn)&#x3D;\sum_{d\mid mn}f(d)$，由于$(m,n)&#x3D;1$，$mn$的每一个因子都可写成$m$的因子$d_1$和$n$的因子$d_2$，且$(d_1,d_2)&#x3D;1$，所以：<br>$$<br>\begin{align*}<br>F(mn)&amp;&#x3D;\sum_{\stackrel{d_1\mid m}{d_2\mid n}}f(d_1d_2) \\<br>&amp;&#x3D;\sum_{\stackrel{d_1\mid m}{d_2\mid n}}f(d_1)f(d_2) \\<br>&amp;&#x3D;\sum_{d_1\mid m}f(d_1)\sum_{d_2\mid m}f(d_2) \\<br>&amp;&#x3D;F(m)F(n)<br>\end{align*}<br>$$<br>定理得证。<br>根据该定理，由于$f(n)&#x3D;n$和$g(n)&#x3D;1$都是乘性的，所以函数$\sigma(n)&#x3D;\sum_{d\mid n}f(d)$和$\tau(n)&#x3D;\sum_{d\mid n}g(d)$为乘性函数。</p>
+<p>根据此结论，重新考虑因子个数函数。当$m&#x3D;p^\alpha$，其中$p$为素数时，$m$的因数个数为$\alpha+1$，这是容易证明的。又由乘性函数可知：<br>$$\tau(n)&#x3D;\tau(p_1^{\alpha_1}\cdots p_r^{\alpha_r})&#x3D;\tau(p_1^{\alpha_1})\cdot\tau(p_2^{\alpha_2})\cdots\tau(p_r^{\alpha_r})&#x3D;\prod_{i&#x3D;1}^r(a_i+1)$$<br>与上面得到的式子相同。</p>
+<h2 id="3-因子和函数"><a href="#3-因子和函数" class="headerlink" title="3. 因子和函数"></a>3. 因子和函数</h2><p>同样的，先考虑$m&#x3D;p^\alpha$的情况，则$m$的因子分别为$1,p,p^2,\cdots,p^\alpha$，于是：<br>$$\sigma(m)&#x3D;1+p+p^2+\cdots+p^\alpha&#x3D;\frac{p^{\alpha+1}-1}{p-1}$$<br>由于$\sigma$是乘性函数，得到因子和函数：<br>$$\sigma(n)&#x3D;\sigma(p_1^{\alpha_1}\cdots p_r^{\alpha_r})&#x3D;\sigma(p_1^{\alpha_1})\cdot\sigma(p_2^{\alpha_2})\cdots\sigma(p_r^{\alpha_r})&#x3D;\prod_{i&#x3D;1}^r\frac{p_i^{\alpha_i+1}-1}{p_i-1}$$</p>
+<h2 id="4-应用-完全数"><a href="#4-应用-完全数" class="headerlink" title="4. 应用-完全数"></a>4. 应用-完全数</h2><p><strong>完全数</strong>指因子和等于其自身两倍的数，即满足$\sigma(n)&#x3D;2n$的自然数$n$。最小的三个完全数是6，28和496。<br>古希腊人很早就知道了偶完全数的一种表示方法：$n&#x3D;2^{p-1}(2^p-1)$，其中$p$和$2^p-1$都为素数。设$2^p-1&#x3D;q$直接用因子和函数求$n$的因子和：<br>$$\sigma(n)&#x3D;\sigma(2^{p-1}q)&#x3D;\frac{2^p-1}{2-1}\cdot(q+1)&#x3D;(2^p-1)\cdot2^p&#x3D;2n$$</p>
+<p>1747年，欧拉证明了，所有偶完全数都具有上述形式，证明如下：<br>设$n$为偶完全数，则$n&#x3D;2^\alpha n_0$，其中$n_0$为奇数，$\alpha\ge1$，求$n$的因子和：<br>$$\sigma(n)&#x3D;\sigma(2^\alpha n_0)&#x3D;\sigma(2^\alpha)\sigma(n_0)&#x3D;(2^{\alpha+1}-1)\sigma(n_0)$$<br>因为$n$为偶完全数，所以：<br>$$(2^{\alpha+1}-1)\sigma(n_0)&#x3D;2n&#x3D;2^{\alpha+1} n_0$$<br>因此$2^{\alpha+1}-1\mid 2^{\alpha+1} n_0$，又由于$2^{\alpha+1}-1$与$2^{\alpha+1}$互素，所以$2^{\alpha+1}-1\mid n_0$<br>设$n_0&#x3D;k(2^{\alpha+1}-1)$，显然$k&lt;n$，由上知：<br>$$\sigma(n_0)&#x3D;2^{\alpha+1}k&#x3D;n_0+k$$<br>这表明$k$与$n_0$是$n_0$仅有的两个因子，于是可知$k&#x3D;1$且$n_0&#x3D;2^{\alpha+1}-1$是素数。<br>设$p$是$\alpha+1$的素因子，则由：<br>$$2^{\alpha+1}-1&#x3D;(2^p)^{\frac{\alpha+1}{2}}-1$$<br>可知其为$2^p-1$的倍数，但$2^{\alpha+1}-1$是素数，所以$\alpha+1&#x3D;p$是素数。<br>此时$n_0&#x3D;2^p-1$是素数，$n&#x3D;2^{\alpha}n_0&#x3D;2^{p-1}(2^p-1)$，定理得证。</p>
+<h2 id="5-推广-一道习题"><a href="#5-推广-一道习题" class="headerlink" title="5. 推广(一道习题)"></a>5. 推广(一道习题)</h2><p>书后有一道习题，要求证明Liouville关于$1^3+2^3+\cdots+n^3&#x3D;(1+2+\cdots+n)^2$的如下推广：<br>$$\sum_{m\mid n}(\tau(m))^3&#x3D;\left(\sum_{m\mid n}\tau(m)\right)^2$$<br>根据定理：乘性函数的和函数是乘性函数，一眼就能看出左右式都是乘性函数。所以只要考虑$m&#x3D;p^\alpha$，$p$为素数的情况。对于这种情况，$\tau(m)&#x3D;\alpha+1$，结合已知结论$\sum_1^n i^3&#x3D;(\sum_1^n i)^2$，容易知道等式成立，于是结论得证。</p>
 
     </div>
 
@@ -253,21 +242,18 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/math/" rel="tag"># math</a>
-              <a href="/tags/group/" rel="tag"># group</a>
+              <a href="/tags/number/" rel="tag"># number</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/" rel="prev" title="群论学习笔记-3.子群">
-                  <i class="fa fa-chevron-left"></i> 群论学习笔记-3.子群
+                <a href="/2023/10/08/%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E4%B8%8E%E5%8D%95%E6%91%86%E5%91%A8%E6%9C%9F/" rel="prev" title="简谐运动与单摆周期">
+                  <i class="fa fa-chevron-left"></i> 简谐运动与单摆周期
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/14/%E5%8A%A0%E7%BC%AA%E7%9A%84%E8%8D%92%E8%AF%9E-%E5%8F%8D%E6%8A%97%E8%91%97%E4%BD%9C/" rel="next" title="加缪的荒诞-反抗著作">
-                  加缪的荒诞-反抗著作 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
