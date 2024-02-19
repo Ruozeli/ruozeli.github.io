@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://s2.loli.net/2023/10/02/yvjwJ76Lcihat8x.png">
 <meta property="og:image" content="https://s2.loli.net/2023/10/02/3GEl8IJ5qDeuM4B.png">
 <meta property="article:published_time" content="2023-09-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-03T14:59:14.325Z">
+<meta property="article:modified_time" content="2024-02-19T05:51:01.695Z">
 <meta property="article:author" content="若则理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="number">
@@ -225,7 +225,10 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="1-一阶线性递推"><a href="#1-一阶线性递推" class="headerlink" title="1. 一阶线性递推"></a>1. 一阶线性递推</h2><p>一阶线性递推指$a_{n+1}&#x3D;f(a_n)$，其中$f$是线性函数的递推关系，可以用待定系数法转化为相关的等比数列，从而求通项公式。</p>
 <h3 id="待定系数法"><a href="#待定系数法" class="headerlink" title="待定系数法"></a>待定系数法</h3><p>设数列$\{a_n\}$满足$a_{n+1}&#x3D;pa_n+q$，其中$pq(p-1)\not&#x3D;0$。<br>假设递推公式可写成$a_{n+1}+t&#x3D;p(a_n+t)$的形式，解得$t&#x3D;q&#x2F;(p-1)$，于是可知数列$\{a_n+\frac{q}{p-1}\}$是等比数列，写出该数列的通项公式，即可得到原数列通项公式。</p>
-<h3 id="不动点法"><a href="#不动点法" class="headerlink" title="不动点法"></a>不动点法</h3><p>这种方法也可理解为寻找<strong>不动点</strong>的方法。<br><img src="https://s2.loli.net/2023/09/30/nuB8PzwV1IaEZxm.png" alt="image.png|400"><br>图为递推数列$\{a_n\}$的直观表示，图中折线为从点$(a_1,0)$开始的迭代，其与$f$交点的纵坐标恰为$a_2,a_3,a_4,\cdots,a_n$，$A$点是$f$与$y&#x3D;x$的交点，这点的特殊之处是其在迭代之后仍是自身，因此被称为不动点，而不动点外的任一点在迭代后都是发散的。<br>解方程$px+q&#x3D;x$即可得到不动点的值，恰为$q&#x2F;(p-1)$，与待定系数法中的$t$值相等，而之后的处理方法可以理解为将图像整体向右上移动，使不动点与原点重合，得到的新数列$\{b_n\}$为等比数列，且$b_n&#x3D;a_n+q&#x2F;(p-1)$。显然，只要$f(x)&#x3D;px+q$，且$pq(p-1)\not&#x3D;0$，则不动点必然存在。</p>
+<h3 id="不动点法"><a href="#不动点法" class="headerlink" title="不动点法"></a>不动点法</h3><p>这种方法也可理解为寻找<strong>不动点</strong>的方法。</p>
+<img src="https://s2.loli.net/2023/09/30/nuB8PzwV1IaEZxm.png" width="70%" height="70%" />
+
+<p>图为递推数列$\{a_n\}$的直观表示，图中折线为从点$(a_1,0)$开始的迭代，其与$f$交点的纵坐标恰为$a_2,a_3,a_4,\cdots,a_n$，$A$点是$f$与$y&#x3D;x$的交点，这点的特殊之处是其在迭代之后仍是自身，因此被称为不动点，而不动点外的任一点在迭代后都是发散的。<br>解方程$px+q&#x3D;x$即可得到不动点的值，恰为$q&#x2F;(p-1)$，与待定系数法中的$t$值相等，而之后的处理方法可以理解为将图像整体向右上移动，使不动点与原点重合，得到的新数列$\{b_n\}$为等比数列，且$b_n&#x3D;a_n+q&#x2F;(p-1)$。显然，只要$f(x)&#x3D;px+q$，且$pq(p-1)\not&#x3D;0$，则不动点必然存在。</p>
 <p>若将递推式稍加改动，变为$a_{n+1}&#x3D;pa_n+qn+r$，不动点法就不适用了。但此数列显然能表示为等比数列与一个确定的等差数列之和，可以使用待定系数法(本质其实差不多，可以认为存在一个规律变化的”不动点”)。<br>设$a_{n+1}+k(n+1)+l&#x3D;p(a_n+kn+l)$，即：<br>$$<br>\begin{cases}<br>(p-1)k&#x3D;q\\<br>pl-k-l&#x3D;r<br>\end{cases}<br>$$<br>解得$k&#x3D;q&#x2F;(p-1)$，$l&#x3D;r&#x2F;(p-1)+q&#x2F;(p-1)^2$，于是可知数列<br>$$\{a_n+\frac{q}{p-1}n+(\frac{r}{p-1}+\frac{q}{(p-1)^2})\}$$<br>是等比数列，之后的步骤同上。</p>
 <h2 id="2-二阶线性递推"><a href="#2-二阶线性递推" class="headerlink" title="2. 二阶线性递推"></a>2. 二阶线性递推</h2><p>二阶线性递推指$a_{n+2}&#x3D;f(a_{n+1})+g(a_n)$，其中$f,g$是线性函数的递推关系，可以用待定系数法得到两个相关的等比数列，原数列的每一项是两个等比数列中对应项的线性组合。</p>
 <h3 id="待定系数法-1"><a href="#待定系数法-1" class="headerlink" title="待定系数法"></a>待定系数法</h3><p>先考虑最基本的情况，即$a_{n+2}&#x3D;pa_{n+1}+qa_n$<br>假设$a_{n+2}-sa_{n+1}&#x3D;t(a_{n+1}-sa_n)$，这样设的目的是构造${a_n}$减去一个等比数列仍得到等比数列的形式。同时发现此式为对称式，即可以改写为$a_{n+2}-ta_{n+1}&#x3D;s(a_{n+1}-ta_n)$的形式。<br>展开与原式比较可得方程组：<br>$$<br>\begin{cases}<br>s+t&#x3D;p\\<br>st&#x3D;-q<br>\end{cases}<br>$$</p>
@@ -248,13 +251,25 @@
 <p>有了一阶线性递推的经验，就直接解方程：<br>$$\frac{ax+b}{cx+d}&#x3D;x$$<br>即方程$cx^2+(d-a)x-b$，该方程也称作此分式递推数列的<strong>特征方程</strong>，其根同样可称为<strong>特征根</strong>。</p>
 <p>解这个二次方程可以得到2个根，分两种情况考虑。</p>
 <p>若$x_1&#x3D;x_2&#x3D;\alpha$，则数列有一个不动点。在递推式两边同时减去$\alpha$再取倒数，可得到一个相关的等差数列，求出该数列通项公式后稍作处理可得原数列通项公式。这里的一个问题是，为什么得到的是相关的等差数列，而不是一般的一阶线性递推数列？</p>
-<p>对于此问题，有一种直观的理解方法。像本文一开始那样用图像表示递推过程：<br><img src="https://s2.loli.net/2023/10/02/SCoqawRVl3ONGer.png" alt="image.png|400"><br>如图，$A$即为不动点，其坐标$(\alpha,\alpha)$，$f$与$y&#x3D;x$在$A$点相切。在递推公式两边减去$\alpha$，就相当于将整个图像向右上平移，使$A$与原点重合。于是该数列就转化为一个可以直接取倒数求解的简单分式递推数列(递推式函数图像经过原点)，同时还满足图像在原点处与$y&#x3D;x$相切。所以只需证满足以上两个条件的函数取倒数后$-1$次项系数为$1$，即：<br>$$<br>\begin{cases}<br>g(x)&#x3D;\frac{px}{qx+r}\\<br>g’(0)&#x3D;1<br>\end{cases}<br>\Rightarrow \frac{1}{g(x)}&#x3D;\frac{1}{x}+\lambda<br>$$<br>其中$p,q,r,\lambda$是常数。这是容易证明的，具体过程就不写了。</p>
+<p>对于此问题，有一种直观的理解方法。像本文一开始那样用图像表示递推过程：</p>
+<img src="https://s2.loli.net/2023/10/02/SCoqawRVl3ONGer.png" width="70%" height="70%" />
+
+<p>如图，$A$即为不动点，其坐标$(\alpha,\alpha)$，$f$与$y&#x3D;x$在$A$点相切。在递推公式两边减去$\alpha$，就相当于将整个图像向右上平移，使$A$与原点重合。于是该数列就转化为一个可以直接取倒数求解的简单分式递推数列(递推式函数图像经过原点)，同时还满足图像在原点处与$y&#x3D;x$相切。所以只需证满足以上两个条件的函数取倒数后$-1$次项系数为$1$，即：<br>$$<br>\begin{cases}<br>g(x)&#x3D;\frac{px}{qx+r}\\<br>g’(0)&#x3D;1<br>\end{cases}<br>\Rightarrow \frac{1}{g(x)}&#x3D;\frac{1}{x}+\lambda<br>$$<br>其中$p,q,r,\lambda$是常数。这是容易证明的，具体过程就不写了。</p>
 <p>但这好像有些兜圈子了，更“简单”的方法是直接把$\alpha&#x3D;(a-d)&#x2F;2c$代进去计算，这样甚至能把得到的等差数列的公差算出来。懒得计算了，就直接写最终结论吧，该等差数列递推公式为：<br>$$\frac{1}{x_{n}-\alpha}&#x3D;\frac{1}{x_{n-1}-\alpha}+\frac{2c}{a+d}$$</p>
 <p>例如，$x_n&#x3D;(x_{n-1}-1)&#x2F;(x_{n-1}+3)$，其特征方程$x^2+2x+1&#x3D;0$，解得$x_1&#x3D;x_2&#x3D;-1$，于是变换递推式为：<br>$$x_n+1&#x3D;\frac{x_{n-1}-1}{x_{n-1}+3}+1&#x3D;\frac{2x_{n-1}+2}{x_{n-1}+3}$$<br>两边取倒数得：<br>$$\frac{1}{x_n+1}&#x3D;\frac{1}{x_{n+1}+1}+\frac{1}{2}$$</p>
 <p>若$x_1&#x3D;\beta_1\not&#x3D;x_2&#x3D;\beta_2$，则数列有两个不动点。分别将递推公式减去两个不动点，得到两个式子：<br>$$<br>\begin{align*}<br>x_n-\beta_1&#x3D;\frac{ax_{n-1}+b}{cx_{n-1}+d}-\beta_1&#x3D;\frac{(a-\beta_1c)(x_{n-1}-\beta_1)}{cx_{n-1}+d}\\<br>x_n-\beta_2&#x3D;\frac{ax_{n-1}+b}{cx_{n-1}+d}-\beta_2&#x3D;\frac{(a-\beta_2c)(x_{n-1}-\beta_2)}{cx_{n-1}+d}<br>\end{align*}<br>$$<br>两式相除得到：<br>$$\frac{x_n-\beta_1}{x_n-\beta_2}&#x3D;\frac{a-\beta_1c}{a-\beta_2c}\cdot\frac{x_{n-1}-\beta_1}{x_{n-1}-\beta_2}$$<br>得到一个相关的等比数列，略加处理即可得到原数列通项公式。</p>
 <p>例如，$x_n&#x3D;(x_{n-1}-2)&#x2F;(x_{n-1}+4)$，其特征方程$x^2+3x+2&#x3D;0$，解得$x_1&#x3D;-1,x_2&#x3D;-2$，代入得到两个式子：<br>$$<br>\begin{align*}<br>x_n+1&#x3D;\frac{2x_{n-1}+2}{x_{n-1}+4}\\<br>x_n+2&#x3D;\frac{3x_{n-1}+6}{x_{n-1}+4}<br>\end{align*}<br>$$<br>两式相除得到：<br>$$\frac{x_n+1}{x_n+2}&#x3D;\frac{2}{3}\cdot\frac{x_{n-1}+1}{x_{n-1}+2}$$</p>
 <p>以上就是基本的不动点法，事实上，题目中还可能出现高次的分式递推，本质也是用上述方法，但需要一些额外的处理，具体情况具体分析。</p>
-<h3 id="复数根与周期性-1"><a href="#复数根与周期性-1" class="headerlink" title="复数根与周期性"></a>复数根与周期性</h3><p>如果分式递推数列特征根是复数，那么不动点就不存在了。正如在二阶线性递推部分所讨论的，可以将复根代入公式，不影响最终结果。那么就产生了一个问题：这样的情况下该分式递推数列是否可能是周期数列？<br>不妨先看一下一些不动点不存在的分式数列迭代图像：<br><img src="https://s2.loli.net/2023/10/02/5dSqHTFjfVisEuD.png" alt="image.png|400"><br>递推公式：$a_n&#x3D;(a_{n-1}-1)&#x2F;(a_{n-1}+1)$<br>特征根：$x_1&#x3D;\mathrm{i},x_2&#x3D;-\mathrm{i}$<br>是周期性数列，其周期是$8$<br><img src="https://s2.loli.net/2023/10/02/yvjwJ76Lcihat8x.png" alt="image.png|400"><br>递推公式：$a_n&#x3D;(a_{n-1}-2)&#x2F;(a_{n-1}+2)$<br>特征根：$x_1&#x3D;(-1+\sqrt{7}\mathrm{i})&#x2F;2,x_2&#x3D;(-1-\sqrt{7}\mathrm{i})&#x2F;2$<br>显然不是周期性数列，迭代值不断“震荡”，但不会重复，应该可以迭代到函数上每一点。<br><img src="https://s2.loli.net/2023/10/02/3GEl8IJ5qDeuM4B.png" alt="image.png|400"><br>递推公式：$a_n&#x3D;(-a_{n-1}-5)&#x2F;(a_{n-1}+1)$<br>特征根：$x_1&#x3D;-1+2\mathrm{i},x_2&#x3D;-1-2\mathrm{i}$<br>是周期性数列，其周期为$4$</p>
+<h3 id="复数根与周期性-1"><a href="#复数根与周期性-1" class="headerlink" title="复数根与周期性"></a>复数根与周期性</h3><p>如果分式递推数列特征根是复数，那么不动点就不存在了。正如在二阶线性递推部分所讨论的，可以将复根代入公式，不影响最终结果。那么就产生了一个问题：这样的情况下该分式递推数列是否可能是周期数列？<br>不妨先看一下一些不动点不存在的分式数列迭代图像：</p>
+<img src="https://s2.loli.net/2023/10/02/5dSqHTFjfVisEuD.png" width="70%" height="70%" />
+
+<p>递推公式：$a_n&#x3D;(a_{n-1}-1)&#x2F;(a_{n-1}+1)$<br>特征根：$x_1&#x3D;\mathrm{i},x_2&#x3D;-\mathrm{i}$<br>是周期性数列，其周期是$8$</p>
+<img src="https://s2.loli.net/2023/10/02/yvjwJ76Lcihat8x.png" width="70%" height="70%" />
+
+<p>递推公式：$a_n&#x3D;(a_{n-1}-2)&#x2F;(a_{n-1}+2)$<br>特征根：$x_1&#x3D;(-1+\sqrt{7}\mathrm{i})&#x2F;2,x_2&#x3D;(-1-\sqrt{7}\mathrm{i})&#x2F;2$<br>显然不是周期性数列，迭代值不断“震荡”，但不会重复，应该可以迭代到函数上每一点。</p>
+<img src="https://s2.loli.net/2023/10/02/3GEl8IJ5qDeuM4B.png" width="70%" height="70%" />
+
+<p>递推公式：$a_n&#x3D;(-a_{n-1}-5)&#x2F;(a_{n-1}+1)$<br>特征根：$x_1&#x3D;-1+2\mathrm{i},x_2&#x3D;-1-2\mathrm{i}$<br>是周期性数列，其周期为$4$</p>
 <p>看到以上三个例子，就基本能总结规律了。与二阶线性递推中对特征根模长与辐角的要求不同，这里的要求是复根的实部和虚部都为有理数。这样，对初始值进行迭代就终将回归自身，形成周期，否则会会迭代到函数上的每一点。当然，以上仅为猜想，并没有证明，等有时间了再研究一下这个问题。</p>
 <h2 id="5-特殊处理"><a href="#5-特殊处理" class="headerlink" title="5. 特殊处理"></a>5. 特殊处理</h2><p>上面说的全都是套路性的方法，实际的数列题当然不可能这么简单，一般需要对非线性的递推式进行特殊处理。下面举两道例题。</p>
 <p><strong>例1</strong>：$a_1&#x3D;a_2&#x3D;1$，$a_n&#x3D;(a_{n-1}^2+2)&#x2F;a_{n-2}$，求通项公式。<br>又是二阶又是分式递推，还是二次的，完全没有头绪。那就凭感觉化简一下，第一步先把分子乘过去，使两边齐次：<br>$$a_na_{n-2}&#x3D;a_{n-1}^2+2$$<br>然后再写一项：<br>$$a_{n+1}a_{n-1}&#x3D;a_{n}^2+2$$<br>两式相减消去常数项：<br>$$a_{n+1}a_{n-1}-a_na_{n-2}&#x3D;a_n^2-a_{n-1}^2$$<br>这样，式子的项数反而增加到了4项，但还是没有明显的规律。继续化简，整理一下，提取公因数：<br>$$a_n(a_n+a_{n-2})&#x3D;a_{n-1}(a_{n+1}+a_{n-1})$$<br>居然直接就配成常数列了，但下标不连续很不方便，于是把括号除到另一半得到：<br>$$\frac{a_n}{a_{n+1}+a_{n-1}}&#x3D;\frac{a_{n-1}}{a_n+a_{n-2}}&#x3D;\frac{a_2}{a_3+a_1}&#x3D;\frac{1}{4}$$<br>于是可知$4a_n&#x3D;a_{n+1}+a_{n-1}$，接下来按照二阶线性递推的方法计算即可。</p>
