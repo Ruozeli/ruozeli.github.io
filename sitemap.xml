@@ -462,6 +462,13 @@
   </url>
   
   <url>
+    <loc>https://ruozeli.github.io/tags/analysis/</loc>
+    <lastmod>2024-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ruozeli.github.io/tags/algebra/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -470,13 +477,6 @@
   
   <url>
     <loc>https://ruozeli.github.io/tags/trigonometry/</loc>
-    <lastmod>2024-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/tags/analysis/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -555,14 +555,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Problem-Solving/</loc>
+    <loc>https://ruozeli.github.io/categories/Learning/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Learning/</loc>
+    <loc>https://ruozeli.github.io/categories/Problem-Solving/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
