@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ruozeli.github.io/2024/08/15/%E8%87%AA%E8%BF%B0/</loc>
+    
+    <lastmod>2024-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/nonsense/index.html</loc>
+    
+    <lastmod>2024-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ruozeli.github.io/2024/09/24/%E7%9C%9F%E7%9B%B8%E3%80%81%E7%9C%9F%E7%90%86%E4%B8%8E%E6%88%90%E7%9C%9F/</loc>
     
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,15 +39,6 @@
   
   <url>
     <loc>https://ruozeli.github.io/2024/09/17/%E4%B8%B4%E5%BA%8A%E5%8C%BB%E5%AD%A6%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
-    
-    <lastmod>2024-09-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/nonsense/index.html</loc>
     
     <lastmod>2024-09-26</lastmod>
     
@@ -508,7 +517,7 @@
 
   <url>
     <loc>https://ruozeli.github.io/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -516,133 +525,133 @@
   
   <url>
     <loc>https://ruozeli.github.io/tags/physics/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/math/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/reading/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/philosophy/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/analysis/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/review/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/logic/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/algebra/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/trigonometry/</loc>
-    <lastmod>2024-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/tags/thoughts/</loc>
-    <lastmod>2024-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/tags/critical/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/society/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/tags/thoughts/</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/tags/critical/</loc>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/literature/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/story/</loc>
-    <lastmod>2024-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/tags/number/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/geometry/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/tags/number/</loc>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/movie/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/group/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/tags/code/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -651,98 +660,98 @@
   
   <url>
     <loc>https://ruozeli.github.io/categories/Research/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Research/OperationAEOLUS/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Reading/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Learning/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Review/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Problem-Solving/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Kuso/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Reading/Literature/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Reading/Philosophy/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Monogatari/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Learning/Analysis/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Learning/Group-Theory/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Code/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ruozeli.github.io/categories/Learning/Number-Theory/</loc>
-    <lastmod>2024-09-26</lastmod>
+    <lastmod>2024-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
