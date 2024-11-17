@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="gcFcmmNr8Y8yiq5ncwJiiPRbv0I3srT4dFD80_qixv4" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGWWenKai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+    <meta name="description" content="奔驰定理的几种证明和一些推广">
+<meta property="og:type" content="article">
+<meta property="og:title" content="奔驰定理证明探究">
+<meta property="og:url" content="https://ruozeli.github.io/2023/03/25/%E5%A5%94%E9%A9%B0%E5%AE%9A%E7%90%86%E8%AF%81%E6%98%8E%E6%8E%A2%E7%A9%B6/index.html">
+<meta property="og:site_name" content="若则理のBlog">
+<meta property="og:description" content="奔驰定理的几种证明和一些推广">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/03/25/hI4B52V7tbjfFpr.png">
+<meta property="og:image" content="https://s2.loli.net/2023/03/25/nH8bDRlUsGikVNo.png">
+<meta property="article:published_time" content="2023-03-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-03T14:58:54.530Z">
+<meta property="article:author" content="若则理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="geometry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/03/25/hI4B52V7tbjfFpr.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/03/25/%E5%A5%94%E9%A9%B0%E5%AE%9A%E7%90%86%E8%AF%81%E6%98%8E%E6%8E%A2%E7%A9%B6/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://ruozeli.github.io/2023/03/25/%E5%A5%94%E9%A9%B0%E5%AE%9A%E7%90%86%E8%AF%81%E6%98%8E%E6%8E%A2%E7%A9%B6/","path":"2023/03/25/奔驰定理证明探究/","title":"奔驰定理证明探究"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>奔驰定理证明探究 | 若则理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若则理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="nav-text">1. 问题分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%B0%9D%E8%AF%95%E8%AF%81%E6%98%8E"><span class="nav-text">2. 尝试证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%AD%A3%E5%BC%8F%E8%AF%81%E6%98%8E"><span class="nav-text">3. 正式证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%8F%A6%E4%B8%80%E7%A7%8D%E8%AF%81%E6%98%8E-%E9%9D%A2%E7%A7%AF%E6%AF%94%E4%BE%8B%E6%8E%A8%E5%AF%BC"><span class="nav-text">4. 另一种证明(面积比例推导)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%89%B9%E4%BE%8B"><span class="nav-text">5. 特例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%BF%83"><span class="nav-text">重心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%BF%83"><span class="nav-text">内心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E5%BF%83"><span class="nav-text">外心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E5%BF%83"><span class="nav-text">垂心</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E4%B8%80%E4%BA%9B%E6%8E%A8%E5%B9%BF"><span class="nav-text">6. 一些推广</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4"><span class="nav-text">二维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4"><span class="nav-text">一维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4"><span class="nav-text">三维</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%8F%82%E8%80%83"><span class="nav-text">7. 参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若则理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/03/25/%E5%A5%94%E9%A9%B0%E5%AE%9A%E7%90%86%E8%AF%81%E6%98%8E%E6%8E%A2%E7%A9%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若则理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若则理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="奔驰定理证明探究 | 若则理のBlog">
+      <meta itemprop="description" content="奔驰定理的几种证明和一些推广">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          奔驰定理证明探究
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-03-25 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-25T00:00:00+08:00">2023-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">奔驰定理的几种证明和一些推广</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="1-问题分析"><a href="#1-问题分析" class="headerlink" title="1. 问题分析"></a>1. 问题分析</h2><p><strong>奔驰定理: $O$是$\triangle ABC$内一点, 且$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$,<br>则$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z$.</strong></p>
+<p>从这个形式很容易联想到三角形重心的性质,<br>即三角形重心满足$\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}&#x3D;\overrightarrow{0}$, $S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;1:1:1$, 应该可以通过重心的性质证明.</p>
+<h2 id="2-尝试证明"><a href="#2-尝试证明" class="headerlink" title="2. 尝试证明"></a>2. 尝试证明</h2><p><img src="https://s2.loli.net/2023/03/25/hI4B52V7tbjfFpr.png" alt="image.png|400"><br>如图, $O$是$\triangle A’B’C’$的重心, $A,B,C$分别为$OA’,OB’,OC’$上一点, 由于$\triangle A’B’C’$是任意的, $\triangle ABC$也为任意三角形. 由$\overrightarrow{OA’}+\overrightarrow{OB’}+\overrightarrow{OC’}&#x3D;\overrightarrow{0}$可得$\overrightarrow{OA’}&#x3D;x\cdot\overrightarrow{OA}$, $\overrightarrow{OB’}&#x3D;y\cdot\overrightarrow{OB}$, $\overrightarrow{OC’}&#x3D;z\cdot\overrightarrow{OC}$.<br>过$A$作$AG\perp BO$, $A’$作$A’G’\perp BO$, $C$作$CH\perp OB$, $C’$作$C’H’\perp OB$.<br>由相似得$AG&#x3D;\frac{1}{x}A’G’,CH&#x3D;\frac{1}{z}C’H’$, 又因为$A’G’&#x3D;C’H’$, 所以$CH:AG&#x3D;x:z$, 可得$S_{\triangle BOC}:S_{\triangle AOB}&#x3D;x:z$, 同理可证$S_{\triangle BOC}:S_{\triangle AOC}&#x3D;x:y$, 即$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z$.<br>以上是一些初步思考，并不是很严格的证明。</p>
+<h2 id="3-正式证明"><a href="#3-正式证明" class="headerlink" title="3. 正式证明"></a>3. 正式证明</h2><p>延长$OA,OB,OC$, 使$\overrightarrow{OA’}&#x3D;x\cdot\overrightarrow{OA}$, $\overrightarrow{OB’}&#x3D;y\cdot\overrightarrow{OB}$, $\overrightarrow{OC’}&#x3D;z\cdot\overrightarrow{OC}$.<br>由$O$是$\triangle A’B’C’$的重心, 可得:<br>$$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$$<br>$$S_{\triangle A’OB’}&#x3D;xy\cdot S_{\triangle AOB}&#x3D;S_{\triangle B’OC’}&#x3D;yz\cdot S_{\triangle BOC}&#x3D;S_{\triangle A’OC’}&#x3D;xz\cdot S_{\triangle AOC}$$<br>整理得$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z\quad\square$</p>
+<h2 id="4-另一种证明-面积比例推导"><a href="#4-另一种证明-面积比例推导" class="headerlink" title="4. 另一种证明(面积比例推导)"></a>4. 另一种证明(面积比例推导)</h2><p>仔细考虑即会发现上面的证明也不是很严格，充要性略有问题。于是我在网上找到了另一种证明方法。<br><img src="https://s2.loli.net/2023/03/25/nH8bDRlUsGikVNo.png" alt="image.png|400"><br>$O$为$\triangle ABC$内任意一点, 延长$AO$至$D$, 设$S_{\triangle AOB}&#x3D;S_1$, $S_{\triangle AOC}&#x3D;S_2$, $S_{\triangle BOC}&#x3D;S_3$. 易得:<br>$$\overrightarrow{AO}&#x3D;\frac{AO}{AD}\cdot\overrightarrow{AD}&#x3D;\frac{S_1+S_2}{S_1+S_2+S_3}\cdot\overrightarrow{AD}$$<br>$$\overrightarrow{AD}&#x3D;\frac{CD}{BC}\cdot\overrightarrow{AB}+\frac{BD}{BC}\cdot\overrightarrow{AC}&#x3D;\frac{S_2}{S_1+S_2}\cdot\overrightarrow{AB}+\frac{S_1}{S_1+S_2}\overrightarrow{AC}$$<br>联立可得:<br>$$<br>\begin{aligned}<br>\overrightarrow{AO}&amp;&#x3D;\frac{S_2}{S_1+S_2+S_3}\cdot\overrightarrow{AB}+\frac{S_1}{S_1+S_2+S_3}\overrightarrow{AC}\\<br>&amp;&#x3D;\frac{S_2}{S_1+S_2+S_3}\cdot(\overrightarrow{AO}+\overrightarrow{OB})+\frac{S_1}{S_1+S_2+S_3}(\overrightarrow{AO}+\overrightarrow{OC})<br>\end{aligned}<br>$$<br>整理得:<br>$$\frac{S_3}{S_1+S_2+S_3}\cdot\overrightarrow{OA}+\frac{S_2}{S_1+S_2+S_3}\cdot\overrightarrow{OB}+\frac{S_1}{S_1+S_2+S_3}\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$$<br>即$S_3:S_2:S_1&#x3D;x:y:z$, $S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;x:y:z\quad\square$</p>
+<h2 id="5-特例"><a href="#5-特例" class="headerlink" title="5. 特例"></a>5. 特例</h2><p>$\triangle ABC$三角$A,B,C$对边分别为$a,b,c$</p>
+<h3 id="重心"><a href="#重心" class="headerlink" title="重心"></a>重心</h3><p>$$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;1:1:1$$<br>$$\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}&#x3D;\overrightarrow{0}$$</p>
+<h3 id="内心"><a href="#内心" class="headerlink" title="内心"></a>内心</h3><p>$$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;a:b:c$$<br>$$a\cdot\overrightarrow{OA}+b\cdot\overrightarrow{OB}+c\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$$</p>
+<h3 id="外心"><a href="#外心" class="headerlink" title="外心"></a>外心</h3><p>$$<br>\begin{aligned}<br>S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&amp;&#x3D;\sin\angle BOC:\sin\angle AOC:\sin\angle AOB\\<br>&amp;&#x3D;\sin2A:\sin2B:\sin2C<br>\end{aligned}<br>$$<br>$$\sin2A\cdot\overrightarrow{OA}+\sin2B\cdot\overrightarrow{OB}+\sin2C\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$$</p>
+<h3 id="垂心"><a href="#垂心" class="headerlink" title="垂心"></a>垂心</h3><p>$$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;\tan A:\tan B:\tan C$$<br>$$\tan2A\cdot\overrightarrow{OA}+\tan2B\cdot\overrightarrow{OB}+\tan2C\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$$</p>
+<h2 id="6-一些推广"><a href="#6-一些推广" class="headerlink" title="6. 一些推广"></a>6. 一些推广</h2><h3 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h3><p>$O$为$\triangle ABC$所在平面内任意一点, 且$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}&#x3D;\overrightarrow{0}$, 则:<br>$$S_{\triangle BOC}:S_{\triangle AOC}:S_{\triangle AOB}&#x3D;\vert x\vert:\vert y\vert:\vert z\vert$$<br>$$S_{\triangle BOC}&#x3D;\frac{\vert x\vert}{\vert x+y+z\vert}$$</p>
+<h3 id="一维"><a href="#一维" class="headerlink" title="一维"></a>一维</h3><p>$O$为线段$AB$所在直线上一点, 且$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}&#x3D;\overrightarrow{0}$, 则:<br>$$L_{OB}:L_{OA}&#x3D;\vert x\vert:\vert y\vert$$<br>$$L_{OB}&#x3D;\frac{\vert x\vert}{\vert x+y\vert}$$</p>
+<h3 id="三维"><a href="#三维" class="headerlink" title="三维"></a>三维</h3><p>$O$为三棱锥$A-BCD$内一点, 且$x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}+k\cdot\overrightarrow{OD}&#x3D;\overrightarrow{0}$, 则:<br>$$V_{O-BCD}:V_{O-ACD}:V_{O-ABD}:V_{O-ABC}&#x3D;\vert x\vert:\vert y\vert:\vert z\vert:\vert k\vert$$<br>$$V_{O-BCD}&#x3D;\frac{\vert x\vert}{\vert x+y+z+k\vert}$$<br>当$O$是三棱锥$A-BCD$内切球球心时:<br>$$S_{\triangle BCD}\cdot\overrightarrow{OA}+S_{\triangle ACD}\cdot\overrightarrow{OB}+S_{\triangle ABD}\cdot\overrightarrow{OC}+S_{\triangle ABC}\cdot\overrightarrow{OD}&#x3D;\overrightarrow{0}$$<br>还没学立体几何，不会证明…</p>
+<h2 id="7-参考"><a href="#7-参考" class="headerlink" title="7. 参考"></a>7. 参考</h2><p>谷留明. 奔驰定理的应用与推广[J]. 中学数学研究,2019(09):20-21.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/geometry/" rel="tag"># geometry</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/12/OpAEOLUS-1/" rel="prev" title="OpAEOLUS-1.Start">
+                  <i class="fa fa-chevron-left"></i> OpAEOLUS-1.Start
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/03/26/OpAEOLUS-2/" rel="next" title="OpAEOLUS-2.数学模型">
+                  OpAEOLUS-2.数学模型 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若则理</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

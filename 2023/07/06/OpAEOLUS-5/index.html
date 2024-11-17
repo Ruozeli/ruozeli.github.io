@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="gcFcmmNr8Y8yiq5ncwJiiPRbv0I3srT4dFD80_qixv4" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGWWenKai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+    <meta name="description" content="OperationAEOLUS-纸飞机设计问题综述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpAEOLUS-5.纸飞机设计">
+<meta property="og:url" content="https://ruozeli.github.io/2023/07/06/OpAEOLUS-5/index.html">
+<meta property="og:site_name" content="若则理のBlog">
+<meta property="og:description" content="OperationAEOLUS-纸飞机设计问题综述">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/07/14/StEjA3s2HKVRIyD.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/14/xKICWvhc2gw1su3.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/14/lJIR1gtFDT5x9No.png">
+<meta property="article:published_time" content="2023-07-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-03T14:58:24.004Z">
+<meta property="article:author" content="若则理">
+<meta property="article:tag" content="physics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/07/14/StEjA3s2HKVRIyD.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/07/06/OpAEOLUS-5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://ruozeli.github.io/2023/07/06/OpAEOLUS-5/","path":"2023/07/06/OpAEOLUS-5/","title":"OpAEOLUS-5.纸飞机设计"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>OpAEOLUS-5.纸飞机设计 | 若则理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若则理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%80%83%E8%99%91%E5%9B%A0%E7%B4%A0"><span class="nav-text">1. 考虑因素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%BA%B8%E9%A3%9E%E6%9C%BA%E8%AE%BE%E8%AE%A1"><span class="nav-text">2. 纸飞机设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%95%E5%BC%A6%E6%AF%94"><span class="nav-text">展弦比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BF%BC%E5%B0%96%E5%B0%8F%E7%BF%BC"><span class="nav-text">翼尖小翼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%87%E9%99%8D%E8%88%B5"><span class="nav-text">升降舵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%B8%AD%E7%BF%BC%E4%B8%8E%E5%B0%BE%E7%BF%BC"><span class="nav-text">鸭翼与尾翼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%85%B9%E9%97%B4%E9%9A%99"><span class="nav-text">腹间隙</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%8F%82%E8%80%83"><span class="nav-text">3. 参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若则理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/07/06/OpAEOLUS-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若则理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若则理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="OpAEOLUS-5.纸飞机设计 | 若则理のBlog">
+      <meta itemprop="description" content="OperationAEOLUS-纸飞机设计问题综述">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OpAEOLUS-5.纸飞机设计
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-06 00:00:00" itemprop="dateCreated datePublished" datetime="2023-07-06T00:00:00+08:00">2023-07-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Research/" itemprop="url" rel="index"><span itemprop="name">Research</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Research/OperationAEOLUS/" itemprop="url" rel="index"><span itemprop="name">OperationAEOLUS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">OperationAEOLUS-纸飞机设计问题综述</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>在上一篇的基础上，进一步分析纸飞机飞行影响因素，并指出纸飞机设计、制作等方面的一些要点。</p>
+<h2 id="1-考虑因素"><a href="#1-考虑因素" class="headerlink" title="1. 考虑因素"></a>1. 考虑因素</h2><p>纸飞机与真正飞机的差异很大，最主要的区别为以下几点：</p>
+<ol>
+<li>纸飞机无自主动力，抛出后仅受气动力作用。</li>
+<li>纸飞机总质量轻，但一般质量分布不均匀，重心位置影响较大。</li>
+<li>机翼厚度小，一般无弯度。与真实飞机几乎完全由机翼产生升力相比，纸飞机的升力产生依赖于全体，机身影响大。</li>
+<li>纸制，易变形，在飞行中形变较大，特别是中间$V$形夹角大幅变化，可能产生较大影响，但此因素较为复杂，本次研究不考虑。</li>
+</ol>
+<p>由此可以得到设计纸飞机需考虑的因素：</p>
+<ol>
+<li>重心：重心太靠前会使纸飞机在下落阶段直线降落；重心太靠后会造成严重失速。因此，纸飞机重心应置于中端靠前的位置，例如，世界纪录的<em>Suzanne</em>纸飞机重心大约在机身前$1&#x2F;3$处。</li>
+<li>稳定性：主要是制作时保持对称。</li>
+<li>升阻比：升阻比是滑翔比的重要决定因素，静气流稳定无动力滑翔中，升阻比等于滑翔比。因此，较大的升阻比可以提升滑翔距离。升阻比主要由迎角、翼型等决定。</li>
+<li>涡诱导阻力：在纸飞机阻力中占较大比重，主要由展弦比和翼尖小翼决定。</li>
+<li>抛射：抛射角和初速度大小。</li>
+</ol>
+<h2 id="2-纸飞机设计"><a href="#2-纸飞机设计" class="headerlink" title="2. 纸飞机设计"></a>2. 纸飞机设计</h2><p>针对上文的考虑因素，分析具体设计问题。</p>
+<h3 id="展弦比"><a href="#展弦比" class="headerlink" title="展弦比"></a>展弦比</h3><p>展弦比定义为翼展的平方比机翼面积：$A&#x3D;b^2&#x2F;S$，也可以表示为翼展&#x2F;弦长，能反映机翼的长短宽窄程度。纸飞机没有明确的翼展等参数，不妨定义纸飞机展弦比为机翼平均长度比机身长度，由此算出<em>Suzanne</em>纸飞机展弦比大约为0.3.<br><img src="https://s2.loli.net/2023/07/14/StEjA3s2HKVRIyD.png" width="50%" height="50%" /></p>
+<p>展弦比的影响有以下两点：</p>
+<ol>
+<li>涡诱导阻力：大展弦比机翼翼尖距离较远，翼尖涡影响较小，从而可以减小阻力。因此，所以追求低阻力的飞机都是大展弦比的，但是展弦比大有机动性不好和强度差等缺点。</li>
+<li>失速迎角：小展弦比机翼的失速迎角比大展弦比机翼大。展弦比越小，越不容易失速，从而可控制性更强。</li>
+</ol>
+<p>一般滞空型纸飞机展弦比较大，距离型纸飞机机翼展弦比较小，最极端的例子是标枪型纸飞机，几乎不存在机翼，没有滑翔阶段，仅凭起初的投掷力运动，近似做抛体运动。小展弦比优势在于上抛阶段，不易失速，同时小展弦比易获得更强的前缘涡，可提高气动效率。<br>但也存在例外，如<em>Paperang</em>纸飞机，展弦比就很大。这一类纸飞机优势在于滑翔，据说滑翔比可达12，且飞行稳定，但上抛易失速，适合从高处投掷。<br><em>Suzanne</em>纸飞机展弦比适中，因此能在保持飞行稳定的同时滑翔很长距离。</p>
+<h3 id="翼尖小翼"><a href="#翼尖小翼" class="headerlink" title="翼尖小翼"></a>翼尖小翼</h3><p>现代客机翼尖处多有向上的小翼，目的是变相地加长机翼和减小翼尖处的弦长，从而减小涡诱导阻力。将纸飞机机翼翼尖上卷也是常见操作，但不确定是否有类似效果，并且若处理不当，机翼不对称，可能导致纸飞机稳定性下降。</p>
+<h3 id="升降舵"><a href="#升降舵" class="headerlink" title="升降舵"></a>升降舵</h3><p>升降舵是飞机尾翼后部可以上下调节的组件，制作纸飞机时，一般将机翼后部向上卷起，起升降舵的作用。<br><img src="https://s2.loli.net/2023/07/14/xKICWvhc2gw1su3.png" width="50%" height="50%" /></p>
+<p>当纸飞机向下俯冲时，气流因升降舵而转向，给纸飞机后端一个向下的力，促使纸飞机抬头，保持平稳滑翔。但升降舵易对飞行稳定性造成影响，导致偏向与失速。</p>
+<h3 id="鸭翼与尾翼"><a href="#鸭翼与尾翼" class="headerlink" title="鸭翼与尾翼"></a>鸭翼与尾翼</h3><p>鸭翼与尾翼是飞机设计中常见的两个组件，但在纸飞机中极少见，在此举两例：<br><img src="https://s2.loli.net/2023/07/14/lJIR1gtFDT5x9No.png" width="50%" height="50%" /><br><em>Super Canard</em>：鸭翼在主翼前，气流从鸭翼下方流过，使气流能够紧贴主翼流过，减小了气面分离，从而避免了失速，同时，这样的设计利于纸飞机在下落时抬头，保持稳定。但过于复杂的结构可能导致一些飞行中的问题。</p>
+<p><em>DC-03</em>：其作者声称此为气动性能最好的纸飞机，但对于尾翼是否能提升纸飞机飞行距离这个问题存在争议，前世界纪录保持者<em>Ken Blackburn</em>不同意在纸飞机后加尾翼的做法。同时，由于使用裁剪和粘贴，此纸飞机不能参加各大纸飞机比赛。</p>
+<h3 id="腹间隙"><a href="#腹间隙" class="headerlink" title="腹间隙"></a>腹间隙</h3><p>腹间隙指纸飞机机身之间所夹的间隙，看似无关紧要，实则对飞行影响巨大。在做实验时，我起初用胶带将两翼贴合，不留间隙，但纸飞机飞行时很不稳定，失去平衡，飞行距离近。<br>论文<em>Flow analysis on the ventral gap of a paper airplane</em><sup>[5]</sup>通过数值仿真方法探讨了腹间隙对纸飞机飞行的影响。结果表明，有腹间隙的纸飞机的失速迎角小于无腹间隙者(更易失速)，而最大升力系数(1.49)大于无腹间隙者(1.46)，在大迎角情况下，有腹间隙的纸飞机俯仰力矩系数为负(抬头)，而无腹间隙者俯仰力矩系数为正(低头)。</p>
+<p>原因可能如下：腹间隙内出现湍流，产生了更强的回流涡度。涡度后存在下洗流，在尾缘高压区又形成了回流，此处回流涡在一定程度上抑制了高压区的前移。从仿真结果可以看出，纸飞机在对称平面上有两个低压区，都与上述回流有关，更强的回流产生了更大面积的低压区，从而增强了升力。然而，更大的升力伴随着更大的阻力，有腹间隙的纸飞机升阻比反而小于无腹间隙者。<br>无腹间隙的纸飞机之俯仰力矩转折一次后持续增加，与常规理解一致，但有腹间隙的纸飞机之俯仰力矩在第一次转折后又转折两次，这一现象可以用回流涡和前缘涡的变化来解释。回流涡的增强提供了机头向下力矩，前缘涡则提供了机头向上力矩，两者在不同迎角互相影响，产生了特殊的变化趋势。<br>(此处仅简要叙述，具体见原文。)</p>
+<p>由于腹间隙易引起失速，间隙夹角的大小需控制。常见方法是在机头出制作自锁结构(<em>Suzanne</em>纸飞机)即如此设计，此方法既可控制夹角，又可使重心提前，值得采用。</p>
+<h2 id="3-参考"><a href="#3-参考" class="headerlink" title="3. 参考"></a>3. 参考</h2><p>[1]笔记：机翼几何参数(展弦比). <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/55217283">https://zhuanlan.zhihu.com/p/55217283</a><br>[2]闲话翼尖涡. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/138781194">https://zhuanlan.zhihu.com/p/138781194</a><br>[3]上反角及升降舵对纸飞机飞行的影响. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/499789517">https://zhuanlan.zhihu.com/p/499789517</a><br>[4]Aerodynamics Explained by a World Record Paper Airplane Designer. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=3KqjRPV9_PY">https://www.youtube.com/watch?v=3KqjRPV9_PY</a><br>[5]Chang M, Feng X, Zhang Y, Zhang X, Bai J. Flow analysis on the ventral gap of a paper airplane. Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science. 2020;0(0). doi:10.1177&#x2F;0954406220946076</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/physics/" rel="tag"># physics</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/06/22/OpAEOLUS-4/" rel="prev" title="OpAEOLUS-4.纸飞机飞行原理">
+                  <i class="fa fa-chevron-left"></i> OpAEOLUS-4.纸飞机飞行原理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/07/14/OpAEOLUS-6/" rel="next" title="OpAEOLUS-6.计算机仿真">
+                  OpAEOLUS-6.计算机仿真 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若则理</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

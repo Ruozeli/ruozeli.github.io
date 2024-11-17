@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="gcFcmmNr8Y8yiq5ncwJiiPRbv0I3srT4dFD80_qixv4" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGWWenKai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+    <meta name="description" content="容纳多个圆(不重叠)的三角形面积最小值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多个圆的最小外切三角形-1">
+<meta property="og:url" content="https://ruozeli.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/index.html">
+<meta property="og:site_name" content="若则理のBlog">
+<meta property="og:description" content="容纳多个圆(不重叠)的三角形面积最小值">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/KVpRz4xoDi73ANg.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/nq7EfbFt2wZ58Lz.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/K1y3CEqXsVJfoUL.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/EeGd5YOIMtfcUZ9.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/5RgahsFXtyZDz8m.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/d7xM69a8HSvZ421.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/MBemtcdriaCq32w.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/vBFcJgYLuhiwHxs.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/01/W7BK6tduSjimsgr.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/02/aK43wljYc9Z8qng.png">
+<meta property="article:published_time" content="2023-07-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-03T14:59:20.342Z">
+<meta property="article:author" content="若则理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="geometry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/08/01/KVpRz4xoDi73ANg.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://ruozeli.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/","path":"2023/08/01/多个圆的最小外切三角形-1/","title":"多个圆的最小外切三角形-1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>多个圆的最小外切三角形-1 | 若则理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若则理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%97%AE%E9%A2%98"><span class="nav-text">1. 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%80%E4%B8%AA%E5%9C%86"><span class="nav-text">2. 一个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A5%E6%A0%BC%E8%AF%81%E6%98%8E"><span class="nav-text">严格证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E7%9B%B4%E8%A7%82"><span class="nav-text">几何直观</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%B8%A4%E4%B8%AA%E5%9C%86"><span class="nav-text">3. 两个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80"><span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C"><span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83"><span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%B8%89%E4%B8%AA%E5%9C%86"><span class="nav-text">4. 三个圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80-1"><span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C-1"><span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89"><span class="nav-text">情况三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83-1"><span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%9B%9B%E3%80%81%E4%BA%94%E3%80%81%E5%85%AD"><span class="nav-text">5. 四、五、六</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%80-2"><span class="nav-text">情况一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C-2"><span class="nav-text">情况二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5%E4%B8%89-1"><span class="nav-text">情况三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-What-about-100%EF%BC%9F"><span class="nav-text">6. What about 100？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E4%B8%8D%E7%AD%89%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">7. 不等大的情况</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若则理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/08/01/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若则理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若则理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="多个圆的最小外切三角形-1 | 若则理のBlog">
+      <meta itemprop="description" content="容纳多个圆(不重叠)的三角形面积最小值">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          多个圆的最小外切三角形-1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-08-01 00:00:00" itemprop="dateCreated datePublished" datetime="2023-08-01T00:00:00+08:00">2023-08-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">容纳多个圆(不重叠)的三角形面积最小值</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h2><p>看到一个很有意思的问题：<br><em>把面积分别为1，2，3…99，100的100个圆平铺在一个三角形里，这个三角形至少有多大？ <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/612605604">https://www.zhihu.com/question/612605604</a></em></p>
+<p>然后我就联想到了这个：<br><img src="https://s2.loli.net/2023/08/01/KVpRz4xoDi73ANg.png" width="50%" height="50%" /></p>
+<p>天知道这是怎么算出来的……</p>
+<p>这个问题的本质大概就是寻找多个圆的最小外切三角形(显然必须相切，不然就不能最小，且每个圆也最好是相切的)，在网上查了一下，没发现什么相关信息g感觉很有趣，那就稍微研究一下。<br>由于大小不同的圆过于复杂，这里先考虑大小相等的圆。</p>
+<h2 id="2-一个圆"><a href="#2-一个圆" class="headerlink" title="2. 一个圆"></a>2. 一个圆</h2><h3 id="严格证明"><a href="#严格证明" class="headerlink" title="严格证明"></a>严格证明</h3><p>先考虑一个圆。<br>一个圆的外切三角形面积最小值很好求，设圆半径为$r$，三角形三个角为$A,B,C$，对边分别为$a,b,c$，于是$S&#x3D;1&#x2F;2\cdot r(a+b+c)$，同时可以用$r$和三个角表示三边：<br>$$<br>\begin{aligned}<br>a&#x3D;r\cot\frac{B}{2}+r\cot\frac{C}{2}\\<br>b&#x3D;r\cot\frac{A}{2}+r\cot\frac{C}{2}\\<br>c&#x3D;r\cot\frac{A}{2}+r\cot\frac{B}{2}<br>\end{aligned}<br>$$<br>所以$S&#x3D;r^2(\cot\frac{A}{2}+\cot\frac{B}{2}+\cot\frac{C}{2})$，余切函数在$(0,\pi&#x2F;2)$是凸函数，直接用琴生不等式就可以得到：<br>$$S_{min}&#x3D;3r^2\cot\frac{A+B+C}{6}&#x3D;3\sqrt{3}r^2$$<br>此时$A&#x3D;B&#x3D;C$，是等边三角形。</p>
+<h3 id="几何直观"><a href="#几何直观" class="headerlink" title="几何直观"></a>几何直观</h3><p>虽然使用琴生不等式很简单，但似乎不易推广到多个圆的情况，所以我想到了一种借助几何直观的方法。<br>当然这种方法很不严格，只是投机取巧的做法罢了，谈不上证明。<br><img src="https://s2.loli.net/2023/08/01/nq7EfbFt2wZ58Lz.png" width="75%" height="75%" /><br>如图，固定两条切线$AC$和$AB$，观察第三条切线$BC$，不妨设$CD&gt;BD$。作圆的切线$MN$，且切点为$MN$中点，作$NE\parallel MB$。<br>显然$\triangle MDB\sim\triangle NDE$，因为$ND&gt;MD$，所以$S_{\triangle MDB}&lt;S_{\triangle NDE}$，那么$S_{\triangle MDB}&lt;S_{\triangle NDC}$，$S_{\triangle AMN}&lt;S_{\triangle ABC}$，可知$\triangle AMN$面积最小。由于对称性，三边切点都是中点时面积最小，此时外切三角形是等边三角形。</p>
+<h2 id="3-两个圆"><a href="#3-两个圆" class="headerlink" title="3. 两个圆"></a>3. 两个圆</h2><p>分成两种情况考虑，一是一边与两个圆相切，二是三边都只与一个圆相切。(至于为什么是两种，请显然。)</p>
+<h3 id="情况一"><a href="#情况一" class="headerlink" title="情况一"></a>情况一</h3><p>本来想直接建系算的，但计算太复杂，超出了我的能力范围。(算出来大概也求不了最值)<br>那就故技重施，取切点为中点的情况：<br><img src="https://s2.loli.net/2023/08/01/K1y3CEqXsVJfoUL.png" width="75%" height="75%" /><br>很容易就能看出此时三角形为等腰直角三角形，面积$S&#x3D;(6+4\sqrt{2})r^2\approx11.657r^2$。</p>
+<h3 id="情况二"><a href="#情况二" class="headerlink" title="情况二"></a>情况二</h3><p>还是一样的方法，但计算繁琐一些。<br><img src="https://s2.loli.net/2023/08/01/EeGd5YOIMtfcUZ9.png" width="75%" height="75%" /><br>设底边长为$2x$，根据勾股定理列方程：<br>$$(\sqrt{(3r)^2+x^2}+3r)^2+x^2&#x3D;(2\sqrt{(3r)^2+x^2-r^2})^2$$<br>解得$x&#x3D;\sqrt{\frac{1}{2}(3\sqrt{17}-5)}r$，于是可以算出面积：<br>$$S&#x3D;\frac{\sqrt{6\sqrt{17}-10}\cdot(\sqrt{17}+9)}{4}r^2\approx12.595r^2$$</p>
+<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p>那么就可以对比面积了，显然第一种情况面积更小一些。于是得出结论：两个圆的最小外切三角形是等腰直角三角形，面积最小值$S&#x3D;(6+4\sqrt{2})r^2$。<br>虽然不能严格证明，但这确实是我找到的最小了。</p>
+<p>还有一个问题是：为什么情况一比情况二面积小？<br>两种情况都是等腰三角形，可以从中间切开考虑，得到两个直角三角形都包含了一个圆，情况二的空隙更大一些，直觉上说就是这样(唉说了跟没说一样)。</p>
+<p><strong>提出猜想1</strong>：情况一面积始终比情况二小，且两情况的差距会随圆个数的增加而增加。</p>
+<h2 id="4-三个圆"><a href="#4-三个圆" class="headerlink" title="4. 三个圆"></a>4. 三个圆</h2><p>这里要分3种情况考虑：</p>
+<ol>
+<li>类似上述情况一</li>
+<li>类似上述情况二</li>
+<li>平面六角密堆积式排列，外切等边三角形</li>
+</ol>
+<p>从直觉来看，显然情况3是最小的，且情况1小于情况2，但我没有什么简单的比较方法，那就干脆全部算出来好了(顺便锻炼计算能力)。</p>
+<h3 id="情况一-1"><a href="#情况一-1" class="headerlink" title="情况一"></a>情况一</h3><p>直接建系如图，并设圆的半径为1.<br><img src="https://s2.loli.net/2023/08/01/5RgahsFXtyZDz8m.png" width="75%" height="75%" /><br>设$A$点坐标$(0,a)$，$B$点$(b,0)$，$AB$中点$C$坐标$(b&#x2F;2,a&#x2F;2)$，可得$AB$的解析式：<br>$$AB:y&#x3D;-\frac{a}{b}x+a$$<br>$AB$与圆在$C$点相切时，$OC\perp AB$，由此可以算出$OC$的解析式：<br>$$OC:y&#x3D;\frac{b}{a}x+\frac{a^2-b^2}{2a}$$<br>根据”$OC$过点$O$”和”$C$在圆$O$上”列出方程：<br>$$<br>\begin{align*}<br>2\cdot\frac{b}{a}+\frac{a^2-b^2}{2a}&#x3D;1\\<br>(\frac{1}{2}b-2)^2+(\frac{1}{2}a-1)^2&#x3D;1<br>\end{align*}<br>$$<br>整理一下就出现了喜闻乐见的一元四次方程：<br>$$x^4-12 x^3+49 x^2-80 x+48&#x3D;0$$<br>这、完全不会解。<br>没关系，还有Wolfram|Alpha，轻松得到答案为：<br>$$b&#x3D;\frac{1}{3} \left(\sqrt[3]{3 \sqrt{183}+62}+\sqrt[3]{62-3 \sqrt{183}}+8\right)\approx5.15276$$<br>继续代回式子，得到：<br>$$S&#x3D;ab\approx18.727$$<br>所以$S\approx18.727r^2$</p>
+<h3 id="情况二-1"><a href="#情况二-1" class="headerlink" title="情况二"></a>情况二</h3><p>这种情况简单许多，和一个圆时类似，设底边为$2x$，根据勾股定理列方程(图都懒得画了)：<br>$$(\sqrt{(5r)^2+x^2}+5r)^2+x^2&#x3D;(2\sqrt{(5r)^2+x^2-r^2})^2$$<br>解得$x&#x3D;\sqrt{\frac{1}{2} \left(5 \sqrt{33}-21\right)}r$，于是算出面积：<br>$$S&#x3D;\frac{1}{2} \sqrt{\frac{1}{2} \left(5 \sqrt{33}-21\right)} \left(\sqrt{10 \sqrt{33}+58}+10\right)r^2\approx20.382r^2$$</p>
+<h3 id="情况三"><a href="#情况三" class="headerlink" title="情况三"></a>情况三</h3><p>看起来很好算，实际上确实很好算。如果建系死算大概会比较复杂，但直接算高$CF$就会轻松很多。<br><img src="https://s2.loli.net/2023/08/01/d7xM69a8HSvZ421.png" width="75%" height="75%" /><br>首先易知$CD&#x3D;r$，然后由于$\triangle OAB$是等边三角形，$OD&#x3D;\sqrt{3}r$，由于$\triangle OEF$是带60°的直角三角形，$OF&#x3D;2OE&#x3D;2r$，所以$CF&#x3D;3+\sqrt{3}$，容易算出三角形面积：<br>$$S&#x3D;(6+4\sqrt{3})r^2\approx12.928r^2$$</p>
+<h3 id="比较-1"><a href="#比较-1" class="headerlink" title="比较"></a>比较</h3><p>到这里，差距就很明显了，情况三显著小于情况一和二，甚至与两个圆的最小外切三角形面积相差无几，看来这的确是一种节省空间的排列方式。因此对于较多的圆，前两种情况可以不用考虑了，差距只会越来越大。</p>
+<p><strong>提出猜想2</strong>：对于三角形数个圆，最小外切三角形必然是类似情况三的等边三角形。<br>可以总结出这类三角形的面积公式：<br>若圆的个数为$k(k+1)&#x2F;2$，则可算出高为$h&#x3D;1+2+(k-1)\sqrt{3}&#x3D;3+(k-1)\sqrt{3}$，由此得到三角形面积$S&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6$。</p>
+<p>那么需要特别考虑的就是非三角形数个圆的情况。</p>
+<div class="admonition note"><p>三角形数：该数目个点或等大圆在等距情况下可排列成三角形，对于相切的等大圆，即可排列成等边三角形的现状。</p>
+<p>前10个三角形数为：1, 3, 6, 10, 15, 21, 28, 36, 45, 55</p>
+</div>
+
+<h2 id="5-四、五、六"><a href="#5-四、五、六" class="headerlink" title="5. 四、五、六"></a>5. 四、五、六</h2><p>经过以上的探究，总结出两条经验：</p>
+<ol>
+<li>若某条线段仅与一个圆相切，尽量使切点在切线段的中点</li>
+<li>尽量排列紧密，最好以平面六角密堆积式排列</li>
+</ol>
+<p>接下来对四、五、六个圆的情况进行分析。为方便起见，接下来默认$r&#x3D;1$。</p>
+<h3 id="情况一-2"><a href="#情况一-2" class="headerlink" title="情况一"></a>情况一</h3><p>六个圆用平面六角密堆积式排列，形成的外切三角形同时也可容纳四个或五个圆：<br><img src="https://s2.loli.net/2023/08/01/MBemtcdriaCq32w.png" width="75%" height="75%" /><br>这时候直接代公式就可以了，$k&#x3D;3$：<br>$$<br>\begin{aligned}<br>S&amp;&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6\\<br>&amp;&#x3D;9\sqrt{3}+18-6\sqrt{3}+4\sqrt{3}-6\\<br>&amp;&#x3D;12+7\sqrt{3}\\<br>&amp;\approx24.124<br>\end{aligned}<br>$$</p>
+<h3 id="情况二-2"><a href="#情况二-2" class="headerlink" title="情况二"></a>情况二</h3><p>对于四个或五个圆，还有另一种面积较小的情况如图，切点$C$为$AB$中点。<br><img src="https://s2.loli.net/2023/08/01/vBFcJgYLuhiwHxs.png" width="75%" height="75%" /><br>还是建系计算，思路与前述相同。<br>设$A(0,a)$，$B(b,0)$，可以列出方程：<br>$$<br>\begin{align*}<br>\frac{b}{a}+\frac{a^2-b^2}{2a}&#x3D;3\\<br>(\frac{1}{2}b-1)^2+(\frac{1}{2}a-3)^2&#x3D;1<br>\end{align*}<br>$$<br>根式解很复杂，所以就直接写近似结果了：$b\approx3.759$，$S\approx26.132&gt;24.124$</p>
+<p>情况一在空缺两位的情况下，空间利用率仍比情况二高，再一次展现了平面六角密堆积式的优越性。事实上，观察情况二的图可知情况一等价于下层两圆移至两边，可以在底不变甚至减小的情况下减小高，如此能够减小面积就不显奇怪了。</p>
+<h3 id="情况三-1"><a href="#情况三-1" class="headerlink" title="情况三"></a>情况三</h3><p>当然，情况一虽排列合理，但终究空缺两位，对于四个圆，很容易发现更小的外切三角形，即图中左下的直角三角形：<br><img src="https://s2.loli.net/2023/08/01/W7BK6tduSjimsgr.png" width="75%" height="75%" /><br>观察图形可只此直角三角形恰为10个圆的最小外切三角形的一半，于是可以用前述方法先求大等边三角形的面积，除以2即为直角三角形面积：<br>$$<br>\begin{aligned}<br>S&amp;&#x3D;(\sqrt{3}n^2+(6-2\sqrt{3})n+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;(16\sqrt{3}+24-8\sqrt{3}+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;9+6\sqrt{3}\\<br>&amp;\approx19.392<br>\end{aligned}<br>$$</p>
+<p>对于像4这样可以形成等边三角形的一半的数，不妨称其为半三角形数。半三角形数就是三角形数减去分割线通过的圆，再除以二。由此可以得到半三角形数的公式：<br>$$<br>a&#x3D;\begin{cases}<br>n^2&#x2F;4,\quad n\to \rm even\\<br>(n^2-1)&#x2F;4,\quad n\to \rm odd<br>\end{cases}<br>$$<br>此时突然发现6也是半三角形数：$6&#x3D;(5^2-1)&#x2F;4$，于是作出6个圆的外切直角三角形：<br><img src="https://s2.loli.net/2023/08/02/aK43wljYc9Z8qng.png" width="75%" height="75%" /><br>然后用和前面一样的方法计算面积：<br>$$<br>\begin{aligned}<br>S&amp;&#x3D;(\sqrt{3}n^2+(6-2\sqrt{3})n+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;(25\sqrt{3}+30-10\sqrt{3}+4\sqrt{3}-6)&#x2F;2\\<br>&amp;&#x3D;12+9.5\sqrt{3}\\<br>&amp;\approx28.454<br>\end{aligned}<br>$$<br>明显比上面的情况一大。</p>
+<p>同时是三角形数和半三角形数的情况不多见，可通过解方程$n^2&#x2F;4&#x3D;k(k+1)&#x2F;2$或$(n^2-1)&#x2F;4&#x3D;k(k+1)&#x2F;2$得到。<br>1000以下共有如下几组解($n$表示半三角形层数，$k$表示三角形层数，$c$表示对应圆的个数)：<br>$$<br>\begin{align*}<br>n&#x3D;2,k&amp;&#x3D;1,c&#x3D;1\\<br>n&#x3D;12,k&amp;&#x3D;8,c&#x3D;36\\<br>n&#x3D;70,k&amp;&#x3D;49,c&#x3D;1225\\<br>n&#x3D;408,k&amp;&#x3D;288,c&#x3D;41616<br>\end{align*}<br>$$<br>或：<br>$$<br>\begin{align*}<br>n&#x3D;5,k&amp;&#x3D;3,c&#x3D;6\\<br>n&#x3D;29,k&amp;&#x3D;20,c&#x3D;210\\<br>n&#x3D;169,k&amp;&#x3D;119,c&#x3D;7140\\<br>n&#x3D;985,k&amp;&#x3D;696,c&#x3D;242556<br>\end{align*}<br>$$<br>除去相等的情况，三角形数和半三角形数分布很不均匀。两个三角形数之间的半三角形数分布不均，因此对于三角形数个圆，不能确定究竟是其排成的直角三角形，还是稍大于其的三角形数排成的等边三角形面积更小。<br>例如，4个圆排成的直角三角形面积小于6个圆排成的等边三角形，而9个圆排成的直角三角形面积(约39.249)大于10个圆排成的等边三角形(约38.785).<br><strong>提出猜想3</strong>：在猜想2的基础上，对于上述半三角形数个圆(不等于某个三角形数)，最小外切三角形可能为等边三角形的一半(带60°的直角三角形)，面积为：<br>$$S&#x3D;\frac{\sqrt{3}}{2}n^2+(3-\sqrt{3})n+2\sqrt{3}-3$$<br>也可能为稍大于其的三角形数排成的等边三角形，面积为：<br>$$S&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6$$<br>不需要考虑其他的情况。</p>
+<h2 id="6-What-about-100？"><a href="#6-What-about-100？" class="headerlink" title="6. What about 100？"></a>6. What about 100？</h2><p>虽然没有得到一般的结论(甚至特殊的结论也没有证明)，但对这个问题大致了解并提出猜想后，100个圆的情况也大致可以算出了。<br>100恰是半三角形数，于是根据猜想3，只需算100个圆排成的直角三角形面积和105个圆排成的等边三角形面积，分别为：<br>$$S_1&#x3D;\frac{\sqrt{3}}{2}n^2+(3-\sqrt{3})n+2\sqrt{3}-3&#x3D;57+182\sqrt{3}\approx372.233$$<br>$$S_2&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6&#x3D;78+172\sqrt{3}\approx375.913$$<br>大概就可以得到最小面积$S_1&#x3D;57+182\sqrt{3}\approx372.233$。</p>
+<h2 id="7-不等大的情况"><a href="#7-不等大的情况" class="headerlink" title="7. 不等大的情况"></a>7. 不等大的情况</h2><p>不等大的情况比等大的复杂很多，关键在于圆与圆相切的方式更多样，需要考虑的情况多得多。需要注意的是不能太高估空隙的容纳能力，本来我以为大圆相切产生的空隙足够将小圆全部容纳其内，结果发现面积为100、99、98的三个圆相切产生的空隙仅能容纳面积大约为2.369的小圆，面积为100、99、98、97的四个圆相切产生的空隙也只能至多容纳面积大约为16.7的圆。<br>对于这个问题我还完全没有思路，还得留到以后解决。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/geometry/" rel="tag"># geometry</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/07/17/OpAEOLUS-7/" rel="prev" title="OpAEOLUS-7.End">
+                  <i class="fa fa-chevron-left"></i> OpAEOLUS-7.End
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/04/%E6%89%98%E5%B0%94%E6%96%AF%E6%B3%B0%E3%80%8A%E5%A4%8D%E6%B4%BB%E3%80%8B/" rel="next" title="托尔斯泰《复活》">
+                  托尔斯泰《复活》 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若则理</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

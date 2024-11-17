@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="gcFcmmNr8Y8yiq5ncwJiiPRbv0I3srT4dFD80_qixv4" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGWWenKai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+    <meta name="description" content="上篇得到的一些数列的继续研究">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多个圆的最小外切三角形-2">
+<meta property="og:url" content="https://ruozeli.github.io/2023/08/07/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-2/index.html">
+<meta property="og:site_name" content="若则理のBlog">
+<meta property="og:description" content="上篇得到的一些数列的继续研究">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/08/05/4z8rw9LkCZiSbqT.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/05/rhqKQBV1HXJYl5i.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/07/fgH7ZCil2QOdXAj.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/07/kgDo1rvjUAszT74.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/07/zV1L2gunkefTRd6.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/07/pFfo7GrRutxicPd.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/08/jAeLtRor9qW2psH.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/07/bYxXFvcRi2ZqU8Q.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/08/UTvVbp6fR2uc8Eg.png">
+<meta property="article:published_time" content="2023-08-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-03T14:59:26.471Z">
+<meta property="article:author" content="若则理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="geometry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/08/05/4z8rw9LkCZiSbqT.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/08/07/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://ruozeli.github.io/2023/08/07/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-2/","path":"2023/08/07/多个圆的最小外切三角形-2/","title":"多个圆的最小外切三角形-2"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>多个圆的最小外切三角形-2 | 若则理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若则理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9B%9E%E9%A1%BE"><span class="nav-text">1. 回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AF%B9%E6%95%B0%E5%88%97%E7%9A%84%E6%8E%A2%E7%A9%B6"><span class="nav-text">2. 对数列的探究</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E7%AD%89%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">相等的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%80%92%E6%8E%A8"><span class="nav-text">一些递推</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E9%9D%A2%E7%A7%AF"><span class="nav-text">比较面积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9B%9E%E5%BD%92%E5%87%A0%E4%BD%95"><span class="nav-text">3. 回归几何</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若则理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/08/07/%E5%A4%9A%E4%B8%AA%E5%9C%86%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若则理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若则理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="多个圆的最小外切三角形-2 | 若则理のBlog">
+      <meta itemprop="description" content="上篇得到的一些数列的继续研究">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          多个圆的最小外切三角形-2
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-08-07 00:00:00" itemprop="dateCreated datePublished" datetime="2023-08-07T00:00:00+08:00">2023-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">上篇得到的一些数列的继续研究</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="1-回顾"><a href="#1-回顾" class="headerlink" title="1. 回顾"></a>1. 回顾</h2><p>还是继续对等大情况的研究。<br>算了一下上一篇所说的两个数列，并分别计算比较了对应的面积，于是记录一下研究进展。<br>为方便起见，接下来直接称三角形数个圆的外切等边三角形为全三角形，半三角形数个圆的外切直角三角形为半三角形(虽然这个定义很奇怪，名称更奇怪，但是Who cares？)。三角形数和半三角形数分别用$a_k,b_n$表示，圆的个数用$c$表示。</p>
+<p>现在有两个数列：</p>
+<ol>
+<li>三角形数：<br>$$a_k&#x3D;k(k+1)&#x2F;2$$</li>
+<li>半三角形数：<br>$$<br>b_n&#x3D;\begin{cases}<br>n^2&#x2F;4,\quad 2\mid n\\<br>(n^2-1)&#x2F;4,\quad 2\nmid n<br>\end{cases}<br>$$</li>
+</ol>
+<p>在上一篇中以提出猜想：当圆的数目恰为三角形数时，最小外切三角形即为圆按照平面六角密堆积式排列之外切等边三角形(全三角形)；当圆的数目恰为半三角形数时，最小外切三角形即为圆按照类似方法排列之外切直角三角形(半三角形)。如图所示：<br><img src="https://s2.loli.net/2023/08/05/4z8rw9LkCZiSbqT.png" alt="位图.png|400"><br>同时，这两种形式的三角形面积可以用$n$和$k$表示：<br>当$c&#x3D;a_k$时，<br>$$S_k&#x3D;\sqrt{3}k^2+(6-2\sqrt{3})k+4\sqrt{3}-6$$<br>当$c&#x3D;b_n$时，<br>$$S_n&#x3D;\frac{\sqrt{3}}{2}n^2+(3-\sqrt{3})n+2\sqrt{3}-3$$<br>此时问题转化成了对这两个数列的研究(<del>似乎已经不是几何问题了</del>)。</p>
+<h2 id="2-对数列的探究"><a href="#2-对数列的探究" class="headerlink" title="2. 对数列的探究"></a>2. 对数列的探究</h2><p>粗略观察两组数列，会发现$k&#x3D;n$时，$a_k\approx2b_n$，$S_k&#x3D;2S_n$；两组数值分布不均，但基本在两个三角形数之间存在1至2个半三角形数，同时存在$a_k&#x3D;b_n$的情况；当$c&#x3D;b_n&#x3D;a_k$时，$S_k&lt;S_n$，当$c&#x3D;b_n&lt;a_k$时，$S_k&gt;S_n$或$S_k&lt;S_n$均有可能。</p>
+<p>作出数据图如下，横轴数据为恰是三角形数或半三角形数的圆个数(从4开始)，纵轴为相应的全三角形或半三角形面积，黑色表示全三角形，红色表示半三角形：<br><img src="https://s2.loli.net/2023/08/05/rhqKQBV1HXJYl5i.png" alt="资源 1.png"><br>可以看到，面积与圆的数量大致呈正比关系，上述的几个观察结果在图上也反映得很清晰。</p>
+<p>首先可以求出数列的递推式：<br>$$a_{k+1}&#x3D;a_k+k+1$$<br>$$<br>b_{n+1}&#x3D;\begin{cases}<br>b_n+n&#x2F;2,\quad 2\mid n\\<br>b_n+(n+1)&#x2F;2,\quad 2\nmid n<br>\end{cases}<br>$$<br>这两个数列的递推都很有意思，$a$是从0开始加上连续自然数(实际数列从1开始)，$b$也是从0开始加连续自然数，但每个自然数加两次。</p>
+<h3 id="相等的情况"><a href="#相等的情况" class="headerlink" title="相等的情况"></a>相等的情况</h3><p>要研究两个数列数值的大小关系，可以从某一个相等的值开始考虑。<br>设$a_k&#x3D;b_n$，则可以得到$n$与$k$的关系：$① n&#x3D;\sqrt{2k^2+2k}$或$②n&#x3D;\sqrt{2k^2+2k+1}$，这两个式子包含了$n$的奇偶性信息，由于$k$是整数，①式得到的$n$必然是偶数，②式得到的$n$必然是奇数。但是两式中$k$的奇偶性没有限制，前4组$n$与$k$为：<br>$$<br>\begin{align*}<br>5&amp;&#x3D;\sqrt{2\times3^2+2\times3+1}\\<br>12&amp;&#x3D;\sqrt{2\times8^2+2\times8}\\<br>29&amp;&#x3D;\sqrt{2\times20^2+2\times20+1}\\<br>70&amp;&#x3D;\sqrt{2\times49^2+2\times49}<br>\end{align*}<br>$$<br>整体观察数据，发现<br>$$<br>\begin{align*}<br>2\nmid n,\quad2\nmid k\\<br>2\mid n,\quad2\mid k\\<br>2\nmid n,\quad2\mid k\\<br>2\mid n,\quad2\nmid k<br>\end{align*}<br>$$<br>这4种情况周期性出现。</p>
+<img src="https://s2.loli.net/2023/08/07/fgH7ZCil2QOdXAj.png" width="75%" height="75%" />
+如图，$\sqrt{2x^2+2x}$和$\sqrt{2x^2+2x+1}$是$\sqrt2(x+1/2)$的两条渐近线，而一组$n$与$k$就表示这两条渐近线上的一个整点(整点$(1,2)$不算)。这似乎与$\sqrt2$的连分数表示有关系，结论应该可以用相关知识证明，但我对数论了解不多，就不继续了。
+显然，由于两条渐近线上的整点是无穷多的，$a_k=b_n$的数量也是无穷的，但出现间隔越来越大。
+
+<h3 id="一些递推"><a href="#一些递推" class="headerlink" title="一些递推"></a>一些递推</h3><p>当$a_k&#x3D;b_n$时，写出$n$和$k$关于$a_k$和$b_n$的关系式：<br>$$k&#x3D;\sqrt{2a_k+1&#x2F;4}-1&#x2F;2$$<br>$$<br>n&#x3D;\begin{cases}<br>2\sqrt{b_n},\quad 2\mid n\\<br>2\sqrt{b_n+1&#x2F;4},\quad 2\nmid n<br>\end{cases}<br>$$<br>代入递推式：<br>$$a_{k+1}&#x3D;a_k+\sqrt{2a_k+1&#x2F;4}+1&#x2F;2$$<br>$$<br>b_{n+1}&#x3D;\begin{cases}<br>b_n+\sqrt{b_n},\quad 2\mid n\\<br>b_n+\sqrt{b_n+1&#x2F;4}+1&#x2F;2,\quad 2\nmid n<br>\end{cases}<br>$$<br>因为$a_k&#x3D;b_n$，所以$\sqrt{2a_k+1&#x2F;4}+1&#x2F;2&gt;\sqrt{b_n}$，$\sqrt{2a_k+1&#x2F;4}+1&#x2F;2&gt;\sqrt{b_n+1&#x2F;4}+1&#x2F;2$，可知$b_{n+1}&lt;a_{k+1}$。将这个结果再代回递推式，又可以得到$b_{n+2}&lt;a_{k+2}$。当然，这些都是显而易见的，比较$b_{n+2}$和$a_{k+1}$的大小则计算稍繁琐，<br>$$<br>b_{n+2}&#x3D;\begin{cases}<br>b_n+\sqrt{b_n}+\sqrt{b_n+\sqrt{b_n}+1&#x2F;4}+1&#x2F;2,\quad 2\mid n\\<br>b_n+\sqrt{b_n+1&#x2F;4}+\sqrt{b_n+\sqrt{b_n+1&#x2F;4}+1&#x2F;2}+1&#x2F;2,\quad 2\nmid n<br>\end{cases}<br>$$<br>因为$a_k&#x3D;b_n&gt;0$，所以：<br>$$<br>\begin{align*}<br>\sqrt{2a_k+1&#x2F;4}&amp;&lt;\sqrt{b_n}+\sqrt{b_n+\sqrt{b_n}+1&#x2F;4}\\<br>\sqrt{2a_k+1&#x2F;4}&amp;&lt;\sqrt{b_n+1&#x2F;4}+\sqrt{b_n+\sqrt{b_n+1&#x2F;4}+1&#x2F;2}<br>\end{align*}<br>$$<br>所以$b_{n+2}&gt;a_{k+1}$。<br>若条件改为$a_k&lt;b_n$，根据上式仍能得到$b_{n+2}&gt;a_{k+1}$，于是可知<strong>不存在2个三角形数之间存在3个半三角形数的情况</strong>，即2个三角形数之间存在1至2个半三角形数。</p>
+<p>之后可继续代回递推式计算，比较大小，但计算太复杂，就不算下去了。<br>直接观察数据可知，当$k&#x3D;3$，$n&#x3D;5$时，<br>$$<br>\begin{align*}<br>a_k&#x3D;b_n\\<br>a_k&lt;b_{n+1}&lt;a_{k+1}\\<br>a_{k+1}&lt;b_{n+2}&lt;a_{k+2}\\<br>a_{k+2}&lt;b_{n+3}&lt;\textcolor{red}{b_{n+4}}&lt;a_{k+3}\\<br>\cdots<br>\end{align*}<br>$$<br>对其他满足$a_k&#x3D;b_n$的$k$和$n$，结果也大致如此，这样的规律是否恒成立？何时2个三角形数之间存在2个半三角形数？<br>比对面积大小，发现当2个三角形数之间存在2个半三角形数时，较小的半三角形数对应面积小于大三角形数对应面积，而较大的半三角形数对应面积大于大三角形数对应面积，是否必然如此？<br>这些问题留到以后考虑吧。</p>
+<h3 id="比较面积"><a href="#比较面积" class="headerlink" title="比较面积"></a>比较面积</h3><p>接下来写出$S_k$和$S_n$与$c$的关系式。<br>若$c&#x3D;a_k&#x3D;k(k+1)&#x2F;2$，则$k&#x3D;\sqrt{2a_k+1&#x2F;4}-1&#x2F;2$，代入到面积公式中：<br>$$S_k&#x3D;2\sqrt3a_k+(6-3\sqrt3)\sqrt{2a_k+1&#x2F;4}+11\sqrt3&#x2F;2-9$$<br>若$c&#x3D;b_n$，则<br>$$<br>n&#x3D;\begin{cases}<br>2\sqrt{b_n},\quad 2\mid n\\<br>2\sqrt{b_n+1&#x2F;4},\quad 2\nmid n<br>\end{cases}<br>$$<br>代入到面积公式：<br>$$<br>S_n&#x3D;\begin{cases}<br>2\sqrt3b_n+(6-2\sqrt3)\sqrt{b_n}+2\sqrt3-3,\quad 2\mid n\\<br>2\sqrt3b_n+(6-2\sqrt3)\sqrt{b_n+1&#x2F;4}+5\sqrt3&#x2F;2-3,\quad 2\nmid n<br>\end{cases}<br>$$<br>本来以为这两条曲线也是某条曲线的渐近线，但其实两个函数差的极限是$\sqrt{3}&#x2F;2$，并不是渐近线。<br><img src="https://s2.loli.net/2023/08/07/kgDo1rvjUAszT74.png" width="75%" height="75%" /><br>这张图清晰的反映了面积与圆数量的接近正比的关系($1&#x2F;2$次项几乎可忽略)，并且这条曲线斜率很大(注意图中横纵坐标比值是$1:4$)。</p>
+<p>先看最简单的情况：$c&#x3D;a_k&#x3D;b_n$，设：<br>$$<br>f(c)&#x3D;S_n-S_k&#x3D;\begin{cases}<br>(6-2\sqrt3)\sqrt{c}-(6-3\sqrt3)\sqrt{2c+1&#x2F;4}-7\sqrt3&#x2F;2+6,\quad 2\mid n\\<br>(6-2\sqrt3)\sqrt{c+1&#x2F;4}-(6-3\sqrt3)\sqrt{2c+1&#x2F;4}-3\sqrt3+6,\quad 2\nmid n<br>\end{cases}<br>$$<br>若$2\mid n$，当$c&gt;0.04348\cdots$时，$f(c)&gt;0$；若$2\nmid n$，$f(c)$恒大于0.<br>所以当$c&#x3D;a_k&#x3D;b_n$，$S_k&lt;S_n$</p>
+<p>关键问题是$a_{k-1}&lt;c&#x3D;b_n&#x3D;a_k-d(d\in\mathbb{N^+})$，而$S_k&lt;S_n$的情况，设：<br>$$<br>g(c,d)&#x3D;S_n-S_k&#x3D;\begin{cases}<br>-2\sqrt3d+(6-2\sqrt3)\sqrt{c}-(6-3\sqrt3)\sqrt{2(c+d)+1&#x2F;4}-7\sqrt3&#x2F;2+6,\quad 2\mid n\\<br>-2\sqrt3d+(6-2\sqrt3)\sqrt{c+1&#x2F;4}-(6-3\sqrt3)\sqrt{2(c+d)+1&#x2F;4}-3\sqrt3+6,\quad 2\nmid n<br>\end{cases}<br>$$<br>理论上，解$g(c,d)&gt;0$的不等式，可以得到$d$的范围，但这个方程没那么好解，直接解会得到长得离谱的答案。<br>那就先画个三维曲面图吧($2\mid n$)：<br><img src="https://s2.loli.net/2023/08/07/zV1L2gunkefTRd6.png" alt="surface.png"><br>图中黄色的曲面是<br>$$g(c,d)&#x3D;-2\sqrt3d+(6-2\sqrt3)\sqrt{c}-(6-3\sqrt3)\sqrt{2(c+d)+1&#x2F;4}-7\sqrt3&#x2F;2+6$$<br>蓝色的曲面是$z&#x3D;0$，所以黄色曲面在蓝色曲面上的部分就表示不等式$g(c,d)&gt;0$成立的部分。那么要求的就是这两个曲面的交线，曲线以下即使$d$的范围(当然，还有满足$2\mid n$，$c$和$d$取整等条件)。于是直接求解$g(c,d)&#x3D;0$，神奇的事情发生了，解不等式时的超长答案消失了，取而代之的是两组非常友善的解：<br>$$<br>\begin{align*}<br>d_1&amp;&#x3D;-\frac{\sqrt{3}}{2}\cdot\sqrt{\left(14-8 \sqrt{3}\right) c+\left(22 \sqrt{3}-38\right) \sqrt{c}-15 \sqrt{3}+26}+\left(\sqrt{3}-1\right) \sqrt{c}-2 \sqrt{3}+\frac{7}{2}\\<br>d_2&amp;&#x3D;\frac{\sqrt{3}}{2}\cdot \sqrt{\left(14-8 \sqrt{3}\right) c+\left(22 \sqrt{3}-38\right) \sqrt{c}-15 \sqrt{3}+26}+\left(\sqrt{3}-1\right) \sqrt{c}-2\sqrt{3}+\frac{7}{2}<br>\end{align*}<br>$$<br>但为什么会有两组解？无所谓，直接代回去检验就可以了，发现$d_1$是可行的(<strong>其实也有误差</strong>，但太小就直接忽略了)。<br>对$2\nmid n$重复一遍操作，得到(当然，这个其实也是<strong>近似的</strong>)：<br>$$d&#x3D;\sqrt{3c+3&#x2F;4}-\sqrt{c+1&#x2F;4}-\frac{\sqrt{2}}{4}\cdot\sqrt{-4 \sqrt{3} (4 c+1)+8 (4 c+1)+52 c-32 \sqrt{3} c+66 \sqrt{3} \sqrt{4 c+1}-114 \sqrt{4 c+1}-98 \sqrt{3}+169}-2\sqrt{3}+\frac{15}{4}$$<br>这之后还得向下取整，最后得到$1000$以下取整图：<br><img src="https://s2.loli.net/2023/08/07/pFfo7GrRutxicPd.png" width="75%" height="75%" /><br>其中黄色表示$2\mid n$的情况，蓝色表示$2\nmid n$的情况。<br>同时可以作出$k&#x3D;\sqrt{2(c+d)+1&#x2F;4}-1&#x2F;2$的图：<br><img src="https://s2.loli.net/2023/08/08/jAeLtRor9qW2psH.png" width="75%" height="75%" /><br>这里的$k&#x3D;a_k-a_{k-1}$，因为$d$的上界始终小于$k$，所以$a_{k-1}&lt;b_n&lt;a_{k}$，且$S_n&lt;S_k$的情况始终存在。</p>
+<p>于是得出结论：<br>$$<br>d_{max}&#x3D;\begin{cases}<br>\lfloor-\frac{\sqrt{3}}{2}\cdot\sqrt{\left(14-8 \sqrt{3}\right) c+\left(22 \sqrt{3}-38\right) \sqrt{c}-15 \sqrt{3}+26}+\left(\sqrt{3}-1\right) \sqrt{c}-2 \sqrt{3}+\frac{7}{2}\rfloor,\quad 2\mid n\\<br>\lfloor\sqrt{3c+3&#x2F;4}-\sqrt{c+1&#x2F;4}-\frac{\sqrt{2}}{4}\cdot\sqrt{-4 \sqrt{3} (4 c+1)+8 (4 c+1)+52 c-32 \sqrt{3} c+66 \sqrt{3} \sqrt{4 c+1}-114 \sqrt{4 c+1}-98 \sqrt{3}+169}-2\sqrt{3}+\frac{15}{4}\rfloor,\quad 2\nmid n<br>\end{cases}<br>$$<br>当$a_{k-1}&lt;c&#x3D;b_n&#x3D;a_k-d(d\in\mathbb{N^+})$时，若$d\le d_{max}$，则$S_k&lt;S_n$，最小外切三角形选择稍大的三角形对应的全三角形。<br>但这个结论其实没什么意思，式子太复杂了(而且实际上也是近似解)，对于这种处处取整的问题，不需要这么高的精度，希望接下来能找到更简单的表达式。</p>
+<h2 id="3-回归几何"><a href="#3-回归几何" class="headerlink" title="3. 回归几何"></a>3. 回归几何</h2><p>除去特殊情况，其他情况也需考虑，这就需要回归几何，具体情况具体分析了。<br>首先选一个三角形数，这里就选15吧，作出对应的全三角形，然后去掉3个圆，作出如图所示的12个圆的外切三角形：<br><img src="https://s2.loli.net/2023/08/07/bYxXFvcRi2ZqU8Q.png" width="75%" height="75%" /><br>显然，$\triangle BFD\sim\triangle EFC$，且$BF&lt;EF$，所以$S_{\triangle BFD}&lt;S_{\triangle EFC}$，所以此外切三角形面积小于全三角形。容易得到$CD$的斜率$k&#x3D;-\sqrt3&#x2F;2$，然后进行一些计算，最后得到面积为：<br>$$S&#x3D;15+\frac{275}{18}\sqrt{3}+3\sqrt{7}+\frac{5}{9}\sqrt{21}\approx51.945,(c&#x3D;12)$$<br>而全三角形面积$S_{k}&#x3D;24+19\sqrt{3}\approx56.909,(a_k&#x3D;15)$，大于此外切三角形面积，可知此外切三角形是这种排列方式下最小的外切三角形。<br>但半三角形面积$S_{n}&#x3D;18+39\sqrt3&#x2F;2\approx51.775,(b_n&#x3D;12)$，又小于此外切三角形面积。</p>
+<p>若再去掉一个圆，用同样的方法构造外切三角形：<br><img src="https://s2.loli.net/2023/08/08/UTvVbp6fR2uc8Eg.png" width="75%" height="75%" /><br>面积明显又减小了很多，可以用相同的方法计算面积，但计算实在太烦了，就直接用GeoGebra的近似值吧：$S\approx47.407,(c&#x3D;11)$，这样得到的面积不仅小于全三角形，而且小于半三角形。<br>于是得到结论：当$a_{k-1}&lt;c&lt;a_k-k&#x2F;2$时，存在比全三角形更小的外切三角形(上述情况)，但这种情况下面积似乎没有通用公式。至于这种情况和可行的半三角形哪个大，就又是一个困难的问题了。(感觉坑越来越大了)</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/geometry/" rel="tag"># geometry</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/04/%E6%89%98%E5%B0%94%E6%96%AF%E6%B3%B0%E3%80%8A%E5%A4%8D%E6%B4%BB%E3%80%8B/" rel="prev" title="托尔斯泰《复活》">
+                  <i class="fa fa-chevron-left"></i> 托尔斯泰《复活》
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/14/%E4%BB%8E%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E5%B0%94%E9%97%AE%E9%A2%98/" rel="next" title="从欧拉公式到巴塞尔问题">
+                  从欧拉公式到巴塞尔问题 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若则理</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

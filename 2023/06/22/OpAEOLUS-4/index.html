@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="gcFcmmNr8Y8yiq5ncwJiiPRbv0I3srT4dFD80_qixv4" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGWWenKai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+    <meta name="description" content="OperationAEOLUS-纸飞机飞行原理分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpAEOLUS-4.纸飞机飞行原理">
+<meta property="og:url" content="https://ruozeli.github.io/2023/06/22/OpAEOLUS-4/index.html">
+<meta property="og:site_name" content="若则理のBlog">
+<meta property="og:description" content="OperationAEOLUS-纸飞机飞行原理分析">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/07/02/A3Ur4NJlibQeIWO.png">
+<meta property="og:image" content="https://s2.loli.net/2023/06/08/SCWYDpwUV9GPRB8.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/02/wKkD7g6pi1ztQFx.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/02/jlHWFtQVhgn26SO.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/02/42ixtDuHyIAOSaN.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/03/bW1iGh7joAfZEqu.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/03/qcRzUFiHdw9VB6A.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/13/6yTsM35HZkwSlOf.png">
+<meta property="og:image" content="https://s2.loli.net/2023/07/13/NZuF1M5jtLKBxeh.png">
+<meta property="article:published_time" content="2023-06-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-03T14:58:16.620Z">
+<meta property="article:author" content="若则理">
+<meta property="article:tag" content="physics">
+<meta property="article:tag" content="math">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/07/02/A3Ur4NJlibQeIWO.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/06/22/OpAEOLUS-4/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://ruozeli.github.io/2023/06/22/OpAEOLUS-4/","path":"2023/06/22/OpAEOLUS-4/","title":"OpAEOLUS-4.纸飞机飞行原理"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>OpAEOLUS-4.纸飞机飞行原理 | 若则理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若则理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%A9%BA%E6%B0%94%E5%8A%A8%E5%8A%9B"><span class="nav-text">1. 空气动力</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%91%E6%81%A9%E8%BE%BE%E6%95%88%E5%BA%94"><span class="nav-text">科恩达效应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8A%A8%E5%8A%9B"><span class="nav-text">基本动力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%94%E5%8E%8B%E5%88%86%E5%B8%83"><span class="nav-text">气压分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8A%A8%E5%8A%9B"><span class="nav-text">其他动力</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0"><span class="nav-text">2. 影响因素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%94%E9%9D%A2%E5%88%86%E7%A6%BB"><span class="nav-text">气面分离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B6%A1%E5%8A%A8%E5%8A%9B"><span class="nav-text">涡动力</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%8A%9B%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-text">3. 力的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%AE%9A%E5%BE%8B"><span class="nav-text">伯努利定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%93%E5%A1%94-%E5%84%92%E5%8F%AF%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%AE%9A%E7%90%86"><span class="nav-text">库塔-儒可夫斯基定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%87%E5%8A%9B%E4%B8%8E%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="nav-text">升力与阻力系数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%8F%82%E8%80%83"><span class="nav-text">4. 参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若则理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/06/22/OpAEOLUS-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若则理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若则理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="OpAEOLUS-4.纸飞机飞行原理 | 若则理のBlog">
+      <meta itemprop="description" content="OperationAEOLUS-纸飞机飞行原理分析">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OpAEOLUS-4.纸飞机飞行原理
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-06-22 00:00:00" itemprop="dateCreated datePublished" datetime="2023-06-22T00:00:00+08:00">2023-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Research/" itemprop="url" rel="index"><span itemprop="name">Research</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Research/OperationAEOLUS/" itemprop="url" rel="index"><span itemprop="name">OperationAEOLUS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">OperationAEOLUS-纸飞机飞行原理分析</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>纸飞机与具有持续动力的飞机差异巨大，但对其的专门研究少，本文主要依据模型飞机飞行原理略加修改，对纸飞机飞行原理进行简要分析。</p>
+<h2 id="1-空气动力"><a href="#1-空气动力" class="headerlink" title="1. 空气动力"></a>1. 空气动力</h2><h3 id="科恩达效应"><a href="#科恩达效应" class="headerlink" title="科恩达效应"></a>科恩达效应</h3><p>科恩达效应(<em>Coandǎ effect</em>)，又称附壁效应，指流体倾向于沿壁面流动的现象。这种现象的本质原因是流体的黏性，它是机翼使气流向下流动的根本原因。<br>当飞机以一个适当的迎角飞行，机翼下方气流被向下压，上方气流被向下拽，于是气流整体向下方偏转，如图：<br><img src="https://s2.loli.net/2023/07/02/A3Ur4NJlibQeIWO.png" width="50%" height="50%" /></p>
+<h3 id="基本动力"><a href="#基本动力" class="headerlink" title="基本动力"></a>基本动力</h3><p>纸飞机气动力的基本原理是牛顿第三定律。纸飞机以一定迎角飞行，由于科恩达效应，机翼迫使空气向下流动。纸飞机给空气一个向下的力，于是空气会给纸飞机一个反作用力，这就是升力与阻力的主要来源。图中$F$为合力，可分解为竖直向上的升力$L$和水平向后的阻力$D$。<br><img src="https://s2.loli.net/2023/06/08/SCWYDpwUV9GPRB8.png" width="50%" height="50%" /></p>
+<h3 id="气压分布"><a href="#气压分布" class="headerlink" title="气压分布"></a>气压分布</h3><p>机翼上下气流速度不同，因此产生压强差，这种压强差承担了大部分升力，同时也是机翼涡流的形成原因。<br><img src="https://s2.loli.net/2023/07/02/wKkD7g6pi1ztQFx.png" width="75%" height="75%" /><br>由于机翼上方负压，气流在机翼前端向上偏，称为上洗。上洗增大机翼迎角，合力与竖直方向夹角小，因此产生阻力较小。</p>
+<h3 id="其他动力"><a href="#其他动力" class="headerlink" title="其他动力"></a>其他动力</h3><ol>
+<li>涡动力 (见下文“影响因素”部分)</li>
+<li>寄生阻力：<ul>
+<li>形状阻力</li>
+<li>表面摩擦力</li>
+<li>干扰阻力</li>
+</ul>
+</li>
+</ol>
+<p>其中涡诱导阻力$\propto 1&#x2F;V$，寄生阻力$\propto V$。因此，对于纸飞机，需要考虑涡动力，无需考虑寄生阻力。<br><img src="https://s2.loli.net/2023/07/02/jlHWFtQVhgn26SO.png" width="50%" height="50%" /></p>
+<h2 id="2-影响因素"><a href="#2-影响因素" class="headerlink" title="2. 影响因素"></a>2. 影响因素</h2><h3 id="气面分离"><a href="#气面分离" class="headerlink" title="气面分离"></a>气面分离</h3><p>当机翼迎角大到一定程度时，气流从机翼表面分离，形成不稳定的涡流区域，不再提供升力，于是飞机失速。相同翼型，失速只与迎角有关。事实上，飞行中时刻存在小范围的气面分离，称为气泡分离，影响较小。<br><img src="https://s2.loli.net/2023/07/02/42ixtDuHyIAOSaN.png" width="50%" height="50%" /></p>
+<h3 id="涡动力"><a href="#涡动力" class="headerlink" title="涡动力"></a>涡动力</h3><p>由于机翼上下方压强差，下方气流在机翼边缘流向上方，由此产生了旋涡。产生的涡可分为附着涡、翼尖涡和启动涡，三种涡在机翼后方形成一个封闭涡环。<br>纸飞机虽质量轻，速度小，但其产生的旋涡很明显，见<em>Wake Turbulence From a Paper Airplane</em> <sup>[8]</sup>。<br><img src="https://s2.loli.net/2023/07/03/bW1iGh7joAfZEqu.png" width="50%" height="50%" /><br>涡流的影响主要在翼尖。涡流使机翼边缘后方气流向上偏，于是对下表面的高压产生泄压作用，同时对上表面的低压产生增压作用，致使升力减小。<br><img src="https://s2.loli.net/2023/07/03/qcRzUFiHdw9VB6A.png" width="50%" height="50%" /><br>翼尖受到涡流影响，气流上洗作用减弱(也可以认为是产生了下洗作用)，有效迎角减小，减小的角称为诱导迎角。因此合力向后偏转，水平向后的分量增大，由此增大的阻力称为涡诱导阻力。</p>
+<p>此外，小展弦比的三角翼(大多数纸飞机的翼型)在高迎角工作时，左右前缘会产生前缘涡。这种前缘涡不同于翼尖涡，特点是较为稳定，可提供升力，是涡升力的主要来源，此效果对纸飞机尤为明显。飞机设计中的涡襟翼就是通过控制前缘涡来提高气动效率。</p>
+<h2 id="3-力的计算"><a href="#3-力的计算" class="headerlink" title="3. 力的计算"></a>3. 力的计算</h2><h3 id="伯努利定律"><a href="#伯努利定律" class="headerlink" title="伯努利定律"></a>伯努利定律</h3><p>伯努利定律，本质是是流体的机械能守恒定律，即动能+重力势能+压力势能&#x3D;常数。本定律适用于粘度可忽略、不可压缩的理想流体，对于流体中某一点：<br>$$p+\frac{1}{2}\rho v^2+\rho gh&#x3D;C$$<br>其中，$p$为流体中该点的压强，$v$为该点的流速，$C$为常数。<br>纸飞机飞行时翼面上下气流流速不同且流速低，因此可以用伯努利定律研究。</p>
+<h3 id="库塔-儒可夫斯基定理"><a href="#库塔-儒可夫斯基定理" class="headerlink" title="库塔-儒可夫斯基定理"></a>库塔-儒可夫斯基定理</h3><p>库塔-儒可夫斯基定理(<em>Kutta–Joukowski theorem</em>)是空气动力学的基本定理，显示了机翼产生的升力与流体速度、密度以及环量的关系。表达式为$L&#x3D;-\rho V\Gamma$，其中$\Gamma$表示环量，即流体的速度沿着一条闭曲线的路径积分。<br>该定理可计算机翼在均匀流体中的升力，但涉及高等数学，计算困难，在本研究中不多涉及。</p>
+<h3 id="升力与阻力系数"><a href="#升力与阻力系数" class="headerlink" title="升力与阻力系数"></a>升力与阻力系数</h3><p>升力由压力产生，易知升力$L\propto S$，由牛顿第二定律$F&#x3D;ma$，得$F&#x3D;constant\times m\times V&#x2F;t$，又由$m&#x2F;t&#x3D;constant\times\rho V$，可知$L\propto\rho V^2$。<br>由此定义升力公式$L&#x3D;1&#x2F;2C_L\rho V^2$，其中$C_L$为升力系数；类似地，有阻力公式$D&#x3D;1&#x2F;2C_D\rho V^2$，其中$C_D$为阻力系数。<br>升力系数与阻力系数的最大优势是无量纲，主要与迎角和翼型相关，一般与速度、面积等量无关。可以通过一定的实验或流体力学分析得到一些迎角某翼型的升力和阻力系数，从而拟合出该翼型升力和阻力系数随迎角的变化曲线，对翼型的空气动力学性质进行全面分析。</p>
+<p>零弯度机翼的升力系数曲线图大致为：<br><img src="https://s2.loli.net/2023/07/13/6yTsM35HZkwSlOf.png" width="50%" height="50%" /><br>可以看到升力系数先随迎角增大而增大，达到最大值后大幅下降，这由大迎角气面分离导致的。如果机翼弯度为正，则图线整体向左平移；如果弯度为负，则向右平移。</p>
+<p>表示机翼升力与阻力系数及迎角变化关系的曲线称为极曲线：<br><img src="https://s2.loli.net/2023/07/13/NZuF1M5jtLKBxeh.png" width="50%" height="50%" /><br>极曲线上各点与原点连线的斜率为升阻比$L&#x2F;D&#x3D;C_L&#x2F;C_D$。极曲线可以很好得反映升阻比，若某点与原点连线和极曲线相切，则此点对应升阻比最大。升阻比与无动力滑翔有关，良好的升阻比可提高飞机滑翔距离。</p>
+<h2 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h2><p>[1]马丁·西蒙斯. 模型飞机空气动力学[M]. 2007, 6<br>[2]How Airplanes Fly: A Physical Description of Lift. <a target="_blank" rel="noopener" href="http://www.aviation-history.com/theory/lift.htm">http://www.aviation-history.com/theory/lift.htm</a><br>[3]飞行原理-升力、阻力、极曲线 ​(空气动力). <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/432995968">https://zhuanlan.zhihu.com/p/432995968</a><br>[4]空气动力学从入门到弃坑[4]：翼型和升力原理. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104203952">https://zhuanlan.zhihu.com/p/104203952</a><br>[5]空气动力学术语解析. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106138927">https://zhuanlan.zhihu.com/p/106138927</a><br>[6]闲话翼尖涡. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/138781194">https://zhuanlan.zhihu.com/p/138781194</a><br>[7]库塔-茹科夫斯基定理的各种推导姿势. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/101175091">https://zhuanlan.zhihu.com/p/101175091</a><br>[8]Wake Turbulence From a Paper Airplane. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=jYbRARW9q2s">https://www.youtube.com/watch?v=jYbRARW9q2s</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/physics/" rel="tag"># physics</a>
+              <a href="/tags/math/" rel="tag"># math</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/06/03/%E5%AE%8C%E5%85%A8%E6%90%9E%E4%B8%8D%E6%87%82%E7%9A%84%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0-2/" rel="prev" title="完全搞不懂的三角函数-2">
+                  <i class="fa fa-chevron-left"></i> 完全搞不懂的三角函数-2
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/07/06/OpAEOLUS-5/" rel="next" title="OpAEOLUS-5.纸飞机设计">
+                  OpAEOLUS-5.纸飞机设计 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若则理</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

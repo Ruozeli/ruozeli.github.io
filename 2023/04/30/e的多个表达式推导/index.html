@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="gcFcmmNr8Y8yiq5ncwJiiPRbv0I3srT4dFD80_qixv4" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGWWenKai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+    <meta name="description" content="自然底数$e$的几种表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="$e$的多个表达式推导">
+<meta property="og:url" content="https://ruozeli.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/index.html">
+<meta property="og:site_name" content="若则理のBlog">
+<meta property="og:description" content="自然底数$e$的几种表达式">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-03T14:57:37.790Z">
+<meta property="article:author" content="若则理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="analysis">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://ruozeli.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/","path":"2023/04/30/e的多个表达式推导/","title":"$e$的多个表达式推导"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>$e$的多个表达式推导 | 若则理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若则理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">级数表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">极限表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%9A%84%E6%8E%A8%E5%B9%BF"><span class="nav-text">极限的推广</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若则理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/04/30/e%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若则理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若则理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="$e$的多个表达式推导 | 若则理のBlog">
+      <meta itemprop="description" content="自然底数$e$的几种表达式">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          $e$的多个表达式推导
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-04-30 00:00:00" itemprop="dateCreated datePublished" datetime="2023-04-30T00:00:00+08:00">2023-04-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Analysis/" itemprop="url" rel="index"><span itemprop="name">Analysis</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">自然底数$e$的几种表达式</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>最近在读小平邦彦先生的《微积分入门》，感觉作为入门书难度有些太高。两周下来终于(<del>大概</del>)看完了实数和函数的基础部分。书中关于自然底数$e$的几个表达式的推导很有意思，于是写本篇记录一些推导过程。</p>
+<h2 id="级数表达式"><a href="#级数表达式" class="headerlink" title="级数表达式"></a>级数表达式</h2><p>定理(1)：如果以级数$\sum_{n&#x3D;1}^{\infty}a_n$的项的绝对值作为项的级数$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛，则原级数收敛。<br>证明：设$s_n&#x3D;\sum_{k&#x3D;1}^{n}a_k$，$\sigma_n&#x3D;\sum_{k&#x3D;1}^{n}\vert a_k\vert$，则：<br>$$\vert s_n-s_m\vert&#x3D;\vert\sum_{k&#x3D;m+1}^n a_k\vert\le\sum_{k&#x3D;m+1}^n\vert a_k\vert&#x3D;\vert\sigma_n-\sigma_m\vert\quad (m&lt;n)$$<br>根据Cauchy判别法，若{$\sigma_n$}收敛，则{$s_n$}也收敛。<br>当$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert$收敛时，称级数$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。</p>
+<p>定理(2)：已知收敛级数$\sum_{n&#x3D;1}^{\infty}r_n,r_n&gt;0$，若存在自然数$m$使$n\ge m$时$\vert a_n\vert\le r_n$成立，则$\sum_{n&#x3D;1}^{\infty}a_n$绝对收敛。<br>证明：设$n&gt;m$，则：<br>$$\sum_{k&#x3D;1}^{n}\vert a_k\vert\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{k&#x3D;m}^{n} r_k\le\sum_{k&#x3D;1}^{m-1}\vert a_k\vert+\sum_{n&#x3D;1}^{\infty} r_n&lt;+\infty$$<br>所以$\sum_{n&#x3D;1}^{\infty}\vert a_n\vert&lt;+\infty$</p>
+<div class="admonition note"><p>幂级数：形如$\sum_{n=0}^{\infty}a_nx^n$的级数</p>
+</div>
+
+<p>考虑幂级数$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$，其中$x$为任意实数。设$m$为$m\ge2\vert x\vert$的自然数，则对$n\ge m$：<br>$$\frac{\vert x\vert^n}{n!}&#x3D;\frac{\vert x\vert^m}{m!}\cdot\frac{\vert x\vert}{m+1}\cdot\frac{\vert x\vert}{m+2}\cdots\frac{\vert x\vert}{n}\le\frac{2^m\vert x\vert^m}{m!}(\frac{1}{2})^n$$<br>设$M&#x3D;2^m\vert x\vert^m&#x2F;m!$，则：<br>$$\sum_{n&#x3D;0}^{\infty}M(\frac{1}{2})^n&#x3D;2M&lt;+\infty$$<br>根据定理(2)，$\sum_{n&#x3D;0}^{\infty}x^n&#x2F;n!$绝对收敛。</p>
+<div class="admonition note"><p>常使用收敛性已知的标准级数，如等比级数$\sum_{n=1}^{\infty}ar^n,0&lt;r&lt;1$，与级数$\sum_{n=1}^{\infty}a_n$进行比较，证明其收敛性</p>
+</div>
+
+<p>特别地，当$x&#x3D;1$时，上述级数和用$e$表示：<br>$$e&#x3D;\sum_{n&#x3D;0}^{\infty}\frac{1}{n!}\approx2.71828\cdots$$</p>
+<h2 id="极限表达式"><a href="#极限表达式" class="headerlink" title="极限表达式"></a>极限表达式</h2><p>$e$通常定义为极限$\lim_{n\to\infty}(1+1&#x2F;n)^n$，这与上述的级数表达式相等，但显然这种表达式收敛更慢。<br>证明$e&#x3D;\lim_{n\to\infty}(1+1&#x2F;n)^n$：<br>设$e_n&#x3D;(1+1&#x2F;n)^n$，则根据二项式定理：<br>$$e_n&#x3D;1+\frac{n}{1!}\frac{1}{n}+\frac{n(n-1)}{2!}\frac{1}{n^2}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\cdots+\frac{1}{n^n}$$<br>设$a_{n,k}&#x3D;\frac{n(n-1)\cdots(n-k+1)}{k!}\frac{1}{n^k}$，则：<br>$$e_n&#x3D;1+\sum_{k&#x3D;1}^{n}a_{n,k}$$<br>$$a_{n,k}&#x3D;\frac{1}{k!}(1-\frac{1}{n})(1-\frac{2}{n})\cdots(1-\frac{k-1}{n})$$<br>$$a_{n,k}&lt;a_{n+1,k}&lt;\frac{1}{k!}$$<br>所以：<br>$$e_n&lt;e_{n+1}&lt;1+\sum_{k&#x3D;1}^{\infty}\frac{1}{k!}&#x3D;e$$<br>{$e_n$}是单调递增数列且$\lim_{n\to\infty}e_n\le e$<br>因为$\lim_{n\to\infty}a_{n,k}&#x3D;1&#x2F;k!$，所以对任意自然数$m$：<br>$$\lim_{n\to\infty}e_n\ge\lim_{n\to\infty}(1+\sum_{k&#x3D;1}^{m}a_{n,k})&#x3D;1+\sum_{k&#x3D;1}^{m}\frac{1}{k!}&#x3D;e$$<br>所以：<br>$$\lim_{n\to\infty}e_n&#x3D;\lim_{n\to\infty}(1+\frac{1}{n})^n&#x3D;e$$</p>
+<h2 id="极限的推广"><a href="#极限的推广" class="headerlink" title="极限的推广"></a>极限的推广</h2><p>将上述极限中的自然数$n$换为实数$t$：<br>$$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$$<br>证明：取满足$n\le t&lt;n+1$的自然数$n$，则：<br>$$(1+\frac{1}{n+1})^n&lt;(1+\frac{1}{t})^t&lt;(1+\frac{1}{n})^{n+1}$$<br>当$t\to+\infty$时，$n\to\infty$，且：<br>$$\lim_{n\to\infty}(1+\frac{1}{n})^{n+1}&#x3D;\lim_{n\to\infty}(1+\frac{1}{n})^{n}(1+\frac{1}{n})&#x3D;e$$<br>$$\lim_{n\to\infty}(1+\frac{1}{n+1})^n&#x3D;\lim_{n\to\infty}(1+\frac{1}{n+1})^{n+1}&#x2F;(1+\frac{1}{n+1})&#x3D;e$$<br>所以$e&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^t$</p>
+<p>将$s&#x3D;t-1$代入原式可得：<br>$$\lim_{t\to+\infty}(1-\frac{1}{t})^{-t}&#x3D;\lim_{s\to+\infty}(1+\frac{1}{s})^s&#x3D;e$$<br>对于$x&gt;0$，令$s&#x3D;tx$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1+\frac{1}{t})^{tx}&#x3D;\lim_{s\to+\infty}(1+\frac{x}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>对于$x&lt;0$，令$y&#x3D;-x,s&#x3D;ty$，则：<br>$$e^x&#x3D;\lim_{t\to+\infty}(1-\frac{1}{t})^{-tx}&#x3D;\lim_{s\to+\infty}(1-\frac{y}{s})^s&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$$<br>所以$e^x&#x3D;\lim_{n\to\infty}(1+\frac{x}{n})^n$</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/analysis/" rel="tag"># analysis</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/04/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" rel="prev" title="群论学习笔记-2.置换群">
+                  <i class="fa fa-chevron-left"></i> 群论学习笔记-2.置换群
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/07/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/" rel="next" title="群论学习笔记-3.子群">
+                  群论学习笔记-3.子群 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若则理</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="gcFcmmNr8Y8yiq5ncwJiiPRbv0I3srT4dFD80_qixv4" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGWWenKai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+    <meta name="description" content="解一个45次方程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="van Roomen问题">
+<meta property="og:url" content="https://ruozeli.github.io/2023/08/22/van-Roomen%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="若则理のBlog">
+<meta property="og:description" content="解一个45次方程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/08/22/MlJAFQW1kXaHUGp.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/22/ozbUC3rVBsupLxK.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/22/tm5zVZplnDi4Yrq.png">
+<meta property="og:image" content="https://s2.loli.net/2023/08/22/wRfUlWT9V12cuF3.png">
+<meta property="article:published_time" content="2023-08-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-19T05:55:22.857Z">
+<meta property="article:author" content="若则理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="algebra">
+<meta property="article:tag" content="trigonometry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/08/22/MlJAFQW1kXaHUGp.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/08/22/van-Roomen%E9%97%AE%E9%A2%98/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh_CN","comments":true,"permalink":"https://ruozeli.github.io/2023/08/22/van-Roomen%E9%97%AE%E9%A2%98/","path":"2023/08/22/van-Roomen问题/","title":"van Roomen问题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>van Roomen问题 | 若则理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若则理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hypotheses non fingo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%97%AE%E9%A2%98"><span class="nav-text">1. 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%AF%95%E6%B0%B4"><span class="nav-text">2. 试水</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%AD%A3%E5%BC%8F%E8%A7%A3%E9%A2%98"><span class="nav-text">3. 正式解题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E5%85%A5%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="nav-text">引入三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%96%E7%AE%80%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="nav-text">化简多项式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%96%E7%AE%80%E5%B8%B8%E6%95%B0%E9%A1%B9"><span class="nav-text">化简常数项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98"><span class="nav-text">解决问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95"><span class="nav-text">4. 其他方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E6%96%B9%E6%B3%95"><span class="nav-text">复数方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E6%8E%A8%E6%96%B9%E6%B3%95"><span class="nav-text">递推方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="nav-text">5. 切比雪夫多项式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%8F%82%E8%80%83"><span class="nav-text">6. 参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若则理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/08/22/van-Roomen%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若则理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若则理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="van Roomen问题 | 若则理のBlog">
+      <meta itemprop="description" content="解一个45次方程">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          van Roomen问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-08-22 00:00:00" itemprop="dateCreated datePublished" datetime="2023-08-22T00:00:00+08:00">2023-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">解一个45次方程</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h2><p>400多年前，数学家Adriaan van Roomen以他的著作<em>Ideae mathematicae</em>中的一个45次方程向当时的欧洲顶尖数学家发起挑战，而挑战的名单中没有法国数学家。荷兰大使据此向法国国王指出：法国没有顶尖数学家，于是法国国王召见François Viète (没错就是韦达定理的那个韦达)，让他解这个方程。他靠着窗户站了一会儿后就给出了一个解，并在第二天就给出了另外22个(正)解。</p>
+<p>这个方程是这样的<sup>[1]</sup>：</p>
+<img src="https://s2.loli.net/2023/08/22/MlJAFQW1kXaHUGp.png" width="50%" height="50%" />
+
+<p>用现代数学语言表示就是这样一个多项式：<br>$$P_{45}(x)&#x3D;45x-3795x^3+95634x^5-1138500x^7+7811375x^9-34512075x^{11}+105306075x^{13}-232676280x^{15}+384942375x^{17}-488494125x^{19}+483841800x^{21}-378658800x^{23}+236030652x^{25}-117679100x^{27}+46955700x^{29}-14945040x^{31}+3764565x^{33}-740259x^{35}+111150x^{37}-12300x^{39}+945x^{41}-45x^{43}+x^{45}$$<br>方程为：<br>$$P_{45}(x)&#x3D;K&#x3D;\sqrt{\frac{7}{4}-\sqrt{\frac{5}{16}}-\sqrt{\frac{15}{8}-\sqrt{\frac{45}{64}}}}$$</p>
+<h2 id="2-试水"><a href="#2-试水" class="headerlink" title="2. 试水"></a>2. 试水</h2><p>虽然是45次方程，但毕竟是400多年前的。<br>太简单了！只要运用一下高科技，答案立即就出来了：</p>
+<img src="https://s2.loli.net/2023/08/22/ozbUC3rVBsupLxK.png" width="60%" height="60%" />
+
+<p>Ut legit, ut solvit !! 45个根，23个正根，22个负根，并且有20位的精度。</p>
+<p>但是，这毕竟是400多年前的问题，使用计算机数值算法纯属犯规了。虽然没必要像Viète一样用纸笔解方程，还是让我们来推测一下他的解题思路。<br>首先观察$P_{45}$的这一堆系数。注意到系数的正负号是交替的，那么基本可以断定这个式子是某个函数的展开式，但是究竟是什么函数呢？画个图像看看：</p>
+<img src="https://s2.loli.net/2023/08/22/tm5zVZplnDi4Yrq.png" width="70%" height="70%" />
+
+<p>看到这个经典的波形，就知道这一定是某个三角函数了。这样也就能解释为什么这个方程的45个根恰好都是实数了。关键问题就在于如何找到这个三角函数。<br>先把这一堆系数分解质因数：<br>$$<br>\begin{align*}<br>45&amp;&#x3D;3^2\times5\\<br>3795&amp;&#x3D;3\times5\times11\times23\\<br>95634&amp;&#x3D;2\times3^3\times7\times11\times23\\<br>1138500&amp;&#x3D;2^2\times3^2\times5^3\times11\times23\\<br>\cdots&amp;\cdots\\<br>111150&amp;&#x3D;2\times3^2\times5^2\times13\times19\\<br>12300&amp;&#x3D;2^2\times3\times5^2\times41\\<br>945&amp;&#x3D;3^3\times5\times7\\<br>45&amp;&#x3D;3^2\times5<br>\end{align*}<br>$$<br>除了质因数大小在一定范围内，似乎没有什么规律。</p>
+<h2 id="3-正式解题"><a href="#3-正式解题" class="headerlink" title="3. 正式解题"></a>3. 正式解题</h2><h3 id="引入三角函数"><a href="#引入三角函数" class="headerlink" title="引入三角函数"></a>引入三角函数</h3><p>查阅资料后我发现，这个问题竟与三次方程的三角解法有关。<br>考察没有二次项的三次方程(Depressed Cubic Equation)，即形如$x^3+px+q&#x3D;0(p,q\not&#x3D;0)$的方程。Viète对其提出了一种利用三角函数的解法<sup>[2]</sup>。</p>
+<p>关键在于三倍角公式的运用：$4\sin^3\theta&#x3D;3\sin\theta-\sin3\theta$<br>令$x&#x3D;A\sin\theta$，$C&#x3D;\sin3\theta$，代入三倍角公式：<br>$$4\left(\frac{x}{A}\right)^3&#x3D;3\left(\frac{x}{A}\right)-C$$<br>化简：<br>$$x^3-\frac{3}{4}A^2x+\frac{1}{4}A^3C&#x3D;0$$<br>于是得到：<br>$$<br>\begin{cases}<br>p&#x3D;-3A^2&#x2F;4\\<br>q&#x3D;A^3C&#x2F;4<br>\end{cases}<br>$$<br>解这个方程组，得到：<br>$$<br>\begin{cases}<br>A&#x3D;2\sqrt{-p&#x2F;3}\\<br>C&#x3D;\sin3\theta&#x3D;4q&#x2F;A^3&#x3D;-9q&#x2F;(2p\sqrt{-3p})<br>\end{cases}<br>$$<br>于是可以求出$\theta$的值<sup>[3]</sup>：<br>$$\theta&#x3D;\frac{1}{3}\arcsin\left(-\frac{9q}{2p\sqrt{-3p}}\right)+\frac{2k\pi}{3},\quad k&#x3D;0,1,2$$<br>再代回$x&#x3D;A\sin\theta$：<br>$$x&#x3D;2\sqrt{-\frac{p}{3}}\cdot\sin\left(\frac{1}{3}\arcsin\left(-\frac{9q}{2p\sqrt{-3p}}\right)+\frac{2k\pi}{3}\right),\quad k&#x3D;0,1,2$$<br>这个求根公式适用于任意无二次项的三次方程，用公式可求出方程的三个根($k&#x3D;0,1,2$)。若规定$p&lt;0$，$q&lt;0$，则不等式$-1&lt;-9q&#x2F;(2p\sqrt{-3p})&lt;1$恒成立，三个根都为实数。</p>
+<p>顺便一提，如果将$y&#x3D;x-a&#x2F;3$代入一般的三次方程$y^3+ay^2+by+c&#x3D;0$，即可消去二次项，得到$x^3+(b-a^2&#x2F;3)x+(2a^3&#x2F;27-ab&#x2F;3+c)&#x3D;0$，因此这个三角函数解法可以直接应用于任意三次方程。</p>
+<h3 id="化简多项式"><a href="#化简多项式" class="headerlink" title="化简多项式"></a>化简多项式</h3><p>可以使用相同的方法化简$P_{45}$。<br>既然是45次，那就需要$\sin45\theta$，$45&#x3D;3^2\times5$，那么显然需要使用一次五倍角公式和两次三倍角公式。<br>$$\sin45\theta&#x3D;16\sin^5 9\theta-20\sin^3 9\theta+5\sin 9\theta$$<br>$$\sin9\theta&#x3D;-4\sin^3 3\theta+3\sin 3\theta$$<br>设$a&#x3D;\sin3\theta$，则：<br>$$<br>\begin{aligned}<br>\sin45\theta&amp;&#x3D;16(-4a^3+3a)^5-20(-4a^3+3a)^3+5(-4a^3+3a)\\<br>&amp;&#x3D;-16384a^{15}+61440a^{13}-92160a^{11}+70400a^9-28800a^7+6048a^5-560a^3+15a<br>\end{aligned}<br>$$<br>设$b&#x3D;\sin\theta$，则：<br>$$\sin45\theta&#x3D;17592186044416 b^{45}-197912092999680 b^{43}+1039038488248320 b^{41}-3380998255411200 b^{39}+7638169839206400 b^{37}-12717552782278656 b^{35}+16168683558666240 b^{33}-16047114509352960 b^{31}+12604574741299200 b^{29}-7897310717542400 b^{27}+3959937231224832 b^{25}-1588210119475200 b^{23}+507344899276800 b^{21}-128055803904000 b^{19}+25227583488000 b^{17}-3812168171520 b^{15}+431333683200 b^{13}-35340364800 b^{11}+1999712000 b^9-72864000 b^7+1530144 b^5-15180 b^3+45 b$$<br>这个式子竟然比$P_{45}$还要复杂得多，但次数倒确实是45次。<br>仔细观察便能发现这个多项式的各项系数恰是$P_{45}$系数的$2^n$倍：<br>$$<br>\begin{aligned}<br>45&amp;&#x3D;45\times2^0\\<br>15180&amp;&#x3D;3795\times2^2\\<br>1530144&amp;&#x3D;95634\times2^4\\<br>72864000&amp;&#x3D;1138500\times2^6\\<br>\cdots&amp;\cdots\\<br>3380998255411200&amp;&#x3D;12300\times2^{38}\\<br>1039038488248320&amp;&#x3D;945\times2^{40}\\<br>197912092999680&amp;&#x3D;45\times2^{42}\\<br>17592186044416&amp;&#x3D;1\times2^{44}<br>\end{aligned}<br>$$<br>设$\sin\theta$展开式的$i$次项系数为$\alpha_i$，$P_{45}$的$i$次项系数为$\beta_i$，则：<br>$$\alpha_i&#x3D;\beta_i\cdot2^{i-1}$$<br>于是容易得到，当$x&#x3D;2\sin\theta$时：<br>$$2\sin45\theta&#x3D;P_{45}(x)$$<br>于是要解的方程就转化为：$2\sin45\theta&#x3D;K$</p>
+<h3 id="化简常数项"><a href="#化简常数项" class="headerlink" title="化简常数项"></a>化简常数项</h3><p>多项式可以化简，这么复杂的常数项一定也可以化简。由于左边是$2\sin45\theta$，可以推测右边也是$2\sin\varphi$形式的。那么<br>$$\frac{1}{2}K&#x3D;\frac{1}{2}\sqrt{\frac{7}{4}-\sqrt{\frac{5}{16}}-\sqrt{\frac{15}{8}-\sqrt{\frac{45}{64}}}}&#x3D;\frac{1}{4}\sqrt{7-\sqrt{5}-\sqrt{30-6\sqrt{5}}}$$<br>是什么角度的正弦值呢？<br>注意到(五倍角公式)：<br>$$16\left(\frac{1}{2}K\right)^5-20\left(\frac{1}{2}K\right)^3+5\left(\frac{1}{2}K\right)&#x3D;\frac{\sqrt{3}}{2}&#x3D;\sin\frac{\pi}{3}$$<br>所以：<br>$$\frac{1}{2}K&#x3D;\sin\frac{\pi}{15}$$<br>怎么注意到呢？好吧其实是直接用软件计算$\arcsin K&#x2F;2$得到12°，再反过来用五倍角公式的。</p>
+<p>我在网上找到的所有资料都是计算$\sin12°$，得到其值恰为$K&#x2F;2$的，似乎没有直接用$K&#x2F;2$得到12°的方法。说到底这个纯粹是van Roomen为了提高问题难度挖的坑，当时只有对三角函数运用熟练、经验极其丰富的数学家才能够得出结果。</p>
+<h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><p>两边都化简后，问题就简单了。<br>$$2\sin45\theta&#x3D;2\sin\frac{\pi}{15}$$<br>解得$45\theta&#x3D;\pi&#x2F;15+2k\pi$，或$45\theta&#x3D;14\pi&#x2F;15+2k\pi$，将将所有满足条件的$\theta$求出，即可得到所有根$x&#x3D;2\sin\theta$，具体计算就不干了，这种事情还是交给计算机吧。</p>
+<p>其实到这里只是使用了多项式关于引入的新变量$\theta$的关系式，而没有得出真正的原函数。通过上面求$x$的过程，很容易得出函数：<br>$$f(x)&#x3D;2\sin\left(45\arcsin\left(\frac{x}{2}\right)\right)$$<br>画出图像：</p>
+<img src="https://s2.loli.net/2023/08/22/wRfUlWT9V12cuF3.png" width="70%" height="70%" />
+
+<p>完美！可以看到函数$f(x)$和$P_{45}$在区间$[-2,2]$是完全重合的。但是$P_{45}$对于$f(x)$不仅是展开式，还是一种<strong>解析延拓</strong>，在此方程中常数项恰在区间$[-2,2]$之间，否则无法用此方法得到解。</p>
+<h2 id="4-其他方法"><a href="#4-其他方法" class="headerlink" title="4. 其他方法"></a>4. 其他方法</h2><h3 id="复数方法"><a href="#复数方法" class="headerlink" title="复数方法"></a>复数方法</h3><p>上面我用倍角公式的方法得到了$P_{45}$的化简，本质上还是误打误撞。事实上，若知道原三角函数，还有一种更直接的使用复数和二项式定理的方法求其展开式，下简述之<sup>[2]</sup>。</p>
+<p>令$t&#x3D;\arcsin(x&#x2F;2)$，那么：<br>$$<br>\begin{aligned}<br>\sin\left(45\arcsin\left(\frac{x}{2}\right)\right)&amp;&#x3D;\sin45t\\<br>&amp;&#x3D;\mathrm{Im}(e^{45\mathrm{i}t})&#x3D;\mathrm{Im}((e^{\mathrm{i}t})^{45})\\<br>&amp;&#x3D;\mathrm{Im}((\cos t+\mathrm{i}\sin t)^{45})\\<br>&amp;&#x3D;\mathrm{Im}\left(\sum_{k&#x3D;0}^{45}\binom{45}{k}(\mathrm{i}\sin t)^k\cos^{45-k}t\right)\\<br>&amp;&#x3D;\frac{1}{\mathrm{i}}\left(\sum_{k&#x3D;0}^{22}\binom{45}{2k+1}(\mathrm{i}\sin t)^{2k+1}\cos^{45-2k}t)\right)\\<br>&amp;&#x3D;\sum_{k&#x3D;0}^{22}\binom{45}{2k+1}(-1)^k\sin^{2k+1}t(1-\sin^2t)^{22-k})\\<br>&amp;&#x3D;\sum_{k&#x3D;0}^{22}\binom{45}{2k+1}(-1)^k\sin^{2k+1}t\sum_{j&#x3D;0}^{22-k}\binom{22-k}{j}(-1)^j\sin^{2j}t\\<br>&amp;&#x3D;\sum_{k&#x3D;0}^{22}\sum_{j&#x3D;0}^{22-k}\binom{45}{2k+1}\binom{22-k}{j}(-1)^{k+j}\sin^{2k+2j+1}t\\<br>&amp;&#x3D;\sum_{k&#x3D;0}^{22}\sum_{j&#x3D;k}^{22}\binom{45}{2k+1}\binom{22-k}{j-k}(-1)^{j}\sin^{2j+1}t\\<br>&amp;&#x3D;\sum_{j&#x3D;0}^{22}\sum_{k&#x3D;0}^{j}\binom{45}{2k+1}\binom{22-k}{j-k}(-1)^{j}\sin^{2j+1}t\\<br>&amp;&#x3D;\sum_{j&#x3D;0}^{22}(-1)^j\left[\sum_{k&#x3D;0}^{j}\binom{45}{2k+1}\binom{22-k}{j-k}\right]\sin^{2j+1}t<br>\end{aligned}<br>$$<br>所以：<br>$$<br>\begin{aligned}<br>f(x)&amp;&#x3D;2\sin(45\arcsin(\frac{x}{2}))\\<br>&amp;&#x3D;\sum_{j&#x3D;0}^{22}(\frac{-1}{4})^j\left[\sum_{k&#x3D;0}^{j}\binom{45}{2k+1}\binom{22-k}{j-k}\right]x^{2j+1}\\<br>&amp;&#x3D;P_{45}(x)<br>\end{aligned}<br>$$<br>此方法适用于计算更多类似三角函数的展开式。</p>
+<h3 id="递推方法"><a href="#递推方法" class="headerlink" title="递推方法"></a>递推方法</h3><p>此外，还有一个相当精彩的方法，通过递推得到了$P_{45}$与三角函数的关系<sup>[4]</sup>。</p>
+<p>定义多项式$P_n$：<br>$$P_n(x)&#x3D;\sum_{i&#x3D;0}^{\lfloor n&#x2F;2\rfloor}(-1)^i\frac{n}{n-i}\binom{n-i}{i}x^{n-2i}$$<br>容易知道，原方程左端的多项式恰是这样定义的$P_{45}$。</p>
+<p>首先，可以求出$P_n$的递推公式：<br>$$P_n(x)&#x3D;xP_{n-1}(x)-P_{n-2}(x)$$<br>证明如下：<br>对于最简单的情况，因为：<br>$$<br>\begin{aligned}<br>P_1(x)&amp;&#x3D;x\\<br>P_2(x)&amp;&#x3D;x^2-2\\<br>P_3(x)&amp;&#x3D;x^3-3x<br>\end{aligned}<br>$$<br>所以：<br>$$xP_2(x)-P_1(x)&#x3D;x(x^2-2)-x&#x3D;x^3-3x&#x3D;P_3(x)$$<br>对于整数$n&gt;3$：<br>$$<br>\begin{aligned}<br>xP_{n-1}(x)&amp;&#x3D;\sum_{i&#x3D;0}^{\lfloor(n-1)&#x2F;2\rfloor}(-1)^i\frac{n-1}{n-1-i}\binom{n-1-i}{i}x^{n-2i}\\<br>&amp;&#x3D;x^n+\sum_{i&#x3D;1}^{\lfloor(n-1)&#x2F;2\rfloor}(-1)^i\frac{n-1}{n-1-i}\binom{n-1-i}{i}x^{n-2i}\\<br>P_{n-2}(x)&amp;&#x3D;\sum_{i&#x3D;0}^{\lfloor n&#x2F;2-1\rfloor}(-1)^i\frac{n-2}{n-2-i}\binom{n-2-i}{i}x^{n-2-2i}\\<br>&amp;&#x3D;\sum_{i&#x3D;1}^{\lfloor n&#x2F;2\rfloor}(-1)^{i-1}\frac{n-2}{n-2-(i-1)}\binom{n-2-(i-1)}{i-1}x^{n-2-2(i-1)}\\<br>&amp;&#x3D;\sum_{i&#x3D;1}^{\lfloor n&#x2F;2\rfloor}(-1)^{i-1}\frac{n-2}{n-1-i}\binom{n-1-i}{i-1}x^{n-2i}<br>\end{aligned}<br>$$<br>接下来根据奇偶性分类讨论。<br>若$2\nmid n$，则$\lfloor n&#x2F;2\rfloor&#x3D;\lfloor(n-1)&#x2F;2\rfloor&#x3D;(n-1)&#x2F;2$，<br>$$xP_{n-1}(x)-P_{n-2}(x)&#x3D;x^n+\sum_{i&#x3D;1}^{\lfloor n&#x2F;2\rfloor}(-1)^i\left[\frac{n-1}{n-1-i}\binom{n-1-i}{i}+\frac{n-2}{n-1-i}\binom{n-1-i}{i-1}\right]x^{n-2i}$$<br>注意中间部分：<br>$$<br>\begin{aligned}<br>&amp;\frac{n-1}{n-1-i}\binom{n-1-i}{i}+\frac{n-2}{n-1-i}\binom{n-1-i}{i-1}\\<br>&#x3D;&amp;\frac{n-1}{n-1-i}\cdot\frac{(n-1-i)!}{i!(n-1-2i)!}+\frac{n-2}{n-1-i}\cdot\frac{(n-1-i)!}{(i-1)!(n-2i)!}\\<br>&#x3D;&amp;\frac{(n-i)!}{(n-i)i!(n-2i)!}\cdot[\frac{(n-1)(n-2i)}{n-1-i}+\frac{i(n-2)}{n-1-i}]\\<br>&#x3D;&amp;\frac{n}{n-i}\cdot\frac{(n-i)!}{i!(n-2i)!}\\<br>&#x3D;&amp;\frac{n}{n-i}\binom{n-i}{i}<br>\end{aligned}<br>$$<br>代回原式：<br>$$<br>\begin{aligned}<br>xP_{n-1}(x)-P_{n-2}(x)&amp;&#x3D;x^n+\sum_{i&#x3D;1}^{\lfloor n&#x2F;2\rfloor}(-1)^i\frac{n}{n-i}\binom{n-i}{i}x^{n-2i}\\<br>&amp;&#x3D;\sum_{i&#x3D;0}^{\lfloor n&#x2F;2\rfloor}(-1)^i\frac{n}{n-i}\binom{n-i}{i}x^{n-2i}\\<br>&amp;&#x3D;P_n(x)<br>\end{aligned}<br>$$<br>若$2\mid n$，则$\lfloor n&#x2F;2\rfloor&#x3D;\lfloor(n-1)&#x2F;2\rfloor+1&#x3D;n&#x2F;2$，<br>$$<br>\begin{aligned}<br>xP_{n-1}(x)-P_{n-2}(x)&#x3D;&amp;\sum_{i&#x3D;0}^{\lfloor n&#x2F;2\rfloor-1}(-1)^i\frac{n}{n-i}\binom{n-i}{i}x^{n-2i}-(-1)^{n&#x2F;2-1}\frac{n-2}{n&#x2F;2-1}\binom{n&#x2F;2-1}{n&#x2F;2-1}\\<br>&#x3D;&amp;\sum_{i&#x3D;0}^{\lfloor n&#x2F;2\rfloor-1}(-1)^i\frac{n}{n-i}\binom{n-i}{i}x^{n-2i}+2(-1)^{n&#x2F;2}<br>\end{aligned}<br>$$<br>当$i&#x3D;\lfloor n&#x2F;2\rfloor&#x3D;n&#x2F;2$时，<br>$$(-1)^i\frac{n}{n-i}\binom{n-i}{i}x^{n-2i}&#x3D;(-1)^{n&#x2F;2}\frac{n}{n&#x2F;2}\binom{n&#x2F;2}{n&#x2F;2}x^0&#x3D;2(-1)^{n&#x2F;2}$$<br>所以：<br>$$xP_{n-1}(x)-P_{n-2}(x)&#x3D;\sum_{i&#x3D;0}^{\lfloor n&#x2F;2\rfloor}(-1)^i\frac{n}{n-i}\binom{n-i}{i}x^{n-2i}&#x3D;P_n(x)$$</p>
+<p>然后来看三角函数中的递推关系。<br>先从一个最基本的关系开始，即喜闻乐见的积化和差：<br>$$\cos A\cos B&#x3D;\frac{\cos(A+B)+\cos(A-B)}{2}$$<br>整理一下可得：<br>$$2\cos(A+B)&#x3D;4\cos A\cos B-2\cos(A-B)$$<br>令$A&#x3D;(n-1)\alpha$，$B&#x3D;\alpha$，则可以得到：<br>$$2\cos n\alpha&#x3D;2\cos\alpha\cdot2\cos(n-1)\alpha-2\cos\alpha$$<br>这时很容易看出此递推关系与$P_n$的相似性，若令$x&#x3D;2\cos\alpha$，则：<br>$$<br>\begin{aligned}<br>P_1(x)&amp;&#x3D;x&#x3D;2\cos\alpha\\<br>P_2(x)&amp;&#x3D;x^2-2&#x3D;4\cos^2\alpha-2&#x3D;2\cos2\alpha\\<br>P_3(x)&amp;&#x3D;x^3-3x&#x3D;8\cos^3\alpha-6\cos\alpha&#x3D;2\cos3\alpha<br>\end{aligned}<br>$$<br>对于$n&gt;3$，由于递推关系一致，可以得到如下等式：<br>$$P_n(2\cos\alpha)&#x3D;2\cos n\alpha$$<br>正弦函数的关系式可以用余弦函数的关系式推出。<br>令$\alpha&#x3D;\beta-\pi&#x2F;2$代入上式：<br>$$<br>\begin{aligned}<br>P_n\left(2\cos\left(\beta-\frac{\pi}{2}\right)\right)&#x3D;&amp;2\cos n\left(\beta-\frac{\pi}{2}\right)\\<br>P_n(2\sin\beta)&#x3D;&amp;2\cos\left(n\beta-\frac{n\pi}{2}\right)<br>\end{aligned}<br>$$<br>若$2\nmid n$，则可化为更规整的形式：<br>$$P_n(2\sin\beta)&#x3D;2\sin n\beta\cdot(-1)^{\frac{n-1}{2}},\quad2\nmid n$$</p>
+<p>事实上，上面的三角函数递推过程就是$n$倍角公式的递推计算过程，这种方法就是将最初的三角函数方法规范化，形成一种确定的技巧。<br>由这样的推导可知，使用余弦函数也可化简多项式，原函数为$2\cos(45\arccos(x&#x2F;2))$，而且余弦函数对于此类多项式的使用范围更广，最初使用正弦函数成功化简确实是误打误撞，要不是恰好45满足$2\nmid n$，$2\mid(n-1)&#x2F;2$，就得不到答案了。(运气真好~)</p>
+<h2 id="5-切比雪夫多项式"><a href="#5-切比雪夫多项式" class="headerlink" title="5. 切比雪夫多项式"></a>5. 切比雪夫多项式</h2><p>在上述递归方法中定义的$P_n$，与第一类<strong>切比雪夫多项式</strong>很类似，这个多项式通常用$T_n$表示，定义为：<br>$$<br>\begin{aligned}<br>T_0(x)&amp;&#x3D;1\\<br>T_1(x)&amp;&#x3D;x\\<br>T_n(x)&amp;&#x3D;2xT_{n-1}(x)-T_{n-2}(x)<br>\end{aligned}<br>$$<br>区别在于递推公式系数中的2，这就导致了两类多项式对应三角函数的区别：<br>$$<br>\begin{aligned}<br>&amp;T_n(x)&#x3D;\cos(n\arccos(x)),\quad x\in[-1,1]\\<br>&amp;P_n(x)&#x3D;2\cos\left(n\arccos\left(\frac{x}{2}\right)\right),\quad x\in[-2,2]\\<br>&amp;T_n(\cos\theta)&#x3D;\cos n\theta\\<br>&amp;P_n(2\cos\theta)&#x3D;2\cos n\theta<br>\end{aligned}<br>$$<br>切比雪夫多项式于1854年由切比雪夫(Chebyshev)引入，之后在逼近理论中被广泛使用。而究其历史，则早在正式提出的250年前就已被发现与使用，Viète等数学家的洞察力与远见实在令人惊叹。</p>
+<h2 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h2><p>[1]Adriaan van Roomen. Ideae mathematicae pars prima, sive methodus polygonorum, 1593.<br>[2]R. L. Herman. van Roomen’s Problem, 2021<br><a target="_blank" rel="noopener" href="http://people.uncw.edu/hermanr/mat346/van_Roomen_s_Problem.pdf">http://people.uncw.edu/hermanr/mat346/van_Roomen_s_Problem.pdf</a><br>[3]参考文献使用符号$\sin^{-1}$，本文为避免歧义，统一使用符号$\arcsin$<br>[4]Van Roomen’s Problem: Solution Explained<br><a target="_blank" rel="noopener" href="http://fermatslasttheorem.blogspot.com/2007/02/van-roomens-problem-solution-explained.html">http://fermatslasttheorem.blogspot.com/2007/02/van-roomens-problem-solution-explained.html</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/algebra/" rel="tag"># algebra</a>
+              <a href="/tags/trigonometry/" rel="tag"># trigonometry</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/14/%E4%BB%8E%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E5%B0%94%E9%97%AE%E9%A2%98/" rel="prev" title="从欧拉公式到巴塞尔问题">
+                  <i class="fa fa-chevron-left"></i> 从欧拉公式到巴塞尔问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/09/08/%E8%99%9A%E5%8D%8E%E8%AE%B0/" rel="next" title="虚华记">
+                  虚华记 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若则理</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
