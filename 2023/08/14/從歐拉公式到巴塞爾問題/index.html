@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="推導歐拉公式，並寫出巴塞爾問題的一種解法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="從歐拉公式到巴塞爾問題">
+<meta property="og:url" content="https://ruozeli.github.io/2023/08/14/%E5%BE%9E%E6%AD%90%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E7%88%BE%E5%95%8F%E9%A1%8C/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="推導歐拉公式，並寫出巴塞爾問題的一種解法">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://s2.loli.net/2023/08/14/97IqAruQLdSK8fj.png">
+<meta property="article:published_time" content="2023-08-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-10T04:21:28.979Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="analysis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/08/14/97IqAruQLdSK8fj.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/08/14/%E5%BE%9E%E6%AD%90%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E7%88%BE%E5%95%8F%E9%A1%8C/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2023/08/14/%E5%BE%9E%E6%AD%90%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E7%88%BE%E5%95%8F%E9%A1%8C/","path":"2023/08/14/從歐拉公式到巴塞爾問題/","title":"從歐拉公式到巴塞爾問題"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>從歐拉公式到巴塞爾問題 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%90%E6%8B%89%E5%85%AC%E5%BC%8F"><span class="nav-text">歐拉公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%BC%A6%E5%87%BD%E6%95%B8%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="nav-text">正弦函數因式分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B4%E5%A1%9E%E7%88%BE%E5%95%8F%E9%A1%8C"><span class="nav-text">巴塞爾問題</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/08/14/%E5%BE%9E%E6%AD%90%E6%8B%89%E5%85%AC%E5%BC%8F%E5%88%B0%E5%B7%B4%E5%A1%9E%E7%88%BE%E5%95%8F%E9%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="從歐拉公式到巴塞爾問題 | 若則理のBlog">
+      <meta itemprop="description" content="推導歐拉公式，並寫出巴塞爾問題的一種解法">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          從歐拉公式到巴塞爾問題
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2023-08-14 00:00:00" itemprop="dateCreated datePublished" datetime="2023-08-14T00:00:00+08:00">2023-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Analysis/" itemprop="url" rel="index"><span itemprop="name">Analysis</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">推導歐拉公式，並寫出巴塞爾問題的一種解法</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="歐拉公式"><a href="#歐拉公式" class="headerlink" title="歐拉公式"></a>歐拉公式</h2><p>《微積分入門》使用歐拉公式嚴格地定義了三角函數，這裡只參考原書推導歐拉公式，不重新定義三角函數。</p>
+<p>定義復數$e&#x3D;\cos(\theta)+\mathrm{i}\sin(\theta)$，$\vert e\vert^2&#x3D;\cos^2(\theta)+\sin^2(\theta)&#x3D;1$。這個復數$e$並不是實際的數，而是表示一種變換，用這個復數來表示復平面的旋轉：<br>$$R_e: z\to z’&#x3D;e\cdot z$$<br>需要確定的就是復數$e$關於角$\theta$的非三角函數形式的函數$e(\theta)$。<br>首先，旋轉兩次的復合可以用$e$的乘積表示，而對於旋轉的角，則是相加，由此可得：<br>$$e(\theta+\varphi)&#x3D;e(\theta)\cdot e(\varphi)\quad(1)$$<br>令$\varphi&#x3D;0$，可得$e(\theta+0)&#x3D;e(\theta)\cdot e(0)$，於是得到：<br>$$e(0)&#x3D;1$$<br>令$\varphi&#x3D;-\theta$，可得$e(0)&#x3D;e(\theta)\cdot e(-\theta)$，於是得到：<br>$$e(-\theta)&#x3D;\frac{1}{e(\theta)}&#x3D;\overline{e(\theta)}$$<br>同時很容易得到：對於正整數$n$，$e(n\theta)&#x3D;e(\theta)^n$，所以：<br>$$e(\theta)&#x3D;e(\frac{\theta}{n})^n$$<br>當$n\to\infty$時，$\theta&#x2F;n\to0$，$e(\theta&#x2F;n)\to1$，令：<br>$$e(\frac{\theta}{n})&#x3D;1+\sigma_n,\quad\sigma_n\to0$$<br>則：<br>$$e(\theta)&#x3D;(1+\sigma_n)^n$$<br>此時，觀察$1\cdot e(\theta&#x2F;n)&#x3D;e(\theta&#x2F;n)$：</p>
+<img src="https://s2.loli.net/2023/08/14/97IqAruQLdSK8fj.png" width="50%" height="50%" />
+
+<p>可以看到，$e(\theta&#x2F;n)$很接近$1+(\theta&#x2F;n)\mathrm{i}$，於是設：<br>$$\sigma_n&#x3D;\frac{1}{n}(\tau_n+\theta\mathrm{i}),\quad\tau_n\to0$$<br>(加上一個很小的$\tau$是為了嚴格性)<br>於是得到：<br>$$e(\theta)&#x3D;(1+\frac{\theta\mathrm{i}}{n}+\frac{\tau}{n})^n&#x3D;(1+\frac{\theta\mathrm{i}}{n})^n(1+\frac{z_n}{n})^n$$<br>其中：<br>$$z_n&#x3D;\frac{\tau_n}{1+\theta\mathrm{i}&#x2F;n}\to0$$</p>
+<p><strong>引理1</strong>：對於復數列$\{z_n\}$，若$\lim_{n\to\infty}z_n&#x3D;0$，那麼$\lim_{n\to\infty}(1+z_n&#x2F;n)^n&#x3D;1$。具體證明不再贅述，見《微積分入門》。</p>
+<p>由此引理可得：<br>$$e(\theta)&#x3D;\lim_{n\to\infty}(1+\frac{\theta\mathrm{i}}{n})^n$$<br>可以證明此函數是絕對值為1的連續復值函數，且滿足條件(1)，具體見《微積分入門》。<br>又由$e^z&#x3D;\lim_{n\to\infty}(1+z&#x2F;n)^n$，可得：<br>$$e(\theta)&#x3D;\lim_{n\to\infty}(1+\frac{\theta\mathrm{i}}{n})^n&#x3D;e^{\mathrm{i}\theta}&#x3D;\cos(\theta)+\mathrm{i}\sin(\theta)$$<br>這就是歐拉公式。</p>
+<p>因為$\lim_{n\to\infty}(1+z&#x2F;n)^n&#x3D;\sum_{n&#x3D;0}^{\infty}z^n&#x2F;n!$，所以：<br>$$e(\theta)&#x3D;1+\sum_{n&#x3D;1}^{\infty}\frac{(\mathrm{i}\theta)^n}{n!}&#x3D;1+\frac{\mathrm{i}\theta}{1!}-\frac{\theta^2}{2!}-\frac{\mathrm{i}\theta^3}{3!}+\frac{\theta^4}{4!}+\cdots$$<br>很容易得到正余弦函數的泰勒展開：<br>$$<br>\begin{cases}<br>\cos(\theta)&#x3D;1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\frac{\theta^6}{6!}+\cdots\\<br>\sin(\theta)&#x3D;\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\frac{\theta^7}{7!}+\cdots<br>\end{cases}<br>$$</p>
+<div class="note warning"><p>注意，以下內容不嚴格</p>
+</div>
+
+<h2 id="正弦函數因式分解"><a href="#正弦函數因式分解" class="headerlink" title="正弦函數因式分解"></a>正弦函數因式分解</h2><p>因為$\sin(\pi)&#x3D;0$，所以可以將正弦函數因式分解為：<br>$$\sin(x)&#x3D;ax(x+\pi)(x-\pi)(x+2\pi)(x-2\pi)\cdots$$<br>注意到極限：<br>$$\lim_{x\to0}\frac{\sin(x)}{x}&#x3D;1$$<br>於是將上式兩邊除以$x$並取極限：<br>$$1&#x3D;a\pi(-\pi)(2\pi)(-2\pi)\cdots$$<br>所以：<br>$$a&#x3D;\frac{1}{\pi(-\pi)(2\pi)(-2\pi)\cdots}$$<br>代回原式：<br>$$\sin(x)&#x3D;x(1+\frac{x}{\pi})(1-\frac{x}{\pi})(1+\frac{x}{2\pi})(1-\frac{x}{2\pi})\cdots$$</p>
+<h2 id="巴塞爾問題"><a href="#巴塞爾問題" class="headerlink" title="巴塞爾問題"></a>巴塞爾問題</h2><p>巴塞爾問題即為求如下級數的值：<br>$$\sum_{n&#x3D;1}^{\infty}\frac{1}{n^2}&#x3D;1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots$$<br>這個問題有很多解法，這裡寫一種使用正弦函數的解法。</p>
+<p>現在，有兩個正弦函數的表達式：<br>$$<br>\begin{aligned}<br>\sin(x)&#x3D;&amp;x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots\\<br>\sin(x)&#x3D;&amp;x(1+\frac{x}{\pi})(1-\frac{x}{\pi})(1+\frac{x}{2\pi})(1-\frac{x}{2\pi})\cdots<br>\end{aligned}<br>$$</p>
+<p>將下式展開：<br>$$<br>\begin{aligned}<br>\sin(x)&#x3D;&amp;x(1+\frac{x}{\pi})(1-\frac{x}{\pi})(1+\frac{x}{2\pi})(1-\frac{x}{2\pi})\cdots\\<br>&#x3D;&amp;x(1-\frac{x^2}{\pi^2})(1-\frac{x^2}{4\pi^2})(1-\frac{x^2}{9\pi^2})\cdots\\<br>&#x3D;&amp;[x-(\frac{x^3}{\pi^2}+\frac{x^3}{4\pi^2}+\frac{x^3}{9\pi^2})+(\frac{x^5}{4\pi^4}+\frac{x^5}{9\pi^4}+\frac{x^5}{36\pi^4})-\frac{x^7}{36\pi^6}](1-\frac{x^2}{16\pi^2})\cdots\\<br>&#x3D;&amp;x-\sum_{n&#x3D;1}^{\infty}\frac{x^3}{n^2\pi}+ax^5-bx^7+\cdots<br>\end{aligned}<br>$$</p>
+<p>比較$x$的次數可得到等式：<br>$$-\frac{x^3}{3!}&#x3D;-\frac{x^3}{6}&#x3D;-\sum_{n&#x3D;1}^{\infty}\frac{x^3}{n^2\pi}$$<br>於是得到：<br>$$\sum_{n&#x3D;1}^{\infty}\frac{1}{n^2}&#x3D;1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots&#x3D;\frac{\pi^2}{6}$$</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/analysis/" rel="tag"># analysis</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/07/%E5%A4%9A%E5%80%8B%E5%9C%93%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A4%96%E5%88%87%E4%B8%89%E8%A7%92%E5%BD%A2-2/" rel="prev" title="多個圓的最小外切三角形-2">
+                  <i class="fa fa-angle-left"></i> 多個圓的最小外切三角形-2
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/22/van-Roomen%E5%95%8F%E9%A1%8C/" rel="next" title="van Roomen問題">
+                  van Roomen問題 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

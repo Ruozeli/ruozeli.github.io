@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="子群及其判定條件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群論學習筆記-3.子群">
+<meta property="og:url" content="https://ruozeli.github.io/2023/05/07/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-3/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="子群及其判定條件">
+<meta property="og:locale" content="de_DE">
+<meta property="article:published_time" content="2023-05-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-10T02:45:08.655Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="group">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/05/07/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-3/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2023/05/07/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-3/","path":"2023/05/07/群論學習筆記-3/","title":"群論學習筆記-3.子群"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>群論學習筆記-3.子群 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%BE%A9"><span class="nav-text">定義</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E5%AE%9A%E6%A2%9D%E4%BB%B6"><span class="nav-text">判定條件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%A4%E5%AE%9A%E6%A2%9D%E4%BB%B6"><span class="nav-text">基本判定條件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E5%AD%90%E7%BE%A4%E5%88%A4%E5%AE%9A%E6%A2%9D%E4%BB%B6"><span class="nav-text">有限子群判定條件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E4%BE%8B%E5%AD%90"><span class="nav-text">一些例子</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/05/07/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="群論學習筆記-3.子群 | 若則理のBlog">
+      <meta itemprop="description" content="子群及其判定條件">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          群論學習筆記-3.子群
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2023-05-07 00:00:00" itemprop="dateCreated datePublished" datetime="2023-05-07T00:00:00+08:00">2023-05-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Group-Theory/" itemprop="url" rel="index"><span itemprop="name">Group Theory</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">子群及其判定條件</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h2><p>$G$是一個群，若$G$的一個子群$H$對$G$的運算構成一個群，則稱$H$是$G$的一個<strong>子群</strong>，若$H\not&#x3D;G$，則$H$是$G$的一個<strong>真子群</strong>。<br>用$H\le G$表示$H$是$G$的子群，$H&lt;G$表示$H$是$G$的真子群。<br>任何群$G$都有兩個明顯的子群：</p>
+<ul>
+<li>由單位元構成的子群$\{e\}$，稱為$G$的單位子群</li>
+<li>群$G$本身，稱為$G$的平凡子群</li>
+</ul>
+<p>其他子群(若存在)稱為$G$的非平凡子群。</p>
+<p>例如：</p>
+<ul>
+<li>加法群 $C&gt;R&gt;Q&gt;Z$</li>
+<li>乘法群 $C^*&gt;R^*&gt;Q^*$</li>
+<li>$n$元交錯群$A_n$是$n$元對稱群$S_n$的子群</li>
+<li>任意$n$元置換群都是$n$元對稱群的子群</li>
+</ul>
+<h2 id="判定條件"><a href="#判定條件" class="headerlink" title="判定條件"></a>判定條件</h2><h3 id="基本判定條件"><a href="#基本判定條件" class="headerlink" title="基本判定條件"></a>基本判定條件</h3><p>$H$是群$G$的非空子集，$H$是$G$的子群的充要條件是：</p>
+<ul>
+<li>如果$a,b\in H$，則$ab\in H$</li>
+<li>如果$a\in H$，則$a^{-1}\in H$</li>
+</ul>
+<p>以上兩個條件可以綜合為一條：</p>
+<ul>
+<li>如果$a,b\in H$，則$ab^{-1}\in H$</li>
+</ul>
+<p>證明：令$b&#x3D;a$，則$aa^{-1}&#x3D;e\in H$，所以對$b\in H$，$eb^{-1}&#x3D;b^{-1}\in H$，即滿足上述條件一，可得$b^{-1}\in H$，因此$a(b^{-1})^{-1}&#x3D;ab\in H$，滿足上述條件二。</p>
+<h3 id="有限子群判定條件"><a href="#有限子群判定條件" class="headerlink" title="有限子群判定條件"></a>有限子群判定條件</h3><p>$H$是群$G$的有限非空子集，$H$是$G$的子群的充要條件是$H$對$G$的運算封閉，即：</p>
+<ul>
+<li>如果$a,b\in H$，則$ab\in H$</li>
+</ul>
+<p>這個條件去掉了基本條件中的條件二。事實上，由於$H$是有限的，必存在自然數$l,m$使$a^l&#x3D;a^m$且$l&gt;m+1$，於是$l-m-1$是正整數，則$a^{l-m-1}&#x3D;a^{-1}\in H$，由此就推出了基本條件中的條件二。</p>
+<h2 id="一些例子"><a href="#一些例子" class="headerlink" title="一些例子"></a>一些例子</h2><p>整數加法群的$Z$中任意一個元素$n$的一切倍數構成的集合記作$nZ$，是$Z$的子群：<br>$$nZ&#x3D;\{kn\mid k&#x3D;0,\pm1,\pm2,\cdots\}$$</p>
+<p>$a$是群$G$的元素，$\langle a\rangle$表示$a$的所有方冪構成的集合。顯然，$\langle a\rangle$是$G$的子群：<br>稱$\langle a\rangle$為$G$的由$a$生成的循環子群，$a$稱為它的生成元，$\langle a\rangle$的階等於$a$的階。</p>
+<p>$Z(G)$表示群$G$中與所有元素都可交換的元素：$Z(G)&#x3D;\{a\mid ax&#x3D;xa,x\in G\}$。顯然$Z(G)$是群$G$的子群。<br>$Z(G)$稱為群$G$的中心，$Z(G)$的元素稱為群$G$的中心元素。若群$G$的中心是單位子群，則群$G$是無中心的；群$G$是交換群的充要條件是$Z(G)&#x3D;G$</p>
+<p>設$H_1,H_2$是$G$的兩個子群，則$H_1,H_2$的交$H_1\cap H_2$是$G$的子群。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/group/" rel="tag"># group</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/04/30/e%E7%9A%84%E5%A4%9A%E5%80%8B%E8%A1%A8%E9%81%94%E5%BC%8F%E6%8E%A8%E5%B0%8E/" rel="prev" title="$e$的多個表達式推導">
+                  <i class="fa fa-angle-left"></i> $e$的多個表達式推導
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/10/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-4/" rel="next" title="群論學習筆記-4.循環群">
+                  群論學習筆記-4.循環群 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

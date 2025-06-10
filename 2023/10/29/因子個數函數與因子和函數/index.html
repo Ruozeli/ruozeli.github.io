@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="因子個數函數與因子和函數，證明及簡單應用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="因子個數函數與因子和函數">
+<meta property="og:url" content="https://ruozeli.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E5%80%8B%E6%95%B8%E5%87%BD%E6%95%B8%E8%88%87%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B8/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="因子個數函數與因子和函數，證明及簡單應用">
+<meta property="og:locale" content="de_DE">
+<meta property="article:published_time" content="2023-10-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-10T03:27:51.775Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="number">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E5%80%8B%E6%95%B8%E5%87%BD%E6%95%B8%E8%88%87%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B8/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E5%80%8B%E6%95%B8%E5%87%BD%E6%95%B8%E8%88%87%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B8/","path":"2023/10/29/因子個數函數與因子和函數/","title":"因子個數函數與因子和函數"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>因子個數函數與因子和函數 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E7%AE%97%E8%A1%93%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-text">0. 算術基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9B%A0%E5%AD%90%E5%80%8B%E6%95%B8%E5%87%BD%E6%95%B8"><span class="nav-text">1. 因子個數函數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B9%98%E6%80%A7%E5%87%BD%E6%95%B8"><span class="nav-text">2. 乘性函數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B8"><span class="nav-text">3. 因子和函數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%87%89%E7%94%A8-%E5%AE%8C%E5%85%A8%E6%95%B8"><span class="nav-text">4. 應用-完全數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%8E%A8%E5%BB%A3-%E4%B8%80%E9%81%93%E7%BF%92%E9%A1%8C"><span class="nav-text">5. 推廣(一道習題)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/10/29/%E5%9B%A0%E5%AD%90%E5%80%8B%E6%95%B8%E5%87%BD%E6%95%B8%E8%88%87%E5%9B%A0%E5%AD%90%E5%92%8C%E5%87%BD%E6%95%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="因子個數函數與因子和函數 | 若則理のBlog">
+      <meta itemprop="description" content="因子個數函數與因子和函數，證明及簡單應用">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          因子個數函數與因子和函數
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2023-10-29 00:00:00" itemprop="dateCreated datePublished" datetime="2023-10-29T00:00:00+08:00">2023-10-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Number-Theory/" itemprop="url" rel="index"><span itemprop="name">Number Theory</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">因子個數函數與因子和函數，證明及簡單應用</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近在學初等數論，記一些有意思的東西。<br>主要參考孫智宏《數和數列》以及Kenneth H. Rosen《初等數論及其應用》</p>
+<h2 id="0-算術基本定理"><a href="#0-算術基本定理" class="headerlink" title="0. 算術基本定理"></a>0. 算術基本定理</h2><p>似乎數學的每一個分支都有基本定理，算術也不例外。<br><strong>算術基本定理</strong>：$n$為大於1的自然數，在不計次序的情況下，$n$可唯一地表示為有限個素數的乘積。<br>結論是trivial的，就不證明了。<br>由算術基本定理，定義$n$的<strong>標准分解式</strong>：<br>$$n&#x3D;p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdots p_r^{\alpha_r}$$<br>其中$p_1,p_2,\cdots,p_r$為素數且$p_1&lt;p_2&lt;\cdots&lt;p_r$</p>
+<h2 id="1-因子個數函數"><a href="#1-因子個數函數" class="headerlink" title="1. 因子個數函數"></a>1. 因子個數函數</h2><p>定義因子個數函數$\tau(n)$為正整數$n$的正因子個數，因子和函數$\sigma(n)$為$n$的所有正因子的和。</p>
+<p>由正整數$n$的標准分解式$n&#x3D;p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdots p_r^{\alpha_r}$可知，$n$的所有因子形如$p_1^{\beta_1}\cdot p_2^{\beta_2}\cdots p_r^{\beta_r}$，其中$\beta_i\in\{0,1,2,\cdots,\alpha_i\}$，由於$p_1,p_2,\cdots,p_r$是$r$個素因子，$\beta_i$有$\alpha_i+1$種可能，根據簡單的排列組合知識，容易得到因子個數函數：<br>$$\tau(n)&#x3D;\sum_{d\mid n}1&#x3D;(\alpha_1+1)(\alpha_2+1)\cdots(\alpha_r+1)&#x3D;\prod_{i&#x3D;1}^r(a_i+1)$$<br>相比因子個數函數，因子和函數不那麼容易得到，需先證明相關結論。</p>
+<h2 id="2-乘性函數"><a href="#2-乘性函數" class="headerlink" title="2. 乘性函數"></a>2. 乘性函數</h2><p>乘性函數指定義在正整數集合上的函數$f$，對任意互素的$m,n$，都有$f(mn)&#x3D;f(m)f(n)$。可以證明，因子個數函數與因子和函數都為乘性函數。</p>
+<p><strong>定理</strong>：如果$f$是乘性函數，則$f$的和函數也為乘性函數，即$F(n)&#x3D;\sum_{d\mid n}f(d)$是乘性函數。<br><strong>證明</strong>：設$m,n$是互素的自然數，則$F(mn)&#x3D;\sum_{d\mid mn}f(d)$，由於$(m,n)&#x3D;1$，$mn$的每一個因子都可寫成$m$的因子$d_1$和$n$的因子$d_2$，且$(d_1,d_2)&#x3D;1$，所以：<br>$$<br>\begin{align*}<br>F(mn)&amp;&#x3D;\sum_{\stackrel{d_1\mid m}{d_2\mid n}}f(d_1d_2) \\<br>&amp;&#x3D;\sum_{\stackrel{d_1\mid m}{d_2\mid n}}f(d_1)f(d_2) \\<br>&amp;&#x3D;\sum_{d_1\mid m}f(d_1)\sum_{d_2\mid m}f(d_2) \\<br>&amp;&#x3D;F(m)F(n)<br>\end{align*}<br>$$<br>定理得證。<br>根據該定理，由於$f(n)&#x3D;n$和$g(n)&#x3D;1$都是乘性的，所以函數$\sigma(n)&#x3D;\sum_{d\mid n}f(d)$和$\tau(n)&#x3D;\sum_{d\mid n}g(d)$為乘性函數。</p>
+<p>根據此結論，重新考慮因子個數函數。當$m&#x3D;p^\alpha$，其中$p$為素數時，$m$的因數個數為$\alpha+1$，這是容易證明的。又由乘性函數可知：<br>$$\tau(n)&#x3D;\tau(p_1^{\alpha_1}\cdots p_r^{\alpha_r})&#x3D;\tau(p_1^{\alpha_1})\cdot\tau(p_2^{\alpha_2})\cdots\tau(p_r^{\alpha_r})&#x3D;\prod_{i&#x3D;1}^r(a_i+1)$$<br>與上面得到的式子相同。</p>
+<h2 id="3-因子和函數"><a href="#3-因子和函數" class="headerlink" title="3. 因子和函數"></a>3. 因子和函數</h2><p>同樣的，先考慮$m&#x3D;p^\alpha$的情況，則$m$的因子分別為$1,p,p^2,\cdots,p^\alpha$，於是：<br>$$\sigma(m)&#x3D;1+p+p^2+\cdots+p^\alpha&#x3D;\frac{p^{\alpha+1}-1}{p-1}$$<br>由於$\sigma$是乘性函數，得到因子和函數：<br>$$\sigma(n)&#x3D;\sigma(p_1^{\alpha_1}\cdots p_r^{\alpha_r})&#x3D;\sigma(p_1^{\alpha_1})\cdot\sigma(p_2^{\alpha_2})\cdots\sigma(p_r^{\alpha_r})&#x3D;\prod_{i&#x3D;1}^r\frac{p_i^{\alpha_i+1}-1}{p_i-1}$$</p>
+<h2 id="4-應用-完全數"><a href="#4-應用-完全數" class="headerlink" title="4. 應用-完全數"></a>4. 應用-完全數</h2><p><strong>完全數</strong>指因子和等於其自身兩倍的數，即滿足$\sigma(n)&#x3D;2n$的自然數$n$。最小的三個完全數是6，28和496。<br>古希臘人很早就知道了偶完全數的一種表示方法：$n&#x3D;2^{p-1}(2^p-1)$，其中$p$和$2^p-1$都為素數。設$2^p-1&#x3D;q$直接用因子和函數求$n$的因子和：<br>$$\sigma(n)&#x3D;\sigma(2^{p-1}q)&#x3D;\frac{2^p-1}{2-1}\cdot(q+1)&#x3D;(2^p-1)\cdot2^p&#x3D;2n$$</p>
+<p>1747年，歐拉證明了，所有偶完全數都具有上述形式，證明如下：<br>設$n$為偶完全數，則$n&#x3D;2^\alpha n_0$，其中$n_0$為奇數，$\alpha\ge1$，求$n$的因子和：<br>$$\sigma(n)&#x3D;\sigma(2^\alpha n_0)&#x3D;\sigma(2^\alpha)\sigma(n_0)&#x3D;(2^{\alpha+1}-1)\sigma(n_0)$$<br>因為$n$為偶完全數，所以：<br>$$(2^{\alpha+1}-1)\sigma(n_0)&#x3D;2n&#x3D;2^{\alpha+1} n_0$$<br>因此$2^{\alpha+1}-1\mid 2^{\alpha+1} n_0$，又由於$2^{\alpha+1}-1$與$2^{\alpha+1}$互素，所以$2^{\alpha+1}-1\mid n_0$<br>設$n_0&#x3D;k(2^{\alpha+1}-1)$，顯然$k&lt;n$，由上知：<br>$$\sigma(n_0)&#x3D;2^{\alpha+1}k&#x3D;n_0+k$$<br>這表明$k$與$n_0$是$n_0$僅有的兩個因子，於是可知$k&#x3D;1$且$n_0&#x3D;2^{\alpha+1}-1$是素數。<br>設$p$是$\alpha+1$的素因子，則由：<br>$$2^{\alpha+1}-1&#x3D;(2^p)^{\frac{\alpha+1}{2}}-1$$<br>可知其為$2^p-1$的倍數，但$2^{\alpha+1}-1$是素數，所以$\alpha+1&#x3D;p$是素數。<br>此時$n_0&#x3D;2^p-1$是素數，$n&#x3D;2^{\alpha}n_0&#x3D;2^{p-1}(2^p-1)$，定理得證。</p>
+<h2 id="5-推廣-一道習題"><a href="#5-推廣-一道習題" class="headerlink" title="5. 推廣(一道習題)"></a>5. 推廣(一道習題)</h2><p>書後有一道習題，要求證明Liouville關於$1^3+2^3+\cdots+n^3&#x3D;(1+2+\cdots+n)^2$的如下推廣：<br>$$\sum_{m\mid n}(\tau(m))^3&#x3D;\left(\sum_{m\mid n}\tau(m)\right)^2$$<br>根據定理：乘性函數的和函數是乘性函數，一眼就能看出左右式都是乘性函數。所以只要考慮$m&#x3D;p^\alpha$，$p$為素數的情況。對於這種情況，$\tau(m)&#x3D;\alpha+1$，結合已知結論$\sum_1^n i^3&#x3D;(\sum_1^n i)^2$，容易知道等式成立，於是結論得證。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/number/" rel="tag"># number</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/10/14/%E4%B8%80%E6%AC%A1%E9%97%9C%E6%96%BC%E7%94%9F%E6%B4%BB%E7%9A%84%E6%BC%94%E8%AC%9B/" rel="prev" title="一次關於生活的演講">
+                  <i class="fa fa-angle-left"></i> 一次關於生活的演講
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/10/31/%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/" rel="next" title="一件小事">
+                  一件小事 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

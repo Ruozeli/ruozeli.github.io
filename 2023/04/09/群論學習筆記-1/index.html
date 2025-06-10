@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="對群的初步認識">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群論學習筆記-1.群的概念">
+<meta property="og:url" content="https://ruozeli.github.io/2023/04/09/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-1/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="對群的初步認識">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://s2.loli.net/2023/04/09/vPfUMOWn6iZedFl.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/16/WUn7xFsPrXgZKOq.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/09/TA8DlcWBZJC4bfL.png">
+<meta property="article:published_time" content="2023-04-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-10T02:16:20.059Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="group">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/04/09/vPfUMOWn6iZedFl.png">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2023/04/09/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-1/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2023/04/09/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-1/","path":"2023/04/09/群論學習筆記-1/","title":"群論學習筆記-1.群的概念"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>群論學習筆記-1.群的概念 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E8%A7%80%E7%90%86%E8%A7%A3"><span class="nav-text">直觀理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BF%BB%E8%BD%89%E9%96%8B%E9%97%9C"><span class="nav-text">翻轉開關</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BF%BB%E8%BD%89%E9%95%B7%E6%96%B9%E5%BD%A2"><span class="nav-text">翻轉長方形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8D%E7%A8%B1%E8%88%87%E7%BE%A4"><span class="nav-text">對稱與群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%B1%E8%90%8A%E5%9C%96"><span class="nav-text">凱萊圖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E6%95%B8%E5%AE%9A%E7%BE%A9"><span class="nav-text">代數定義</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E7%BE%A9"><span class="nav-text">定義</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B0%A1%E5%96%AE%E6%80%A7%E8%B3%AA"><span class="nav-text">簡單性質</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%A4%E7%9A%84%E9%9A%8E"><span class="nav-text">群的階</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2023/04/09/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="群論學習筆記-1.群的概念 | 若則理のBlog">
+      <meta itemprop="description" content="對群的初步認識">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          群論學習筆記-1.群的概念
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2023-04-09 00:00:00" itemprop="dateCreated datePublished" datetime="2023-04-09T00:00:00+08:00">2023-04-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Group-Theory/" itemprop="url" rel="index"><span itemprop="name">Group Theory</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">對群的初步認識</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>群是代數的結構，也是數學中最早被認識和研究的結構，並且這個「群」的結構在「在十九世紀逐步征服了數學這門科學」。(皮亞傑《結構主義》)</p>
+<p>本學習筆記記錄我自學群論(主要是有限群論)的一些思考與總結。</p>
+<p><em>主要參考內森·卡特《群論彩圖版》和王萼芳《有限群論基礎》</em></p>
+<h2 id="直觀理解"><a href="#直觀理解" class="headerlink" title="直觀理解"></a>直觀理解</h2><p>一言以蔽之，群論是研究對稱(<em>Symmetry</em>)的理論，但究竟什麼是”對稱”?</p>
+<h3 id="翻轉開關"><a href="#翻轉開關" class="headerlink" title="翻轉開關"></a>翻轉開關</h3><p>現在我們有兩個開關，每個開關有開合兩種狀態。可以看到這兩個開關的組合共有4種狀態，對其有2種基本操作，即”翻轉開關1”和”翻轉開關2”，每一種狀態都可由基本操作的組合得到。</p>
+<img src="https://s2.loli.net/2023/04/09/vPfUMOWn6iZedFl.png" width="50%" height="50%" />
+
+<h3 id="翻轉長方形"><a href="#翻轉長方形" class="headerlink" title="翻轉長方形"></a>翻轉長方形</h3><p>一張長方形紙片，對其進行「豎直翻轉」和「水平翻轉」操作：</p>
+<img src="https://s2.loli.net/2023/04/16/WUn7xFsPrXgZKOq.png" width="50%" height="50%" />
+
+<p>可以看到這種操作與翻轉開關很相似，每次操作將對象變換為另一種狀態，但其在某種意義上不變。</p>
+<h3 id="對稱與群"><a href="#對稱與群" class="headerlink" title="對稱與群"></a>對稱與群</h3><p>上面的兩種操作可抽象為等價的作用，兩種操作表示同一個群。這些<strong>作用</strong>(<em>Action</em>)即為<strong>對稱</strong>(<em>Symmetry</em>)，而這些作用的集合就是一個群。<br>事實上，對稱(<em>Symmetry</em>)就是對某個數學對象的(可逆)變換，可以理解為映射$\phi : X\to X$ ($X$映射到本身意味著這個對象本身是不變的)。因而，群的研究對象可以看作對稱，也可以看作一種作用。</p>
+<p>一些給定的作用的系統或集合就是一個群，這些作用滿足如下性質：</p>
+<ul>
+<li>每個作用都是可逆的</li>
+<li>每個作用都是確定性的</li>
+<li>任何連續作用的序列仍是一個作用</li>
+<li>「什麼也不做」也是一個作用</li>
+</ul>
+<p>一個群可以看作作用的集合，也可看作定義了某種作用的狀態的集合。</p>
+<p>最基本的作用稱為<strong>生成元</strong>(<em>Generators</em>)，生成元的集合為生成集合，一般表示為$S$，$S$是最小的使群中所有元素都可表示為$S$中元素乘積的子集(子群)。</p>
+<p>特別地，若群中任意兩個連續作用交換後結果相同，此群為<strong>交換群</strong>(阿貝爾群)。</p>
+<h3 id="凱萊圖"><a href="#凱萊圖" class="headerlink" title="凱萊圖"></a>凱萊圖</h3><p>凱萊圖(<em>Cayley graph</em>)是群的可視化工具，將上面的作用圖簡化，即可得到這個群的凱萊圖：</p>
+<img src="https://s2.loli.net/2023/04/09/TA8DlcWBZJC4bfL.png" width="50%" height="50%" />
+
+<p>這個群就是Klein四元群$V_4$<br>圖中不同顏色的邊表示不同生成元，若某生成元$s&#x3D;s^{-1}$，該生成元用無向邊表示，否則用有向箭頭表示。</p>
+<p>由群作用的性質，可以得到凱萊圖主要的一些性質：</p>
+<ul>
+<li>連通性(<em>Connectedness</em>)：圖是連通的</li>
+<li>同質性(<em>Homogeneity</em>)：對任意頂點對$x,y$，僅有一種著色圖同構將$x$映射到$y$<br>  這點是說，任何圖論陳述從$x$頂點出發為真，則從$y$頂點出發亦為真，保證了群作用關系的一致性(例如在$S_3$中，任意頂點出發$f\cdot r\cdot f&#x3D;r^{-1}$恆成立)</li>
+<li>正則性(<em>Regularity</em>)：對任意顏色$s\in S$($S$即生成集合)，有一條$s$-邊指向頂點$x$，一條$s$-邊從頂點$x$發出，若$S$中有$k$個元素，則每個頂點都有$k$條邊指入，$k$條邊指出</li>
+</ul>
+<p>(From <em>Cayley graphs and the geometry of groups</em> by Terence Tao)</p>
+<h2 id="代數定義"><a href="#代數定義" class="headerlink" title="代數定義"></a>代數定義</h2><h3 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h3><p>設$G$是一個非空集合, 在$G$中定義了一種代數運算, 稱為「乘法」，記作「$\cdot$」.<br>若$G$對這種運算滿足如下條件：</p>
+<ul>
+<li>封閉性：$\forall a,b\in G,a\cdot b\in G$</li>
+<li>結合律：$(a\cdot b)\cdot c&#x3D;a\cdot (b\cdot c)$</li>
+<li>單位元的存在：存在$e$使$e\cdot a&#x3D;a\cdot e&#x3D;a$</li>
+<li>逆元的存在：對任意$a$, 存在$a^{-1}$使$a^{-1}\cdot a&#x3D;a\cdot a^{-1}&#x3D;e$</li>
+</ul>
+<p>則$G$稱為一個群。</p>
+<p>若群$G$還滿足交換律，那麼$G$就稱作一個交換群或阿貝爾群，交換群的運算可用加法表示，記作「+」.<br>此時，該運算滿足：</p>
+<ul>
+<li>封閉性：$\forall a,b\in G,a+b\in G$</li>
+<li>結合律：$(a+b)+c&#x3D;a+(b+c)$</li>
+<li>零元素的存在：存在元素$0$使$0+a&#x3D;a+0&#x3D;a$</li>
+<li>負元素的存在：對任意$a$, 存在$-a$使$(-a)+a&#x3D;a+(-a)&#x3D;0$</li>
+<li>交換律：對任意兩個元素$a,b$, $a+b&#x3D;b+a$</li>
+</ul>
+<h3 id="簡單性質"><a href="#簡單性質" class="headerlink" title="簡單性質"></a>簡單性質</h3><ul>
+<li>單位元唯一</li>
+<li>每個元素只有一個逆元素, $(a^{-1})^{-1}&#x3D;a$</li>
+<li>消去律成立：若$ab&#x3D;ac$, 則$b&#x3D;c$; 若$ba&#x3D;ca$, 則$b&#x3D;c$</li>
+<li>指數律成立：$a^m\cdot a^n&#x3D;a^{m+n},(a^m)^n&#x3D;a^{mn}\quad(m,n\in \mathbb{Z})$</li>
+<li>若$ab&#x3D;ba,(ab)^n&#x3D;a^nb^n\quad(n\in\mathbb{Z})$</li>
+<li>對任意元素$a,b$, $ax&#x3D;b$有唯一解</li>
+</ul>
+<h3 id="群的階"><a href="#群的階" class="headerlink" title="群的階"></a>群的階</h3><p>如果群$G$包含的元素個數有限，則稱$G$為<strong>有限群</strong>，否則稱$G$為<strong>無限群</strong>。<br>例如，Klein四元群是有限群，$\mathbb{Z}$上的加法群是無限群。</p>
+<p>有限群$G$所包含的元素個數稱為$G$的<strong>階</strong>，記作$|G|$。設$a$是$G$中一個元素，若存在正整數$k$使$a^k&#x3D;e$，則$a$為有限階元素，滿足$a^k&#x3D;e$的最小正整數$k$為$a$的階。單位元是唯一的1階元素，有限群的所有元素都為有限階元素。<br>例如，Klein四元群是4階群(階數最小的非循環群)，除單位元外所有元素都是2階的。</p>
+<p>若$a$是$G$的$k$階元素，$a^l&#x3D;a^m\to k\mid l-m$<br>若$a$是$G$的無限階元素，$a^l&#x3D;a^m\to l&#x3D;m$</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/group/" rel="tag"># group</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/04/01/Poincar%C3%A9%E7%9A%84%E5%93%B2%E5%AD%B8%E8%91%97%E4%BD%9C/" rel="prev" title="Poincaré的哲學著作">
+                  <i class="fa fa-angle-left"></i> Poincaré的哲學著作
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/04/16/%E7%BE%A4%E8%AB%96%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-2/" rel="next" title="群論學習筆記-2.置換群">
+                  群論學習筆記-2.置換群 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
