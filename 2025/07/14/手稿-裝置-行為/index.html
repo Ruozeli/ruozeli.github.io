@@ -312,23 +312,23 @@
 <h2 id="時間-Ⅱ"><a href="#時間-Ⅱ" class="headerlink" title="時間 Ⅱ"></a>時間 Ⅱ</h2><p>無需解釋<br>時間在看不見的地方<br>流過(2025,7,14)</p>
 <head>
 <script>
-    function updateTime() {
-        let timeObj;
-            const local = new Date();
-            timeObj = {
-                hours: local.getHours().toString().padStart(2,  '0'),
-                minutes: local.getMinutes().toString().padStart(2,  '0'),
-                seconds: local.getSeconds().toString().padStart(2,  '0')
-            };
-        document.getElementById('clock').textContent  =
-            `${timeObj.hours}:${timeObj.minutes}:${timeObj.seconds}`;
-    }
-    setInterval("updateTime();",1000);
+	function updateTime() {
+		let timeObj;
+			const local = new Date();
+			timeObj = {
+				hours: local.getHours().toString().padStart(2,  '0'),
+				minutes: local.getMinutes().toString().padStart(2,  '0'),
+				seconds: local.getSeconds().toString().padStart(2,  '0')
+			};
+		document.getElementById('clock').textContent  =
+			`${timeObj.hours}:${timeObj.minutes}:${timeObj.seconds}`;
+	}
+	setInterval("updateTime();",1000);
 </script>
 </head>
 <body onload = updateTime()>
-    <div id=clock style="color: white;font-size: 80px;font-family: Arial;">
-    </div>
+	<div id=clock style="color: white;font-size: 80px;font-family: Arial;">
+	</div>
 </body>
     </div>
 

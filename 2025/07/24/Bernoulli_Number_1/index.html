@@ -28,7 +28,7 @@
 <meta property="og:description" content="由自然數等冪求和引入Bernoulli‎數">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2025-07-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-07-26T06:51:28.261Z">
+<meta property="article:modified_time" content="2025-07-27T06:09:39.155Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="number theory">
@@ -260,7 +260,9 @@
 <br>
 
 <h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>觀察計算所得數列 $a$, 發現 $\alpha_3&#x3D;\alpha_5&#x3D;\alpha_7&#x3D;\cdots&#x3D;0$, 推測當 $m$ 為大於 $1$ 的奇數時, $\alpha_m&#x3D;0$. 下證明之. </p>
-<p>由 $f_m(x)-f_m(x-1)&#x3D;x^m$ 可得 $f_m(-1)&#x3D;f_m(0)-0^m&#x3D;0$, 根據式 $(1)$:<br>$$(m+1)\cdot f_m(-1)&#x3D;\sum_{k&#x3D;1}^{m+1}(-1)^k\cdot C_{m+1}^k\alpha_{m+1-k}&#x3D;0$$<br>在式 $(1)$ 中代入 $x&#x3D;1$ 得:<br>$$(m+1)\cdot f_m(1)&#x3D;\sum_{k&#x3D;1}^{m+1}C_{m+1}^k\alpha_{m+1-k}&#x3D;m+1\tag{4}$$<br>兩式相加減消掉偶數項, 得到奇數項之和:<br>$$\sum_{i&#x3D;0}^{n}C_{2n+2}^{2i+1}\alpha_{2n+1-2i}&#x3D;n+1$$<br>左側和式的最後一項為<br>$$C_{2n+2}^{2n+1}\alpha_1&#x3D;(2n+2)\alpha_1&#x3D;\frac{1}{2}(2n+2)&#x3D;n+1$$<br>所以<br>$$\sum_{i&#x3D;0}^{n-1}C_{2n+2}^{2i+1}\alpha_{2n+1-2i}&#x3D;C_{2n+2}^{1}\alpha_{2n+1}+C_{2n+2}^{3}\alpha_{2n-1}+\cdots+C_{2n+2}^{2n-1}\alpha_{3}&#x3D;0$$<br>遞推可得結論. $\blacksquare$ </p>
+<p>由 $f_m(x)-f_m(x-1)&#x3D;x^m$ 可得 $f_m(-1)&#x3D;f_m(0)-0^m&#x3D;0$, 根據式 $(1)$:<br>$$(m+1)\cdot f_m(-1)&#x3D;\sum_{k&#x3D;1}^{m+1}(-1)^k\cdot C_{m+1}^k\alpha_{m+1-k}&#x3D;0$$<br>在式 $(1)$ 中代入 $x&#x3D;1$ 得: </p>
+<p>$$(m+1)\cdot f_m(1)&#x3D;\sum_{k&#x3D;1}^{m+1}C_{m+1}^k\alpha_{m+1-k}&#x3D;m+1\tag{4}$$</p>
+<p>兩式相加減消掉偶數項, 得到奇數項之和:<br>$$\sum_{i&#x3D;0}^{n}C_{2n+2}^{2i+1}\alpha_{2n+1-2i}&#x3D;n+1$$<br>左側和式的最後一項為<br>$$C_{2n+2}^{2n+1}\alpha_1&#x3D;(2n+2)\alpha_1&#x3D;\frac{1}{2}(2n+2)&#x3D;n+1$$<br>所以<br>$$\sum_{i&#x3D;0}^{n-1}C_{2n+2}^{2i+1}\alpha_{2n+1-2i}&#x3D;C_{2n+2}^{1}\alpha_{2n+1}+C_{2n+2}^{3}\alpha_{2n-1}+\cdots+C_{2n+2}^{2n-1}\alpha_{3}&#x3D;0$$<br>遞推可得結論. $\blacksquare$ </p>
 <br>
 
 <h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>我們把 $\alpha_1$ 的值替換為 $-\frac{1}{2}$, 得到的數列稱為 Bernoulli ‎數, 記為 $B_m$. 前几項分別是:<br>$$<br>\begin{align*}<br>B_1&amp;&#x3D;1,\quad B_1&#x3D;-\frac{1}{2},\quad B_2&#x3D;\frac{1}{6},\quad B_3&#x3D;0,\quad B_4&#x3D;-\frac{1}{30},\\<br>B_5&amp;&#x3D;0,\quad B_6&#x3D;\frac{1}{42},\quad B_7&#x3D;0,\quad B_8&#x3D;-\frac{1}{30},\quad B_9&#x3D;0<br>\end{align*}<br>$$</p>
