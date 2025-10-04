@@ -28,7 +28,7 @@
 <meta property="og:description" content="由自然數等冪求和引入Bernoulli‎數">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2025-07-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-01T14:22:20.074Z">
+<meta property="article:modified_time" content="2025-10-03T13:04:27.426Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="number theory">
@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">150</span>
+          <span class="site-state-item-count">151</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
@@ -250,24 +250,24 @@
 
 <h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>因為 $f_m(0)&#x3D;0$, 所以 $f_m(x)$ 的常數項為 $0$,<br>且滿足 $f_m(x)-f_m(x-1)&#x3D;x^m$. </p>
 <p>在 $f_m(x)-f_m(x-1)&#x3D;x^m$ 中用 $m-1$ 替換 $m$ 得:<br>$$f_{m-1}(x)-f_{m-1}(x-1)&#x3D;x^{m-1}$$<br>根據 $f_m(x)-f_m(x-1)&#x3D;x^m$ 兩邊求導得:<br>$$f_m’(x)-f_m’(x-1)&#x3D;mx^{m-1}$$<br>聯立兩式得:<br>$$mf_{m-1}(x)-mf_{m-1}(x-1)&#x3D;f_m’(x)-f_m’(x-1)$$<br>即:<br>$$f_m’(x)-mf_{m-1}(x)&#x3D;f_m’(x-1)-mf_{m-1}(x-1)$$<br>令 $g_m(x)&#x3D;f_m’(x)-mf_m(x)$, 則 $g_m(x)&#x3D;g_m(x-1)$, 所以對任意正整數 $n$, $g_m(n)$ 是常數, 記 $g_m(n)&#x3D;\alpha_m$, 得:<br>$$f_m’(x)&#x3D;mf_{m-1}(x)+\alpha_m$$</p>
-<p>仿照二項展開式, 設(常數項為 $0$):<br>$$f_m(x)&#x3D;A_m^1 x+A_m^2 x^2+A_m^3 x^3+\cdots+A_m^{m+1} x^{m+1}$$<br>求導:<br>$$f_m’(x)&#x3D;A_m^1+2A_m^2 x+3A_m^3 x^2+\cdots+(m+1)A_m^{m+1} x^{m}$$<br>又由 $f_m’(x)&#x3D;mf_{m-1}(x)+\alpha_m$ 得:<br>$$A_m^1+2A_m^2 x+\cdots+(m+1)A_m^{m+1} x^{m}&#x3D;mA_{m-1}^1 x+mA_{m-1}^2 x^2+\cdots+A_{m-1}^{m} x^{m}+\alpha_m$$<br>比較 $k-1$ 次項係數:<br>$$<br>\begin{align*}<br>kA_m^k&amp;&#x3D;mA_{m-1}^{k-1} &amp;(k\geq 2)\\<br>A_m^1&amp;&#x3D;\alpha_m &amp;(k&#x3D;1)<br>\end{align*}<br>$$<br>得到:<br>$$A_m^k&#x3D;\frac{m}{k}A_{m-1}^{k-1}&#x3D;\frac{m(m-1)}{k(k-1)}A_{m-2}^{k-2}$$<br>重複該過程, 最終得到:<br>$$A_m^k&#x3D;\frac{m(m-1)\cdots(m-k+2)}{k(k-1)\cdots2}A_{m-k+1}^{1}&#x3D;\frac{m(m-1)\cdots(m-k+2)}{k(k-1)\cdots2}\alpha_{m-k+1}$$<br>用二項式係數來表示:<br>$$A_m^k&#x3D;\frac{1}{m+1}C_{m+1}^k\alpha_{m-k+1}$$<br>由此得到 $f_m(x)$ 的表達式:<br>$$f_m(x)&#x3D;\frac{1}{m+1}\sum_{k&#x3D;1}^{m+1}C_{m+1}^k\alpha_{m+1-k} x^k\tag{1}$$</p>
+<p>仿照二項展開式, 設(常數項為 $0$):<br>$$f_m(x)&#x3D;A_m^1 x+A_m^2 x^2+A_m^3 x^3+\cdots+A_m^{m+1} x^{m+1}$$<br>求導:<br>$$f_m’(x)&#x3D;A_m^1+2A_m^2 x+3A_m^3 x^2+\cdots+(m+1)A_m^{m+1} x^{m}$$<br>又由 $f_m’(x)&#x3D;mf_{m-1}(x)+\alpha_m$ 得:<br>$$A_m^1+2A_m^2 x+\cdots+(m+1)A_m^{m+1} x^{m}&#x3D;mA_{m-1}^1 x+mA_{m-1}^2 x^2+\cdots+A_{m-1}^{m} x^{m}+\alpha_m$$<br>比較 $k-1$ 次項係數:<br>$$<br>\begin{align*}<br>kA_m^k&amp;&#x3D;mA_{m-1}^{k-1} &amp;(k\geq 2)\\<br>A_m^1&amp;&#x3D;\alpha_m &amp;(k&#x3D;1)<br>\end{align*}<br>$$<br>得到:<br>$$A_m^k&#x3D;\frac{m}{k}A_{m-1}^{k-1}&#x3D;\frac{m(m-1)}{k(k-1)}A_{m-2}^{k-2}$$<br>重複該過程, 最終得到:<br>$$A_m^k&#x3D;\frac{m(m-1)\cdots(m-k+2)}{k(k-1)\cdots2}A_{m-k+1}^{1}&#x3D;\frac{m(m-1)\cdots(m-k+2)}{k(k-1)\cdots2}\alpha_{m-k+1}$$<br>用二項式係數來表示:<br>$$A_m^k&#x3D;\frac{1}{m+1}C_{m+1}^k\alpha_{m-k+1}$$<br>由此得到 $f_m(x)$ 的表達式:<br>$$f_m(x)&#x3D;\frac{1}{m+1}\sum_{k&#x3D;1}^{m+1}C_{m+1}^k\alpha_{m+1-k} x^k\quad\quad\quad\mathrm{(1)}$$</p>
 <br>
 
 <h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>為簡化表達, 我們引入一種新的記號.<br>用二項式定理展開 $(x+t)^{m+1}$ 可得:<br>$$(x+t)^{m+1}&#x3D;C_{m+1}^{m+1}x^{m+1}t^0+C_{m+1}^m x^{m-1}t+\cdots+C_{m+1}^{0}t^{m+1}$$<br>類似地, 給定數列 $a&#x3D;\{\alpha_i\}$, 定義 $(x+a)^{m+1}$ 表示: (即將上式中 $t^i$ 替換為 $\alpha_i$)<br>$$(x+a)^{m+1}&#x3D;C_{m+1}^{m+1}x^{m+1}\alpha_0+C_{m+1}^m x^{m-1}\alpha_1+\cdots+C_{m+1}^{0}\alpha_{m+1}$$<br>可以看到, 上式與式 $(1)$ 非常接近. 但是注意, 這個展開式中多出一項 $C_{m+1}^{0}\alpha_{m+1}&#x3D;\alpha_{m+1}$ 是式 $(1)$ 中沒有的, 因而還需減掉.</p>
-<p>由此, $f_m(x)$ 可以表示為:<br>$$f_m(x)&#x3D;\frac{1}{m+1}\left((x+a)^{m+1}-\alpha_{m+1}\right)\tag{2}$$</p>
+<p>由此, $f_m(x)$ 可以表示為:<br>$$f_m(x)&#x3D;\frac{1}{m+1}\left((x+a)^{m+1}-\alpha_{m+1}\right)\quad\quad\quad\mathrm{(2)}$$</p>
 <p>注意, 式 $(2)$ 中的數列 $a&#x3D;\{\alpha_i\}$ 完全是任意的, 而多項式 $f_m(x)$ 顯然是唯一的, 因而還需確定 $\alpha_m$ 的取值. </p>
-<p>將 $x&#x3D;1$ 代入 $f_m(x)-f_m(x-1)&#x3D;x^m$, 因為 $f_m(0)&#x3D;0$, 所以:<br>$$f_m(1)&#x3D;\frac{1}{m+1}\left((a+1)^{m+1}-\alpha_{m+1}\right)&#x3D;1$$<br>化簡得 $(a+1)^{m+1}-\alpha_{m+1}&#x3D;m+1$, 即:<br>$$(a+1)^{m}-\alpha_{m}&#x3D;m\quad (m&#x3D;1,2,3,\cdots)\tag{3}$$<br>滿足式 $(3)$ 的 $a&#x3D;\{\alpha_i\}$ 即是所需的數列. 顯然, $\alpha_0&#x3D;1$. </p>
+<p>將 $x&#x3D;1$ 代入 $f_m(x)-f_m(x-1)&#x3D;x^m$, 因為 $f_m(0)&#x3D;0$, 所以:<br>$$f_m(1)&#x3D;\frac{1}{m+1}\left((a+1)^{m+1}-\alpha_{m+1}\right)&#x3D;1$$<br>化簡得 $(a+1)^{m+1}-\alpha_{m+1}&#x3D;m+1$, 即:<br>$$(a+1)^{m}-\alpha_{m}&#x3D;m\quad (m&#x3D;1,2,3,\cdots)\quad\quad\quad\mathrm{(3)}$$<br>滿足式 $(3)$ 的 $a&#x3D;\{\alpha_i\}$ 即是所需的數列. 顯然, $\alpha_0&#x3D;1$. </p>
 <p>換一種遞推的等價表達就是:<br>$$<br>\begin{align*}<br>\alpha_0&amp;&#x3D;1 \\<br>\alpha_m&amp;&#x3D;1-\frac{1}{m+1}\sum_{i&#x3D;0}^{m-1}C_{m+1}^i\alpha_i\quad(m\geq1)<br>\end{align*}<br>$$</p>
 <p>據此計算出 $a$ 的前 $m+1$ 項即可確定 $f_1$ 至 $f_m$.<br>分別代入 $m&#x3D;1,2,3,4,5$, 可以得到:<br>$$\alpha_1&#x3D;\frac{1}{2},\quad \alpha_2&#x3D;\frac{1}{6},\quad \alpha_3&#x3D;0,\quad \alpha_4&#x3D;-\frac{1}{30},\quad \alpha_5&#x3D;0$$<br>從而容易得到:<br>$$<br>\begin{align*}<br>f_1(n)&amp;&#x3D;\sum_{i&#x3D;0}^{n}i&#x3D;\frac{n(n+1)}{2}\\<br>f_2(n)&amp;&#x3D;\sum_{i&#x3D;0}^{n}i^2&#x3D;\frac{n(n+1)(2n+1)}{6}\\<br>f_3(n)&amp;&#x3D;\sum_{i&#x3D;0}^{n}i^3&#x3D;\frac{n^2(n+1)^2}{4}\\<br>f_4(n)&amp;&#x3D;\sum_{i&#x3D;0}^{n}i^4&#x3D;\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}<br>\end{align*}<br>$$</p>
 <br>
 
 <h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>觀察計算所得數列 $a$, 發現 $\alpha_3&#x3D;\alpha_5&#x3D;\alpha_7&#x3D;\cdots&#x3D;0$, 推測當 $m$ 為大於 $1$ 的奇數時, $\alpha_m&#x3D;0$. 下證明之. </p>
 <p>由 $f_m(x)-f_m(x-1)&#x3D;x^m$ 可得 $f_m(-1)&#x3D;f_m(0)-0^m&#x3D;0$, 根據式 $(1)$:<br>$$(m+1)\cdot f_m(-1)&#x3D;\sum_{k&#x3D;1}^{m+1}(-1)^k\cdot C_{m+1}^k\alpha_{m+1-k}&#x3D;0$$<br>在式 $(1)$ 中代入 $x&#x3D;1$ 得: </p>
-<p>$$(m+1)\cdot f_m(1)&#x3D;\sum_{k&#x3D;1}^{m+1}C_{m+1}^k\alpha_{m+1-k}&#x3D;m+1\tag{4}$$</p>
+<p>$$(m+1)\cdot f_m(1)&#x3D;\sum_{k&#x3D;1}^{m+1}C_{m+1}^k\alpha_{m+1-k}&#x3D;m+1\quad\quad\quad\mathrm{(4)}$$</p>
 <p>兩式相加減消掉偶數項, 得到奇數項之和:<br>$$\sum_{i&#x3D;0}^{n}C_{2n+2}^{2i+1}\alpha_{2n+1-2i}&#x3D;n+1$$<br>左側和式的最後一項為<br>$$C_{2n+2}^{2n+1}\alpha_1&#x3D;(2n+2)\alpha_1&#x3D;\frac{1}{2}(2n+2)&#x3D;n+1$$<br>所以<br>$$\sum_{i&#x3D;0}^{n-1}C_{2n+2}^{2i+1}\alpha_{2n+1-2i}&#x3D;C_{2n+2}^{1}\alpha_{2n+1}+C_{2n+2}^{3}\alpha_{2n-1}+\cdots+C_{2n+2}^{2n-1}\alpha_{3}&#x3D;0$$<br>遞推可得結論. $\blacksquare$ </p>
 <br>
 
-<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>我們把 $\alpha_1$ 的值替換為 $-\frac{1}{2}$, 得到的數列稱為 Bernoulli ‎數, 記為 $B_m$. 前几項分別是:<br>$$<br>\begin{align*}<br>B_1&amp;&#x3D;1,\quad B_1&#x3D;-\frac{1}{2},\quad B_2&#x3D;\frac{1}{6},\quad B_3&#x3D;0,\quad B_4&#x3D;-\frac{1}{30},\\<br>B_5&amp;&#x3D;0,\quad B_6&#x3D;\frac{1}{42},\quad B_7&#x3D;0,\quad B_8&#x3D;-\frac{1}{30},\quad B_9&#x3D;0<br>\end{align*}<br>$$</p>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>我們把 $\alpha_1$ 的值替換為 $-\frac{1}{2}$, 得到的數列稱為 Bernoulli ‎數, 記為 $B_m$. 前几項分別是:<br>$$<br>\begin{align*}<br>B_0&amp;&#x3D;1,\quad B_1&#x3D;-\frac{1}{2},\quad B_2&#x3D;\frac{1}{6},\quad B_3&#x3D;0,\quad B_4&#x3D;-\frac{1}{30},\\<br>B_5&amp;&#x3D;0,\quad B_6&#x3D;\frac{1}{42},\quad B_7&#x3D;0,\quad B_8&#x3D;-\frac{1}{30},\quad B_9&#x3D;0<br>\end{align*}<br>$$</p>
 <p>同樣可以用 $B_m$ 來表示 $\sum_{i&#x3D;0}^{n}i^m$, 只需在奇數項前乘上 $(-1)$ 的冪次, 因為除去第一項, $B_m$(或 $\alpha_m$)的奇數項都為 $0$, 所以這樣處理後結果保持一致:<br>$$\sum_{i&#x3D;0}^{n}i^m&#x3D;\frac{1}{m+1}\sum_{k&#x3D;0}^{m}(-1)^k\cdot C_{m+1}^k B_k n^{m+1-k}$$<br><br><br>自然, 定第二項為 $-\frac{1}{2}$, 是因為這樣定義的 $B_m$ 具有一些有趣的性質.<br>首先, $B_m$ 的遞推式比上文 $\alpha_m$ 的遞推式要簡單得多:<br>由式 $(4)$ 知<br>$$<br>\begin{align*}<br>\sum_{k&#x3D;0}^{m}C_{m+1}^k\alpha_{k}&amp;&#x3D;\sum_{k&#x3D;0}^{m}C_{m+1}^k B_{k}-C_{m+1}^{1}B_1+C_{m+1}^{1}\alpha_1\\<br>&amp;&#x3D;\sum_{k&#x3D;0}^{m}C_{m+1}^k B_{k}+(m+1)\\<br>&amp;&#x3D;m+1<br>\end{align*}<br>$$<br>即 $\sum_{k&#x3D;0}^{m}C_{m+1}^k B_{k}&#x3D;0$. 由此得到遞推式:<br>$$<br>\begin{align*}<br>B_0&amp;&#x3D;1 \\<br>B_m&amp;&#x3D;-\frac{1}{m+1}\sum_{i&#x3D;0}^{m-1}C_{m+1}^i B_i\quad(m\geq1)<br>\end{align*}<br>$$<br>其次, 這樣定義的 $B_m$ 更方便用生成函數來等價定義, 這部分內容留到下一篇再說. </p>
 
     </div>
@@ -292,6 +292,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2025/10/04/Bernoulli_Number_2/" rel="next" title="Bernoulli‎數-2.生成函數">
+                  Bernoulli‎數-2.生成函數 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
