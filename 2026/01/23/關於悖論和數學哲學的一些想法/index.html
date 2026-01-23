@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="《文史哲基礎與方法導引》(什麼鬼課程名)選修課作業">
+<meta property="og:type" content="article">
+<meta property="og:title" content="關於悖論和數學哲學的一些想法">
+<meta property="og:url" content="https://ruozeli.github.io/2026/01/23/%E9%97%9C%E6%96%BC%E6%82%96%E8%AB%96%E5%92%8C%E6%95%B8%E5%AD%B8%E5%93%B2%E5%AD%B8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="《文史哲基礎與方法導引》(什麼鬼課程名)選修課作業">
+<meta property="og:locale" content="de_DE">
+<meta property="article:published_time" content="2026-01-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-23T04:21:54.897Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="philosophy">
+<meta property="article:tag" content="logic">
+<meta property="article:tag" content="foundations">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2026/01/23/%E9%97%9C%E6%96%BC%E6%82%96%E8%AB%96%E5%92%8C%E6%95%B8%E5%AD%B8%E5%93%B2%E5%AD%B8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2026/01/23/%E9%97%9C%E6%96%BC%E6%82%96%E8%AB%96%E5%92%8C%E6%95%B8%E5%AD%B8%E5%93%B2%E5%AD%B8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/","path":"2026/01/23/關於悖論和數學哲學的一些想法/","title":"關於悖論和數學哲學的一些想法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>關於悖論和數學哲學的一些想法 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%82%96%E8%AB%96%E4%BD%9C%E7%82%BA%E8%AA%9E%E7%BE%A9%E8%88%87%E5%8F%A5%E6%B3%95%E5%B1%A4%E6%AC%A1%E9%96%93%E7%9A%84%E4%B8%8D%E7%9B%B8%E5%8C%B9%E9%85%8D"><span class="nav-text">一、悖論作為語義與句法層次間的不相匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9C%A8%E6%AD%A4%E5%9F%BA%E7%A4%8E%E4%B8%8A%E8%80%83%E5%AF%9F%E5%85%A9%E5%80%8B%E6%82%96%E8%AB%96"><span class="nav-text">二、在此基礎上考察兩個悖論</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Godel-%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%80%A7%E5%AE%9A%E7%90%86"><span class="nav-text">1. Gödel 不完全性定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Skolem-%E6%82%96%E8%AB%96"><span class="nav-text">2. Skolem 悖論</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%8A%E8%BF%B0%E5%88%86%E6%9E%90%E5%B0%8D%E6%95%B8%E5%AD%B8%E5%93%B2%E5%AD%B8%E7%9A%84%E5%95%9F%E7%A4%BA"><span class="nav-text">三、上述分析對數學哲學的啟示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%87%8D%E6%80%9D%E5%BA%B7%E5%BE%B7%E5%B0%8D%E6%95%B8%E5%AD%B8%E4%B9%8B%E6%9C%AC%E8%B3%AA%E7%9A%84%E7%9C%8B%E6%B3%95"><span class="nav-text">1. 重思康德對數學之本質的看法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%80%9D%E8%80%83%E5%AE%A2%E8%A7%80%E6%80%A7%E5%95%8F%E9%A1%8C"><span class="nav-text">2. 思考客觀性問題</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"><span class="nav-text">參考文獻</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2026/01/23/%E9%97%9C%E6%96%BC%E6%82%96%E8%AB%96%E5%92%8C%E6%95%B8%E5%AD%B8%E5%93%B2%E5%AD%B8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="關於悖論和數學哲學的一些想法 | 若則理のBlog">
+      <meta itemprop="description" content="《文史哲基礎與方法導引》(什麼鬼課程名)選修課作業">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          關於悖論和數學哲學的一些想法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2026-01-23 00:00:00" itemprop="dateCreated datePublished" datetime="2026-01-23T00:00:00+08:00">2026-01-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Writing/" itemprop="url" rel="index"><span itemprop="name">Writing</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">《文史哲基礎與方法導引》(什麼鬼課程名)選修課作業</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="一、悖論作為語義與句法層次間的不相匹配"><a href="#一、悖論作為語義與句法層次間的不相匹配" class="headerlink" title="一、悖論作為語義與句法層次間的不相匹配"></a>一、悖論作為語義與句法層次間的不相匹配</h2><p>1925年，英國數學家 F. P. Ramsey 在題為《數學基礎》的論文中，首次把當時已知的悖論分為「邏輯-數學悖論」和「語義悖論」兩大類。前一類悖論不涉及內容，只與元素、集合或類、屬於和不屬於、基數和序數等數學概念有關，包括 Burali-Forti 悖論、Cantor 悖論、Russell 悖論等；後一類則與一些心理的或語義的概念，如意義、命名、指稱、定義、真假等相關，包括說謊者悖論及其變種、Grelling 悖論、Richard 悖論等〔陈波. pp 15-16.〕。前者一般用符號邏輯的語言來形式化地表達，後者則往往依賴於自然語言以及日常、直觀的理解。</p>
+<p>我認為，Ramsey 的劃分不完全合理。單純的語義悖論，如 Grelling 悖論，充其量只說明了自然語言某些方面的歧義性，不能算作真正的悖論。而在任何一個真正的悖論之內，我們實際上都可以區分出語義和句法兩個層次，後者是純形式的推演，僅僅依據既定的規則；而前者則關乎我們對悖論所涉及概念的直觀理解或闡釋，由於數學並不能完全機械化，這裡必定包含一些心理的成分。我們難以完整、直接且融貫地把握一個悖論，所以在嘗試解讀悖論時，必定首先依照形式的推演規則導出結論，隨後再回到語義層次檢查結論之間的矛盾。對於一個自身不一致的系統，我們自然可以形式地推出矛盾；但如果系統本身是一致的，那麽要想有意義地理解一個悖論，我們必須從系統之外(元語言，或對系統的解釋)入手。</p>
+<p>例如，考慮 Curry 悖論：</p>
+<center>
+句子<math><mi>X</mi></math>: 若<math><mi>X</mi></math>, 則聖誕老人存在。
+</center>
+分析如下：句子$X$是一句條件句，我們首先假定其前提為真。$X$的前提就是$X$自身，所以我們假定$X$為真。在這種情況下可由$X$推出$X$的結論，即聖誕老人存在，這表明句子$X$為真。既已證明$X$為真，我們就可以直接從中推出聖誕老人存在。事實上，任何形如「若$X$,則$Y$」的句子$X$都可以用這種方法證明為真，故任何句子$Y$(以及$\neg Y$)都可被證明為真。這是自相矛盾的。
+
+<p>在分析悖論的過程中，我們沒有考慮句子$X$的意義，而是經過一系列公認無誤的推理規則導出結論，隨後才能發現其中蘊含的矛盾。最初這個未被拆解分析的句子$X$，我們對它的印象僅僅是無意義(一個結構錯誤的句子，或純粹的胡言亂語)，甚至不能將其識別為悖論，唯有通過一定的形式推演才能夠「有意義」地將其理解為悖論。單從語義層面講，我們起初就不會認為它包含什麽意義；單從句法層面講，這個純形式的中間過程完全可以用命題邏輯的語言來表述，而這就意味著，如果我們要保持命題邏輯的一致性，就必須設法把這一類自指形式排除出去。在一個一致的形式系統下，這個悖論不可能實現；正是在系統之外，在自然語言中使用了不合法的句子構造，才導致悖論的產生。悖論的產生涉及到語義層次的問題 ，同時也要求對形式系統整體的規範性調整。〔形式系統中一個句子「應當」如何構造，這個問題依賴於某些認識論預設，故不是一個純句法問題。〕</p>
+<p>另一方面，數理邏輯中的 Löb 定理雖與 Curry 悖論具有相似的結構，卻是一個合法的算術推理，絲毫不構成悖論。它斷言：</p>
+<div class="note info"><p><strong>定理(Martin Löb)</strong>：對於任何算術語句 $\varphi$，如果 $\mathrm{PA}\vdash\mathrm{Pr_{PA}}(\ulcorner\varphi\urcorner)\to\varphi$，那麽 $\mathrm{PA}\vdash\varphi$。其中 $\ulcorner\varphi\urcorner$ 表示公式 $\varphi$ 的 Gödel 數，$\mathrm{Pr_{PA}}(x)$ 表示 $x$ 是 $\mathrm{PA}$ 中定理的 Gödel 數。〔Hamkins. p 372(250).〕</p>
+</div>
+
+<p>字面上看，該定理說的是，若「$\varphi$ 是 $\mathrm{PA}$ 中定理」蘊含 $\varphi$，則 $\varphi$ 在 $\mathrm{PA}$ 中可證，特別地，Löb 句子 $\psi: \mathrm{Pr_{PA}}(\ulcorner\varphi\urcorner)\to\psi$ 在 $\mathrm{PA}$ 中可證。如果說 Gödel 句子對應於說謊者句子，斷言其自身不可證，那麽 Löb 句子就對應於「說真者句子」，斷言其自身可證。直觀上看，「這句話是真的」這句話應該是真假不定的，若說它必然為真，那就形成了悖論。但它的形式化對應卻是一個嚴格的數學結果，既不是悖論，也同語義無關，若僅從形式的角度看，甚至不會發現它與某個悖論之間存在著隱含的聯繫。</p>
+<p>事實上，這個定理反映出形式系統及其所表達的語義層次之間存在著差別。悖論不僅與形式系統自身有關，也涉及到我們對系統做出的解釋，簡化的、直觀的理解很可能是一種誤解，而許多悖論正是由這一類錯誤的意義解讀中產生的。一個一致的形式系統應當是自律的，如果我們從中推出了悖論，那麽或者我們對該系統做出了錯誤的解釋，或者我們尚未完全把握保證該系統一致性的全部條件，而尋找這種條件必然要回到建立系統的目的、這個系統反映何種背景語義等問題上。〔有很多種方法(暫時地)消除系統中的不一致性，關鍵在於選擇哪一種。〕無論哪種情況，悖論的出現都不可能僅僅是形式的，也不可能僅僅形式地得到解決。</p>
+<p>進一步說，任何數學實踐也包含兩個層次，其一接近於語義，是一種對數學對象之意義的自然理解或直觀把握，充當數學實踐中的理論動機或是解決問題的基本思路；其二接近句法，是基於公認演繹規則進行推演的，較為機械的過程，證明中的技術性細節往往歸屬此類。前者可以概括為「認識-直觀」，後者則對應於「規則-行動」。我認為，對悖論的討論，以及對數學實踐的分析，都應當在這一層次劃分之下進行。</p>
+<h2 id="二、在此基礎上考察兩個悖論"><a href="#二、在此基礎上考察兩個悖論" class="headerlink" title="二、在此基礎上考察兩個悖論"></a>二、在此基礎上考察兩個悖論</h2><h3 id="1-Godel-不完全性定理"><a href="#1-Godel-不完全性定理" class="headerlink" title="1. Gödel 不完全性定理"></a>1. Gödel 不完全性定理</h3><p>Gödel 不完全性定理不是悖論，但談及自指與悖論，這一定理絕對是繞不開的話題。儘管自身並非悖論，Gödel 不完全性定理，尤其是 Gödel 句子的構造卻有著悖論的結構。</p>
+<p>Gödel 不完全性定理的核心在於 Gödel 配數，該方法在形式算術的公式與自然數之間建立對應關係，使形式算術的公式能夠恰當地談論自身，從而用遞歸函數形成自指，最終在系統中合法地構造出一句斷言自身不可證的句子。這句 Gödel 句子在系統中是不可判定的。定理的推導可以在有窮主義數學中進行，並且無需假設語義概念。〔叶峰. pp 306-308.〕正因如此，該定理的證明完全是形式的，沒有涉及「指稱」、「真」等缺乏明確定義的語義概念，自然與悖論毫不相幹。</p>
+<p>Gödel 不完全性定理的一個等價表述則借助圖靈機和可計算性的概念。它是這麽說的：「不存在遞歸可枚舉的一組公理，可以證明且僅證明所有自然數算術的真命題」。假設不然，就會有一個可計算的程序能夠解決停機問題，而這與圖靈的結果相矛盾。〔Hamkins. p 342(230).〕換句話說，一個形式系統所能產生的公式集必定是遞歸可枚舉的(至少是半可判定的)；然而，只要描述自然數的形式語言足夠豐富(可表達原始遞歸函數)，那麽這個形式系統對自然數解釋為真的公式集就不是半可判定的。從這個意義上說，「一個形式系統永遠無法窮盡所有真理」。〔叶峰. p 312.〕</p>
+<p>進一步說，Tarski 的真之不可定義定理斷言：不存在算術語言中的可定義謂詞 $T$，使得 $\mathbb{N}\models\varphi\to T(\ulcorner\varphi\urcorner)$。這個定理作為 Gödel 不完全性定理的推論，表明我們在系統中無法定義何謂「系統標準模型」的真理。其本質在於：我們無法按照語義的概念給句子進行恰當的編碼，一種形式語言不足以表達其自身的語義。由此可推知，元語言必然具有超過對象語言的表達能力，才有可能表達對象語言的語義，一些在對象語言中不可證的定理，在元語言中卻是可證的。相較於 Gödel 不完全性定理的數學意義，Tarski 的定理明顯更具有哲學意義。〔Tarski’s undefinability theorem. Wikipedia.〕</p>
+<p>這裡的問題在於，我們建立形式系統的原本目的，就是要更明確且無爭議地描述推理、證明以及命題的真，而不完全性定理卻揭示了：形式系統由於自身的特性，絕無可能承擔反映「真」的任務。需要注意的是，不能簡單地從 Gödel 不完全性定理得出形式算術無法完備化的結論，算術公理集 $\mathcal{N}$ 的完備無矛盾擴張是存在的，例如把在自然數上恒真的形式算術的公式構成的集 $\mathrm{Tr}$ 作為公理集，則 $\mathrm{Tr}$ 就是 $\mathcal{N}$ 的一個完備無矛盾擴張。但 $\mathrm{Tr}$ 中公式的 Gödel 數構成的集是非遞歸的，因而不能用算法判定任給的公式是否是 $\mathrm{Tr}$ 中的公理，所以這樣的擴張雖完備但是無意義的。同樣可以證明，把形式算術字母表中的乘號 $\times$ 去掉得到的 Presburger 算術是完備的，但這樣的系統內容太過貧乏，不足以作為數學的形式化基礎。〔汪芳庭. pp 166-167.〕因此，Gödel 不完全性定理真正表明的是，建立一個抓住該系統所要描述的具體理論的全部真命題，與要求系統中的證明能有機械的算法檢驗，這兩點對於足夠豐富的數學來說不能同時成立。</p>
+<p>事實上，由於系統中存在不可判定的命題，我們可以脫離語義，單純形式地設定這些命題的真值來擴充系統。儘管 Gödel 句子斷言自身不可證，在字面意義上是真的，但我們也可以將其否定作為公理。Gödel 句子 $G$ 實質上斷言任何數都不是 $G$ 在 $\mathcal{N}$ 中的證明的 Gödel 數，故可以寫作一閉式 $\forall x: \neg p(x)$。對所有自然數 $n$，我們有 $\mathcal{N}\vdash\neg p(n)$，又加入 $G$ 的否定 $\exists x: p(x)$ 作為公理，所以這樣擴充後的系統是 $\omega$-不一致的。對於自然數的標準解釋來說，這當然是自相矛盾的，但是在形式系統之內，由於不存在 Gödel 句子為真的證明， $\mathcal{N}+\neg G$ 同樣應該是一致的。對此，解決方案是引入超自然數(hypernaturals)，$\neg G$ 斷言 $G$ 有證明，但 $G$ 可以是一個超自然數定理(該定理可以是假的)，它並沒有自然數見證(witness)。因此，如果我們僅限於構造自然數定理的證明，就不會引發矛盾。同樣，由 Gödel 第二不完全性定理可知，形式系統的一致性在系統內不可證，所以 $\mathcal{N}+\neg\mathrm{con}(\mathcal{N})$ 也是一致的，這樣就會有一個一致的系統自證其不一致，按照一般意義的理解，這就又是一個悖論了。然而，通常意義的「一致」等說法，其實只是為方便交流而作的簡化，形式系統之內的技術性細節要比這復雜得多，我們認為它是自相矛盾的，僅僅是因為在其上附加了自然的語義解釋。拋開這些附加的理解，我們至多只能說該系統未能很好地描述標準自然數的行為，這個系統的模型中必然含有非標準自然數。這也就是非標準模型的由來。</p>
+<p>可見，當一個形式系統(已規定的句法)與其描述的具體理論(語義)之間不相匹配，即或者形式系統不足以完全反映語義有效性，或者形式系統對背景語義做出了不合常理的描述時，違背預期的情況(悖論)就會發生；而根據 Gödel 不完全性定理，這是形式系統固有特性所決定的，與 Russell 悖論等由公理體系未被良好定義導致的悖論截然不同。一方面，我們可以順著自然直覺，將合乎標準模型的命題作為公理填補漏洞，但這樣只會形成一個逐級增強卻永遠無法達到完備的「一致性強度之塔」；另一方面，我們也可以將其反面作為公理，並依據擴充後的系統在模型中加入非標準的數學對象，這樣也會面臨新的問題。所以，這種形式的矛盾必然不能得到徹底的解決，它反映的是我們構建形式系統的目的與形式系統之固有缺陷間的衝突。</p>
+<h3 id="2-Skolem-悖論"><a href="#2-Skolem-悖論" class="headerlink" title="2. Skolem 悖論"></a>2. Skolem 悖論</h3><p>如果說 Gödel 不完全性定理揭示了形式算術描述自然數理論的局限性，那麽 Skolem 悖論就是在一個更基礎的層面表明了形式語言與其所描述的數學結構(模型)之間的根本差異。Löwenheim-Skolem 定理指出：</p>
+<div class="note info"><p><strong>定理(Löwenheim-Skolem, Downward)</strong>：如果一個一階理論 $T$ 有無窮模型，那麽它必定有可數無窮模型。〔Skolem’s Paradox. Stanford Encyclopedia of Philosophy.〕</p>
+</div>
+
+<p>注意到，Cantor 的集合論公理也可以被形式化為一些一階語句，根據 Löwenheim-Skolem 定理，如果這些公理有模型，那麽它們必有可數模型。然而，Cantor 曾用這些公理證明了不可數集的存在性，斷言存在不可數數學對象的理論，其自身怎麽能被可數模型滿足？這就產生了矛盾。確切地說，假設 $T$ 是集合論的一個一階公理化理論，那麽 $T$ 就會有可數模型 $\mathcal{M}$ 。由於 $T\vdash\exists x: x\,\mathrm{is\,uncountable}$，所以必有 $\mathcal{M}\models M\,\mathrm{is\,uncountable}$，而 $\mathcal{M}$ 自身可數，其中至多只能有可數多個對象 $m$ 使得 $\mathcal{M}\models m\in M$，因此 $M$ 是至多可數的。就此而言，$T$ 對 $\mathcal{M}$ 做出了錯誤的描述。</p>
+<p>悖論產生的原因在於我們簡單地使用了「$x$ 是不可數的」這樣的概括，正如在上一節裡不應按照字面意思去理解「一致」等概念。事實上，在形式系統內部，Cantor 推導得出的實質上是一個公式 $\Omega(x)$，他證明 $\mathcal{M}\models\Omega(x)$，但並不保證 $\Omega(x)$ 蘊含字面意義的「$x$ 是不可數的」。如果我們對 $\Omega(x)$ 采取一種模型論解釋，問題立即就能解決。具體來說，首先，模型論解釋將 $\in$ 理解為任何落在解釋函數下的 $\mathcal{M}$ 上的二元關係，而字面意義的解釋則僅僅將 $\in$ 理解為集合論意義上的「屬於」關係；其次，模型論解釋的 $\forall x$ 和 $\exists x$ 只在 $\mathcal{M}$ 上取值，而字面意義的解釋將量詞的取值範圍涵蓋到整個集合論宇宙，假設 $\mathcal{M}\models M\,\mathrm{is\,the\,set\,of\,real\,numbers}$，那麽其中就會有不可數無窮多個實數落在 $\mathcal{M}$ 的定義域之外，特別地，落在 $\left\{m|\mathcal{M}\models m\in M\right\}$ 之外。換句話說，該形式系統只能將至多可數個對象識別為實數，這與整個集合論宇宙中存在不可數無窮多的實數不矛盾。綜合上面兩點，一旦我們明確區分兩種不同的解釋，悖論就自然解除了。〔Skolem’s Paradox. Stanford Encyclopedia of Philosophy. 2.2.〕</p>
+<p>進一步，上面說的公式 $\Omega(x)$ 表明不存在雙射 $f: \mathbb{N}\to x$，而在字面意義的解釋下，可數模型 $\mathcal{M}$ 中僅有至多可數個元素屬於 $x$，這樣的雙射必然是存在的。所以 $\Omega(x)$ 實際說的是：模型 $\mathcal{M}$ 不包含這樣的雙射，既然量詞只在 $\mathcal{M}$ 中取值，那麽 $\Omega(x)$ 毫無疑問可以是真的。(這說明 $\Omega(x)$ 這個公式不是絕對的。) Löwenheim-Skolem 定理的本質在於一階邏輯的可數句法結構與其描述對象規模間的不匹配，一個可數理論只能對模型進行可數的約束，不能對它的可數模型和不可數模型加以區分，更不能強制它的模型必須是不可數的。一階邏輯固然具有這樣的局限性，但 Löwenheim-Skolem 定理對二階邏輯不成立，例如確界存在性定理只能用二階語句來表述，它不能被可數模型滿足。這或許也是數學不能被完全邏輯化的一個證據。〔多數哲學家認為二階邏輯原則上是數學和集合論。〕</p>
+<h2 id="三、上述分析對數學哲學的啟示"><a href="#三、上述分析對數學哲學的啟示" class="headerlink" title="三、上述分析對數學哲學的啟示"></a>三、上述分析對數學哲學的啟示</h2><p>Gödel 不完全性定理和 Löwenheim-Skolem 定理都揭示了形式系統與其所描述的具體理論之間的不匹配性，因此，通過形式化來機械地把握整個數學領域是不可能的。這引發了兩個問題：首先，在自然的數學實踐中，是否存在某種不同於機械計算的過程能夠突破形式規則的局限？其次，在對數學進行公理化的不同路徑背後，是否存在一個作為參照的、單一不變的數學本體(或結構)？</p>
+<p>前一個問題關注數學的外在方面，即在數學體系之外詢問數學實踐何以可能；後一個問題關注數學的內在方面，所問的實質上是：我們所研究的數學究竟是什麽，以及我們所研究的究竟是否為「真」。我認為，第一個問題在目前是無法解答的，它涉及到數學之外的一些領域，如神經科學、智能科學方面的研究進展，如果說這個問題是可解答的，那麽它的解答也應該是歸於自然科學的。而後一個問題則留有更多哲學闡釋的余地。</p>
+<h3 id="1-重思康德對數學之本質的看法"><a href="#1-重思康德對數學之本質的看法" class="headerlink" title="1. 重思康德對數學之本質的看法"></a>1. 重思康德對數學之本質的看法</h3><p>自康德以來，數學之分析性與綜合性的爭論便從未停止。康德的觀點一般被概括為：幾乎所有數學命題都是先天綜合的〔康德覺察到有些數學命題是分析的，如「三角形有三個角」〕，亦即，命題的真假不直接蘊含在對概念的定義之中，但是依賴於人類認知能力的先天原則，故具有普遍必然性。這種概括過於簡單，忽略了康德之先驗觀念論的多個層次，下文我將嘗試對康德的數學哲學做另一種闡釋。</p>
+<p>康德在《純粹理性批判》的先驗感性論部分回答了「數學何以可能」這個問題。在這一部分，康德闡述了作為純直觀的時間與空間，並將其作為使數學得以可能的先天條件。所謂純直觀，就是先驗的直觀的純形式，在康德看來，時間與空間依賴於主體先天的直觀能力，因而並不獨立於主體。時間是內直觀的純形式，空間是外直觀的純形式，兩者預先把一切可能的經驗直觀限定在時空之內，但其自身並不實在。這契合於康德所主張的「先驗的觀念論，經驗的實在論」，即一種先於經驗的對象只能是觀念的，不能單靠邏輯去認識；而一旦設定了普遍的認識能力，通過經驗來認識的對象相對於這個經驗主體來說就必定是實在的。</p>
+<p>對比早先的兩種時空觀，康德的時空理論采取了折中的立場。牛頓的時空觀是完全外在，如同齒輪機械地運轉，可以說是一種唯物主義，數學就是這種機械運作之中蘊含的規律；萊布尼茨則認為，時間與空間都是單子的表象，單子把萬物都表象在時空中，但這只是一種幻覺，單子與單子間真正的關係不是時空的，而是數學的和邏輯的，由此導出徹底關係化的時空觀，時間和空間歸結於事物的邏輯關係，故最終都是可計算的，這也就是普遍文字(characteristica universalis)的由來。相較而言，康德將時間與空間作為一切經驗直觀的先天條件，故時空既不是純外在機械的，也不是純內在偶然的，而是成為聯繫主體內在與外在的中介。如果說牛頓把數學還原為物理學，萊布尼茨把數學和物理學還原為可計算的邏輯，那麽康德就在折中的層次上為獨立的數學提供了基礎。先天綜合命題的真正意義是，作為邏輯(計算)與物理之間的中介，數學在其他地方持有其客觀性的依據。</p>
+<p>進而，康德的數學哲學與數學之「分析性」並不矛盾。關鍵在於認識到，在對概念進行明確界定之前討論分析性是無意義的，而一個概念的明確界定不可能脫離某種形式的綜合，所以一個命題的分析性必然依賴於預先的綜合，只不過綜合的過程往往微不足道。例如，當我考慮一個紅蘋果時，在我思維中出現的絕不是孤立的「紅」和「蘋果」的意象，而是一個完整的「紅蘋果」，為了獲得一個紅蘋果的形象，我必須明確「紅」和「蘋果」是可結合的，這就涉及到語義的綜合；反之，「一個綠色的憤怒是綠色的」按形式構成來看是真的，但「綠色的憤怒」根本不成其為概念，整個命題自然也不是分析的。這種綜合只依賴於較低層次的思維能力，其過程往往在意識閾值以下故而不被察覺。我認為這一點就發生在康德的先驗想象力&#x2F;圖型法之中，正是通過想象力，我才能具有一個與當下正在談論的抽象語詞相對應的直觀圖像，經過圖型層面的綜合，我們才能判定一個分析的真命題。</p>
+<p>康德用純直觀為數學奠定先天綜合的基礎，但他真正論及數學實踐卻是在圖型法部分。時間與空間只是數學的基礎，我們真正談論的數學概念，例如某個三角形，實則是經由想象力在空間純粹形狀方面綜合後的圖型。通過這種綜合，我們發現這些圖型間具有某些推理規則，而抽去這些直觀本身保留推理規則，並依據這些規則形式地推導數學命題，就會認為數學命題僅僅是分析的，這與上文討論的「分析性」的由來是一致的。重要的是，上文提到的分析命題並不止步於先驗想象力層次，在談論一個紅蘋果時，我可以從這個蘋果本身經驗地獲得更多信息，例如深紅或淺紅、酸或甜，原則上我不可能在想象中重構出一個與現實中這個細節無限的蘋果別無二致的圖型，因此我必須就某個命題的符合性對這個現實的蘋果進行查證。然而，數學概念只能是先驗想象力層次的圖型，既不能太低，也不會更高。它不能作為更具特殊性的經驗性實體或事件而讓知性範疇運用於其上，也不能進一步抽去內容還原為更加初等的邏輯形式。康德將圖型法作為直觀與知性範疇之間的中介，既具有先天的普遍性，也具有感性的直觀性，而正是在這裡，我們發現了數學的另一層中介性。因此，數學命題既不能是先天分析的，亦不能是經驗綜合的，在這個意義上，它是先天綜合的。但是，這並不意味著我們不能在某個層次上分析地對它進行研究。</p>
+<p>康德對數學本質的看法，實際上合理地兼顧到了數學的兩個方面，一方面，數學由於其固定的推理規則和機械的可驗證性被認為是形式的、分析的；另一方面，對數學的理解必定包含某種直觀和思想，多數數學定理的證明原則上可以翻譯成算法，但是誰都不會覺得，一個能夠按照算法計算的人就是理解了這個定理。數學確實具有句法和語義兩個截然不同的層次，比喻地說，數學實踐是在兩個層次之間蔓延的褶子，而康德理論的高明之處在於讓數學的基礎介於兩個層次之間，使其不缺失其中任何一個方面。這同時也與現實經驗相符，在學習數學的最初階段，直觀的圖像是不可或缺的，然而當我們從中抽取出確定的推理規則後並熟練運用後，我們完全可以忽略這個初級的對直觀做綜合處理的過程，轉而純形式地進行算符操作。形式系統的建立正是為了方便這種簡化的算符推導，但我們仍需要相應的直觀去理解每一步推理的意義。</p>
+<h3 id="2-思考客觀性問題"><a href="#2-思考客觀性問題" class="headerlink" title="2. 思考客觀性問題"></a>2. 思考客觀性問題</h3><p>上文對康德之數學哲學的重釋可歸結為三點：一，先天綜合命題的意義是揭示數學在邏輯(機械計算)與物理現實之外有客觀性依據，數學的客觀性不在於它所描述的物理事實的客觀性〔正如形式系統的客觀性不在於它所描述的模型的客觀性，儘管我們希望這兩者是一致的〕；二，數學命題是先天綜合命題不意味著不能分析地對其進行研究，確切地說，分析性本就依賴於預先的綜合；三、數學作為邏輯(機械計算)與物理現實的中介，橫跨於語義和句法兩個層次，並且兩者不能完全匹配，因此一種反思平衡式的調節是必要的。在此，我們要考慮的問題是：一，數學之客觀性的依據從何而來？二，數學是單一的抑或是多元的？</p>
+<p>按照康德的看法，第一個問題的答案是，客觀性的依據是人先天認識能力的內在框架，從現代科學的觀點看，這指的就是大腦的內在結構，因此這種依據即便不直接是物理的，必然也間接地是物理的。但必須注意的是，這種客觀性不能簡單等同於物理現實的客觀性，理由在於，物理現實，基於不同情形和不同關注點，事實上有著多種不同的客觀描述，每一種描述或預測在某種意義上都是「真」的。例如在常規低速情況下使用牛頓力學，在宏觀高速情況下考慮相對論相應，或在微觀情形考慮量子力學效應，這幾種情形無疑都可以得到客觀的數學描述，但相應的物理直覺卻大不相同。每一種描述無疑都是客觀的，但若放入另一個體系便不再為真，如果數學的客觀性依賴於它所描述的物理現實的客觀性，那麽它在幾種不兼容的體系下同時適用便是不可理解的〔例如，經典邏輯無法直接適用於量子力學〕。進一步說，很多數學結果並不是源於物理動機，而是產生自對數學結構本身的探索，事實上，在相對論還未被提出的時代，相對論所使用的數學就是客觀的。對此，一種更好的解釋是，儘管物理圖景有所不同，人類認識能力的本性使得我們采用相同的數學去加以描述，至少可以說，牛頓體系、相對論和量子力學所使用的數學，其公有核心是由人的認識能力決定的。在尚未使用自身認識能力去認識某物之前，事先對自身認識能力進行探究，這在我看來是毫無矛盾的。</p>
+<p>但是，基於內在框架決定的公有核心，我們是否有可能創造出不同的數學呢？一般認為，數學是絕對客觀的，但這種客觀性並不排除多元性。我們所說的客觀指的是在已確定的公理之下數學不應導出矛盾，但我們完全可以構建不同的公理體系，甚至違背自然直覺，在另一些體系下導出矛盾的結論，這些體系互相並不幹涉，也談不上對錯優劣。如果我們在不同的物理理論下推出不同的結果，那麽必定會以實驗檢驗哪一種符合現實。但在數學中並沒有外在於數學的檢驗程序，任何一種在其內部沒有自相矛盾的數學體系都應當被允許。無怪乎 Russell 曾言：「在數學中我們不知道自己研究的是什麽，也不知道自己研究的是否為真」。</p>
+<p>隨著二十世紀數學公理化的大潮，數學之單一性或多元性的爭論也愈發凸顯，尤其在形式化導致悖論時，不同的解決方案變成了導向不同形式系統的分水嶺。Skolem 在闡述以他命名的悖論之哲學意義時指出，集合論的公理化將導致集合論概念的相對化，而集合論本身不足以作為數學的基礎。Gödel 則借不完全性定理發展了他的概念實在論，並提出了客觀數學的概念，這種數學「超過任何一個一致的、可靠的形式系統中的數學」〔叶峰. p 403.〕。這種客觀數學，作為所有客觀上為真的數學命題的全體，顯然是單一的。這種單一的數學觀很可能來源於對自然數學的樸素認識，由於自然數學描述較為普遍的物理現象，其對應的大腦機制在進化過程中已經完善，而當代高度復雜的數學遠遠超出日常所及，故會產生更多模棱兩可、不可判定乃至悖論。內在框架沒有預先限定的部分，就只能人工地加以定義，不同的定義方法導致了相對化。直觀來看，實現單一數學的可能途徑有兩種，其一是采用元理論，在使用不同系統的陳述前加上模態限定——但元理論本身也可能是多元的；其二是寄希望於找到一種足夠嚴格且全面的形式化，囊括自然數學的絕大部分結果，並保證進一步數學成果的豐富性——這種巧合幾乎是不可能的。</p>
+<p>事實上，結論可能是，數學的單一或多元對具體數學實踐而言並不是必要的，在具體領域從事研究的數學家可能根本不會關注數學基礎方面的工作。采用何種數學系統的問題或許更多地牽扯到約定俗成、習慣、價值等外在因素，對這個問題的探討大概更接近於一種「規則-行動」的語用學研究，必須考慮歷史和現實情況的復雜性，無法在數學內部解決。但是，也可以合理地提出猜測，既然迄今為止所有的編程語言都沒有超出 Church-Turing 論題所斷言的可計算限度，那麼在數學思維中或許也存在著這樣的限度，儘管形式化和形式系統可以無限制地自我衍生，但在背景語義上有所陳述、有內容和思想性的數學在其能力及範圍上已有所限定〔如上文所述，這種限定來源於人的先天認識能力〕，我們說的單一數學，指的就是這種在語義上具有統一性的數學。</p>
+<h2 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻"></a>參考文獻</h2><div style="font-family: 'STKaiti';">
+1. Hamkins, J. D. (2025). 数学哲学讲义 (郝兆宽,高坤,单芃舒译). 上海人民出版社. (原书出版于2021年)<br>
+2. 叶峰. (2010). 二十世纪数学哲学: 一个自然主义者的评述. 北京大学出版社.<br>
+3. 汪芳庭. (2010). 数理逻辑(第2版). 中国科学技术大学出版社.<br>
+4. Raatikainen, P. (2013, November 11). Gödel’s Incompleteness Theorems. Stanford Encyclopedia of Philosophy. https://plato.stanford.edu/entries/goedel-incompleteness/<br>
+5. Bays, T. (2009, Janurary 12). Skolem’s Paradox (E. N. Zalta & U. Nodelman, Eds.). Stanford Encyclopedia of Philosophy. https://plato.stanford.edu/entries/paradox-skolem/<br>
+6. Wikipedia contributors. (2026, January 16). Tarski's undefinability theorem. In Wikipedia, The Free Encyclopedia. Retrieved 08:27, January 20, 2026, from https://en.wikipedia.org/w/index.php?title=Tarski%27s_undefinability_theorem&oldid=1333232957<br>
+7. Hofstadter, D. R. (1997). 哥德尔、艾舍尔、巴赫——集异璧之大成 (严勇, 莫大伟, 刘皓明译). 商务印书馆. (原书出版于1978年)<br>
+8. Shapiro, S. (2009). 数学哲学: 对数学的思考 (郝兆宽,杨睿之译). 复旦大学出版社. (原书出版于2000年)<br>
+9. 陈波. (2017). 悖论研究. 北京大学出版社.<br>
+10. Kant, I. (2017). 纯粹理性批判 (邓晓芒译, 杨祖陶校). 人民出版社. (原书出版于1787年)<br>
+11. 邓晓芒. (2013). 《纯粹理性批判》讲演录. 商务印书馆.<br>
+</div>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/philosophy/" rel="tag"># philosophy</a>
+              <a href="/tags/logic/" rel="tag"># logic</a>
+              <a href="/tags/foundations/" rel="tag"># foundations</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/01/01/%E8%AB%96%E9%BB%91%E9%87%91%E5%B1%AC/" rel="prev" title="論黑金屬">
+                  <i class="fa fa-angle-left"></i> 論黑金屬
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

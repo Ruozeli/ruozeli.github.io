@@ -28,7 +28,7 @@
 <meta property="og:description" content="Bernoulli‎數的生成函數定義">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2025-10-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-04T13:28:40.706Z">
+<meta property="article:modified_time" content="2026-01-20T08:47:28.194Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="number theory">
@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">schlagwörter</span></a>
       </div>
   </nav>
@@ -247,7 +247,7 @@
     <div class="post-body" itemprop="articleBody"><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>考慮冪級數<br>$$e(x)&#x3D;1+\frac{x}{1!}+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+\cdots \quad\quad\quad\mathrm{(1)}$$<br>引入變量 $y$ , 則有 $e(x+y)&#x3D;e(x)e(y)$ , 證明如下:<br>將式 $\mathrm{(1)}$ 中的 $x$ 替換為 $x+y$ , 則 $n$ 次項形如 $(x+y)^n&#x2F;n!$ , 分子用二項式公式展開得<br>$$(x+y)^n&#x3D;x^n+\frac{n!}{1!(n-1)!}x^{n-1}y+\cdots+\frac{n!}{k!(n-k)!}x^{n-k}y^k+\cdots+y^n$$<br>故 $e(x+y)$ 中 $n$ 次項可化簡為<br>$$\frac{x^n}{n!}+\frac{x^{n-1}}{(n-1)!}\frac{y}{1!}+\cdots+\frac{x^{n-k}}{(n-k)!}\frac{y^k}{k!}+\cdots+\frac{y^n}{n!}$$<br>和式中每一項即是 $e(x)$ 中的 $k$ 次項與 $e(y)$ 中的 $n-k$ 次項的乘積, 因而這恰給出了 $e(x)e(y)$ 中的 $n$ 次項. $\blacksquare$ </p>
 <p>用 $a$ 表示數列 $\alpha_1,\alpha_2,\cdots,\alpha_n,\cdots$ , 定義冪級數 $e(ax)$<br>$$e(ax)&#x3D;1+\frac{\alpha_1}{1!} x+\frac{\alpha_2}{2!} x^2+\cdots+\frac{\alpha_n}{n!} x^n+\cdots$$<br>令數列 $a&#x3D;\{\alpha_n\}$ , $b&#x3D;\{\beta_n\}$ , 定義 $a+b&#x3D;\{\alpha_n+\beta_n\}$ . 那麼根據上面的結果, 顯然有<br>$$e((a+b)x)&#x3D;e(ax)\cdot e(bx)$$</p>
 <p>由於具有這樣方便的性質, 此類冪級數可用作生成函數, 其 $n$ 次項係數乘以 $n!$ 即得到數列的第 $n$ 項, 故我們稱這一類冪級數為數列的<strong>階乘生成函數</strong>.</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>在上一篇中我們得到Bernoulli‎數的遞推公式:<br>$$<br>\begin{align*}<br>B_0&amp;&#x3D;1 \\<br>B_m&amp;&#x3D;-\frac{1}{m+1}\sum_{i&#x3D;0}^{m-1}C_{m+1}^i B_i\quad(m\geq1)<br>\end{align*}<br>$$<br>即當 $m\geq1$ 時,<br>$$\sum_{i&#x3D;0}^m C_{m+1}^i B_i&#x3D;0$$<br>在等式兩邊同時加上 $B_{i+1}$ 可得<br>$$\sum_{i&#x3D;0}^{m+1} C_{m+1}^i B_i&#x3D;B_{m+1}$$<br>接著用 $m$ 替換 $m+1$ . 需要注意的是, 此處適用範圍發生了變化, 下式在 $m\geq 2$ 時成立:<br>$$\sum_{i&#x3D;0}^{m} C_{m}^i B_i&#x3D;B_{m}$$<br>稍作變換可得<br>$$\sum_{i&#x3D;0}^{m}\frac{B_i}{i!}\cdot\frac{1}{(m-i)!}&#x3D;\frac{B_m}{m!}  \quad\quad\quad\mathrm{(2)}$$<br>注意到等式左邊具有卷積的性質. </p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>在<a href="https://ruozeli.github.io/2025/07/24/Bernoulli_Number_1/">上一篇</a>中我們得到Bernoulli‎數的遞推公式:<br>$$<br>\begin{align*}<br>B_0&amp;&#x3D;1 \\<br>B_m&amp;&#x3D;-\frac{1}{m+1}\sum_{i&#x3D;0}^{m-1}C_{m+1}^i B_i\quad(m\geq1)<br>\end{align*}<br>$$<br>即當 $m\geq1$ 時,<br>$$\sum_{i&#x3D;0}^m C_{m+1}^i B_i&#x3D;0$$<br>在等式兩邊同時加上 $B_{i+1}$ 可得<br>$$\sum_{i&#x3D;0}^{m+1} C_{m+1}^i B_i&#x3D;B_{m+1}$$<br>接著用 $m$ 替換 $m+1$ . 需要注意的是, 此處適用範圍發生了變化, 下式在 $m\geq 2$ 時成立:<br>$$\sum_{i&#x3D;0}^{m} C_{m}^i B_i&#x3D;B_{m}$$<br>稍作變換可得<br>$$\sum_{i&#x3D;0}^{m}\frac{B_i}{i!}\cdot\frac{1}{(m-i)!}&#x3D;\frac{B_m}{m!}  \quad\quad\quad\mathrm{(2)}$$<br>注意到等式左邊具有卷積的性質. </p>
 <h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>依照第一部分, 定義冪級數 $e(Bz)&#x3D;\mathscr{B}(z)$<br>$$\mathscr{B}(z)&#x3D;1+\frac{B_1}{1!}z^1+\frac{B_2}{2!}z^2+\cdots+\frac{B_n}{n!}z^n+\cdots$$<br>$\mathscr{B}(z)$ 是 $B_n$ 的階乘生成函數. 我們的目標是求出 $\mathscr{B}(z)$ 的顯式表達式. </p>
 <p>將 $\mathscr{B}(z)$ 與 $e(z)$ 相乘, 則根據第一部分的結果, $\mathscr{B}(z)e(z)$ 中的 $m$ 次項係數恰是等式 $\mathrm(2)$ 左邊的和式, 而等式 $\mathrm(2)$ 的右邊恰為 $\mathscr{B}(z)$ 中 $m$ 次項的係數. </p>
 <p>等式 $\mathrm(2)$ 在 $m\geq 2$ 時成立, 故遞推可知 $\mathscr{B}(z)e(z)$ 和 $\mathscr{B}(z)$ 的 $m$ 次項 ($m\geq 2$) 係數分別相等, 且易知兩式常數項相等. 由此可知, 除去次數為 $1$ 的項, 兩式均相等, 簡單計算得:<br>$$\mathscr{B}(z)e(z)&#x3D;z+\mathscr{B}(z)$$<br>直接解該方程即可得到<br>$$\mathscr{B}(z)&#x3D;\frac{z}{e(z)-1}$$<br>這便是我們想要的結果. </p>
