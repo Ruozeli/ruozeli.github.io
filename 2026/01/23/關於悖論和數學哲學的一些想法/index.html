@@ -28,7 +28,7 @@
 <meta property="og:description" content="《文史哲基礎與方法導引》(什麼鬼課程名)選修課作業">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-01-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-01-23T04:21:54.897Z">
+<meta property="article:modified_time" content="2026-01-27T04:38:46.420Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="philosophy">
@@ -152,13 +152,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">Kategorien</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -254,7 +254,7 @@
 <div class="note info"><p><strong>定理(Martin Löb)</strong>：對於任何算術語句 $\varphi$，如果 $\mathrm{PA}\vdash\mathrm{Pr_{PA}}(\ulcorner\varphi\urcorner)\to\varphi$，那麽 $\mathrm{PA}\vdash\varphi$。其中 $\ulcorner\varphi\urcorner$ 表示公式 $\varphi$ 的 Gödel 數，$\mathrm{Pr_{PA}}(x)$ 表示 $x$ 是 $\mathrm{PA}$ 中定理的 Gödel 數。〔Hamkins. p 372(250).〕</p>
 </div>
 
-<p>字面上看，該定理說的是，若「$\varphi$ 是 $\mathrm{PA}$ 中定理」蘊含 $\varphi$，則 $\varphi$ 在 $\mathrm{PA}$ 中可證，特別地，Löb 句子 $\psi: \mathrm{Pr_{PA}}(\ulcorner\varphi\urcorner)\to\psi$ 在 $\mathrm{PA}$ 中可證。如果說 Gödel 句子對應於說謊者句子，斷言其自身不可證，那麽 Löb 句子就對應於「說真者句子」，斷言其自身可證。直觀上看，「這句話是真的」這句話應該是真假不定的，若說它必然為真，那就形成了悖論。但它的形式化對應卻是一個嚴格的數學結果，既不是悖論，也同語義無關，若僅從形式的角度看，甚至不會發現它與某個悖論之間存在著隱含的聯繫。</p>
+<p>字面上看，該定理說的是，若「$\varphi$ 是 $\mathrm{PA}$ 中定理」蘊含 $\varphi$，則 $\varphi$ 在 $\mathrm{PA}$ 中可證，特別地，Löb 句子 $\psi: \mathrm{Pr_{PA}}(\ulcorner\psi\urcorner)\to\psi$ 在 $\mathrm{PA}$ 中可證。如果說 Gödel 句子對應於說謊者句子，斷言其自身不可證，那麽 Löb 句子就對應於「說真者句子」，斷言其自身可證。直觀上看，「這句話是真的」這句話應該是真假不定的，若說它必然為真，那就形成了悖論。但它的形式化對應卻是一個嚴格的數學結果，既不是悖論，也同語義無關，若僅從形式的角度看，甚至不會發現它與某個悖論之間存在著隱含的聯繫。</p>
 <p>事實上，這個定理反映出形式系統及其所表達的語義層次之間存在著差別。悖論不僅與形式系統自身有關，也涉及到我們對系統做出的解釋，簡化的、直觀的理解很可能是一種誤解，而許多悖論正是由這一類錯誤的意義解讀中產生的。一個一致的形式系統應當是自律的，如果我們從中推出了悖論，那麽或者我們對該系統做出了錯誤的解釋，或者我們尚未完全把握保證該系統一致性的全部條件，而尋找這種條件必然要回到建立系統的目的、這個系統反映何種背景語義等問題上。〔有很多種方法(暫時地)消除系統中的不一致性，關鍵在於選擇哪一種。〕無論哪種情況，悖論的出現都不可能僅僅是形式的，也不可能僅僅形式地得到解決。</p>
 <p>進一步說，任何數學實踐也包含兩個層次，其一接近於語義，是一種對數學對象之意義的自然理解或直觀把握，充當數學實踐中的理論動機或是解決問題的基本思路；其二接近句法，是基於公認演繹規則進行推演的，較為機械的過程，證明中的技術性細節往往歸屬此類。前者可以概括為「認識-直觀」，後者則對應於「規則-行動」。我認為，對悖論的討論，以及對數學實踐的分析，都應當在這一層次劃分之下進行。</p>
 <h2 id="二、在此基礎上考察兩個悖論"><a href="#二、在此基礎上考察兩個悖論" class="headerlink" title="二、在此基礎上考察兩個悖論"></a>二、在此基礎上考察兩個悖論</h2><h3 id="1-Godel-不完全性定理"><a href="#1-Godel-不完全性定理" class="headerlink" title="1. Gödel 不完全性定理"></a>1. Gödel 不完全性定理</h3><p>Gödel 不完全性定理不是悖論，但談及自指與悖論，這一定理絕對是繞不開的話題。儘管自身並非悖論，Gödel 不完全性定理，尤其是 Gödel 句子的構造卻有著悖論的結構。</p>
@@ -320,6 +320,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2026/01/30/Mathematical_Logic%20_1/" rel="next" title="數理邏輯筆記 No.1">
+                  數理邏輯筆記 No.1 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>

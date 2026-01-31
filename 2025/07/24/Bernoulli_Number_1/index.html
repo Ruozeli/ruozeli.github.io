@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="由自然數等冪求和引入Bernoulli‎數">
+    <meta name="description" content="From power sum to Bernoulli‎ number.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bernoulli‎數-1.引入">
+<meta property="og:title" content="Bernoulli‎ Number 1">
 <meta property="og:url" content="https://ruozeli.github.io/2025/07/24/Bernoulli_Number_1/index.html">
 <meta property="og:site_name" content="若則理のBlog">
-<meta property="og:description" content="由自然數等冪求和引入Bernoulli‎數">
+<meta property="og:description" content="From power sum to Bernoulli‎ number.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2025-07-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-03T13:04:27.426Z">
+<meta property="article:modified_time" content="2026-01-28T11:53:26.086Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="number theory">
@@ -39,10 +39,10 @@
 <link rel="canonical" href="https://ruozeli.github.io/2025/07/24/Bernoulli_Number_1/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2025/07/24/Bernoulli_Number_1/","path":"2025/07/24/Bernoulli_Number_1/","title":"Bernoulli‎數-1.引入"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2025/07/24/Bernoulli_Number_1/","path":"2025/07/24/Bernoulli_Number_1/","title":"Bernoulli‎ Number 1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Bernoulli‎數-1.引入 | 若則理のBlog</title>
+<title>Bernoulli‎ Number 1 | 若則理のBlog</title>
   
 
 
@@ -151,13 +151,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">Kategorien</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -202,12 +202,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Bernoulli‎數-1.引入 | 若則理のBlog">
-      <meta itemprop="description" content="由自然數等冪求和引入Bernoulli‎數">
+      <meta itemprop="name" content="Bernoulli‎ Number 1 | 若則理のBlog">
+      <meta itemprop="description" content="From power sum to Bernoulli‎ number.">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Bernoulli‎數-1.引入
+          Bernoulli‎ Number 1
         </h1>
 
         <div class="post-meta-container">
@@ -237,7 +237,7 @@
   
 </div>
 
-            <div class="post-description">由自然數等冪求和引入Bernoulli‎數</div>
+            <div class="post-description">From power sum to Bernoulli‎ number.</div>
         </div>
       </header>
 
@@ -245,7 +245,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>眾所周知:<br>$$S_1(n)&#x3D;1+2+\cdots+n&#x3D;\sum_{i&#x3D;0}^{n}i&#x3D;\frac{n(n+1)}{2}$$<br>$$S_2(n)&#x3D;1^2+2^2+\cdots+n^2&#x3D;\sum_{i&#x3D;0}^{n}i^2&#x3D;\frac{n(n+1)(2n+1)}{6}$$<br>那麼, 對於 $n$ 的任意次冪, 類似的和式是否也可表示為多項式? 易知, 對正整數 $m$, 存在唯一 $m+1$ 次多項式 $f_m(n)$ 使得 $f_m(n)&#x3D;S_m(n)&#x3D;\sum_{i&#x3D;0}^{n}i^m$. </p>
-<p>要求出 $f_m$, 最無腦的方法自然是待定係數法, 通過 $f_m(n)-f_m(n-1)&#x3D;n^m$ 這一表達式直接計算即可. 但這種方法在計算上太過繁瑣, 也不能得到普遍結論. 下使用另一種方法得到 $f_m(n)$ 更直接的表達式. </p>
+<p>要求出 $f_m$, 最simple的方法自然是待定係數法, 通過 $f_m(n)-f_m(n-1)&#x3D;n^m$ 這一表達式直接計算即可. 但這種方法在計算上太過繁瑣, 也不能得到普遍結論. 下使用另一種方法得到 $f_m(n)$ 更直接的表達式. </p>
 <br>
 
 <h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>因為 $f_m(0)&#x3D;0$, 所以 $f_m(x)$ 的常數項為 $0$,<br>且滿足 $f_m(x)-f_m(x-1)&#x3D;x^m$. </p>
@@ -292,8 +292,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/10/04/Bernoulli_Number_2/" rel="next" title="Bernoulli‎數-2.生成函數">
-                  Bernoulli‎數-2.生成函數 <i class="fa fa-angle-right"></i>
+                <a href="/2025/10/04/Bernoulli_Number_2/" rel="next" title="Bernoulli‎ Number 2">
+                  Bernoulli‎ Number 2 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

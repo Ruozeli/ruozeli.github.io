@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="命題演算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="數理邏輯筆記 No.1">
+<meta property="og:url" content="https://ruozeli.github.io/2026/01/30/Mathematical_Logic%20_1/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="命題演算">
+<meta property="og:locale" content="de_DE">
+<meta property="article:published_time" content="2026-01-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-31T07:55:57.999Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="logic">
+<meta property="article:tag" content="foundations">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2026/01/30/Mathematical_Logic%20_1/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2026/01/30/Mathematical_Logic%20_1/","path":"2026/01/30/Mathematical_Logic _1/","title":"數理邏輯筆記 No.1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>數理邏輯筆記 No.1 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E9%A1%8C%E6%BC%94%E7%AE%97"><span class="nav-text">命題演算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A5%E6%B3%95"><span class="nav-text">句法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AA%9E%E7%BE%A9"><span class="nav-text">語義</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7%E5%92%8C%E5%AE%8C%E5%85%A8%E6%80%A7"><span class="nav-text">可靠性和完全性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E4%BA%9B%E8%AA%B2%E9%A1%8C"><span class="nav-text">另一些課題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E5%80%BC%E5%85%AC%E5%BC%8F"><span class="nav-text">等值公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%90%E5%8F%96%E7%AF%84%E5%BC%8F%E8%88%87%E5%90%88%E5%8F%96%E7%AF%84%E5%BC%8F"><span class="nav-text">析取範式與合取範式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%85%8B%E9%82%8F%E8%BC%AF"><span class="nav-text">模態邏輯</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2026/01/30/Mathematical_Logic%20_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="數理邏輯筆記 No.1 | 若則理のBlog">
+      <meta itemprop="description" content="命題演算">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          數理邏輯筆記 No.1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2026-01-30 00:00:00" itemprop="dateCreated datePublished" datetime="2026-01-30T00:00:00+08:00">2026-01-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Foundations/" itemprop="url" rel="index"><span itemprop="name">Foundations</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">命題演算</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>自學數理邏輯的筆記, 到 Gödel 不完全性定理為止. 略去證明細節, 以對關鍵概念和基本理論的理解為主, 可能夾雜一些錯誤的理解和不成熟的哲學思考.<br>〔主要參考: 汪芳庭《數理邏輯》、復旦《數理邏輯: 證明及其限度》〕</p>
+<h1 id="命題演算"><a href="#命題演算" class="headerlink" title="命題演算"></a>命題演算</h1><p>命題演算是最簡單的形式系統, 以簡單命題為研究對象. 在命題演算中, 簡單命題類似於原子, 可以通過命題聯結詞構成複合命題, 但自身不能再分解, 因此整個系統的結構也較為簡單. 我們不必去關心原子命題的具體含義, 只需賦予其古典二值邏輯的真或假(1或0). 下面先規定句法, 建立起命題演算的語言, 隨後引入這種語言的語義, 最後通過可靠性和完全性將兩者聯繫起來. </p>
+<h2 id="句法"><a href="#句法" class="headerlink" title="句法"></a>句法</h2><p>拋開符號的意義, 我們用選定的字母表, 純形式地建立語言. 我們的字母表包括: </p>
+<ol>
+<li>兩個運算符 $\neg$(否定)和 $\to$(蘊涵); </li>
+<li>命題變元的可數序列: $x_1,x_2,\cdots x_n\cdots$.</li>
+</ol>
+<p>命題形成規則如下: </p>
+<ol>
+<li>命題變元 $x_1,x_2,\cdots x_n\cdots$ 中的每一個都是公式; </li>
+<li>若 $p,q$ 為公式則 $\neg p$, $p\to q$ 均為公式; </li>
+<li>任一公式由前兩條規則使用有限次得到.</li>
+</ol>
+<p>記 $X&#x3D;\left\{x_1,x_2,\cdots x_n\cdots\right\}$, $L(X)$ 為所有公式構成的集, 則公式集具有分層:<br>$$L(X)&#x3D;L_0\cup L_1\cup\cdots\cup L_n\cup\cdots$$<br>其中 $L_0&#x3D;X$, $L_n$ 中公式由命題變元經過 $n$ 次運算(使用規則1和規則2)得到. $L(X)$ 的分層性是後面一些歸納定義的基礎, 顯然, 它的不同層次之間沒有公共元素, 這保證了歸納定義的合理性.<br>在處理命題變元有限的情形時, 令 $X_n&#x3D;\left\{x_1,\cdots x_n\right\}$, 我們可以以相同的方式定義代數 $L(X_n)\subset L(X)$, 這是 $L(X)$ 的一個子代數, 同樣具有分層性和可數性. </p>
+<p>在公式集 $L(X)$ 的基礎上, 我們建立命題演算 $L$, 即在 $L(X)$ 上規定 “公理” 和 “證明”.<br><strong>“公理”</strong> 定義為 $L(X)$ 的具有如下形狀的公式:</p>
+<p>$(L1)$ 肯定後件律: $p\to(q\to p)$;<br>$(L2)$ 蘊涵詞分配律: $(p\to (q\to r))\to((p\to q)\to(p\to r))$;<br>$(L3)$ 換位律: $(\neg p\to\neg q)\to(q\to p)$. </p>
+<p>其中 $p,q,r\in L(X)$. 這實質上是三個公理模式, 依據 $p,q,r$ 的具體選擇可形成無窮多條公理.〔取 $L(X)$ 中特殊公式為公理, 取法不唯一, 不同取法可得到不同的命題演算.〕</p>
+<p><strong>“證明”</strong> 定義為 $L(X)$ 中公式的特定的有限序列. 設 $\Gamma\subset L(X)$, $p\in L(X)$, 我們說 “公式 $p$ 從公式集 $\Gamma$ 中可證”, 假如存在 $L(X)$ 中公式的有限序列 $p_1,\cdots,p_n$, 其中 $p_n&#x3D;p$, 且每個 $p_k$ 都滿足: (1) $p_k\in\Gamma$, 或 (2) $p_k$ 是”公理”, 或 (3) 存在 $i,j&lt;k$ 使得 $p_j&#x3D;p_i\to p_k$〔分離規則(Modus Ponens, $\text{MP}$)〕. 有限序列 $p_1,\cdots,p_n$ 叫做 $p$ 從 $\Gamma$ 的 “證明”. 證明如果存在, 就一定不是唯一的. </p>
+<p>如果公式 $p$ 從公式集 $\Gamma$ 中可證, 我們稱 $\Gamma$ 中公式為 “假定”, 稱 $p$ 為假定集 $\Gamma$ 的<strong>句法推論</strong>, 記作 $\Gamma\vdash p$. 若 $\varnothing\vdash p$, 則稱 $p$ 為 $L$ 的 “定理”, 記作 $\vdash p$.<br>如果對任何公式 $p$, $\Gamma\vdash p$ 和 $\Gamma\vdash\neg p$ 不同時成立, 那麼就稱公式集 $\Gamma$ 是無矛盾公式集(或稱 $\Gamma$ 是<strong>一致</strong>的); 反之, 如果 $\Gamma$ 是有矛盾公式集($\Gamma$ 是不一致的), 那麼容易證明, 對任一公式 $p$ 都有 $\Gamma\vdash p$. </p>
+<p>下面是三個常用的語法定理. </p>
+<ol>
+<li>演繹定理: $\Gamma\cup\left\{p\right\}\vdash q\Leftrightarrow\Gamma\vdash p\to q$.<br>推論(假設三段論): $\left\{p\to q,q\to r\right\}\vdash p\to r$. 簡稱 $\text{HS}$, 可作為一條推理規則. </li>
+<li>反證律: $\Gamma\cup\left\{\neg p\right\}\vdash q$, $\Gamma\cup\left\{\neg p\right\}\vdash \neg q$ $\Rightarrow$ $\Gamma\vdash p$. </li>
+<li>歸謬律: $\Gamma\cup\left\{p\right\}\vdash q$, $\Gamma\cup\left\{p\right\}\vdash \neg q$ $\Rightarrow$ $\Gamma\vdash\neg p$.</li>
+</ol>
+<p>需注意的是, 反證律強於歸謬律. 一些系統不承認 $(L3)$, 將其換為比 $(L3)$ 更弱的形式, 這些系統承認歸謬律但不承認反證律. 事實上, 這些系統與古典系統的分歧在於對排中律的態度, 儘管有 $\vdash p\to\neg\neg p$ 恆成立, 但 $\vdash\neg\neg p\to p$ 不一定恆成立. </p>
+<p>在 $\left\{\neg,\to\right\}$ 型代數 $L(X)$ 中進一步定義二元運算析取, 合取及等值:<br>$$p\vee q&#x3D;\neg p\to q$$<br>$$p\wedge q&#x3D;\neg(p\to\neg q)$$<br>$$p\leftrightarrow q&#x3D;(p\to q)\wedge(q\to p)$$<br>至此, 五個基本命題聯結詞都已得到句法上的定義. </p>
+<h2 id="語義"><a href="#語義" class="headerlink" title="語義"></a>語義</h2><p>命題邏輯的語義不關心具體表述什麼, 以及這種表述是否為真, 重要的只是我們在元語言層次上賦予公式的真值. 因此, 命題邏輯語義的根本其實就是真值表. </p>
+<p>我們首先定義<strong>真值函數</strong>. 記 $Z_2&#x3D;\left\{0,1\right\}$, 則函數 $f: Z_2^n\to Z_2$ 叫做 $n$ 元真值函數. 一元真值函數共有4個, 分別用 $f_1,f_2,f_3,f_4$ 表示:<br>$$<br>\begin{array}{c|cc} v\in Z_2 &amp; f_1(v) &amp; f_2(v) &amp; f_3(v) &amp; f_4(v)\\<br>\hline 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0\\<br>\hline 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0\\<br>\end{array}<br>$$<br>其中 $f_3$ 稱作 “否定”, 記為 $f_3&#x3D;\neg v&#x3D;1-v$.<br>二元真值函數共有16個:<br>$$<br>\begin{array}{cc|cc} v_1 &amp; v_2 &amp; f_1 &amp; f_2 &amp; \cdots &amp; f_5 &amp; \cdots &amp; f_7 &amp; f_8 &amp; \cdots &amp; f_{16}\\<br>\hline 1 &amp; 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; \cdots &amp; 1 &amp; 1 &amp; \cdots &amp; 0\\<br>\hline 1 &amp; 0 &amp; 1 &amp; 1 &amp; \cdots &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; \cdots &amp; 0\\<br>\hline 0 &amp; 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; \cdots &amp; 0 &amp; 0 &amp; \cdots &amp; 0\\<br>\hline 0 &amp; 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 1 &amp; \cdots &amp; 1 &amp; 0 &amp; \cdots &amp; 0\\<br>\end{array}<br>$$<br>其中 $f_5$ 稱作 “蘊涵”, 記為 $f_5(v_1,v_2)&#x3D;v_1\to v_2&#x3D;1-v_1+v_1v_2$. 同時分別用 $\vee$, $\wedge$, $\leftrightarrow$ 來表示上表中的 $f_2$, $f_8$, $f_7$. 這裡我們用 $\neg$, $\to$ 等符號僅僅是對特定真值函數的簡化表示, 但對應真值表很容易看出, 這些函數與經典邏輯中的 “否定”, “蘊涵” 等聯結詞具有一致的作用效果. </p>
+<p>歸納可知, 任一真值函數都可僅用 $\neg$ 和 $\to$ 表示出來. 若 $Z_2$ 上的一些運算能夠表示任一真值函數, 我們就稱這些運算構成了一個<strong>完全組</strong>, 所以 $\left\{\neg,\to\right\}$ 是一個完全組. 同樣, $\left\{\neg,\vee\right\}$ 和 $\left\{\neg,\wedge\right\}$ 也是完全組, 因為 $u\to v&#x3D;\neg u\vee v&#x3D;\neg(u\wedge\neg v)$. </p>
+<details class="note info"><summary><p>NAND and NOR</p>
+</summary>
+<p>“與非” 和 “或非” 算符分別用 $|$ 和 $\downarrow$ 表示, 定義為:<br>$$v_1|v_2&#x3D;\neg(v_1\wedge v_2)$$<br>$$v_1\downarrow v_2&#x3D;\neg(v_1\vee v_2)$$<br>對應真值表<br>$$<br>\begin{array}{cc|cc} v_1 &amp; v_2 &amp; v_1|v_2 &amp; v_1\downarrow v_2\\<br>\hline 1 &amp; 1 &amp; 0 &amp; 0\\<br>\hline 1 &amp; 0 &amp; 1 &amp; 0\\<br>\hline 0 &amp; 1 &amp; 1 &amp; 0\\<br>\hline 0 &amp; 0 &amp; 1 &amp; 1\\<br>\end{array}<br>$$<br>容易驗證, 獨元集 $\left\{|\right\}$ 和 $\left\{\downarrow\right\}$ 都是完全組, 因為<br>$$\neg v_1&#x3D;v_1|v_1&#x3D;v_1\downarrow v_1$$<br>$$v_1\vee v_2&#x3D;(v_1|v_1)|(v_2|v_2)$$<br>$$v_1\wedge v_2&#x3D;(v_1\downarrow v_1)\downarrow(v_2\downarrow v_2)$$<br>與非算符 $|$ 又叫做 Sheffer 豎. 理論上說, 命題演算的任一公式都可以僅由命題變元經過一種運算( $|$ 或 $\downarrow$ )表示出來, 因此, Wittgenstein 在《逻辑哲学论》中著重強調 $\downarrow$ 算符, 並提出所謂 “命題的一般形式”. 但在實際使用中, 這樣的轉寫往往使公式更加冗長且不直觀, 所以沒有多大實際意義. </p>
+
+</details>
+
+<p>接著, 我們通過”賦值”在 $L(X)$ 和 $Z_2$ 這兩種代數之間建立聯繫.<br>具有保運算性的映射 $v: L(X)\to Z_2$ 稱為 $L(X)$ 的<strong>賦值</strong>, 其中, 保運算性是指, 對任意 $p,q\in L(X)$ 有:<br>(1) $v(\neg p)&#x3D;\neg v(p)$;<br>(2) $v(p\to q)&#x3D;v(p)\to v(q)$.<br>對任意公式 $p\in L(X)$, $v(p)$ 叫做 $p$ 的真值. </p>
+<p>根據 $\vee$, $\wedge$, $\leftrightarrow$ 的句法定義, 容易驗證 $v$ 對這些運算也具有保運算性. 這種賦值之所以良好定義, 是因為我們此前定義的 $L(X)$ 和 $Z_2$ 都是 $\left\{\neg,\to\right\}$ 型代數, 兩者是同構的. </p>
+<p>由 $L(X)$ 的代數結構和 $v$ 的保運算性可知, 只需明確命題變元 $x_1,\cdots,x_n,\cdots$ 的真值, $L(X)$ 中任意公式的真值就都能確定下來. 因此, 我們將映射 $v_0:X\to Z_2$ 定義為命題變元的<strong>真值指派</strong>. 歸納可知, 命題變元的任一真值指派, 必可唯一地擴張成 $L(X)$ 的賦值. 將 $v_0$ 限制在 $X_n&#x3D;\left\{x_1,\cdots x_n\right\}$ 上, $v$ 限制在 $L(X_n)$ 上, 結論同樣成立. </p>
+<p>若公式 $p$ 的真值函數取常值 $1$, 則稱 $p$ 為命題演算 $L$ 的<strong>永真式</strong>或重言式(Tautoloy), 記作 $\vDash p$. 字面上看, $\vDash p$ 說的當然是, $p$ 對 $X$ 的任意真值指派恆真.<br>進而, 我們有代換定理: $\vDash p(x_1,\cdots,x_n)$ $\Rightarrow$ $\vDash p(p_1,\cdots,p_n)$, 其中 $p(x_1,\cdots,x_n)\in L(X_n)$, $p_1,\cdots,p_n\in L(X)$; 而 $p(p_1,\cdots,p_n)$ 即是用 $p_1,\cdots,p_n$ 替換 $x_1,\cdots,x_n$ 的結果.<br>若 $\neg p$ 是永真式, 則 $p$ 是永假式, 非永假式叫做可滿足公式. </p>
+<p>設 $\Gamma\subset L(X)$, $p\in L(X)$. 如果 $\Gamma$ 中所有公式的任何公共成真指派都一定是公式 $p$ 的成真指派, 則說 $p$ 是 $\Gamma$ 的<strong>語義推論</strong>, 記作 $\Gamma\vDash p$. 即是說, $L(X)$ 的任一賦值 $v$, 若對所有 $q\in \Gamma$ 都有 $v(q)&#x3D;1$, 那麼必有 $v(p)&#x3D;1$.<br>語義推論和句法推論在形式和含義上都極為相似, 事實上, 一般情況下在簡單的數學系統下, 由於系統的可靠性和完全性, 這兩者是等價的. </p>
+<h2 id="可靠性和完全性"><a href="#可靠性和完全性" class="headerlink" title="可靠性和完全性"></a>可靠性和完全性</h2><p>下面要證明的是命題演算 $L$ 中句法推論和語義推論的一致性, 即<br>$$\Gamma\vdash p\quad\Leftrightarrow\quad\Gamma\vDash p$$<br>特別地, $\vdash p$ 當且僅當 $\vDash p$, 即 $L$ 中定理集與永真式集重合. </p>
+<p>首先是可靠性定理: $\Gamma\vdash p\enspace\Rightarrow\enspace\Gamma\vDash p$. 只需驗證公理 $(L1)$, $(L2)$ 和 $(L3)$ 都是永真式, 並用歸納法即可證明. 這一條保證: 使用句法推演規則得到的推論, 必然是語義上真的. </p>
+<p>完全性定理是可靠性定理的逆命題: $\Gamma\vDash p\enspace\Rightarrow\enspace\Gamma\vdash p$, 它斷言: 任何一個語義上真的公式, 都必然可以句法地推出. 這個定理的證明要困難得多. </p>
+<p>首先定義<strong>可滿足性</strong>: 如果有一真值指派使公式集 $\Gamma$ 中的所有公式都為真, 我們就稱公式集 $\Gamma$ 是可滿足的. 據此給出完全性定理的等價表述: </p>
+<p>(1) $\Gamma\vDash p\enspace\Rightarrow\enspace\Gamma\vdash p$;<br>(2) 如果 $\Gamma$ 是一致的, 則 $\Gamma$ 可滿足. </p>
+<p>“(1)$\Rightarrow$(2)”: 假定 $\Gamma$ 一致, 反設 $\Gamma$ 不可滿足, 那麼對任意公式 $p$ 都有 $\Gamma\vDash p$ (注意”$\vDash$”的定義), 由 $\Gamma\vDash p\enspace\Rightarrow\enspace\Gamma\vdash p$ 知 $\Gamma\vdash p$ 且 $\Gamma\vdash\neg p$, 故 $\Gamma$ 是不一致的. 矛盾. </p>
+<p>“(2)$\Rightarrow$(1)”: 假定 $\Gamma\vDash p$, 反設 $\Gamma\not\vdash p$, 則 $\Gamma\cup\left\{\neg p\right\}$ 是一致的, 由(2)知 $\Gamma\cup\left\{\neg p\right\}$ 可滿足, 故存在一個賦值 $v$ 使得 $\Gamma$ 中公式均為真而 $p$ 為假, 即 $\Gamma\not\vDash p$. 矛盾. </p>
+<p>$L(X)$ 是可數的, 所以我們可以把其中公式枚舉為 $p_0,p_1,p_2,\cdots$, 任取一個無矛盾公式集 $\Gamma$, 遞歸定義一個公式集序列 $\left\{\Gamma_n\right\}$ 如下:<br>$$<br>\begin{align*}<br>\Gamma_0&amp;&#x3D;\Gamma;\\<br>\Gamma_n&amp;&#x3D;<br>\begin{cases}<br>\Gamma_{n-1},&amp;\text{if}\enspace\Gamma\vdash p_{n-1};\\<br>\Gamma_{n-1}\cup\left\{\neg p_{n-1}\right\},&amp;\text{if}\enspace\Gamma\not\vdash p_{n-1}.<br>\end{cases}<br>\end{align*}<br>$$<br>可以驗證, 序列中每一個公式集 $\Gamma_n$ 都是一致的. 令 $\Gamma^{*}&#x3D;\bigcup_{n&#x3D;0}^{\infty}\Gamma_n$, 則 $\Gamma^{*}$ 也是一致的, 由於我們遍歷了整個 $L(X)$, 在保證一致性的前提下將每一個公式或其否定都納入到 $\Gamma^{*}$ 之中, 所以對任意公式 $p$, $\Gamma^{*}\vdash p$ 和 $\Gamma^{*}\vdash\neg p$ 必居其一, 換句話說, $\Gamma^{*}\vdash p$ 是完備的(或<strong>極大一致</strong>的). 我們稱 $\Gamma^{*}$ 是 $\Gamma$ 的<strong>完備無矛盾擴張</strong>. 由構造過程可以得到定理(Lindenbaum): 無矛盾公式集必有完備無矛盾擴張. </p>
+<p>定義一個映射 $v:L(X)\to Z_2$, 使得 $v(p)&#x3D;1$ 當且僅當 $p\in\Gamma^{*}$, 容易證明這樣定義的 $v$ 具有保運算性, 所以是一個賦值. 存在賦值 $v$ 使 $\Gamma^{*}$ 中所有公式為真, 故 $\Gamma^{*}$ 是可滿足的. 又 $\Gamma\subset\Gamma^{*}$, 所以 $\Gamma$ 也是可滿足的. 因此, 我們證明了上面的等價表述(2), 也就證明了 $L$ 的完全性. </p>
+<details class="note info"><summary><p>完全性定理弱形式的證明</p>
+</summary>
+<p>復旦版數理邏輯給出了一個更直接和直觀的方法, 可證明完全性定理的弱形式: $\vDash p$ 當且僅當 $\vdash p$. 思路如下.<br>假設 $p$ 是僅包含命題變元 $x_1,\cdots,x_k$ 的一個公式, $v_0$ 是 $x_1,\cdots,x_k$ 的一個真值指派, $v$ 為其對應的賦值. 根據 $v_0$ 對 $x_i$ 做變形, 如果 $v_0(x_i)&#x3D;1$, 就令 $x_i’$ 為 $x_i$, 否則令 $x_i’$ 為 $\neg x_i$; 同樣指定 $p$ 的變形: 如果 $v(p)&#x3D;1$, 就令 $p’$ 為 $p$, 否則為 $\neg p$. 那麼我們有:<br>$$\left\{x_1’,x_2’,\cdots,x_k’\right\}\vdash p’$$<br>設 $\vDash p$, 則 $p’$ 就是 $p$, 所以有 $\left\{x_1’,x_2’,\cdots,x_k\right\}\vdash p$ 和 $\left\{x_1’,x_2’,\cdots,\neg x_k\right\}\vdash p$. 由演繹定理得 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash x_k\to p$ 和 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash\neg x_k\to p$, 所以有<br>$$\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash(x_k\to p)\to((\neg x_k\to p)\to p)$$<br>用兩次分離規則即得 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash p$. 多次重複該過程, 便可把命題變元一個個消去, 得到 $\vdash p$. </p>
+<p>這種弱形式之所以能如此簡單地得到證明, 是因為它只依賴於命題變元(第一層)的真值指派, 而不用關心由命題變元真值所決定的某些更高層次的公式的真值. </p>
+
+</details>
+
+<p>有了完全性定理, 我們很容易得到<strong>緊緻性定理</strong>: 公式集 $\Gamma$ 是可滿足的當且僅當 $\Gamma$ 的每一個有窮子集都是可滿足的. 這個定理可以看作拓撲中緊緻性定理的一個特殊情況. </p>
+<details class="note success"><summary><p>Example</p>
+</summary>
+<p>復旦版數理邏輯給出了一個有趣的例子: 用緊緻性定理證明任何集合都可線序化.<br>給定集合 $M$, 指定命題變元集 $X&#x3D;\left\{x_{ab}:a,b\in M\right\}$, 其下標為 $M$ 中元素構成的有序對. 考慮 $X$ 的如下公式集 $\Gamma$:<br>$$\Gamma&#x3D;\left\{\neg x_{aa}:a\in M\right\}\cup\left\{x_{ab}\to x_{bc}\to x_{ac}:a,b,c\in M\right\}\cup\left\{x_{ab}\vee x_{ba}:a,b\in M,a\not&#x3D;b\right\}$$<br>$\Gamma$ 的任何有窮子集都可滿足, 所以 $\Gamma$ 也可滿足, 任何一個滿足 $\Gamma$ 的真值指派都給出 $M$ 上的一個線序. 事實上, $\Gamma$ 是三種模式的公式的並集, 這三種模式的公式分別給出了線序的三個要求: (1) 非自反性; (2) 傳遞性; (3) 任意 $a,b\in M$, $aRb$, $a&#x3D;b$, $bRa$ 必居其一. </p>
+
+</details>
+
+<p>命題演算 $L$ 是語義可判定的, 即, 存在算法可用來確定 $L$ 中任給的公式 $p(x_1,\cdots,x_n)$ 是否為永真式. 這樣的算法當然存在, 我們只需一一計算不同真值指派下的真值函數值即可, 這相當於列真值表並檢驗最後一列是否都是 $1$. 但這種算法效率很低, 是所謂指數時間算法. 由完全性定理, $L$ 也是句法可判定的, 但句法可判定完全依賴於語義可判定. </p>
+<h2 id="另一些課題"><a href="#另一些課題" class="headerlink" title="另一些課題"></a>另一些課題</h2><h3 id="等值公式"><a href="#等值公式" class="headerlink" title="等值公式"></a>等值公式</h3><p>如果 $p\leftrightarrow q$ 是永真式, 那麼稱 $p$ 和 $q$ 為等值公式. 設 $p,q\in L(X_n)$, 則 $p,q$ 等值 $\Leftrightarrow$ 對 $L(X_n)$ (或 $L(X)$ )的任一賦值 $v$ 都有 $v(p)&#x3D;v(q)$ $\Leftrightarrow$ $p$ 和 $q$ 有相同的真值函數. 由於 $n$ 元真值函數共有 $2^{2^n}$ 個, 所以儘管 $L(X_n)$ 中有無窮多個公式, 語義不同的僅有有限種. 互相等值的公式形成一個等價類, 這就給出了 $L(X_n)$ 的一個分類. </p>
+<p>設公式 $p$ 只含有命題變元, $\neg$, $\vee$, $\wedge$, 把 $p$ 中的命題變元改為自身的否定, 把 $\vee$ 全改為 $\wedge$, 把 $\wedge$ 全改為 $\vee$, 這樣得到的公式稱為 $p$ 的對偶, 記為 $p^{*}$. 例如, 公式 $p&#x3D;x_1\vee x_2\wedge \neg x_3$ 的對偶即為 $p^{*}&#x3D;\neg x_1\wedge \neg x_2\vee\neg\neg x_3$. 可以證明(歸納法), 公式 $p^{*}$ 和 $\neg p$ 等值. 一個最簡單的例子是: $x_1\to x_2&#x3D;\neg x_1\vee x_2&#x3D;\neg(x_1\wedge\neg x_2)$. </p>
+<p>進而, 我們有推廣的 De Morgan 律:<br>$$\models\enspace \bigvee_{i&#x3D;1}^n \neg p_i\leftrightarrow\neg \bigwedge_{i&#x3D;1}^n p_i$$<br>$$\models\enspace \bigwedge_{i&#x3D;1}^n \neg p_i\leftrightarrow\neg \bigvee_{i&#x3D;1}^n p_i$$</p>
+<h3 id="析取範式與合取範式"><a href="#析取範式與合取範式" class="headerlink" title="析取範式與合取範式"></a>析取範式與合取範式</h3><p>形如 $y_1\vee y_2\vee\cdots\vee y_n$ 和 $y_1\wedge y_2\wedge\cdots\wedge y_n$ 的公式分別叫做<strong>基本析取式</strong>和<strong>基本合取式</strong>, 其中每個 $y_i$ 是命題變元或命題變元的否定. 任給一個基本析取式, 很容易判定它是否是永真式, 如果式中同時出現 $x_k$ 和 $\neg x_k$, 那麼該式必為永真式; 同樣, 如果在一個基本合取式中同時出現 $x_k$ 和 $\neg x_k$, 那麼該式必為永假式. </p>
+<p>形如 $\bigvee_{i&#x3D;1}^m(\bigwedge_{j&#x3D;1}^{n_i}y_{ij})$ 和 $\bigwedge_{i&#x3D;1}^m(\bigvee_{j&#x3D;1}^{n_i}y_{ij})$ 的公式分別叫做<strong>析取範式</strong>和<strong>合取範式</strong>, 其中每個 $y_i$ 是命題變元或命題變元的否定. 很容易判定析取範式是否為永假式, 因為每一析取支都是基本合取式, 原析取範式為永假式, 當且僅當每一析取支都是永假式; 同樣, 一個合取範式是永真式, 當且僅當每一合取支都是永真式. </p>
+<p>進而, 我們稱 $L(X)$ 中的一個析(合)取範式為<strong>主析(合)取範式</strong>, 如果在它的每一析(合)取支中, 每個命題變元 $x_1,\cdots x_n$ 按下標由小到大的順序出現且僅出現一次. 於是我們有: 任一非永假式必有與它等值的主析取範式.<br>證明即是該主析取範式的求法. 設公式 $p$ 不是永假式, 則它有成真指派, 令它的所有成真指派為 $(v_{11},\cdots,v_{1n})$, $\cdots$, $(v_{k1},\cdots,v_{kn})$, 分別作出對應的基本合取式<br>$$y_{11}\wedge y_{12}\wedge\cdots\wedge y_{1n},\enspace\cdots,\enspace y_{k1}\wedge y_{k2}\wedge\cdots\wedge y_{kn}$$<br>其中<br>$$<br>y_{ij}&#x3D;\begin{cases}<br>x_{j},&amp;\text{if}\enspace v_{ij}&#x3D;1 \\<br>\neg x_{j},&amp;\text{if}\enspace v_{ij}&#x3D;0<br>\end{cases}<br>$$<br>令 $q&#x3D;(y_{11}\wedge\cdots\wedge y_{1n})\vee\cdots\vee(y_{k1}\wedge\cdots\wedge y_{kn})$, 則 $q$ 就是所求的主析取範式.<br>類似地, 任一非永真式 $p$ 必有與它等值的主合取範式, 由廣義 De Morgan 律很容易求出. ($\neg p$ 不是永假式)</p>
+<h3 id="模態邏輯"><a href="#模態邏輯" class="headerlink" title="模態邏輯"></a>模態邏輯</h3><p>這個跟數理邏輯的核心問題似乎關係不大, 但是復旦版數理邏輯裡面有寫, 我覺得也挺有意思, 所以一並整理到這篇筆記裡. </p>
+<p>模態邏輯的語言比命題邏輯僅僅多一個一元聯結詞 $\Box$, 也稱作模態算子. 一元聯結詞 $\Diamond$ 定義為 $\Box$ 的對偶: $\Diamond\alpha&#x3D;\neg\Box\neg\alpha$, 下面的討論中不會涉及. $\Box$ 和 $\Diamond$ 一般分別解釋為 “必然” 和 “可能”, 其他解釋包括 “應當” 和 “允許”, “已知” 和 “不與已知矛盾” 等. </p>
+<p>依舊是語義和語法兩個層次, 我們從語義入手. 根據 Kripke 的可能世界語義學, 我們首先定義模型: </p>
+<ol>
+<li>$W$ 為一個非空集合, $R$ 為 $W$ 上的一個二元關係, 我們稱二元組 $F&#x3D;(W,R)$ 為一個<strong>框架</strong>; </li>
+<li>我們稱從命題變元的集合 $X&#x3D;\left\{A_1,A_2,\cdots\right\}$ 到 $W$ 的冪集的映射 $V:X\to P(W)$ 為一個<strong>賦值</strong>; </li>
+<li>我們稱一個由框架和賦值形成的二元組 $M&#x3D;(F,V)$ 為一個<strong>模型</strong>, 也常寫作 $M&#x3D;(W,R,V)$.</li>
+</ol>
+<p>$W$ 中的元素一般稱為一個<strong>世界</strong>或<strong>可能世界</strong>(可以想象成是一些泡沫狀的平行宇宙), 而 $xRy$ 表示 “從 $x$ 可通達 $y$”. 對一個命題變元 $A_i$, $V(A_i)&#x3D;\bar{w_i}\subset W$, 任意 $w\in\bar{w_i}$, $A_i$ 在 $w$ 中成立. </p>
+<p>隨後我們歸納地定義一個模態公式 $\alpha$ 在模型 $M$ 的世界 $w$ 中為真, 記作 $(M,w)\vDash \alpha$, 如下: </p>
+<ol>
+<li>對命題變元 $A_i$, $(M,w)\vDash A_i$ 當且僅當 $w\in V(A_i)$; </li>
+<li>$(M,w)\vDash \neg\beta$ 當且僅當 $(M,w)\not\vDash \beta$; </li>
+<li>$(M,w)\vDash \beta\to\gamma$ 當且僅當 $(M,w)\not\vDash \beta$ 或 $(M,w)\vDash \gamma$; </li>
+<li>$(M,w)\vDash \Box\beta$ 當且僅當對任意 $w’\in W$, 如果 $w’Rw$, 那麼 $(M,w’)\vDash \beta$.</li>
+</ol>
+<p>結合可能世界的字面意義, 這幾條的含義都是比較直觀的. </p>
+<p>如果對所有 $w\in W$ 都有 $(M,w)\vDash \alpha$, 就稱 $\alpha$ 在模型 $M$ 中為真, 記作 $M\vDash\alpha$. 如果對所有模型 $M$ 都有 $M\vDash\alpha$, 就稱 $\alpha$ 是普遍有效的, 記作 $\vDash\alpha$. </p>
+<p>接著定義模態邏輯的一個推理系統 $K$. 在 $(L1)$, $(L2)$, $(L3)$ 的基礎上添加公理 $K:\Box(\alpha\to\beta)\to(\Box\alpha\to\Box\beta)$, 在原有分離規則的基礎上添加必然化規則 $\text{RN}$: 從 $\alpha$ 可以得到 $\Box\alpha$. “證明” 和 “定理” 的定義都與命題邏輯相類似, 證明規則中多加一條必然化. $\alpha$ 是 $K$ 的定理, 記作 $\vdash_{K}\alpha$. 命題邏輯的句法演繹定理對 $K$ 仍然有效. </p>
+<p>由於 $K$ 是 $L$ 的擴張, $L$ 中的永真式當然也是 $K$ 中的永真式, 但帶有模態語言中永真式的概念不完全相同. 我們把所有命題變元和形如 $\Box\alpha$ 的公式全都列出來: $\beta_1,\beta_2,\cdots$, 並為其指派新的符號如 $B_1,B_2,\cdots$, 若經過變換後關於 $B_i$ 的公式是古典意義的永真式, 則稱原來的模態公式為 $K$ 中的永真式. 顯然, 對每一個模態永真式 $\alpha$, 都有 $\vdash_{K}\alpha$. </p>
+<p>仿照命題邏輯, 我們定義 $\Gamma$ 是一個 $K$-極大一致集, 如果 $\Gamma$ 是 $K$-一致的, 且對任意模態公式 $\alpha$, 或者 $\alpha\in\Gamma$ 或者 $\neg\alpha\in\Gamma$. $K$ 中也有相應的 Lindenbaum 定理: 任一 $K$-一致的公式集都可擴張成一個 $K$-極大一致集. 設 $\Gamma$ 是一個 $K$-極大一致集, 則 $\Box\beta\in\Gamma$ 當且僅當對每一個滿足 $\left\{\alpha:\Box\alpha\in\Gamma\right\}\subset\Delta$ 的 $K$-極大一致集 $\Delta$, 都有 $\beta\in\Delta$. 事實上, 我們可以把每一個這樣的 $K$-極大一致集 $\Delta$ 視為對應於一個可能世界, 結合前面定義的模型, 自然就能對這個定理有一定程度的直觀理解. </p>
+<p>與命題邏輯相同, 我們可以證明模態邏輯的可靠性和完全性. 這裡只討論弱形式, 即 $\vdash_{K}\alpha$ 當且僅當 $\vDash\alpha$. </p>
+<p>可靠性定理的證明仍然是使用歸納法. 顯然公理 $(L1)$, $(L2)$, $(L3)$ 是普遍有效的, 對於公理 $K:\Box(\alpha\to\beta)\to(\Box\alpha\to\Box\beta)$, 任給模型 $M$ 和世界 $w$, 如果 $(M,w)\not\vDash\Box(\alpha\to\beta)$, 那麼 $(M,w)\vDash K$, 所以我們只需討論 $(M,w)\vDash\Box(\alpha\to\beta)$ 的情況; 在這種情況下, 如果 $(M,w)\not\vDash\Box\alpha$, 那麼 $(M,w)\vDash\Box\alpha\to\Box\beta$, 則 $(M,w)\vDash K$; 如果 $(M,w)\vDash\Box\alpha$, 那麼由 $\Box(\alpha\to\beta)$ 和 $\Box\alpha$ 能推出 $\Box\beta$, 即 $(M,w)\vDash\Box\beta$. 故 $(M,w)\vDash K$, 從而 $\vDash K$. 之後用歸納法即可. </p>
+<p>完全性定理的證明思路是, 如果 $\not\vdash_{K}\alpha$, 就找出一個模型 $M$ 和世界 $w$, 使得 $(M,w)\not\vDash\alpha$. 特別地, 在模態邏輯中, 我們能找到一個模型 $M&#x3D;(W,R,V)$, 如果 $\not\vdash_{K}\alpha$, 就會有一個世界 $w\in W$, 使得 $(M,w)\not\vDash\alpha$. 這個為一切非定理提供反例的模型稱為<strong>典範模型</strong>. </p>
+<div class="note primary"><p>定義 $K$ 的典範模型 $M&#x3D;(W,R,V)$ 為: $W&#x3D;\{\Gamma:\Gamma$ 是 $K$-極大一致集$\}$; $(\Gamma,\Gamma’)\in R$ 當且僅當 $\left\{\alpha:\Box\alpha\in\Gamma\right\}\subset\Gamma’$; $V(A_i)&#x3D;\left\{\Gamma\in W:A_i\in\Gamma\right\}$. </p>
+</div>
+
+<p>令 $M$ 為 $K$ 的典範模型, 則對任意模態公式 $\alpha$, 任意 $\Gamma\in W$, 我們有 $(M,\Gamma)\vDash\alpha$ 當且僅當 $\alpha\in\Gamma$, 即任意 $\Gamma$ 對語義推論是封閉的(依舊歸納證明). 假定 $\not\vdash_{K}\alpha$, 則 $\left\{\neg\alpha\right\}$ 是 $K$-一致的, 將其擴張為一個 $K$-極大一致集 $\Gamma$, 考慮典範模型 $M$ 中的世界 $\Gamma$, 則 $\neg\alpha\in\Gamma$, 故 $(M,\Gamma)\not\vDash\alpha$. 這樣就證明了 $K$ 的完全性. </p>
+<p><strong>Remark.</strong> 按照可能世界的語義解釋, 模態邏輯看似只是把經典哲學關於可能、必然等問題的直觀理解進行了形式化, 但實際上, 模態邏輯的結構要比這複雜得多. 最有意思的一點或許是, 形如 $\Box\alpha$ 的句子看似只應該在跨可能世界(元語言)的層次上出現, 卻竟能在單個可能世界中有所斷言, 這似乎是缺乏解釋的. 另外, 按照公式的構成規則, $K$ 中將會出現如 $\Box\Box\alpha$ 這一類沒有明確直觀意義的公式, 這是否是形式化帶來的冗餘? 從數學角度看, 這些問題當然是沒有意義的, 我們關心的只是這個已經形式化的系統本身. 從哲學的角度看, 我們或許可以把每一個 “可能世界” 理解為 Leibniz 式的單子, 每一個單子都反映著整個世界, 也反映著其他單子中反映著其自身的映像, 形成無限遞歸的鏡面系統. </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/logic/" rel="tag"># logic</a>
+              <a href="/tags/foundations/" rel="tag"># foundations</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/01/23/%E9%97%9C%E6%96%BC%E6%82%96%E8%AB%96%E5%92%8C%E6%95%B8%E5%AD%B8%E5%93%B2%E5%AD%B8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/" rel="prev" title="關於悖論和數學哲學的一些想法">
+                  <i class="fa fa-angle-left"></i> 關於悖論和數學哲學的一些想法
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
