@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="數理邏輯筆記 No.2">
+<meta property="og:url" content="https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
+<meta property="og:locale" content="de_DE">
+<meta property="article:published_time" content="2026-02-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-02-28T03:26:06.296Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="foundations">
+<meta property="article:tag" content="logic">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/","path":"2026/02/14/Mathematical_Logic_2/","title":"數理邏輯筆記 No.2"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>數理邏輯筆記 No.2 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AC%82%E8%A9%9E%E6%BC%94%E7%AE%97"><span class="nav-text">謂詞演算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AA%9E%E6%B3%95"><span class="nav-text">語法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90%E5%85%AC%E5%BC%8F"><span class="nav-text">原子公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AC%82%E8%A9%9E%E6%BC%94%E7%AE%97%E5%85%AC%E5%BC%8F%E9%9B%86"><span class="nav-text">謂詞演算公式集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E7%94%B1%E5%87%BA%E7%8F%BE%E5%92%8C%E7%B4%84%E6%9D%9F%E5%87%BA%E7%8F%BE"><span class="nav-text">自由出現和約束出現</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AC%82%E8%A9%9E%E6%BC%94%E7%AE%97-K"><span class="nav-text">謂詞演算 $K$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AA%9E%E7%BE%A9"><span class="nav-text">語義</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%87%8B"><span class="nav-text">解釋</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F%E7%9A%84%E8%B3%A6%E5%80%BC%E5%87%BD%E6%95%B8"><span class="nav-text">公式的賦值函數</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AA%9E%E7%BE%A9%E6%8E%A8%E8%AB%96%E5%92%8C%E6%9C%89%E6%95%88%E5%BC%8F"><span class="nav-text">語義推論和有效式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%AE%9A%E7%BE%A9%E6%80%A7"><span class="nav-text">可定義性*</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7%E5%92%8C%E5%AE%8C%E5%82%99%E6%80%A7"><span class="nav-text">可靠性和完備性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="nav-text">可靠性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E6%80%A7"><span class="nav-text">完全性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B7%8A%E7%B7%BB%E6%80%A7%E5%AE%9A%E7%90%86"><span class="nav-text">緊緻性定理*</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">157</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="數理邏輯筆記 No.2 | 若則理のBlog">
+      <meta itemprop="description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          數理邏輯筆記 No.2
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2026-02-14 00:00:00" itemprop="dateCreated datePublished" datetime="2026-02-14T00:00:00+08:00">2026-02-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Foundations/" itemprop="url" rel="index"><span itemprop="name">Foundations</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">First-order logic; Definability; Gödel's completeness theorem.</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="謂詞演算"><a href="#謂詞演算" class="headerlink" title="謂詞演算"></a>謂詞演算</h1><p>命題邏輯雖結構簡單易於研究, 但應用範圍較窄, 例如古典三段論推理就沒法用命題語言來形式化. 一階邏輯是對命題邏輯的細化, 我們在命題邏輯的基礎上引入謂詞和量詞, 以此來進一步研究 “原子命題” 的內部結構. 由此建立的新數學模型稱為 “謂詞演算”, 它具有更細緻, 複雜的結構, 能更深入地表現實際的推理過程. </p>
+<p>需要注意的是, 在一階邏輯中, 變元僅僅指代個體, 量詞的控制範圍也僅限於個體, 這一點與討論 “(個體組成的)集合” 和 “(個體間的)關係” 的二階邏輯不同. 儘管二階邏輯的語言更豐富, 但一階邏輯仍然在邏輯學中佔有主導地位, 原因之一是一階邏輯有完全性, 而二階邏輯沒有. 也有哲學家認為二階邏輯本質上已經是數學和集合論, 並不是單純的邏輯. </p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><h3 id="原子公式"><a href="#原子公式" class="headerlink" title="原子公式"></a>原子公式</h3><p>為形式化一個一般的數學命題, 我們總共需要4個集: 個體變元集 $X$, 個體常元集 $C$, 運算(函數)集 $F$, 謂詞集 $R$. </p>
+<ol>
+<li>個體變元集 $X&#x3D;\left\{x_1,x_2,\cdots\right\}$ 是可數集, 個體變元 $x_i$ 用來表示某個不定的個體對象; </li>
+<li>個體常元集 $C&#x3D;\left\{c_1,c_2,\cdots\right\}$ 是可數集, 也可以是有限集(包括空集), 個體常元 $c_i$ 用來表示確定的個體對象; </li>
+<li>運算集 $F&#x3D;\left\{f^1_1,f^1_2,\cdots,f^2_1,f^2_2,\cdots\right\}$ 是可數集, 也可以是有限集(包括空集), $f^n_i$ 叫做第 $i$ 個 $n$ 元運算符; </li>
+<li>謂詞集 $R&#x3D;\left\{R^1_1,R^1_2,\cdots,R^2_1,R^2_2,\cdots\right\}$ 是可數集, 也可以是有限集(不能是空集), $R^n_i$ 叫做第 $i$ 個 $n$ 元謂詞, 表示某種個體對象集上的 $n$ 元關係.</li>
+</ol>
+<p>我們首先構建項集. 當 $F&#x3D;\varnothing$ 時, 項集 $T&#x3D;X\cup C$;<br>當 $F\not&#x3D;\varnothing$ 時, $T$ 有如下分層:<br>$$T&#x3D;T_0\cup T_1\cup\cdots\cup T_k\cup\cdots$$<br>其中<br>$$<br>\begin{align*}<br>T_0 &#x3D;&amp; X\cup C, \\<br>T_1 &#x3D;&amp; \left\{f^1_1(x_1),\cdots,f^1_1(c_1),\cdots,f^1_2(x_1),\cdots,f^2_1(x_1,x_1),\cdots\right\},\\<br>T_2 &#x3D;&amp; \left\{f^1_1(f^1_1(x_1)),\cdots,f^2_1(x_1,f^1_1(x_1)),\cdots\right\},\\<br>&amp;\cdots\cdots<br>\end{align*}<br>$$<br>$T_k$ 中元素是由 $T_0$ 中元素經 $k$ 次運算得到的. 項集 $T$ 是由 $X\cup C$ 生成的 $F$ 型代數, 其生成方式和分層結構與命題代數 $L(X)$ (由 $X$ 生成的 $\left\{\neg,\to\right\}$ 型代數) 相類似. 同樣, $T$ 的各個層次間沒有公共元素. </p>
+<p>$T$ 中只含個體常元的項稱為<strong>閉項</strong>, 例如 $f^1_1(c_1)$, $f^2_1(c_1,f^1_1(c_2))$ 等. 所有閉項構成的集就是由 $C$ 生成的 $F$ 型代數. </p>
+<p>進而定義<strong>原子公式集</strong><br>$$Y&#x3D;\bigcup_{i,n}\left(\left\{R^n_i\right\}\times T^n\right)$$<br>即<br>$$Y&#x3D;\left\{(R^n_i,t_1,\cdots,t_n):R^n_i\in R,t_1,\cdots,t_n\in T\right\}$$<br>其中 $(R^n_i,t_1,\cdots,t_n)$ 一般寫作 $R^n_i(t_1,\cdots,t_n)$. </p>
+<p>在謂詞演算中, 原子公式是用來表示命題的最小單位, 而項則是構成原子命題的基礎. 項大致可類比為日常語言中的名詞, 而謂詞可以理解為描述對象的某種性質. </p>
+<h3 id="謂詞演算公式集"><a href="#謂詞演算公式集" class="headerlink" title="謂詞演算公式集"></a>謂詞演算公式集</h3><p>隨後我們形式地定義謂詞演算的語言. 首先列出字母表: </p>
+<ol>
+<li>個體變元 $x_1,x_2,\cdots$; </li>
+<li>個體常元 $c_1,c_2,\cdots$; </li>
+<li>運算符 $f^1_1,f^1_2,\cdots,f^2_1,f^2_2,\cdots$; </li>
+<li>謂詞 $R^1_1,R^1_2,\cdots,R^2_1,R^2_2,\cdots$; </li>
+<li>聯結詞 $\neg,\to$; </li>
+<li>全稱量詞 $\forall$; </li>
+<li>左右括號, 逗號.</li>
+</ol>
+<p>以原子公式為出發點, 謂詞演算公式的形成規則是 </p>
+<ol>
+<li>每個原子公式是公式; </li>
+<li>若 $p$, $q$ 是公式, 則 $\neg p$, $p\to q$, $\forall x_i\thinspace p\thinspace(i&#x3D;1,2,\cdots)$ 是公式; </li>
+<li>任一公式由前兩條規則使用有限次得到.</li>
+</ol>
+<p>用 $K(Y)$ 表示所有謂詞演算公式構成的集. $T$ 是可數集, 故 $Y$ 是可數集, 因此 $K(Y)$ 也是可數集. 仿照 $L(X)$, $K(Y)$ 也具有分層性, 零層即為原子公式集, 第 $k$ 層由原子公式經 $k$ 次運算得到. </p>
+<p>除 $\neg$, $\to$, $\forall$ 外, 還可以定義 $\vee$, $\wedge$, $\leftrightarrow$ 及存在量詞 $\exists$. 前三者定義同前, $\exists$ 定義為 $\forall$ 的對偶: $\exists x_i\thinspace p&#x3D;\neg\forall x_i\thinspace \neg p$. </p>
+<h3 id="自由出現和約束出現"><a href="#自由出現和約束出現" class="headerlink" title="自由出現和約束出現"></a>自由出現和約束出現</h3><p>在一個公式中, 個體變元 $x$ 的出現如果不在 $\forall x$ 中或 $\forall x$ 的範圍中, 則叫做<strong>自由出現</strong>, 否則叫做<strong>約束出現</strong>. 一個公式若不含自由出現的變元, 就叫做<strong>閉式</strong>. </p>
+<p>這個定義是為了區分項對公式中的某變元是否可代換, 從而排除由於量詞存在而產生的 “變元干擾”. 用項 $t$ 去代換公式 $p$ 中的自由出現的個體變元 $x$, 若在代換後的公式裡, $t$ 的變元都是自由的, 則稱 “$t$ 對 $p$ 中 $x$ 是自由的”. 即是說, 如果用 $t$ 替換 $p$ 中的自由變元 $x$, 結果 $t$ 的某一變元 $x’$ 落入原公式中 $\forall x’$ 的範圍內, 那麼原本不受約束的部分就會受到約束, 因此 $t$ 對 $p$ 中 $x$ 是不可代換(不自由)的. </p>
+<p>例如, 假設二元謂詞 $R^2_1$ 表示 “相等”, 公式 $p$ 為 $\neg\forall y\thinspace R^2_1(x,y)$ (即存在 $x$, 使得 $x\not&#x3D;y$ ), 如果我們用 $t&#x3D;y$ 代換 $p$ 中的 $x$, 那麼公式就變為 $\neg\forall y\thinspace R^2_1(y,y)$, 即存在 $y$, $y$ 不等於自身. 在這種情況下, 替換是不被允許的. </p>
+<p>下面兩種情況下, $t$ 對 $p$ 中 $x$ 是自由的: </p>
+<ol>
+<li>$t$ 是閉項; </li>
+<li>$x$ 不在 $p$ 中自由出現.</li>
+</ol>
+<p>我們用 $p(t)$ 表示用項 $t$ 代換 $p(x)$ 中所有自由出現的 $x$. (注意, 我們寫 $p(x)$, 其中 $x$ 指的是公式中自由出現的 $x$. )</p>
+<h3 id="謂詞演算-K"><a href="#謂詞演算-K" class="headerlink" title="謂詞演算 $K$"></a>謂詞演算 $K$</h3><p>謂詞演算 $K$ 的定義方式與命題演算 $L$ 類似, 即在公式集 $K(Y)$ 上規定 “公理” 和 “證明”.<br><strong>“公理”</strong> 定義為 $K(Y)$ 的具有如下形狀的公式:<br>$(K1)$ $p\to(q\to p)$;<br>$(K2)$ $(p\to (q\to r))\to((p\to q)\to(p\to r))$;<br>$(K3)$ $(\neg p\to\neg q)\to(q\to p)$;<br>$(K4)$ $\forall x p(x)\to p(t)$, 其中 $t$ 對 $p$ 中 $x$ 是自由的;<br>$(K5)$ $\forall x(p\to q)\to(p\to\forall x q)$, 其中 $x$ 不在 $p$ 中自由出現. </p>
+<p>其中 $p,q,r\in K(Y)$. 前三條公理模式和命題演算是一樣的, 有些書中的公理 $(K5)$ 形為 $\forall x(p\to q)\to(\forall x p\to\forall x q)$, 則不需要 $x$ 不在 $p$ 中自由出現的條件. </p>
+<p><strong>“證明”</strong> 的定義與命題演算基本相同, 但增加一條推廣規則〔$\text{Gen}$ 規則, 也稱概括規則〕.<br>設 $\Gamma\subseteq K(Y)$, 我們說 “公式 $p$ 從公式集 $\Gamma$ 中可證”, 假如存在公式的有限序列 $p_1,\cdots,p_n$, 其中 $p_n&#x3D;p$, 且每個 $p_k$ 都滿足: </p>
+<ol>
+<li>$p_k\in\Gamma$, 或</li>
+<li>$p_k$ 是 “公理”, 或</li>
+<li>存在 $i,j&lt;k$ 使得 $p_j&#x3D;p_i\to p_k$, 或</li>
+<li>存在 $j&lt;k$, 使得 $p_k&#x3D;\forall x\thinspace p_j$. 其中的 $x$ 叫做 $\text{Gen}$ 變元.</li>
+</ol>
+<p>則有限序列 $p_1,\cdots,p_n$ 叫做 $p$ 從 $\Gamma$ 的 “證明”. 語法推論的定義同命題演算. </p>
+<p>如果我們把 $K(Y)$ 的公式視為命題演算中用命題變元表示的簡單命題, 那麼謂詞演算可以很自然地看成是命題演算的擴張.<br>命題演算中的定理在謂詞演算中當然也成立, 只需用公式 $p_1,p_2,\cdots,p_n\in K(Y)$ 代換原公式中的命題變元 $x_1,x_2,\cdots,x_n$ 便可, 即<br>$$\vdash_{L}\enspace p(x_1,x_2,\cdots,x_n)\quad\Rightarrow\quad\vdash_{K}\enspace p(p_1,p_2,\cdots,p_n)$$</p>
+<p>若 $p(x_1,x_2,\cdots,x_n)$ 是命題演算中的重言式, 那麼代換後的 $p(p_1,p_2,\cdots,p_n)$ 稱為 $K$ 的<strong>命題演算型重言式</strong>, 簡稱重言式. 需注意的是, $K$ 的定理不一定是重言式. </p>
+<hr>
+
+<p>演繹定理, 歸謬律和反證律在謂詞演算中同樣成立, 但關於 $\text{Gen}$ 變元的使用有一定變化. </p>
+<ol>
+<li><strong>演繹定理</strong>: (1) 若 $\Gamma\vdash p\to q$, 則 $\Gamma\cup\left\{p\right\}\vdash q$; (2) 若 $\Gamma\cup\left\{p\right\}\vdash q$, 且證明中所用 $\text{Gen}$ 變元不在 $p$ 中自由出現, 則不增加新的 $\text{Gen}$ 變元就可得 $\Gamma\vdash p\to q$; </li>
+<li><strong>反證律</strong>: 若 $\Gamma\cup\left\{\neg p\right\}\vdash q$ 及 $\neg q$, 且 $\text{Gen}$ 變元不在 $p$ 中自由出現, 則不增加新的 $\text{Gen}$ 變元就可得 $\Gamma\vdash\neg q$; </li>
+<li><strong>歸謬律</strong>: 若 $\Gamma\cup\left\{p\right\}\vdash q$ 及 $\neg q$, 且 $\text{Gen}$ 變元不在 $p$ 中自由出現, 則不增加新的 $\text{Gen}$ 變元就可得 $\Gamma\vdash\neg q$.</li>
+</ol>
+<p>要求 $\text{Gen}$ 變元不在 $p$ 中自由出現是因為定理證明過程中使用了公理 $(K5)$. </p>
+<p>另有關於存在量詞的兩條規則: </p>
+<ol>
+<li>$\exists_1$ <strong>規則</strong>: 設項 $t$ 對 $p(x)$ 中的 $x$ 自由, 則有 $\vdash p(t)\to\exists x p(x)$; </li>
+<li>$\exists_2$ <strong>規則</strong>: 設 $\Gamma\cup\left\{p\right\}\vdash q$, 其證明中所用 $\text{Gen}$ 變元不在 $p$ 中自由出現, 且 $x$ 不在 $q$ 中自由出現, 那麼有 $\Gamma\cup\left\{\exists x p\right\}\vdash q$, 且除 $x$ 不增加其他 $\text{Gen}$ 變元.</li>
+</ol>
+<p>$p$ 與 $q$ 可證等價(簡稱等價), 指 $\vdash p\leftrightarrow q$ 成立, 這個概念相當於命題演算中的等值公式. “可證等價” 給出了 $K(Y)$ 上的一個等價關係, 確定了 $K(Y)$ 的一個分類. 我們有 </p>
+<ol>
+<li>$\vdash \forall x\thinspace p(x)\leftrightarrow\forall y\thinspace p(y)$; </li>
+<li>$\vdash \exists x\thinspace p(x)\leftrightarrow\exists y\thinspace p(y)$,</li>
+</ol>
+<p>其中 $y$ 不在 $x$ 中出現. 這兩條可用來更換約束變元. </p>
+<p>在謂詞演算中, 我們同樣有對偶律. 設公式 $p$ 只含原子公式及 $\neg$, $\vee$, $\wedge$, $\forall$, $\exists$, 把原子公式換為其否定, $\vee$ 和 $\wedge$ 互換, $\forall$ 和 $\exists$ 互換, 得到公式 $p^{*}$, 則 $\vdash \neg p\leftrightarrow p^{*}$. </p>
+<details class="note info"><summary><p>前束範式</p>
+</summary>
+<p><strong>前束範式</strong>指形如 $Q_1 x_1\cdots Q_n x_n\thinspace p$ 的公式, 其中 $Q_i$ 為 $\forall$ 或 $\exists$, $p$ 是不含量詞的公式. 可以歸納證明, 每一個公式都有與之等價的前束範式, 求出該前束範式的方法是多次使用如下等價推導規則: (用 $Q^{*}$ 表示 $Q$ 的對偶)</p>
+<ol>
+<li>若 $y$ 不在 $p(x)$ 中出現, 則 $\vdash Qx\thinspace p(x)\leftrightarrow Qy\thinspace p(y)$; </li>
+<li>若 $x$ 不在 $p$ 中自由出現, 則 $\vdash(p\to Qx\thinspace q)\leftrightarrow Qx(p\to q)$; 若 $x$ 不在 $q$ 中自由出現, 則 $\vdash(Qx\thinspace p\to q)\leftrightarrow Q^{*}x(p\to q)$; </li>
+<li>$\vdash\neg Qx\thinspace p\leftrightarrow Q^{*}x\thinspace \neg p$.</li>
+</ol>
+<p>設 $n&gt;0$, 若前束範式是由全稱量詞開始, 從左至右改變 $n-1$ 次詞性, 則叫做 $\Pi_n$ 型前束範式; 若由存在量詞開始, 從左至右改變 $n-1$ 次詞性, 則叫做 $\Sigma_n$ 型前束範式. </p>
+
+</details>
+
+<h2 id="語義"><a href="#語義" class="headerlink" title="語義"></a>語義</h2><h3 id="解釋"><a href="#解釋" class="headerlink" title="解釋"></a>解釋</h3><p>要討論謂詞演算的語義, 我們必須解釋系統中每一個符號的意義, 即挑選一個外部的數學 “結構” 來符合這種語言的陳述, 使其中的謂詞, 函數和項有所指稱. 這點與命題邏輯大不相同, 因為命題邏輯中的簡單命題只帶有抽象的真值, 一般不會具體地用來描述某個數學結構. </p>
+<p>設非空集 $M$ 具有如下性質: </p>
+<ol>
+<li>對 $K$ 的每個個體常元 $c_i$, 都有 $M$ 中的元素 $\overline{c_i}$ 與之對應: $c_i\mapsto\overline{c_i}$; </li>
+<li>對 $K$ 的每個運算符 $f^n_i$, 都有 $M$ 上的 $n$ 元運算 $\overline{f^n_i}$ 與之對應: $f^n_i\mapsto\overline{f^n_i}$; </li>
+<li>對 $K$ 的每個謂詞 $R^n_i$, 都有 $M$ 上的 $n$ 元關係 $\overline{R^n_i}$ 與之對應: $R^n_i\mapsto\overline{R^n_i}$.</li>
+</ol>
+<p>〔註: 後面出現多個解釋域時, 就把解釋域記為上標以示區分, 例如, 把 $\overline{c}$ 具體寫作 $\overline{c}^M$. 〕</p>
+<p>帶有上述三個映射的非空集 $M$ 叫做 $K$ 的<strong>解釋域</strong>. 解釋域的元素叫做個體對象, 解釋域通常也叫做 “解釋” 或 <strong>“結構”</strong>.<br>解釋域是帶有特定內部結構的集合, 其結構與謂詞演算的語法結構具有一定對應性, 但集合內部的性質不一定都能被謂詞演算這種語言 “捕捉”. </p>
+<hr>
+
+<p>要討論 $K$ 中公式的真假, 除了明確解釋域, 還需確定個體變元的解釋. 為此引入 “項解釋”, 把項集 $T$ 與給定解釋域聯繫起來.<br>我們把映射 $\varphi_0:X\to M$ 叫做個體變元的對象指派. 隨後即可遞歸地定義項解釋 $\varphi:T\to M$ 如下: </p>
+<ol>
+<li>$\varphi(x_i)&#x3D;\varphi_0(x_i)$, $\varphi(c_i)&#x3D;\overline{c_i}$; </li>
+<li>$\varphi(f^n_i(t_1,\cdots,t_n))&#x3D;\overline{f^n_i}(\varphi(t_1),\cdots,\varphi(t_n))$. (保運算性)</li>
+</ol>
+<p>對固定的解釋域 $M$, 把所有項解釋 $\varphi$ 組成的集記作 $\varPhi_M$. </p>
+<p>設 $x$ 是某個給定的個體變元, $y$ 是任意的個體變元, 且 $\varphi,\varphi’\in \varPhi_M$ 滿足 $y\not&#x3D;x$ $\Rightarrow$ $\varphi(y)&#x3D;\varphi’(y)$, 則稱 $\varphi’$ 為 $\varphi$ 的 $x$ 項變通. $\varphi$ 與 $\varphi’$ 除 $x$ 的指派可能不同, 其他變元的指派全都相同. 項變通的概念將用於對含量詞公式的解釋. </p>
+<h3 id="公式的賦值函數"><a href="#公式的賦值函數" class="headerlink" title="公式的賦值函數"></a>公式的賦值函數</h3><p>在固定的解釋域 $M$ 中, $\varphi_0$ 一旦給定, 項解釋 $\varphi$ 就確定下來, 每個原子公式就可解釋為關於 $M$ 中個體對象的命題, 我們於是可以討論 $K$ 中公式的真假. </p>
+<p>設 $M$ 是給定的解釋域, $p$ 是 $K$ 中任一公式, 歸納定義 $|p|:\varPhi_M\to Z_2$ 如下:<br>對任一項解釋 $\varphi\in\varPhi_M$, </p>
+<ol>
+<li>當 $p$ 為原子公式 $R^n_i(t_1,\cdots,t_n)$ 時, 令<br>$$<br>|p|(\varphi)&#x3D;\begin{cases}<br>1,&amp;\text{if}\enspace(\overline{t_1},\cdots,\overline{t_n})\in \overline{R^n_i},\\<br>0,&amp;\text{if}\enspace(\overline{t_1},\cdots,\overline{t_n})\not\in \overline{R^n_i};<br>\end{cases}<br>$$</li>
+<li>當 $p&#x3D;\neg q$ 或 $p&#x3D;q\to r$ 時, 分別令<br>$$<br>\begin{align*}<br>|\neg q|(\varphi)&amp;&#x3D;\neg|q|(\varphi), \\<br>|q\to r|(\varphi)&amp;&#x3D;|q|(\varphi)\to|r|(\varphi);<br>\end{align*}<br>$$</li>
+<li>當 $p&#x3D;\forall x\thinspace q$ 時, 若 $\varphi$ 的任一 $x$ 變通 $\varphi’$ 都使 $|q|(\varphi’)&#x3D;1$, 則 $|\forall x\thinspace q|(\varphi)&#x3D;1$, 反之, $|\forall x\thinspace q|(\varphi)&#x3D;0$. (這一點類似於上一篇提到的模態邏輯中的 $\Box$ 算子)</li>
+</ol>
+<p>〔註: $|p|(\varphi)&#x3D;1$ 在有些書中寫作 $(M,\varphi)\models p$. 〕</p>
+<hr>
+
+<p>設 $M$ 是 $K$ 的解釋域, $\varphi,\psi\in\varPhi_M$, 那麼顯然有: </p>
+<ol>
+<li>若對項 $t$ 中每一變元 $x$ 都有 $\varphi(x)&#x3D;\psi(x)$, 則 $\varphi(t)&#x3D;\psi(t)$; </li>
+<li>若對公式 $p$ 中每一自由出現的變元 $x$ 都有 $\varphi(x)&#x3D;\psi(x)$, 則 $|p|(\varphi)&#x3D;|p|(\psi)$. 即, 公式的真值只與在公式中自由出現的變元指派有關.</li>
+</ol>
+<p>若對任一 $\varphi\in\varPhi_M$ 都有 $|p|(\varphi)&#x3D;1$, 則公式 $p$ 在解釋域 $M$ 中恆真, 記作 $|p|_M&#x3D;1$. 若 $p$ 在 $M$ 中恆假, 則記作 $|p|_M&#x3D;0$. 在 $M$ 中非恆假的公式叫做 $M$ 中可滿足公式. 由於閉式中沒有自由出現的變元, 所以閉式的真值與特定指派無關, 由此可知, 任一閉式 $p$ 在解釋域 $M$ 中恆真或恆假二者必居其一. </p>
+<p>容易看出, $|p|_M&#x3D;1$ 當且僅當 $|\forall x\thinspace p|_M&#x3D;1$. 設 $x_{i_1},\cdots,x_{i_n}$ 是 $p$ 中所有自由出現的變元, 我們稱 $\forall x_{i_1}\cdots\forall x_{i_n}\thinspace p$ 為 $p$ 的<strong>全稱閉式</strong>. 設 $p$ 的全稱閉式為 $p’$, 則 $|p|_M&#x3D;1$ 當且僅當 $|p’|_M&#x3D;1$. </p>
+<h3 id="語義推論和有效式"><a href="#語義推論和有效式" class="headerlink" title="語義推論和有效式"></a>語義推論和有效式</h3><p>首先定義模型. 設 $M$ 是 $K$ 的解釋域, 若公式集 $\Gamma$ 的每個公式都在 $M$ 中恆真, 則稱 $M$ 是 $\Gamma$ 的一個<strong>模型</strong>:<br>$$r\in\Gamma\enspace\Leftrightarrow\enspace|r|_M&#x3D;1$$<br>$\Gamma&#x3D;\varnothing$ 時, 任何解釋域都是 $\Gamma$ 的模型. </p>
+<p>公式 $p$ 是公式集 $\Gamma$ 的<strong>語義推論</strong>, 記作 $\Gamma\models p$, 是指 $p$ 在 $\Gamma$ 的所有模型中都恆真. 換句話說, $\Gamma$ 的任何模型也都是 $\Gamma\cup\left\{p\right\}$ 的模型.<br>若 $\varnothing\models p$, 則稱 $p$ 為 $K$ 的<strong>有效式</strong>, 記作 $\models p$. 若 $\neg p$ 不是有效式, 則 $p$ 叫做 $K$ 的<strong>可滿足公式</strong>. 如果 $p$ 是 $K$ 的可滿足公式, 那麼 $\Gamma&#x3D;\left\{p\right\}$ 必定有模型. </p>
+<details class="note success"><summary><p>Example</p>
+</summary>
+<p>舉一個直觀的例子, 如果我們把 Euclid 的前四條公設作為公理建立一個形式系統 $G$, 那麼歐氏幾何, 橢圓幾何, 雙曲幾何都是 $\Gamma&#x3D;\varnothing$ 的模型. 若公式 $p$ 是 “兩點之間測地線最短” 在 $G$ 中的形式化, 則 $p$ 是 $G$ 的有效式; 若公式 $q$ 是 Euclid 第五公設在 $G$ 中的形式化, 則 $q$ 和 $\neg q$ 都是 $G$ 的可滿足公式, 且歐氏幾何是 $\Gamma&#x3D;\left\{q\right\}$ 的模型. </p>
+
+</details>
+
+<p>$K$ 中的重言式都是有效式, 特別地, $(K1)$, $(K2)$, $(K3)$ 三種模式的公理都是有效式. </p>
+<p>容易看出, $\Gamma\models p$ 當且僅當 $\Gamma\models\forall x\thinspace p$, 所以有 $\left\{p\right\}\models\forall x\thinspace p$. 但 $\models p\to\forall x\thinspace p$ 不一定成立. 例如, 公式 $R^1(x)\to\forall x R^1(x)$ 顯然不是有效式, 直觀上就能看出, 這個公式有 “以偏概全” 的可能, 也很容易找到一個使其為假的賦值. 這就解釋了為何謂詞演算中的演繹定理必須對 $\text{Gen}$ 變元的自由出現加以限制. (參見上文)</p>
+<h3 id="可定義性"><a href="#可定義性" class="headerlink" title="可定義性*"></a>可定義性*</h3><p>上文已經提到, 給定一種語言, 其解釋域內部的結構不一定能由這種語言完全 “捕捉”, 集合內的某些性質有可能 “溢出” 語言的描述能力, 因而無法在這種語言下得到明確, 著名的 Skolem 悖論即是來自於語言及其所描述數學結構之間的這種不協調性. 因此, 討論結構 $M$ 的哪些子集或關係可以被系統中的公式描述就成了一個很重要的問題. (這裡的討論不侷限於一般的謂詞演算 $K$ )</p>
+<p>固定一個語言 $L$, 設 $M$ 是 $L$ 的結構(解釋域). 假定 $x_1,\cdots,x_n$ 是公式 $p\in L$ 中所有自由出現的變元, 且 $a_1,\cdots,a_n\in M$, 定義 $M\models p\left[a_1,\cdots,a_n\right]$, 若存在項解釋 $\varphi$ 使得 $\varphi(x_i)&#x3D;a_i$ 且 $|p|(\varphi)&#x3D;1$. 進而, 我們稱 $n$ 元關係<br>$$\left\{(a_1,\cdots,a_n):M\models p\left[a_1,\cdots,a_n\right]\right\}$$<br>是公式 $p$ 在 $M$ 中<strong>定義</strong>的關係. 若 $M$ 中的 $n$ 元關係 $R^n$ 可被某個公式 $p$ 定義, 則稱 $R^n$ 是<strong>可定義</strong>的. </p>
+<hr>
+
+<p>給定一個語言, 我們考慮其不同結構之間的關係. 令 $A$ 和 $B$ 是一個語言的兩個結構, 我們稱映射 $h:A\to B$ 為一個從 $A$ 到 $B$ 的<strong>同態</strong>, 如果它滿足: </p>
+<ol>
+<li>對每個(不是等詞的) $n$ 元謂詞 $R$ 和每組 $a_1,\cdots,a_n\in A$, 都有 $(a_1,\cdots,a_n)\in \overline{R}^A$ 當且僅當 $(h(a_1),\cdots,h(a_n))\in \overline{R}^B$, 其中 $n$ 取遍正整數; </li>
+<li>對每個 $n$ 元運算符 $f$ 和每組 $a_1,\cdots,a_n\in A$, 都有 $h(\overline{f}^A(a_1,\cdots,a_n))&#x3D;\overline{f}^B(h(a_1),\cdots,h(a_n))$, 其中 $n$ 取遍正整數; </li>
+<li>對每個個體常元 $c$, 都有 $h(\overline{c}^A)&#x3D;\overline{c}^B$.</li>
+</ol>
+<p>進一步, 如果 $h$ 是一個雙射, 那麼稱 $h$ 為一個從 $A$ 到 $B$ 的<strong>同構</strong>, 記作 $A\cong B$. </p>
+<p>於是我們有<strong>同態定理</strong>: 設 $h:A\to B$ 是一個從 $A$ 到 $B$ 的同態, $\varphi\in\varPhi_A$, 則</p>
+<ol>
+<li>$h\circ\varphi\in\varPhi_B$; </li>
+<li>對任何不含量詞且不含等詞的公式 $p$, $|p|(\varphi)&#x3D;1$ 當且僅當 $|p|(h\circ\varphi)&#x3D;1$; </li>
+<li>若 $h$ 是單射, 則 (2) 中公式 $p$ 可以包含等詞; </li>
+<li>若 $h$ 是滿射, 則 (2) 中公式 $p$ 可以包含量詞.</li>
+</ol>
+<p>進而, 我們稱 $L$ 上的兩個結構 $A$ 和 $B$ 是<strong>初等等價</strong>的, 記作 $A\equiv B$, 如果對 $L$ 中的任意閉式 $p$ 都有 $|p|_A&#x3D;1$ 當且僅當 $|p|_B&#x3D;1$.<br>由同態定理可知, 若存在雙射 $h:A\to B$, 那麼對任何公式 $p$ 都有 $|p|(\varphi)&#x3D;1$ 當且僅當 $|p|(h\circ\varphi)&#x3D;1$, 故 $A$ 和 $B$ 是初等等價的, 這是因為, 同構的兩個結構, 本質上其實是同一個結構. 然而反過來, 若 $A$ 和 $B$ 初等等價, 則不能得出 $A$ 和 $B$ 是同構的. 可能情況是, 兩個結構儘管不同, 但用我們的語言不能描述出它們的區別, 這只能說明語言的匱乏. </p>
+<hr>
+
+<p>結構 $A$ 上的一個<strong>自同構</strong>就是 $A$ 到 $A$ 自身的一個同構. 由同態定理可知, 任何自同構都保持可定義的關係. 令 $h:A\to A$ 是一個自同構, $R$ 是 $A$ 上的一個可定義的 $n$ 元關係, 則對任意 $a_1,\cdots,a_n\in A$ 都有<br>$$(a_1,\cdots,a_n)\in R\enspace\Leftrightarrow\enspace(h(a_1),\cdots,h(a_n))\in R$$<br>這個結果經常被用來證明某些關係的不可定義性. </p>
+<p>例如, 考慮由全體實數和其上的自然序組成的結構 $(\mathbb{R},&lt;)$. 令 $h:\mathbb{R}\to\mathbb{R}$ 為 $h(x)&#x3D;\sqrt[3]{x}$, 則 $h$ 是該結構的一個自同構, 由此可以證明自然數集 $\mathbb{N}$ (作為一元關係)在該結構上是不可定義的. 假設公式 $p$ 在該結構上定義了關係 $R$, 那麼對自然數 $n&gt;1$, 若 $n\in R$ 則必有 $h(n)&#x3D;\sqrt[3]{n}\in R$, 因此 $R\not&#x3D;\mathbb{N}$. 這就表明了 $\mathbb{N}$ 的不可定義性. </p>
+<p>再比如, 加法函數的圖像 $\left\{(m,n,p):p&#x3D;m+n\right\}$ (作為三元關係) 在結構 $(\mathbb{N},\cdot)$ 中不可定義. 我們只需令 $h:\mathbb{N}\to\mathbb{N}$,<br>$$<br>h(x)&#x3D;\begin{cases}<br>2^b \cdot 3^a ,&amp;\text{if}\enspace x&#x3D;2^a \cdot 3^b\\<br>x,&amp;\text{if}\enspace 2\nmid x,\thinspace 3\nmid x<br>\end{cases}<br>$$<br>由唯一分解定理知 $h$ 是一個雙射, 故 $h$ 定義了 $\mathbb{N}$ 上的一個自同構. 如果有一個公式 $\alpha$ 定義了 $R&#x3D;\left\{(m,n,p):p&#x3D;m+n\right\}$, 則由 $(1,2,3)\in R$ 可以推出 $(h(1),h(2),h(3))&#x3D;(1,3,2)\in R$, 從而導出矛盾. </p>
+<h2 id="可靠性和完備性"><a href="#可靠性和完備性" class="headerlink" title="可靠性和完備性"></a>可靠性和完備性</h2><h3 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h3><p>可靠性定理是指: $\Gamma\vdash p\Rightarrow\Gamma\models p$. 證明類似命題邏輯, 驗證 $(K1)$~$(K5)$ 型公理的有效性, 然後歸納法. </p>
+<p>推論: $K$ 是無矛盾的, 即對任意公式 $p$, $\vdash p$ 和 $\vdash\neg p$ 不同時成立. 否則由可靠性定理就會有 $\models p$ 和 $\models\neg p$ 同時成立, 而這是不可能的. 類似地也可證明, 若公式集 $\Gamma$ 有模型, 則 $\Gamma$ 是無矛盾的. </p>
+<h3 id="完全性"><a href="#完全性" class="headerlink" title="完全性"></a>完全性</h3><p>完全性定理是指: $\Gamma\models p\Rightarrow\Gamma\vdash p$, 即 $K$ 的有效式一定是 $K$ 的定理. </p>
+<p>首先證明定理: <strong>無矛盾公式集一定有可數集模型</strong>.<br>證明分為六個步驟:<br><strong>(1) 作擴大的謂詞演算 $K^{+}$</strong><br>取可數個新的個體常元 $b_0,b_1,\cdots$, $B&#x3D;\left\{b_0,b_1,\cdots\right\}$ 與原個體常元集 $C&#x3D;\left\{c_0,c_1,\cdots\right\}$ 不相交. 擴大 $K$, 以 $C\cup B$ 為個體常元集, 其他保持不變, 得到新的謂詞演算記作 $K^{+}$, 其項集記作 $T^{+}$, 原子公式集記作 $Y^{+}$. 則 $T\subseteq T^{+}$, $Y\subseteq Y^{+}$, $K(Y)\subseteq K(Y^{+})$. </p>
+<p><strong>(2) 作擴大的無矛盾公式集 $\Gamma’\supset\Gamma$</strong><br>把 $K^{+}$ 中所有只含一個自由變元的公式(可數個)全部取出排成不重複的一列: $p_0(y_0),\thinspace p_1(y_1),\cdots,\thinspace p_n(y_n),\cdots$, 其中 $y_n&#x3D;x_{i_n}\in X$ 這些變元可以重複出現. 在 $B$ 中取一串 $b_{i_0},\thinspace b_{i_1},\cdots$, 滿足: (1) $b_{i_0}$ 不在 $p_0(y_0)$ 中出現; (2) $n&gt;0$ 時, $b_{i_n}$ 不在 $p_0(y_0),\cdots,p_n(y_n)$ 中出現, 且 $b_{i_n}\not\in\left\{b_{i_0},\cdots,b_{i_{n-1}}\right\}$. </p>
+<p>記 $r_n&#x3D;p_n(b_{i_n})\to\forall y_n\thinspace p_n(y_n)$, 並令 $\Gamma’&#x3D;\Gamma\cup\left\{r_0,r_1,r_2\cdots\right\}$. 隨後反證 $\Gamma’$ 是無矛盾的: 假設 $q\in K^{+}$ 使得 $\Gamma’\vdash_{K^{+}} q$ 和 $\Gamma’\vdash_{K^{+}}\neg q$ 同時成立, 那麼必有足夠大的 $n$ 使得 $\Gamma\cup\left\{r_0,\cdots,r_n\right\}\vdash_{K^{+}} q$ 及 $\neg q$. 對 $r_i$ 的個數歸納可知, 這是不可能的. </p>
+<p><strong>(3) 作 $\Gamma’$ 的完備無矛盾擴張 $\Gamma^{*}$</strong><br>把 $K(Y^{+})$ 中所有閉式(可數個)排成不重複的一列: $p^{*}_0,\thinspace p^{*}_1,\cdots$, 令<br>$$<br>\begin{align*}<br>\Gamma_0&amp;&#x3D;\Gamma’, \\<br>\Gamma_n&amp;&#x3D;\begin{cases}<br>\Gamma_{n-1},&amp;\text{if}\enspace\Gamma_{n-1}\vdash_{K^{+}}p^{*}_{n-1}; \\<br>\Gamma_{n-1}\cup\left\{\neg p\right\},&amp;\text{if}\enspace\Gamma_{n-1}\not\vdash_{K^{+}} p^{*}_{n-1}.<br>\end{cases}<br>\end{align*}<br>$$<br>歸納可知 $\Gamma_n$ 是無矛盾的, 所以 $\Gamma^{*}&#x3D;\bigcup_{n&#x3D;0}^{\infty}\Gamma_n$ 也是無矛盾的. $\Gamma^{*}$ 是完備的, 即對 $K^{+}$ 中任一閉式 $p^{*}_k$, $\Gamma^{*}\vdash_{K^{+}} p^{*}_k$ 與 $\Gamma^{*}\vdash_{K^{+}} \neg p^{*}_k$ 二者必居其一. </p>
+<p><strong>(4) 作 $K^{+}$ 的解釋域 $M$</strong><br>令 $M$ 為 $K^{+}$ 中所有閉項組成的集合. 閉項集 $M\subseteq T^{+}$ 是可數集, 是由 $B\cup C$ 生成的以 $F$ 為運算集的代數系統. 讓 $M$ 成為 $K^{+}$ 的解釋域: 令 $\overline{b_i}&#x3D;b_i$, $\overline{c_i}&#x3D;c_i$, $\overline{f^n_i}&#x3D;f^n_i$, 規定 $M$ 中與 $n$ 元謂詞 $R^n_i$ 對應的 $n$ 元關係 $\overline{R^n_i}$ 如下: </p>
+<p>對任意閉項 $t_1,\cdots,t_n\in M$,<br>當 $\Gamma^{*}\vdash_{K^{+}}R^n_i(t_1,\cdots,t_n)$ 時, 令 $(t_1,\cdots,t_n)\in\overline{R^n_i}$;<br>當 $\Gamma^{*}\vdash_{K^{+}}\neg R^n_i(t_1,\cdots,t_n)$ 時, 令 $(t_1,\cdots,t_n)\not\in\overline{R^n_i}$. </p>
+<p>定義的合理性由 $\Gamma^{*}$ 的完備無矛盾性保證. </p>
+<p><strong>(5) 完成證明</strong><br>歸納可證命題<br>$$(*)\quad \Gamma^{*}\vdash_{K^{+}}q\enspace\Leftrightarrow\enspace |q|_M&#x3D;1$$<br>其中 $q$ 是 $K^{+}$ 的任一閉式. </p>
+<p>任取 $p\in\Gamma\subseteq\Gamma^{*}$, 則 $\Gamma^{*}\vdash_{K^{+}} p$. 設 $p’$ 是 $p$ 的全稱閉式, 則有 $\Gamma^{*}\vdash_{K^{+}} p’$, 又由命題 $(*)$ 可得 $|p’|_M&#x3D;1$, 於是 $|p|_M&#x3D;1$. 這就證明了 $M$ 是 $\Gamma$ 的模型, 也即我們要找的可數模型. </p>
+<hr>
+
+<p>由這個定理, 我們能立即證明 $K$ 的完全性: $\Gamma\models p\Rightarrow\Gamma\vdash p$.<br>反設 $\Gamma\not\vdash p$, 令 $p’$ 為 $p$ 的全稱閉式, 則 $\Gamma\cup\left\{p’\right\}$ 是無矛盾的, 所以公式集 $\Gamma\cup\left\{p’\right\}$ 有可數模型, 設為 $M$. 於是有 $|\neg p’|_M&#x3D;1$, 從而 $|p’|_M&#x3D;0$, 由此可知 $\Gamma\not\models p$, 與假設矛盾. 這樣就證明了完全性. </p>
+<p>把 $K$ 的可靠性和完全性結合起來, 我們就得到了關於謂詞演算 $K$ 的 Gödel 完備性定理: $\Gamma\models p\Leftrightarrow\Gamma\vdash p$. 這個定理指出了 $K$ 的語義和語法的一致性. </p>
+<h3 id="緊緻性定理"><a href="#緊緻性定理" class="headerlink" title="緊緻性定理*"></a>緊緻性定理*</h3><p>類似命題演算, 在謂詞演算中也有緊緻性定理: </p>
+<ol>
+<li>若 $\Gamma\models\varphi$, 則存在 $\Gamma$ 的某個子集 $\Gamma_0$ 使得 $\Gamma_0\models\varphi$; </li>
+<li>若 $\Gamma$ 的每一個有窮子集 $\Gamma_0$ 是可滿足的, 則 $\Gamma$ 是可滿足的.</li>
+</ol>
+<p>由這個定理可以得到<strong>非標準算術模型</strong>的存在性, 這個模型與標準算術模型初等等價但不同構. </p>
+<hr>
+
+<p>對給定結構 $A$, 我們稱所有在 $A$ 中成立的閉語句為 $A$ 的<strong>理論</strong>, 記作 $\text{Th}\thinspace A$. 容易證明, 如果同一個語言上的結構 $B$ 滿足 $\text{Th}\thinspace A$, 那麼就有 $A\equiv B$, 即 $A$ 和 $B$ 初等等價. </p>
+<p>現在考慮標準算術模型 $A&#x3D;(\mathbb{N},0,S,&lt;,+,\cdot)$. 首先擴展語言, 添加一個新的常數符號 $c$, 令公式集<br>$$\Sigma&#x3D;\left\{0&lt;c,\thinspace S0&lt;c,\thinspace SS0&lt;c,\thinspace \cdots\right\}$$<br>任何一個 $\Sigma\cup\text{Th}\thinspace A$ 的有窮子集 $\Sigma_0$ 都是可滿足的 (對 $\Sigma$ 中的有限個語句, 只需把 $c$ 解釋為一個充分大的自然數 $k$; 而 $\text{Th}\thinspace A$ 中的語句則根本不牽涉 $c$ ), 所以由緊緻性定理, $\Sigma\cup\text{Th}\thinspace A$ 也是可滿足的. </p>
+<p>設 $B$ 是 $\Sigma\cup\text{Th}\thinspace A$ 的一個模型, 由於 $B$ 是 $\text{Th}\thinspace A$ 的模型, 所以 $A\equiv B$. 假設存在同構 $h:B\to A$, 設 $m&#x3D;h(c^{A})$, 由於 $0&lt;c$, $S0&lt;c$, $\cdots$, $\underbrace{SS\cdots S}_{m}0&lt;c$ 在 $B$ 中成立, 所以 $h$ 誘導了一個從 $m+1$ 到 $m$ 的單射, 與抽屜原理矛盾. 因此, $B$ 就是我們要求的非標準模型. </p>
+<p>直觀來看, 非標準模型就是在標準模型中加入了大於任意標準自然數的 “非標準自然數”, 這樣的非標準自然數可用於構造 Gödel 句子的否定在其中成立的模型. </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/foundations/" rel="tag"># foundations</a>
+              <a href="/tags/logic/" rel="tag"># logic</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/01/30/Mathematical_Logic_1/" rel="prev" title="數理邏輯筆記 No.1">
+                  <i class="fa fa-angle-left"></i> 數理邏輯筆記 No.1
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/02/24/Mathematical_Logic_3/" rel="next" title="數理邏輯筆記 No.3">
+                  數理邏輯筆記 No.3 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
