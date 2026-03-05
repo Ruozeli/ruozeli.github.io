@@ -28,7 +28,7 @@
 <meta property="og:description" content="Propositional logic; Basic modal logic.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-01-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-02-28T03:35:59.834Z">
+<meta property="article:modified_time" content="2026-03-03T04:38:02.229Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">157</span>
+          <span class="site-state-item-count">159</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
@@ -244,7 +244,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>自學數理邏輯的筆記, 到 Gödel 不完全性定理為止. 略去證明細節, 以對關鍵概念和基本理論的理解為主, 可能夾雜一些錯誤的理解和不成熟的哲學思考.<br>〔主要參考: 汪芳庭《數理邏輯》、復旦《數理邏輯: 證明及其限度》〕</p>
+    <div class="post-body" itemprop="articleBody"><p>自學數理邏輯的筆記, 到 Gödel 不完全性定理為止. 內容主要是抄書……<br>〔參考: 汪芳庭《數理邏輯》、復旦《數理邏輯: 證明及其限度》〕</p>
 <h1 id="命題演算"><a href="#命題演算" class="headerlink" title="命題演算"></a>命題演算</h1><p>命題演算是最簡單的形式系統, 以簡單命題為研究對象. 在命題演算中, 簡單命題類似於原子, 可以通過命題聯結詞構成複合命題, 但自身不能再分解, 因此整個系統的結構也較為簡單. 我們不必去關心原子命題的具體含義, 只需賦予其古典二值邏輯的真或假(1或0). 下面先規定語法, 建立起命題演算的語言, 隨後引入這種語言的語義, 最後通過可靠性和完全性將兩者聯繫起來. </p>
 <h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><h3 id="命題演算公式集"><a href="#命題演算公式集" class="headerlink" title="命題演算公式集"></a>命題演算公式集</h3><p>拋開符號的意義, 我們用選定的字母表, 純形式地建立語言. 我們的字母表包括: </p>
 <ol>
@@ -330,6 +330,7 @@
 <hr>
 
 <p>有了完全性定理, 我們很容易得到<strong>緊緻性定理</strong>: 公式集 $\Gamma$ 是可滿足的當且僅當 $\Gamma$ 的每一個有窮子集都是可滿足的. 這個定理可以看作拓撲中緊緻性定理的一個特殊情況. </p>
+<p>證明: 假設公式集 $\Gamma$ 的任意有窮子集都是可滿足的, 反設 $\Gamma$ 不可滿足. 則根據完全性定理, $\Gamma$ 也不一致, 所以 $\Gamma\vdash p\wedge\neg p$. 由於每一個證明的長度都是有限的, 所以存在 $\Gamma$ 的一個有窮子集 $\Gamma_0$ 使得 $\Gamma_0\vdash p\wedge\neg p$, 根據可靠性定理就有 $\Gamma_0\vDash p\wedge\neg p$, 故 $\Gamma_0$ 不可滿足, 與假設矛盾. </p>
 <details class="note success"><summary><p>Example</p>
 </summary>
 <p>復旦版數理邏輯給出了一個有趣的例子: 用緊緻性定理證明任何集合都可線序化.<br>給定集合 $M$, 指定命題變元集 $X&#x3D;\left\{x_{ab}:a,b\in M\right\}$, 其下標為 $M$ 中元素構成的有序對. 考慮 $X$ 的如下公式集 $\Gamma$:<br>$$<br>\begin{align*}<br>\Gamma&#x3D;&amp;\left\{\neg x_{aa}:a\in M\right\}\cup \\<br>&amp;\left\{x_{ab}\to x_{bc}\to x_{ac}:a,b,c\in M\right\}\cup \\<br>&amp;\left\{x_{ab}\vee x_{ba}:a,b\in M,a\not&#x3D;b\right\}<br>\end{align*}<br>$$</p>

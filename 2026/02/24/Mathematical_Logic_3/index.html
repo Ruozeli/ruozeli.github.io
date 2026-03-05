@@ -28,7 +28,7 @@
 <meta property="og:description" content="Peano arithmetic; Recursive function; Gödel number.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-02-28T14:46:18.822Z">
+<meta property="article:modified_time" content="2026-03-04T09:06:27.729Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">157</span>
+          <span class="site-state-item-count">159</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
@@ -245,7 +245,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="形式算術"><a href="#形式算術" class="headerlink" title="形式算術"></a>形式算術</h1><h2 id="等詞"><a href="#等詞" class="headerlink" title="等詞"></a>等詞</h2><p>在上一篇定義的謂詞演算基礎上, 我們引入一個特殊的二元謂詞: 等詞 $R^2_1$, 這個謂詞用以形式化表達我們心目中的 “相等” 概念, 形式算術 $K_N$ 即是一種帶等詞的謂詞演算. 下面我們把 $R^2_1$ 簡記為 “$\approx$”. </p>
-<p>在帶有等詞的謂詞演算 $K$ 中, 以下三種形式的公式叫做<strong>等詞公理</strong>:<br>$(E1)$ $t\approx t$;<br>$(E2)$ $t_k\approx u\to R^2_1(f^n_i(t_1,\cdots,t_k,\cdots,t_n),f^n_i(t_1,\cdots,u,\cdots,t_n))$;<br>$(E3)$ $t_k\approx u\to (R^n_i(t_1,\cdots,t_k,\cdots,t_n)\to R^n_i(t_1,\cdots,u,\cdots,t_n))$.<br>其中 $t_1,\cdots,t_n$ 是任意的項, $k&#x3D;1,\cdots,n$. 記 $E&#x3D;\left\{E1,E2,E3\right\}$. </p>
+<p>在帶有等詞的謂詞演算 $K$ 中, 以下三種形式的公式叫做<strong>等詞公理</strong>:<br>$$<br>\begin{align*}<br>&amp;(E1)\quad t\approx t; \\<br>&amp;(E2)\quad t_k\approx u\to R^2_1(f^n_i(t_1,\cdots,t_k,\cdots,t_n),f^n_i(t_1,\cdots,u,\cdots,t_n)); \\<br>&amp;(E3)\quad t_k\approx u\to (R^n_i(t_1,\cdots,t_k,\cdots,t_n)\to R^n_i(t_1,\cdots,u,\cdots,t_n)).<br>\end{align*}<br>$$<br>其中 $t_1,\cdots,t_n$ 是任意的項, $k&#x3D;1,\cdots,n$. 記 $E&#x3D;\left\{E1,E2,E3\right\}$. </p>
 <p>需要注意的是, 這些等詞公理不是有效式, 即它並非在 $K$ 的任何解釋域中恆真. 但當 “$\approx$” 在解釋域中解釋為 “相等” 時, 該解釋域一定是 $E$ 的模型. </p>
 <p>容易證明: </p>
 <ol>
@@ -256,7 +256,7 @@
 <p>由此可知, 等詞 “$\approx$” 在公理集 $E$ 的模型中不一定解釋為 “相等”, 但它所解釋的二元關係一定是等價關係. </p>
 <h2 id="形式算術-K-N"><a href="#形式算術-K-N" class="headerlink" title="形式算術 $K_N$"></a>形式算術 $K_N$</h2><p>形式算術 $K_N$ 指一種特殊的帶等詞的謂詞演算, 它有一個個體常元 $c_1$, 三個函數詞: $f^1_1$, $f^2_1$, $f^2_2$, 和一個二元謂詞 $\approx$. </p>
 <p>$K_N$ 有一個自然的解釋域: 自然數集 $\mathbb{N}&#x3D;\left\{0,1,2,\cdots\right\}$. 在 $\mathbb{N}$ 中 $c_1$ 解釋為 $0$; $f^1_1$, $f^2_1$, $f^2_2$ 分別解釋為一元後繼函數, 二元求和函數, 二元乘積函數; 等詞 $\approx$ 解釋為 $\mathbb{N}$ 中的相等($&#x3D;$).<br>由於接下來的討論基本限於這個標準自然數的解釋域, 所以下面我們把個體常元 $c_1$ 寫成 $\overline{0}$, $f^1_1(t)$, $f^2_1(t_1,t_2)$, $f^2_2(t_1,t_2)$ 分別寫成 $t’$, $t_1+t_2$, $t_1\times t_2$. 在 $\mathbb{N}$ 中常元 $\overline{0}$ 解釋為 $0$, 項 $\overline{0}’$ 解釋為 $0’&#x3D;1$. 下面把閉項 $\overline{0}’,\overline{0}’’,\cdots$ 分別寫作 $\overline{1},\overline{2},\cdots$, 這些形為 $\overline{n}$ 的閉項叫做 $K_N$ 的數字. </p>
-<p>$K_N$ 中所有等詞公理及如下形式的公式都叫做<strong>算術公理</strong>:<br>$(N1)$ $t’\not\approx \overline{0}$;<br>$(N2)$ $t_1’\approx t_2’\to t_1\approx t_2$;<br>$(N3)$ $t+\overline{0}\approx t$;<br>$(N4)$ $t_1+t_2’\approx (t_1+t_2)’$;<br>$(N5)$ $t\times\overline{0}\approx \overline{0}$;<br>$(N6)$ $t_1\times t_2’\approx t_1\times t_2+t_1$;<br>$(N7)$ $p(\overline{0})\to(\forall x(p(x)\to p(x’))\to\forall x\thinspace p(x))$<br>其中 $p(x)$ 是任意的公式. </p>
+<p>$K_N$ 中所有等詞公理及如下形式的公式都叫做<strong>算術公理</strong>:<br>$$<br>\begin{align*}<br>&amp;(N1)\quad t’\not\approx \overline{0}; \\<br>&amp;(N2)\quad t_1’\approx t_2’\to t_1\approx t_2; \\<br>&amp;(N3)\quad t+\overline{0}\approx t; \\<br>&amp;(N4)\quad t_1+t_2’\approx (t_1+t_2)’; \\<br>&amp;(N5)\quad t\times\overline{0}\approx \overline{0}; \\<br>&amp;(N6)\quad t_1\times t_2’\approx t_1\times t_2+t_1; \\<br>&amp;(N7)\quad p(\overline{0})\to(\forall x(p(x)\to p(x’))\to\forall x\thinspace p(x)).<br>\end{align*}<br>$$<br>其中 $p(x)$ 是任意的公式. </p>
 <p>算術公理的集記作 $\mathcal{N}$. 帶有算術公理集 $\mathcal{N}$ 的 $K_N$ 叫做 <strong>Peano 形式算術</strong>. (等詞公理集 $E\subseteq\mathcal{N}$; $K_N$ 的公理除算術公理外還有謂詞演算公理 $(K1)$~$(K5)$ )</p>
 <p>若 $\mathcal{N}\vdash p$, 則稱 $p$ 為 Peano 形式算術的(形式)定理. 通常的關於自然數的定理可以大量翻譯成形式定理, 但其形式證明一般都很複雜. “建立形式算術的主要目的之一, 是用以探討關於自然數的性質, 我們究竟能精確而機械地抓住些什麼.”</p>
 <h2 id="可表示函數與關係"><a href="#可表示函數與關係" class="headerlink" title="可表示函數與關係"></a>可表示函數與關係</h2><h3 id="函數"><a href="#函數" class="headerlink" title="函數"></a>函數</h3><p>$k$ 元函數 $f:\mathbb{N}^k\to\mathbb{N}$ 在 $K_N$ 中<strong>可表示</strong>, 是指存在含 $k+1$ 個自由變元的公式 $p(x_1,\cdots,x_k,y)$, 它具有如下性質: 對任意 $n_1,\cdots,n_k,m\in\mathbb{N}$, </p>
@@ -293,7 +293,7 @@
 </ol>
 <p>基本函數以及由它們經過有限次使用下面的規則 I, II, III 得到的函數叫做<strong>遞歸函數</strong> (或一般遞歸函數). </p>
 <p><strong>規則 I</strong> ——複合<br>一個 $j$ 元函數 $g$ 和 $j$ 個 $k$ 元函數 $h_1,\cdots,h_j$ 複合為一個 $k$ 元函數 $f$<br>$$f(n_1,\cdots,n_k)&#x3D;g\left(h_1(n_1,\cdots,n_k),\cdots,h_j(n_1,\cdots,n_k)\right)$$<br><strong>規則 II</strong> ——遞歸<br>由 $k$ 元函數 $g$ 和 $k+2$ 元函數 $h$ 使用遞歸規則生成 $k+1$ 元函數 $f$<br>$$<br>\begin{align*}<br>&amp;f(n_1,\cdots,n_k,0) &#x3D; g(n_1,\cdots,n_k), \\<br>&amp;f(n_1,\cdots,n_k,n+1) &#x3D; h(n_1,\cdots,n_k,n,f(n_1,\cdots,n_k,n))<br>\end{align*}<br>$$<br>特別地, 當 $k&#x3D;0$ 時<br>$$<br>\begin{align*}<br>&amp;f(0) &#x3D; g, \\<br>&amp;f(n+1) &#x3D; h(n,f(n))<br>\end{align*}<br>$$<br><strong>規則 III</strong> ——$\mu$ 算子<br>若 $k+1$ 元函數 $g$ 滿足根存在性條件, 則由 $g$ 使用 $\mu$ 算子生成 $k$ 元函數 $f$<br>$$f(n_1,\cdots,n_k)&#x3D;\mu\thinspace x\left[g(n_1,\cdots,n_k,x)&#x3D;0\right]$$</p>
-<p>若去掉規則 III, 只允許使用規則 I, II, 則定義的函數叫做<strong>原始遞歸函數</strong>. 原始遞歸算術 (Primitive Recursive Arithmetic, PRA) 是 Hilbert 有窮主義數學的形式化, 其中只包含原始遞歸函數. 然而, 這個形式系統已經足夠強, 可以從中推出 Gödel 不完全性定理. </p>
+<p>若去掉規則 III, 只允許使用規則 I, II, 則定義的函數叫做<strong>原始遞歸函數</strong>. 原始遞歸函數是有窮主義數學的基礎. 最早由 Skolem 提出, 用於形式化有窮主義數學的原始遞歸算術 (Primitive Recursive Arithmetic, $\text{PRA}$) 就只能表達關於自然數和原始遞歸函數的命題. $\text{PRA}$ 經常被用作證明論的基本形式系統. </p>
 <p>若去掉規則 III 中根存在性條件的限制, 則定義的函數叫做<strong>部分遞歸函數</strong> (或遞歸偏函數). 部分遞歸函數不一定處處有定義, 所以不一定是全函數. </p>
 <hr>
 
@@ -307,7 +307,7 @@
 <li>一元函數 $\text{sg}$, 若 $n&#x3D;0$ 則 $\text{sg}(n)&#x3D;0$, 否則 $\text{sg}(n)&#x3D;1$.<br>$$<br>\begin{align*}<br>&amp;\text{sg}(0) &#x3D; 0, \\<br>&amp;\text{sg}(n+1) &#x3D; 1 &#x3D; c_1(n,\text{sg}(n))<br>\end{align*}<br>$$</li>
 <li>一元函數 $\overline{\text{sg}}$, $\overline{\text{sg}(n)}&#x3D;1\dot{-}\text{sg}(n)$.</li>
 </ol>
-<div class="note primary"><p>插入一個命題: 由 $k$ 元遞歸函數 $f$ 用下式定義的 $l$ 元函數 $g$ 也是遞歸的:<br>$$g(n_1,\cdots,n_l)&#x3D;f(n_{m_1},\cdots,n_{m_k})$$<br>其中 $1\leq m_i\leq l$. 這是因為, $g$ 可由如下複合而成:<br>$$g(n_1,\cdots,n_l)&#x3D;f(p^l_{m_1}(n_1,\cdots,n_l),\cdots,p^l_{m_k}(n_1,\cdots,n_l))$$<br>該命題可由於 “增元” 或 “減元”. </p>
+<div class="note info"><p>插入一個命題: 由 $k$ 元遞歸函數 $f$ 用下式定義的 $l$ 元函數 $g$ 也是遞歸的:<br>$$g(n_1,\cdots,n_l)&#x3D;f(n_{m_1},\cdots,n_{m_k})$$<br>其中 $1\leq m_i\leq l$. 這是因為, $g$ 可由如下複合而成:<br>$$g(n_1,\cdots,n_l)&#x3D;f(p^l_{m_1}(n_1,\cdots,n_l),\cdots,p^l_{m_k}(n_1,\cdots,n_l))$$<br>該命題可由於 “增元” 或 “減元”. </p>
 </div>
 
 <ol start="8">
@@ -334,7 +334,7 @@
 <hr>
 
 <p>定義二元關係 $\text{Divi}$, $(n_1,n_2)\in \text{Divi}$ 當且僅當 $n_1&#x3D;0$ 或 $n_1$ 整除 $n_2$. 則 $\text{Divi}$ 是遞歸關係, 因為 $C_{\text{Divi}}(n_1,n_2)&#x3D;\overline{\text{sg}}(\text{rem}(n_1,n_2))$.<br>進而, 全體素數的集 $\text{Prm}$ 是遞歸集. 我們用檢查因子個數的方式構造其特徵函數的遞歸形式, 若 $n$ 的因子數大於 $2$, 則 $n$ 不是素數, 所以有:<br>$$C_{\text{Prm}}(n)&#x3D;\left(4\dot{-}\sum_{i\leq n}C_{\text{Divi}}(i,n)\right)\times\text{sg}(n\dot{-}1)$$<br>設 $p(n)$ 定義為第 $n$ 個素數 ($p(0)&#x3D;2$, $p(1)&#x3D;3$, $\cdots$ ), 則 $p$ 是一元遞歸函數, 因為<br>$$<br>\begin{align*}<br>&amp;p(0) &#x3D; 2, \\<br>&amp;p(n+1) &#x3D; \mu\thinspace x\left[C_{&lt;}(p(n),x)\times C_{\text{Prm}}(x)&#x3D;1\right]<br>\end{align*}<br>$$</p>
-<h2 id="可表示性"><a href="#可表示性" class="headerlink" title="可表示性"></a>可表示性</h2><p>本節證明的是, 遞歸函數在 $K_N$ 中皆可表示. 這一結論在 Gödel 不完全性定理的證明中起重要作用. </p>
+<h2 id="可表示性"><a href="#可表示性" class="headerlink" title="可表示性"></a>可表示性</h2><p>本節證明的是, 遞歸函數在 $K_N$ 中皆可表示. 這一結論在 Gödel 不完備性定理的證明中起重要作用. </p>
 <p>先引入三個記號: $\text{REP}$, $\text{REC}$, $\text{REC}^{*}$. </p>
 <ol>
 <li>$\text{REP}$: 在 $K_N$ 中可表示的函數全體構成的集; </li>
@@ -377,10 +377,10 @@
 <hr>
 
 <p>由 $k$ 元函數 $g$ 和 $k+2$ 元函數 $h$ 使用規則 II 生成 $k+1$ 元函數 $f$ 時, $f$ 在點 $(\alpha,n+1)$ 的值依賴於 $f$ 在點 $(\alpha,n)$ 的值 ($\alpha$ 表示 $n_1,\cdots,n_k$ ). 而在分析 $K_N$ 的性質時, 常遇到另一種函數, 它在點 $(\alpha,n+1)$ 的值依賴於 $(\alpha,0)$, $\cdots$, $(\alpha,n)$ 這些點的值, 對於這一類函數有如下結論. </p>
-<p>設 $k+2$ 元函數 $h$ 是遞歸的, 且 $k+1$ 元函數 $f$ 滿足 <strong>“過程值遞歸條件”</strong>:<br>$$f(n_1,\cdots,n_k,n_{k+1})&#x3D;h(n_1,\cdots,n_k,n_{k+1},f’(n_1,\cdots,n_k,n_{k+1}))$$<br>其中<br>$$f’(n_1,\cdots,n_k,n_{k+1})&#x3D;\prod_{x&lt;n_{k+1}}p_x^{f(n_1,\cdots,n_k,x)}$$<br>那麼 $f$ 也是遞歸函數. </p>
-<p>證明: 我們有<br>$$<br>f’(\alpha,n_{k+1})&#x3D;\begin{cases}<br>2^{f(\alpha,0)}\cdots\thinspace p_{n_{k+1}-1}^{f(\alpha,n_{k+1}-1)}, &amp;n_{k+1}&gt;0, \\<br>1, &amp;n_{k+1}&#x3D;0<br>\end{cases}<br>$$<br>要證明 $f$ 是遞歸的, 只需證明 $f’$ 是遞歸的. 事實上,<br>$$<br>\begin{align*}<br>&amp;f’(\alpha,0) &#x3D; 1, \\<br>&amp;f’(\alpha,n+1) &#x3D; f’(\alpha,n)\times p_n^{f(\alpha,n)}&#x3D;f’(\alpha,n)\times p_n^{h(\alpha,n,f’(\alpha,n))}<br>\end{align*}<br>$$<br>根據規則 II, $f’$ 是遞歸的. </p>
-<p>特別地, 設 $h$ 是二元遞歸函數, 一元函數 $f$ 滿足過程值遞歸條件:<br>$$f(n)&#x3D;h(n,f’(n))$$<br>其中<br>$$f’(n)&#x3D;2^{f(0)}\thinspace 3^{f(1)}\cdots\thinspace p_{n-1}^{f(n-1)}$$<br>則 $f$ 也是遞歸函數. </p>
-<p>顯然, 當 $x&lt;n_{k+1}$ 時, $f(\alpha,x)&#x3D;(f’(\alpha,n_{k+1}))_x$. $f(\alpha,x)$ 關於 $f’(\alpha,n_{k+1})$ 的表達式是遞歸的, 這給出了在遞推關係式中引用已有項的合法性. </p>
+<p>設 $k+2$ 元函數 $h$ 是遞歸的, 且 $k+1$ 元函數 $f$ 滿足 <strong>“過程值遞歸條件”</strong>:<br>$$f(n_1,\cdots,n_k,n_{k+1})&#x3D;h(n_1,\cdots,n_k,n_{k+1},f^{\sharp}(n_1,\cdots,n_k,n_{k+1}))$$<br>其中<br>$$f^{\sharp}(n_1,\cdots,n_k,n_{k+1})&#x3D;\prod_{x&lt;n_{k+1}}p_x^{f(n_1,\cdots,n_k,x)}$$<br>那麼 $f$ 也是遞歸函數. </p>
+<p>證明: 我們有<br>$$<br>f^{\sharp}(\alpha,n_{k+1})&#x3D;\begin{cases}<br>2^{f(\alpha,0)}\cdots\thinspace p_{n_{k+1}-1}^{f(\alpha,n_{k+1}-1)}, &amp;n_{k+1}&gt;0, \\<br>1, &amp;n_{k+1}&#x3D;0<br>\end{cases}<br>$$<br>要證明 $f$ 是遞歸的, 只需證明 $f^{\sharp}$ 是遞歸的. 事實上,<br>$$<br>\begin{align*}<br>&amp;f^{\sharp}(\alpha,0) &#x3D; 1, \\<br>&amp;f^{\sharp}(\alpha,n+1) &#x3D; f^{\sharp}(\alpha,n)\times p_n^{f(\alpha,n)}&#x3D;f^{\sharp}(\alpha,n)\times p_n^{h(\alpha,n,f^{\sharp}(\alpha,n))}<br>\end{align*}<br>$$<br>根據規則 II, $f^{\sharp}$ 是遞歸的. </p>
+<p>特別地, 設 $h$ 是二元遞歸函數, 一元函數 $f$ 滿足過程值遞歸條件:<br>$$f(n)&#x3D;h(n,f^{\sharp}(n))$$<br>其中<br>$$f^{\sharp}(n)&#x3D;2^{f(0)}\thinspace 3^{f(1)}\cdots\thinspace p_{n-1}^{f(n-1)}$$<br>則 $f$ 也是遞歸函數. </p>
+<p>顯然, 當 $x&lt;n_{k+1}$ 時, $f(\alpha,x)&#x3D;(f^{\sharp}(\alpha,n_{k+1}))_x$. $f(\alpha,x)$ 關於 $f^{\sharp}(\alpha,n_{k+1})$ 的表達式是遞歸的, 這給出了在遞推關係式中引用已有項的合法性. </p>
 <h3 id="K-N-的一些遞歸性質"><a href="#K-N-的一些遞歸性質" class="headerlink" title="$K_N$ 的一些遞歸性質"></a>$K_N$ 的一些遞歸性質</h3><p>$\mathbb{N}$ 的以下子集是遞歸集: </p>
 <ol>
 <li>$\text{VS}&#x3D;\left\{2^{15+2k}:k\geq 1\right\}$, $\text{VS}$ 即所有個體變元的 Gödel 數構成的集; </li>
@@ -391,9 +391,9 @@
 <p>證明: </p>
 <ol>
 <li>$\text{VS}$ 的特徵函數是遞歸的:<br>$$C_{\text{VS}}(n) &#x3D; \sum_{k&lt;n}\left(C_{\geq}(k,1)\times C_{&#x3D;}(n,2^{15+2k})\right)$$</li>
-<li>任給一項, 必屬於這幾種可能形式: $\overline{0}$, $x_i$, $’t$, $+t_1t_2$, $\times t_1t_2$ (採用前置式寫法), 據此給出 $C_{\text{TM}}$ 滿足的關係式:<br>$$<br>\begin{align*}<br>C_{\text{TM}}(n) &#x3D;&amp; C_{&#x3D;}(n,2^{15})+C_{\text{VS}}(n)+\sum_{x&lt;n}(C_{&#x3D;}(n,2^1 * x)\times C_{\text{TM}}(x)) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}\left((C_{&#x3D;}(n,2^3*x*y)+C_{&#x3D;}(n,2^5*x*y))\times C_{\text{TM}}(x)\times C_{\text{TM}}(y)\right)<br>\end{align*}<br>$$<br>把上式右邊出現的所有 $C_{\text{TM}}(x)$ 和 $C_{\text{TM}}(y)$ 分別換成上一節定義的 $(C_{\text{TM}}’(n))_x$ 和 $(C_{\text{TM}}’(n))_y$, 即得 $C_{\text{TM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{TM}}$ 是遞歸函數. </li>
+<li>任給一項, 必屬於這幾種可能形式: $\overline{0}$, $x_i$, $’t$, $+t_1t_2$, $\times t_1t_2$ (採用前置式寫法), 據此給出 $C_{\text{TM}}$ 滿足的關係式:<br>$$<br>\begin{align*}<br>C_{\text{TM}}(n) &#x3D;&amp; C_{&#x3D;}(n,2^{15})+C_{\text{VS}}(n)+\sum_{x&lt;n}(C_{&#x3D;}(n,2^1 * x)\times C_{\text{TM}}(x)) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}\left((C_{&#x3D;}(n,2^3*x*y)+C_{&#x3D;}(n,2^5*x*y))\times C_{\text{TM}}(x)\times C_{\text{TM}}(y)\right)<br>\end{align*}<br>$$<br>把上式右邊出現的所有 $C_{\text{TM}}(x)$ 和 $C_{\text{TM}}(y)$ 分別換成上一節定義的 $(C_{\text{TM}}^{\sharp}(n))_x$ 和 $(C_{\text{TM}}^{\sharp}(n))_y$, 即得 $C_{\text{TM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{TM}}$ 是遞歸函數. </li>
 <li>原子公式的結構只有 $\approx t_1t_2$ 這一種形式, 由此得到:<br>$$C_{\text{YF}}(n)&#x3D;\sum_{x&lt;n}\sum_{y&lt;n}C_{\text{TM}}(x)\times C_{\text{TM}}(y)\times C_{&#x3D;}(n,2^{13}*x*y)$$</li>
-<li>$K_N$ 的公式除原子公式外, 便具有 $\neg q$, $q\to r$, $\forall x_i\thinspace q$ 這三種形式, 所以 $C_{\text{FM}}$ 滿足:<br>$$<br>\begin{align*}<br>C_{\text{FM}}(n) &#x3D;&amp; C_{\text{YF}}(n)+\sum_{x&lt;n}C_{\text{FM}}(x)\times C_{&#x3D;}(n,2^7*x) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{FM}}(x)\times C_{\text{FM}}(y))\times C_{&#x3D;}(n,2^9*x*y) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{VS}}(x)\times C_{\text{FM}}(y))\times C_{&#x3D;}(n,2^{11}*x*y)<br>\end{align*}<br>$$<br>同樣把上式右邊的 $C_{\text{FM}}(x)$ 和 $C_{\text{FM}}(y)$ 分別換成 $(C_{\text{FM}}’(n))_x$ 和 $(C_{\text{FM}}’(n))_y$, 即得 $C_{\text{FM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{FM}}$ 是遞歸函數.</li>
+<li>$K_N$ 的公式除原子公式外, 便具有 $\neg q$, $q\to r$, $\forall x_i\thinspace q$ 這三種形式, 所以 $C_{\text{FM}}$ 滿足:<br>$$<br>\begin{align*}<br>C_{\text{FM}}(n) &#x3D;&amp; C_{\text{YF}}(n)+\sum_{x&lt;n}C_{\text{FM}}(x)\times C_{&#x3D;}(n,2^7*x) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{FM}}(x)\times C_{\text{FM}}(y))\times C_{&#x3D;}(n,2^9*x*y) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{VS}}(x)\times C_{\text{FM}}(y))\times C_{&#x3D;}(n,2^{11}*x*y)<br>\end{align*}<br>$$<br>同樣把上式右邊的 $C_{\text{FM}}(x)$ 和 $C_{\text{FM}}(y)$ 分別換成 $(C_{\text{FM}}^{\sharp}(n))_x$ 和 $(C_{\text{FM}}^{\sharp}(n))_y$, 即得 $C_{\text{FM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{FM}}$ 是遞歸函數.</li>
 </ol>
 <hr>
 
@@ -431,7 +431,7 @@
 </ol>
 <p>證明略. 這裡需要注意的是, $\text{PF}$ 的遞歸性僅僅依賴於 “$\text{AX}$ 是遞歸的” 這一點, 而與 $\text{AX}$ 中包含哪些具體公理的 Gödel 數無關. 不論怎樣增減公理, 只要不改變 $\text{AX}$ 的遞歸性, 就不改變 $\text{PF}$ 的遞歸性. </p>
 <p>一元函數 $\text{Num}$ 定義為 $\text{Num}(n)&#x3D;\text{g}(\overline{n})$, 則 $\text{Num}$ 是遞歸函數, 因為<br>$$<br>\begin{align*}<br>&amp;\text{Num}(0) &#x3D; \text{g}(\overline{0}) &#x3D; 2^{15} \\<br>&amp;\text{Num}(n+1) &#x3D; 2^1 * \text{g}(\overline{n}) &#x3D; 2^1 * \text{Num}(n)<br>\end{align*}<br>$$</p>
-<p>至此, 證明 Gödel 不完全性定理的準備工作已告完成. </p>
+<p>至此, 證明 Gödel 不完備性定理的準備工作已告完成. </p>
 <h2 id="可表示函數的遞歸性"><a href="#可表示函數的遞歸性" class="headerlink" title="可表示函數的遞歸性*"></a>可表示函數的遞歸性*</h2><p>此前我們已經證明了 $\text{REC}\subseteq\text{REP}$, 現在順帶證明 $\text{REP}\subseteq\text{REC}$, 即所有在 $K_N$ 中可表示的函數都是遞歸函數. </p>
 <p>設 $k$ 元函數 $f$ 用公式 $p(x_1,\cdots,x_k,y)$ 可表示, 其中 $y$ 是不同於 $x_1,\cdots,x_k$ 的個體變元. 把 $p(x_1,\cdots,x_k,y)$ 的 Gödel 數記為 $\alpha_0$:<br>$$\alpha_0&#x3D;\text{g}(p(x_1,\cdots,x_k,y))$$<br>給定 $f$, 且取定用以表示它的公式 $p$ 之後, $\alpha_0$ 就是定數. 現用公式 $p$ 作出一個 $k+2$ 元關係 $W_p$:<br>	$W_p&#x3D;\{(n_1,\cdots,n_{k+2}):n_{k+2}$ 是 $p(\overline{n_1},\cdots,\overline{n_{k+1}})$ 從 $\mathcal{N}$ 的證明的 Gödel 數 $\}$ </p>
 <p>把 $p(\overline{n_1},x_2,\cdots,x_k,y)$, $p(\overline{n_1},\overline{n_2},x_3,\cdots,x_k,y)$, $\cdots$, $p(\overline{n_1},\cdots,\overline{n_{k+1}})$ 的 Gödel 數分別記為 $\alpha_1(n_1)$, $\alpha_2(n_1,n_2)$, $\cdots$, $\alpha_{k+1}(n_1,\cdots,n_{k+1})$. 這是一串遞歸函數:<br>$$<br>\begin{align*}<br>&amp;\alpha_1(n_1) &#x3D; \text{Sub}(2^{15+2},\text{Num}(n_1),\alpha_0), \\<br>&amp;\alpha_2(n_1,n_2) &#x3D; \text{Sub}(2^{15+4},\text{Num}(n_2),\alpha_1(n_1)), \\<br>&amp;\cdots , \\<br>&amp;\alpha_{k+1}(n_1,\cdots,n_{k+1}) &#x3D; \text{Sub}(2^{15+2(k+1)},\text{Num}(n_{k+1}),\alpha_k(n_1,\cdots,n_k))<br>\end{align*}<br>$$<br>所以由 $W_p$ 的定義即可知 $W_p$ 是遞歸的:<br>$$C_{W_p}(n_1,\cdots,n_{k+2})&#x3D;C_{\text{PRF}}\left(\alpha_{k+1}(n_1,\cdots,n_{k+1}),n_{k+2}\right)$$</p>
@@ -442,7 +442,8 @@
 <p>上文已經提到, 部分遞歸函數是在使用規則 III 時去掉根存在性條件所得, 確切地說, 設 $k+1$ 元部分函數 $g$, 對其使用 $\mu$ 算子得到函數 $f$:<br>$$f(\alpha)&#x3D;\mu\thinspace x\left[\forall z\leq x\thinspace (g(\alpha,z)\downarrow)\wedge g(\alpha,x)&#x3D;0\right]$$<br>則 $f$ 是一個部分遞歸函數. 其中 $\alpha$ 表示 $n_1,\cdots,n_k$; $g(\alpha,z)\downarrow$ 表示函數 $g$ 在點 $(\alpha,z)$ 有定義, 或稱 $g(\alpha,z)$ 收斂. 相應地, $g(\alpha,z)\uparrow$ 則表示 $g$ 在該點無定義, 或稱 $g(\alpha,z)$ 發散. </p>
 <p>上式中加入條件 $\forall z\leq x\thinspace (g(\alpha,z)\downarrow)$ 是因為, $g(\alpha,x)$ 可以是部分函數, 有可能在最小根 $x_0$ 出現前, 就在某個 $z_0&lt;x_0$ 處無定義, 假如跳過 $z_0$, 那麼即便找到了 $x_0$ 這個根, 我們也不能斷言 $x_0$ 是最小的, 因為我們不能能行地知道 $g(\alpha,z_0)$ 是發散的. 所以我們寧可達不到真正的根, 也不跳過發散點. </p>
 <p>形成部分遞歸函數的這條規則, 可以作用在部分函數上, 也可以產生部分函數. 事實上, Turing 給出的可計算性概念面向的是 $\mathbb{N}$ 上的部分函數, 而不僅僅是全函數: 一個可計算函數可能並非在所有輸入值上都有定義, 對某些輸入, 一個計算程序可能會一直運行, 永不停止. 正是由於這個部分性特徵, Turing 的計算概念能避開 Gödel 的對角化難題 (對原始遞歸函數的任何枚舉總可以通過對角化增添新的可計算函數, 參見上文), 達成對可計算函數的完全的枚舉. 簡單來說, 假定我們枚舉所有的部分遞歸函數: $f_0, f_1, \cdots$, 並定義對角函數 $F:\mathbb{N}\to\mathbb{N}$ 為 $F(n)&#x3D;f_n(n)+1$, 則 $F$ 可以與列表中的某個 $f_{k}$ 相同, 因為 $f_k(k)$ 無定義. </p>
-
+<div class="note primary"><p><strong>Church 論題</strong>: 算法可計算函數 &#x3D; 遞歸函數.<br>這是一個經驗事實, 但還未發現反例. 上文已經證明 $\text{FM}$ 和 $\text{PF}$ 是遞歸集, 所以按 Church 論題, 存在算法能用來確定任給的 $n\in\mathbb{N}$ 是否屬於 $\text{FM}$ 或 $\text{PF}$, 即存在算法能確定任意字母串是不是 $K_N$ 的公式, 以及任給的有限公式序列是不是從 $\mathcal{N}$ 的一個證明. </p>
+</div>
     </div>
 
     
@@ -465,6 +466,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2026/03/03/Mathematical_Logic_4/" rel="next" title="數理邏輯筆記 No.4">
+                  數理邏輯筆記 No.4 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>

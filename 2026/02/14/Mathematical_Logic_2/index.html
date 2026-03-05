@@ -28,7 +28,7 @@
 <meta property="og:description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-02-28T03:26:06.296Z">
+<meta property="article:modified_time" content="2026-03-02T15:06:07.969Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">157</span>
+          <span class="site-state-item-count">159</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
@@ -396,13 +396,17 @@
 <hr>
 
 <p>結構 $A$ 上的一個<strong>自同構</strong>就是 $A$ 到 $A$ 自身的一個同構. 由同態定理可知, 任何自同構都保持可定義的關係. 令 $h:A\to A$ 是一個自同構, $R$ 是 $A$ 上的一個可定義的 $n$ 元關係, 則對任意 $a_1,\cdots,a_n\in A$ 都有<br>$$(a_1,\cdots,a_n)\in R\enspace\Leftrightarrow\enspace(h(a_1),\cdots,h(a_n))\in R$$<br>這個結果經常被用來證明某些關係的不可定義性. </p>
-<p>例如, 考慮由全體實數和其上的自然序組成的結構 $(\mathbb{R},&lt;)$. 令 $h:\mathbb{R}\to\mathbb{R}$ 為 $h(x)&#x3D;\sqrt[3]{x}$, 則 $h$ 是該結構的一個自同構, 由此可以證明自然數集 $\mathbb{N}$ (作為一元關係)在該結構上是不可定義的. 假設公式 $p$ 在該結構上定義了關係 $R$, 那麼對自然數 $n&gt;1$, 若 $n\in R$ 則必有 $h(n)&#x3D;\sqrt[3]{n}\in R$, 因此 $R\not&#x3D;\mathbb{N}$. 這就表明了 $\mathbb{N}$ 的不可定義性. </p>
+<p>例如, 考慮由全體實數和其上的自然序組成的結構 $(\mathbb{R},&lt;)$. 令 $h:\mathbb{R}\to\mathbb{R}$ 為 $h(x)&#x3D;\sqrt[3]{x}$, 則 $h$ 是該結構的一個自同構, 由此可以證明自然數集 $\mathbb{N}$ (作為一元關係)在該結構上是不可定義的. 假設公式 $p$ 在該結構上定義了一元關係 $N$, 那麼對自然數 $n&gt;1$, 若 $n\in N$ 則必有 $h(n)&#x3D;\sqrt[3]{n}\in N$, 因此 $N\not&#x3D;\mathbb{N}$. 這就表明了 $\mathbb{N}$ 的不可定義性. </p>
 <p>再比如, 加法函數的圖像 $\left\{(m,n,p):p&#x3D;m+n\right\}$ (作為三元關係) 在結構 $(\mathbb{N},\cdot)$ 中不可定義. 我們只需令 $h:\mathbb{N}\to\mathbb{N}$,<br>$$<br>h(x)&#x3D;\begin{cases}<br>2^b \cdot 3^a ,&amp;\text{if}\enspace x&#x3D;2^a \cdot 3^b\\<br>x,&amp;\text{if}\enspace 2\nmid x,\thinspace 3\nmid x<br>\end{cases}<br>$$<br>由唯一分解定理知 $h$ 是一個雙射, 故 $h$ 定義了 $\mathbb{N}$ 上的一個自同構. 如果有一個公式 $\alpha$ 定義了 $R&#x3D;\left\{(m,n,p):p&#x3D;m+n\right\}$, 則由 $(1,2,3)\in R$ 可以推出 $(h(1),h(2),h(3))&#x3D;(1,3,2)\in R$, 從而導出矛盾. </p>
 <h2 id="可靠性和完備性"><a href="#可靠性和完備性" class="headerlink" title="可靠性和完備性"></a>可靠性和完備性</h2><h3 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h3><p>可靠性定理是指: $\Gamma\vdash p\Rightarrow\Gamma\models p$. 證明類似命題邏輯, 驗證 $(K1)$~$(K5)$ 型公理的有效性, 然後歸納法. </p>
 <p>推論: $K$ 是無矛盾的, 即對任意公式 $p$, $\vdash p$ 和 $\vdash\neg p$ 不同時成立. 否則由可靠性定理就會有 $\models p$ 和 $\models\neg p$ 同時成立, 而這是不可能的. 類似地也可證明, 若公式集 $\Gamma$ 有模型, 則 $\Gamma$ 是無矛盾的. </p>
 <h3 id="完全性"><a href="#完全性" class="headerlink" title="完全性"></a>完全性</h3><p>完全性定理是指: $\Gamma\models p\Rightarrow\Gamma\vdash p$, 即 $K$ 的有效式一定是 $K$ 的定理. </p>
 <p>首先證明定理: <strong>無矛盾公式集一定有可數集模型</strong>.<br>證明分為六個步驟:<br><strong>(1) 作擴大的謂詞演算 $K^{+}$</strong><br>取可數個新的個體常元 $b_0,b_1,\cdots$, $B&#x3D;\left\{b_0,b_1,\cdots\right\}$ 與原個體常元集 $C&#x3D;\left\{c_0,c_1,\cdots\right\}$ 不相交. 擴大 $K$, 以 $C\cup B$ 為個體常元集, 其他保持不變, 得到新的謂詞演算記作 $K^{+}$, 其項集記作 $T^{+}$, 原子公式集記作 $Y^{+}$. 則 $T\subseteq T^{+}$, $Y\subseteq Y^{+}$, $K(Y)\subseteq K(Y^{+})$. </p>
-<p><strong>(2) 作擴大的無矛盾公式集 $\Gamma’\supset\Gamma$</strong><br>把 $K^{+}$ 中所有只含一個自由變元的公式(可數個)全部取出排成不重複的一列: $p_0(y_0),\thinspace p_1(y_1),\cdots,\thinspace p_n(y_n),\cdots$, 其中 $y_n&#x3D;x_{i_n}\in X$ 這些變元可以重複出現. 在 $B$ 中取一串 $b_{i_0},\thinspace b_{i_1},\cdots$, 滿足: (1) $b_{i_0}$ 不在 $p_0(y_0)$ 中出現; (2) $n&gt;0$ 時, $b_{i_n}$ 不在 $p_0(y_0),\cdots,p_n(y_n)$ 中出現, 且 $b_{i_n}\not\in\left\{b_{i_0},\cdots,b_{i_{n-1}}\right\}$. </p>
+<p><strong>(2) 作擴大的無矛盾公式集 $\Gamma’\supset\Gamma$</strong><br>把 $K^{+}$ 中所有只含一個自由變元的公式(可數個)全部取出排成不重複的一列: $p_0(y_0),\thinspace p_1(y_1),\cdots,\thinspace p_n(y_n),\cdots$, 其中 $y_n&#x3D;x_{i_n}\in X$ 這些變元可以重複出現. 在 $B$ 中取一串 $b_{i_0},\thinspace b_{i_1},\cdots$, 滿足: </p>
+<ol>
+<li>$b_{i_0}$ 不在 $p_0(y_0)$ 中出現; </li>
+<li>$n&gt;0$ 時, $b_{i_n}$ 不在 $p_0(y_0),\cdots,p_n(y_n)$ 中出現, 且 $b_{i_n}\not\in\left\{b_{i_0},\cdots,b_{i_{n-1}}\right\}$.</li>
+</ol>
 <p>記 $r_n&#x3D;p_n(b_{i_n})\to\forall y_n\thinspace p_n(y_n)$, 並令 $\Gamma’&#x3D;\Gamma\cup\left\{r_0,r_1,r_2\cdots\right\}$. 隨後反證 $\Gamma’$ 是無矛盾的: 假設 $q\in K^{+}$ 使得 $\Gamma’\vdash_{K^{+}} q$ 和 $\Gamma’\vdash_{K^{+}}\neg q$ 同時成立, 那麼必有足夠大的 $n$ 使得 $\Gamma\cup\left\{r_0,\cdots,r_n\right\}\vdash_{K^{+}} q$ 及 $\neg q$. 對 $r_i$ 的個數歸納可知, 這是不可能的. </p>
 <p><strong>(3) 作 $\Gamma’$ 的完備無矛盾擴張 $\Gamma^{*}$</strong><br>把 $K(Y^{+})$ 中所有閉式(可數個)排成不重複的一列: $p^{*}_0,\thinspace p^{*}_1,\cdots$, 令<br>$$<br>\begin{align*}<br>\Gamma_0&amp;&#x3D;\Gamma’, \\<br>\Gamma_n&amp;&#x3D;\begin{cases}<br>\Gamma_{n-1},&amp;\text{if}\enspace\Gamma_{n-1}\vdash_{K^{+}}p^{*}_{n-1}; \\<br>\Gamma_{n-1}\cup\left\{\neg p\right\},&amp;\text{if}\enspace\Gamma_{n-1}\not\vdash_{K^{+}} p^{*}_{n-1}.<br>\end{cases}<br>\end{align*}<br>$$<br>歸納可知 $\Gamma_n$ 是無矛盾的, 所以 $\Gamma^{*}&#x3D;\bigcup_{n&#x3D;0}^{\infty}\Gamma_n$ 也是無矛盾的. $\Gamma^{*}$ 是完備的, 即對 $K^{+}$ 中任一閉式 $p^{*}_k$, $\Gamma^{*}\vdash_{K^{+}} p^{*}_k$ 與 $\Gamma^{*}\vdash_{K^{+}} \neg p^{*}_k$ 二者必居其一. </p>
 <p><strong>(4) 作 $K^{+}$ 的解釋域 $M$</strong><br>令 $M$ 為 $K^{+}$ 中所有閉項組成的集合. 閉項集 $M\subseteq T^{+}$ 是可數集, 是由 $B\cup C$ 生成的以 $F$ 為運算集的代數系統. 讓 $M$ 成為 $K^{+}$ 的解釋域: 令 $\overline{b_i}&#x3D;b_i$, $\overline{c_i}&#x3D;c_i$, $\overline{f^n_i}&#x3D;f^n_i$, 規定 $M$ 中與 $n$ 元謂詞 $R^n_i$ 對應的 $n$ 元關係 $\overline{R^n_i}$ 如下: </p>
@@ -419,7 +423,7 @@
 <li>若 $\Gamma\models\varphi$, 則存在 $\Gamma$ 的某個子集 $\Gamma_0$ 使得 $\Gamma_0\models\varphi$; </li>
 <li>若 $\Gamma$ 的每一個有窮子集 $\Gamma_0$ 是可滿足的, 則 $\Gamma$ 是可滿足的.</li>
 </ol>
-<p>由這個定理可以得到<strong>非標準算術模型</strong>的存在性, 這個模型與標準算術模型初等等價但不同構. </p>
+<p>由這個定理可以得到<strong>非標準算術模型</strong>的存在性, 該模型與標準算術模型初等等價但不同構. </p>
 <hr>
 
 <p>對給定結構 $A$, 我們稱所有在 $A$ 中成立的閉語句為 $A$ 的<strong>理論</strong>, 記作 $\text{Th}\thinspace A$. 容易證明, 如果同一個語言上的結構 $B$ 滿足 $\text{Th}\thinspace A$, 那麼就有 $A\equiv B$, 即 $A$ 和 $B$ 初等等價. </p>
