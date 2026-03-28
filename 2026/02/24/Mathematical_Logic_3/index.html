@@ -28,7 +28,7 @@
 <meta property="og:description" content="Peano arithmetic; Recursive function; Gödel number.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-04T09:06:27.729Z">
+<meta property="article:modified_time" content="2026-03-28T07:46:55.746Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -244,7 +244,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="形式算術"><a href="#形式算術" class="headerlink" title="形式算術"></a>形式算術</h1><h2 id="等詞"><a href="#等詞" class="headerlink" title="等詞"></a>等詞</h2><p>在上一篇定義的謂詞演算基礎上, 我們引入一個特殊的二元謂詞: 等詞 $R^2_1$, 這個謂詞用以形式化表達我們心目中的 “相等” 概念, 形式算術 $K_N$ 即是一種帶等詞的謂詞演算. 下面我們把 $R^2_1$ 簡記為 “$\approx$”. </p>
+    <div class="post-body" itemprop="articleBody"><h1 id="形式算術"><a href="#形式算術" class="headerlink" title="形式算術"></a>形式算術</h1><h2 id="等詞"><a href="#等詞" class="headerlink" title="等詞"></a>等詞</h2><p>在上一篇定義的謂詞演算基礎上, 我們引入一個特殊的二元謂詞: 等詞 $R^2_1$, 這個謂詞用以形式化表達我們心目中的 “相等” 概念, 形式算術 $K_N$ 即是一種帶等詞的謂詞演算. 下面把 $R^2_1$ 簡記為 “$\approx$”. </p>
 <p>在帶有等詞的謂詞演算 $K$ 中, 以下三種形式的公式叫做<strong>等詞公理</strong>:<br>$$<br>\begin{align*}<br>&amp;(E1)\quad t\approx t; \\<br>&amp;(E2)\quad t_k\approx u\to R^2_1(f^n_i(t_1,\cdots,t_k,\cdots,t_n),f^n_i(t_1,\cdots,u,\cdots,t_n)); \\<br>&amp;(E3)\quad t_k\approx u\to (R^n_i(t_1,\cdots,t_k,\cdots,t_n)\to R^n_i(t_1,\cdots,u,\cdots,t_n)).<br>\end{align*}<br>$$<br>其中 $t_1,\cdots,t_n$ 是任意的項, $k&#x3D;1,\cdots,n$. 記 $E&#x3D;\left\{E1,E2,E3\right\}$. </p>
 <p>需要注意的是, 這些等詞公理不是有效式, 即它並非在 $K$ 的任何解釋域中恆真. 但當 “$\approx$” 在解釋域中解釋為 “相等” 時, 該解釋域一定是 $E$ 的模型. </p>
 <p>容易證明: </p>
@@ -297,27 +297,39 @@
 <p>若去掉規則 III 中根存在性條件的限制, 則定義的函數叫做<strong>部分遞歸函數</strong> (或遞歸偏函數). 部分遞歸函數不一定處處有定義, 所以不一定是全函數. </p>
 <hr>
 
-<p>下面列舉一些常用的(原始)遞歸函數: </p>
-<ol>
-<li>$k$ 元常值函數 $c_m$, $c_m(n_1,\cdots,n_k)&#x3D;m$.<br>$$<br>\begin{align*}<br>&amp;c_0(n_1,\cdots,n_k) &#x3D; z(p^k_1(n_1,\cdots,n_k)), \\<br>&amp;c_{m+1}(n_1,\cdots,n_k) &#x3D; s(c_m(n_1,\cdots,n_k))<br>\end{align*}<br>$$</li>
-<li>二元和函數 $+$<br>$$<br>\begin{align*}<br>&amp;n_1+0 &#x3D; p^1_1(n_1), \\<br>&amp;n_1+(n+1) &#x3D; (n_1+n)+1 &#x3D; s(p^3_3(n_1,n,n_1+n))<br>\end{align*}<br>$$</li>
-<li>二元乘積函數 $\times$<br>$$<br>\begin{align*}<br>&amp;n_1\times 0 &#x3D; z(n_1), \\<br>&amp;n_1\times (n+1) &#x3D; p^3_3(n_1,n,n_1\times n)+p^3_1(n_1,n,n_1\times n)<br>\end{align*}<br>$$</li>
-<li>前鄰函數 $p^{-}$, 若 $n&#x3D;0$ 則 $p^{-}(n)&#x3D;0$, 否則 $p^{-}(n)&#x3D;n-1$.<br>$$<br>\begin{align*}<br>&amp;p^{-}(n) &#x3D; 0, \\<br>&amp;p^{-}(n+1) &#x3D; n &#x3D; p^2_1(n,p^{-}(n))<br>\end{align*}<br>$$</li>
-<li>截差函數 $\dot{-}$, 若 $n_1\geq n_2$, 則 $n_1\dot{-}n_2&#x3D;n_1-n_2$, 否則 $n_1\dot{-}n_2&#x3D;0$.<br>$$<br>\begin{align*}<br>&amp;n_1\dot{-}\thinspace 0 &#x3D; n_1 &#x3D; p^1_1(n_1) , \\<br>&amp;n_1\dot{-}(n+1) &#x3D; p^{-}(n_1\dot{-}n) &#x3D; p^{-}(p^3_3(n_1,n,n_1\dot{-}n))<br>\end{align*}<br>$$</li>
-<li>一元函數 $\text{sg}$, 若 $n&#x3D;0$ 則 $\text{sg}(n)&#x3D;0$, 否則 $\text{sg}(n)&#x3D;1$.<br>$$<br>\begin{align*}<br>&amp;\text{sg}(0) &#x3D; 0, \\<br>&amp;\text{sg}(n+1) &#x3D; 1 &#x3D; c_1(n,\text{sg}(n))<br>\end{align*}<br>$$</li>
-<li>一元函數 $\overline{\text{sg}}$, $\overline{\text{sg}(n)}&#x3D;1\dot{-}\text{sg}(n)$.</li>
-</ol>
-<div class="note info"><p>插入一個命題: 由 $k$ 元遞歸函數 $f$ 用下式定義的 $l$ 元函數 $g$ 也是遞歸的:<br>$$g(n_1,\cdots,n_l)&#x3D;f(n_{m_1},\cdots,n_{m_k})$$<br>其中 $1\leq m_i\leq l$. 這是因為, $g$ 可由如下複合而成:<br>$$g(n_1,\cdots,n_l)&#x3D;f(p^l_{m_1}(n_1,\cdots,n_l),\cdots,p^l_{m_k}(n_1,\cdots,n_l))$$<br>該命題可由於 “增元” 或 “減元”. </p>
+<div class="note info"><p>命題: 由 $k$ 元遞歸函數 $f$ 用下式定義的 $l$ 元函數 $g$ 也是遞歸的:<br>$$g(n_1,\cdots,n_l)&#x3D;f(n_{m_1},\cdots,n_{m_k})$$<br>其中 $1\leq m_i\leq l$. 這是因為, $g$ 可由如下複合而成:<br>$$g(n_1,\cdots,n_l)&#x3D;f(p^l_{m_1}(n_1,\cdots,n_l),\cdots,p^l_{m_k}(n_1,\cdots,n_l))$$<br>該命題可由於 “增元” 或 “減元”. </p>
 </div>
 
-<ol start="8">
-<li>絕對差 $\ddot{-}$, $n_1\ddot{-}n_2&#x3D;|n_1-n_2|$.<br>$$n_1\ddot{-}n_2&#x3D;(n_1\dot{-}n_2)+(n_2\dot{-}n_1)$$</li>
-<li>$k$ 元最值函數 $\min$, $\max$.<br>$$<br>\begin{align*}<br>&amp;k&#x3D;2,\quad\min(n_1,n_2) &#x3D; n_1\dot{-}(n_1\dot{-}n_2), \\<br>&amp;k&gt;2,\quad\min(n_1,\cdots,n_k) &#x3D; \min(\min(n_1,\cdots,n_{k-1}),n_k)<br>\end{align*}<br>$$</li>
-<li>指數函數 $n_1^{n_2}$, 規定 $0^0&#x3D;0$.<br>$$<br>\begin{align*}<br>&amp;n_1^0 &#x3D; \text{sg}(n_1), \\<br>&amp;n_1^{n+1} &#x3D; n_1^n\times n_1<br>\end{align*}<br>$$</li>
-<li>餘數函數 $\text{rem}$, 若 $n_1&gt;0$, $\text{rem}(n_1,n_2)$ 是用 $n_1$ 除 $n_2$ 所得餘數; 若 $n_1&#x3D;0$ 則 $\text{rem}(n_1,n_2)&#x3D;0$.<br>$$<br>\begin{align*}<br>&amp;\text{rem}(n_1,0) &#x3D; 0, \\<br>&amp;\text{rem}(n_1,n+1) &#x3D; (\text{rem}(n_1,n)+1)\thinspace \text{sg}(n\dot{-}(\text{rem}(n_1,n)+1))<br>\end{align*}<br>$$</li>
-<li>設 $f$ 是 $k+1$ 元遞歸函數, 由 $f$ 定義新的 $k$ 元函數 $g$ 和 $k+1$ 元函數 $h$:<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; \sum_{i\leq n_k} f(n_1,\cdots,n_k,i), \\<br>&amp;h(n_1,\cdots,n_{k+1}) &#x3D; \sum_{i\leq n_{k+1}} f(n_1,\cdots,n_k,i)<br>\end{align*}<br>$$<br> $g$ 和 $h$ 都是遞歸的, 因為<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; h(n_1,\cdots,n_k,n_k), \\<br>&amp;h(n_1,\cdots,n_k,0) &#x3D; f(n_1,\cdots,n_k,0), \\<br>&amp;h(n_1,\cdots,n_k,n+1) &#x3D; h(n_1,\cdots,n_k,n) + f(n_1,\cdots,n_k,n+1)<br>\end{align*}<br>$$</li>
-<li>設 $f$ 是 $k+1$ 元遞歸函數, 定義新的 $k$ 元函數 $g$ 和 $k+1$ 元函數 $h$:<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; \sum_{i &lt; n_k} f(n_1,\cdots,n_k,i), \\<br>&amp;h(n_1,\cdots,n_{k+1}) &#x3D; \sum_{i &lt; n_{k+1}} f(n_1,\cdots,n_k,i)<br>\end{align*}<br>$$<br> ($n_k&#x3D;0$ 時, 規定 $g&#x3D;0$; $n_{k+1}&#x3D;0$ 時, 規定 $h&#x3D;0$. )</li>
-<li>設 $f$ 是 $k+1$ 元遞歸函數, 定義新的 $k$ 元函數 $g$ 和 $k+1$ 元函數 $h$:<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; \prod_{i\leq n_k} f(n_1,\cdots,n_k,i), \\<br>&amp;h(n_1,\cdots,n_{k+1}) &#x3D; \prod_{i\leq n_{k+1}} f(n_1,\cdots,n_k,i)<br>\end{align*}<br>$$<br> ($n_k&#x3D;0$ 時, 規定 $g&#x3D;1$; $n_{k+1}&#x3D;0$ 時, 規定 $h&#x3D;1$. )</li>
+<p>下面列舉一些常用的(原始)遞歸函數: </p>
+<ol>
+<li><p>$k$ 元常值函數 $c_m$, $c_m(n_1,\cdots,n_k)&#x3D;m$.<br>$$<br>\begin{align*}<br>&amp;c_0(n_1,\cdots,n_k) &#x3D; z(p^k_1(n_1,\cdots,n_k)), \\<br>&amp;c_{m+1}(n_1,\cdots,n_k) &#x3D; s(c_m(n_1,\cdots,n_k))<br>\end{align*}<br>$$</p>
+</li>
+<li><p>二元和函數 $+$<br>$$<br>\begin{align*}<br>&amp;n_1+0 &#x3D; p^1_1(n_1), \\<br>&amp;n_1+(n+1) &#x3D; (n_1+n)+1 &#x3D; s(p^3_3(n_1,n,n_1+n))<br>\end{align*}<br>$$</p>
+</li>
+<li><p>二元乘積函數 $\times$<br>$$<br>\begin{align*}<br>&amp;n_1\times 0 &#x3D; z(n_1), \\<br>&amp;n_1\times (n+1) &#x3D; p^3_3(n_1,n,n_1\times n)+p^3_1(n_1,n,n_1\times n)<br>\end{align*}<br>$$</p>
+</li>
+<li><p>前鄰函數 $p^{-}$, 若 $n&#x3D;0$ 則 $p^{-}(n)&#x3D;0$, 否則 $p^{-}(n)&#x3D;n-1$.<br>$$<br>\begin{align*}<br>&amp;p^{-}(n) &#x3D; 0, \\<br>&amp;p^{-}(n+1) &#x3D; n &#x3D; p^2_1(n,p^{-}(n))<br>\end{align*}<br>$$</p>
+</li>
+<li><p>截差函數 $\dot{-}$, 若 $n_1\geq n_2$, 則 $n_1\dot{-}n_2&#x3D;n_1-n_2$, 否則 $n_1\dot{-}n_2&#x3D;0$.<br>$$<br>\begin{align*}<br>&amp;n_1\dot{-}\thinspace 0 &#x3D; n_1 &#x3D; p^1_1(n_1) , \\<br>&amp;n_1\dot{-}(n+1) &#x3D; p^{-}(n_1\dot{-}n) &#x3D; p^{-}(p^3_3(n_1,n,n_1\dot{-}n))<br>\end{align*}<br>$$</p>
+</li>
+<li><p>一元函數 $\text{sg}$, 若 $n&#x3D;0$ 則 $\text{sg}(n)&#x3D;0$, 否則 $\text{sg}(n)&#x3D;1$.<br>$$<br>\begin{align*}<br>&amp;\text{sg}(0) &#x3D; 0, \\<br>&amp;\text{sg}(n+1) &#x3D; 1 &#x3D; c_1(n,\text{sg}(n))<br>\end{align*}<br>$$</p>
+</li>
+<li><p>一元函數 $\overline{\text{sg}}$, $\overline{\text{sg}}(n)&#x3D;1\dot{-}\text{sg}(n)$. </p>
+</li>
+<li><p>絕對差 $\ddot{-}$, $n_1\ddot{-}n_2&#x3D;|n_1-n_2|$.<br>$$n_1\ddot{-}n_2&#x3D;(n_1\dot{-}n_2)+(n_2\dot{-}n_1)$$</p>
+</li>
+<li><p>$k$ 元最值函數 $\min$, $\max$.<br>$$<br>\begin{align*}<br>&amp;k&#x3D;2,\quad\min(n_1,n_2) &#x3D; n_1\dot{-}(n_1\dot{-}n_2), \\<br>&amp;k&gt;2,\quad\min(n_1,\cdots,n_k) &#x3D; \min(\min(n_1,\cdots,n_{k-1}),n_k)<br>\end{align*}<br>$$</p>
+</li>
+<li><p>指數函數 $n_1^{n_2}$, 規定 $0^0&#x3D;0$.<br>$$<br>\begin{align*}<br>&amp;n_1^0 &#x3D; \text{sg}(n_1), \\<br>&amp;n_1^{n+1} &#x3D; n_1^n\times n_1<br>\end{align*}<br>$$</p>
+</li>
+<li><p>餘數函數 $\text{rem}$, 若 $n_1&gt;0$, $\text{rem}(n_1,n_2)$ 是用 $n_1$ 除 $n_2$ 所得餘數; 若 $n_1&#x3D;0$ 則 $\text{rem}(n_1,n_2)&#x3D;0$.<br>$$<br>\begin{align*}<br>&amp;\text{rem}(n_1,0) &#x3D; 0, \\<br>&amp;\text{rem}(n_1,n+1) &#x3D; (\text{rem}(n_1,n)+1)\thinspace \text{sg}(n\dot{-}(\text{rem}(n_1,n)+1))<br>\end{align*}<br>$$</p>
+</li>
+<li><p>設 $f$ 是 $k+1$ 元遞歸函數, 由 $f$ 定義新的 $k$ 元函數 $g$ 和 $k+1$ 元函數 $h$:<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; \sum_{i\leq n_k} f(n_1,\cdots,n_k,i), \\<br>&amp;h(n_1,\cdots,n_{k+1}) &#x3D; \sum_{i\leq n_{k+1}} f(n_1,\cdots,n_k,i)<br>\end{align*}<br>$$<br> $g$ 和 $h$ 都是遞歸的, 因為<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; h(n_1,\cdots,n_k,n_k), \\<br>&amp;h(n_1,\cdots,n_k,0) &#x3D; f(n_1,\cdots,n_k,0), \\<br>&amp;h(n_1,\cdots,n_k,n+1) &#x3D; h(n_1,\cdots,n_k,n) + f(n_1,\cdots,n_k,n+1)<br>\end{align*}<br>$$</p>
+</li>
+<li><p>設 $f$ 是 $k+1$ 元遞歸函數, 定義新的 $k$ 元函數 $g$ 和 $k+1$ 元函數 $h$:<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; \sum_{i &lt; n_k} f(n_1,\cdots,n_k,i), \\<br>&amp;h(n_1,\cdots,n_{k+1}) &#x3D; \sum_{i &lt; n_{k+1}} f(n_1,\cdots,n_k,i)<br>\end{align*}<br>$$<br> ($n_k&#x3D;0$ 時, 規定 $g&#x3D;0$; $n_{k+1}&#x3D;0$ 時, 規定 $h&#x3D;0$. )</p>
+</li>
+<li><p>設 $f$ 是 $k+1$ 元遞歸函數, 定義新的 $k$ 元函數 $g$ 和 $k+1$ 元函數 $h$:<br>$$<br>\begin{align*}<br>&amp;g(n_1,\cdots,n_k) &#x3D; \prod_{i\leq n_k} f(n_1,\cdots,n_k,i), \\<br>&amp;h(n_1,\cdots,n_{k+1}) &#x3D; \prod_{i\leq n_{k+1}} f(n_1,\cdots,n_k,i)<br>\end{align*}<br>$$<br> ($n_k&#x3D;0$ 時, 規定 $g&#x3D;1$; $n_{k+1}&#x3D;0$ 時, 規定 $h&#x3D;1$. )</p>
+</li>
 </ol>
 <details class="note info"><summary><p>可計算的非原始遞歸函數</p>
 </summary>
@@ -364,7 +376,7 @@
 
 </details>
 
-<p>這個證明實質上是構造性的, 它給出了不使用規則 II, 由 $g$ 和 $h$ 直接構造 $f$ 的表達式的具體方法, 但這個構造沒有給出明確的計算方法, 只是對計算所需的信息進行編碼. 所以從計算的角度看, 規則 II 仍是必不可少的. 過程中出現形式極為複雜的定義式, 其實是表述對某些變量相等或大小關係, 以及邏輯依賴性的條件約束. </p>
+<p>這個證明當然可以說是構造性的, 它給出了不使用規則 II, 由 $g$ 和 $h$ 直接構造 $f$ 的表達式的具體方法. 但它並沒有給出明確的計算方法, 只是對計算所需的信息進行編碼. 所以從計算的角度看, 規則 II 仍是必不可少的. 證明過程中出現形式極為複雜的定義式, 其實是表述對某些變量相等或大小關係, 以及邏輯依賴性的條件約束. </p>
 <p>這樣我們就證明了 $\text{REC}\subseteq\text{REC}^{*}$, 從而任意遞歸函數都是可表示函數. 一個明顯的推論是, 任意遞歸關係在 $K_N$ 中可表示. </p>
 <h2 id="對-K-N-的遞歸分析"><a href="#對-K-N-的遞歸分析" class="headerlink" title="對 $K_N$ 的遞歸分析"></a>對 $K_N$ 的遞歸分析</h2><h3 id="Godel-配數"><a href="#Godel-配數" class="headerlink" title="Gödel 配數"></a>Gödel 配數</h3><p>對一種人工的形式語言, 我們一般要求它具有唯一讀法, 即從字母表中任取字母構成有限符號串, 我們要有辦法判斷它是項, 是公式, 還是既非項亦非公式, 如果是項或公式, 則要進一步明確它在哪一層次, 這些應當是唯一確定的. 可以證明, $K_N$ 具有唯一讀法, 細節略過. </p>
 <p>有了唯一讀法, 我們就可以對 $K_N$ 這種形式語言(有限符號串)進行編碼(配數), 使 $K_N$ 算術化, 以便之後讓 $K_N$ 從內部 “談論自身”. 配數的方法有很多種, 下面是其中一種. </p>
@@ -390,10 +402,10 @@
 </ol>
 <p>證明: </p>
 <ol>
-<li>$\text{VS}$ 的特徵函數是遞歸的:<br>$$C_{\text{VS}}(n) &#x3D; \sum_{k&lt;n}\left(C_{\geq}(k,1)\times C_{&#x3D;}(n,2^{15+2k})\right)$$</li>
-<li>任給一項, 必屬於這幾種可能形式: $\overline{0}$, $x_i$, $’t$, $+t_1t_2$, $\times t_1t_2$ (採用前置式寫法), 據此給出 $C_{\text{TM}}$ 滿足的關係式:<br>$$<br>\begin{align*}<br>C_{\text{TM}}(n) &#x3D;&amp; C_{&#x3D;}(n,2^{15})+C_{\text{VS}}(n)+\sum_{x&lt;n}(C_{&#x3D;}(n,2^1 * x)\times C_{\text{TM}}(x)) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}\left((C_{&#x3D;}(n,2^3*x*y)+C_{&#x3D;}(n,2^5*x*y))\times C_{\text{TM}}(x)\times C_{\text{TM}}(y)\right)<br>\end{align*}<br>$$<br>把上式右邊出現的所有 $C_{\text{TM}}(x)$ 和 $C_{\text{TM}}(y)$ 分別換成上一節定義的 $(C_{\text{TM}}^{\sharp}(n))_x$ 和 $(C_{\text{TM}}^{\sharp}(n))_y$, 即得 $C_{\text{TM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{TM}}$ 是遞歸函數. </li>
-<li>原子公式的結構只有 $\approx t_1t_2$ 這一種形式, 由此得到:<br>$$C_{\text{YF}}(n)&#x3D;\sum_{x&lt;n}\sum_{y&lt;n}C_{\text{TM}}(x)\times C_{\text{TM}}(y)\times C_{&#x3D;}(n,2^{13}*x*y)$$</li>
-<li>$K_N$ 的公式除原子公式外, 便具有 $\neg q$, $q\to r$, $\forall x_i\thinspace q$ 這三種形式, 所以 $C_{\text{FM}}$ 滿足:<br>$$<br>\begin{align*}<br>C_{\text{FM}}(n) &#x3D;&amp; C_{\text{YF}}(n)+\sum_{x&lt;n}C_{\text{FM}}(x)\times C_{&#x3D;}(n,2^7*x) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{FM}}(x)\times C_{\text{FM}}(y))\times C_{&#x3D;}(n,2^9*x*y) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{VS}}(x)\times C_{\text{FM}}(y))\times C_{&#x3D;}(n,2^{11}*x*y)<br>\end{align*}<br>$$<br>同樣把上式右邊的 $C_{\text{FM}}(x)$ 和 $C_{\text{FM}}(y)$ 分別換成 $(C_{\text{FM}}^{\sharp}(n))_x$ 和 $(C_{\text{FM}}^{\sharp}(n))_y$, 即得 $C_{\text{FM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{FM}}$ 是遞歸函數.</li>
+<li>$\text{VS}$ 的特徵函數是遞歸的:<br>$$C_{\text{VS}}(n) &#x3D; \sum_{k&lt;n}\left(C_{\geq}(k,1)\times C_{&#x3D;}\left(n,2^{15+2k}\right)\right)$$</li>
+<li>任給一項, 必屬於這幾種可能形式: $\overline{0}$, $x_i$, $’t$, $+t_1t_2$, $\times t_1t_2$ (採用前置式寫法), 據此給出 $C_{\text{TM}}$ 滿足的關係式:<br>$$<br>\begin{align*}<br>C_{\text{TM}}(n) &#x3D;&amp; C_{&#x3D;}\left(n,2^{15}\right)+C_{\text{VS}}(n)+\sum_{x&lt;n}\left(C_{&#x3D;}\left(n,2^1 * x\right)\times C_{\text{TM}}(x)\right) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}\left(\left(C_{&#x3D;}\left(n,2^3*x*y\right)+C_{&#x3D;}\left(n,2^5*x*y\right)\right)\times C_{\text{TM}}(x)\times C_{\text{TM}}(y)\right)<br>\end{align*}<br>$$<br>把上式右邊出現的所有 $C_{\text{TM}}(x)$ 和 $C_{\text{TM}}(y)$ 分別換成上一節定義的 $(C_{\text{TM}}^{\sharp}(n))_x$ 和 $(C_{\text{TM}}^{\sharp}(n))_y$, 即得 $C_{\text{TM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{TM}}$ 是遞歸函數. </li>
+<li>原子公式的結構只有 $\approx t_1t_2$ 這一種形式, 由此得到:<br>$$C_{\text{YF}}(n)&#x3D;\sum_{x&lt;n}\sum_{y&lt;n}C_{\text{TM}}(x)\times C_{\text{TM}}(y)\times C_{&#x3D;}\left(n,2^{13}*x*y\right)$$</li>
+<li>$K_N$ 的公式除原子公式外, 便具有 $\neg q$, $q\to r$, $\forall x_i\thinspace q$ 這三種形式, 所以 $C_{\text{FM}}$ 滿足:<br>$$<br>\begin{align*}<br>C_{\text{FM}}(n) &#x3D;&amp; C_{\text{YF}}(n)+\sum_{x&lt;n}C_{\text{FM}}(x)\times C_{&#x3D;}\left(n,2^7*x\right) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{FM}}(x)\times C_{\text{FM}}(y)\times C_{&#x3D;}\left(n,2^9*x*y\right) \\<br>&amp;+ \sum_{x&lt;n}\sum_{y&lt;n}C_{\text{VS}}(x)\times C_{\text{FM}}(y)\times C_{&#x3D;}\left(n,2^{11}*x*y\right)<br>\end{align*}<br>$$<br>同樣把上式右邊的 $C_{\text{FM}}(x)$ 和 $C_{\text{FM}}(y)$ 分別換成 $(C_{\text{FM}}^{\sharp}(n))_x$ 和 $(C_{\text{FM}}^{\sharp}(n))_y$, 即得 $C_{\text{FM}}$ 滿足的過程值遞歸條件, 所以 $C_{\text{FM}}$ 是遞歸函數.</li>
 </ol>
 <hr>
 
@@ -401,7 +413,7 @@
 <p>容易證明 $\text{LA}_1$, $\text{LA}_2$, $\text{LA}_3$ 的遞歸性. 而要證明 $\text{LA}_4$ 和 $\text{LA}_5$ 的遞歸性, 困難在於要設法遞歸地表達出這樣的關係: 在 Gödel 數為 $n_3$ 的項 $u(x_i)$ 或公式 $p(x_i)$ 中, 用 Gödel 數為 $n_2$ 的項 $t$ 去替換 Gödel 數為 $n_1$ 的變元 $x_i$ 的所有自由出現, 所得結果 $u(t)$ 或 $p(t)$ 的 Gödel 數是 $n_4$. </p>
 <p>首先令 $\gamma&#x3D;2^{n_3}\thinspace 3^{n_4}\cdots$, 則 $(\gamma)_0&#x3D;n_3$, $(\gamma)_1&#x3D;n_4$, 藉此將 $n_1$, $n_2$, $n_3$, $n_4$ 的四元關係轉化為一個三元關係. 這樣做是為了避免涉及兩個自然數變量的過程值遞歸. </p>
 <p>定義三元關係 $\text{SBS}$: $(n_1,n_2,\gamma)\in\text{SBS}$ $\Leftrightarrow$ $n_1\in\text{VS}$, $n_2\in\text{TM}$, $(\gamma)_0\in\text{TM}\cup\text{FM}$, $(\gamma)_1$ 是用 $n_2$ (對應的)項去替換 $(\gamma)_0$ 項或 $(\gamma)_0$ 公式中的 $n_1$ 變元的全部自由出現所得結果的 Gödel 數.<br>通過分析用項 $t$ 去替換項 $u(x_i)$ 或公式 $p(x_i)$ 中所有自由的 $x_i$ 所得的可能類型, 可以逐個寫出關係 $\text{SBS}$ 需滿足的約束條件, 由此得到 $C_{\text{SBS}}$ 所滿足的過程值遞歸條件, 即可證明 $\text{SBS}$ 是遞歸關係, 細節略過. </p>
-<p>在遞歸關係 $\text{SBS}$ 的基礎上, 定義三元函數 $\text{Sub}$:<br>$$\text{Sub}(n_1,n_2,n_3)&#x3D;\mu\thinspace x\left[C_{\text{SBS}}(n_1,n_2,2^{n_3}\thinspace 3^{x})+C_{\leq}((p_{n_2 n_3})^{n_2^2 n_3^2},x)&#x3D;1 \right]$$<br>在函數 $\text{Sub}$ 中加一項 $C_{\leq}(m,x)$ 是為了確保根存在性條件, $m$ 需要取得充分大, 以至於不可能是上述替換結果的 Gödel 數, 這裡取 $m&#x3D;(p_{n_2 n_3})^{n_2^2 n_3^2}$. 該函數顯然是遞歸的. </p>
+<p>在遞歸關係 $\text{SBS}$ 的基礎上, 定義三元函數 $\text{Sub}$:<br>$$\text{Sub}(n_1,n_2,n_3)&#x3D;\mu\thinspace x\left[C_{\text{SBS}}\left(n_1,n_2,2^{n_3}\thinspace 3^{x}\right)+C_{\leq}\left((p_{n_2 n_3})^{n_2^2 n_3^2},x\right)&#x3D;1 \right]$$<br>在函數 $\text{Sub}$ 中加一項 $C_{\leq}(m,x)$ 是為了確保根存在性條件, $m$ 需要取得充分大, 以至於不可能是上述替換結果的 Gödel 數, 這裡取 $m&#x3D;(p_{n_2 n_3})^{n_2^2 n_3^2}$. 該函數顯然是遞歸的. </p>
 <p>根據定義, 可以把上式具體寫作:<br>$$<br>\text{Sub}(n_1,n_2,n_3)&#x3D;\begin{cases}<br>\text{g}(u(t)), &amp;\text{if}\enspace n_1&#x3D;\text{g}(x_i),\thinspace n_2&#x3D;\text{g}(t),\thinspace n_3&#x3D;\text{g}(u(x_i)); \\<br>\text{g}(p(t)), &amp;\text{if}\enspace n_1&#x3D;\text{g}(x_i),\thinspace n_2&#x3D;\text{g}(t),\thinspace n_3&#x3D;\text{g}(p(x_i)); \\<br>(p_{n_2 n_3})^{n_2^2 n_3^2},&amp;\text{otherwise}.<br>\end{cases}<br>$$<br>其中, 符號 $\text{g}$ 表示 Gödel 配數. </p>
 <p>最後, 要斷定 $\text{LA}_4$ 和 $\text{LA}_5$ 的遞歸性, 還需要下面的結論.<br>以下關係是遞歸關係: </p>
 <ol>
@@ -432,10 +444,10 @@
 <p>證明略. 這裡需要注意的是, $\text{PF}$ 的遞歸性僅僅依賴於 “$\text{AX}$ 是遞歸的” 這一點, 而與 $\text{AX}$ 中包含哪些具體公理的 Gödel 數無關. 不論怎樣增減公理, 只要不改變 $\text{AX}$ 的遞歸性, 就不改變 $\text{PF}$ 的遞歸性. </p>
 <p>一元函數 $\text{Num}$ 定義為 $\text{Num}(n)&#x3D;\text{g}(\overline{n})$, 則 $\text{Num}$ 是遞歸函數, 因為<br>$$<br>\begin{align*}<br>&amp;\text{Num}(0) &#x3D; \text{g}(\overline{0}) &#x3D; 2^{15} \\<br>&amp;\text{Num}(n+1) &#x3D; 2^1 * \text{g}(\overline{n}) &#x3D; 2^1 * \text{Num}(n)<br>\end{align*}<br>$$</p>
 <p>至此, 證明 Gödel 不完備性定理的準備工作已告完成. </p>
-<h2 id="可表示函數的遞歸性"><a href="#可表示函數的遞歸性" class="headerlink" title="可表示函數的遞歸性*"></a>可表示函數的遞歸性*</h2><p>此前我們已經證明了 $\text{REC}\subseteq\text{REP}$, 現在順帶證明 $\text{REP}\subseteq\text{REC}$, 即所有在 $K_N$ 中可表示的函數都是遞歸函數. </p>
+<h2 id="可表示函數的遞歸性"><a href="#可表示函數的遞歸性" class="headerlink" title="可表示函數的遞歸性*"></a>可表示函數的遞歸性*</h2><p>此前已經證明了 $\text{REC}\subseteq\text{REP}$, 現在順帶證明 $\text{REP}\subseteq\text{REC}$, 即所有在 $K_N$ 中可表示的函數都是遞歸函數. </p>
 <p>設 $k$ 元函數 $f$ 用公式 $p(x_1,\cdots,x_k,y)$ 可表示, 其中 $y$ 是不同於 $x_1,\cdots,x_k$ 的個體變元. 把 $p(x_1,\cdots,x_k,y)$ 的 Gödel 數記為 $\alpha_0$:<br>$$\alpha_0&#x3D;\text{g}(p(x_1,\cdots,x_k,y))$$<br>給定 $f$, 且取定用以表示它的公式 $p$ 之後, $\alpha_0$ 就是定數. 現用公式 $p$ 作出一個 $k+2$ 元關係 $W_p$:<br>	$W_p&#x3D;\{(n_1,\cdots,n_{k+2}):n_{k+2}$ 是 $p(\overline{n_1},\cdots,\overline{n_{k+1}})$ 從 $\mathcal{N}$ 的證明的 Gödel 數 $\}$ </p>
 <p>把 $p(\overline{n_1},x_2,\cdots,x_k,y)$, $p(\overline{n_1},\overline{n_2},x_3,\cdots,x_k,y)$, $\cdots$, $p(\overline{n_1},\cdots,\overline{n_{k+1}})$ 的 Gödel 數分別記為 $\alpha_1(n_1)$, $\alpha_2(n_1,n_2)$, $\cdots$, $\alpha_{k+1}(n_1,\cdots,n_{k+1})$. 這是一串遞歸函數:<br>$$<br>\begin{align*}<br>&amp;\alpha_1(n_1) &#x3D; \text{Sub}(2^{15+2},\text{Num}(n_1),\alpha_0), \\<br>&amp;\alpha_2(n_1,n_2) &#x3D; \text{Sub}(2^{15+4},\text{Num}(n_2),\alpha_1(n_1)), \\<br>&amp;\cdots , \\<br>&amp;\alpha_{k+1}(n_1,\cdots,n_{k+1}) &#x3D; \text{Sub}(2^{15+2(k+1)},\text{Num}(n_{k+1}),\alpha_k(n_1,\cdots,n_k))<br>\end{align*}<br>$$<br>所以由 $W_p$ 的定義即可知 $W_p$ 是遞歸的:<br>$$C_{W_p}(n_1,\cdots,n_{k+2})&#x3D;C_{\text{PRF}}\left(\alpha_{k+1}(n_1,\cdots,n_{k+1}),n_{k+2}\right)$$</p>
-<p>因為 $f$ 可由公式 $p(x_1,\cdots,x_k,y)$ 表示, 所以<br>$$\mathcal{N}\vdash p(\overline{n_1},\cdots,\overline{n_k},\thinspace \overline{f(n_1,\cdots,n_k)})$$<br>把 $p(\overline{n_1},\cdots,\overline{n_k},\thinspace \overline{f(n_1,\cdots,n_k)})$ 從 $\mathcal{N}$ 的一個證明的 Gödel 數記為 $m$, 則有<br>$$(n_1,\cdots,n_k,f(n_1,\cdots,n_k),m)\in W_p$$<br>這說明, 對任意的 $n_1,\cdots,n_k$, 一定存在 $x\in\mathbb{N}$ 使<br>$$(n_1,\cdots,n_k,(x)_0,(x)_1)\in W_p$$<br>例如令 $x&#x3D;2^{f(n_1,\cdots,n_k)}\thinspace 3^m$ 即可. 所以如下定義的 $k$ 元函數 $x^{*}$ 是遞歸全函數:<br>$$x^{*}(n_1,\cdots,n_k)&#x3D;\mu\thinspace x\left[C_{W_p}(n_1,\cdots,n_k,(x)_0,(x)_1)&#x3D;1\right]$$</p>
+<p>因為 $f$ 可由公式 $p(x_1,\cdots,x_k,y)$ 表示, 所以<br>$$\mathcal{N}\vdash p\left(\overline{n_1},\cdots,\overline{n_k},\thinspace \overline{f(n_1,\cdots,n_k)}\right)$$<br>把 $p\left(\overline{n_1},\cdots,\overline{n_k},\thinspace \overline{f(n_1,\cdots,n_k)}\right)$ 從 $\mathcal{N}$ 的一個證明的 Gödel 數記為 $m$, 則有<br>$$(n_1,\cdots,n_k,f(n_1,\cdots,n_k),m)\in W_p$$<br>這說明, 對任意的 $n_1,\cdots,n_k$, 一定存在 $x\in\mathbb{N}$ 使<br>$$(n_1,\cdots,n_k,(x)_0,(x)_1)\in W_p$$<br>例如令 $x&#x3D;2^{f(n_1,\cdots,n_k)}\thinspace 3^m$ 即可. 所以如下定義的 $k$ 元函數 $x^{*}$ 是遞歸全函數:<br>$$x^{*}(n_1,\cdots,n_k)&#x3D;\mu\thinspace x\left[C_{W_p}(n_1,\cdots,n_k,(x)_0,(x)_1)&#x3D;1\right]$$</p>
 <p>於是我們有<br>$$\mathcal{N}\vdash p\left(\overline{n_1},\cdots,\overline{n_k},\thinspace \overline{(x^{*}(n_1,\cdots,n_k))_0}\right)\tag{1}$$<br>假設 $f(n_1,\cdots,n_k)\not&#x3D;(x^{*}(n_1,\cdots,n_k))_0$, 則會得到<br>$$\mathcal{N}\vdash\neg p\left(\overline{n_1},\cdots,\overline{n_k},\thinspace \overline{(x^{*}(n_1,\cdots,n_k))_0}\right)\tag{2}$$<br>與 $(1)$ 式矛盾. 如果 $\mathcal{N}$ 是無矛盾的, 就必然有<br>$$f(n_1,\cdots,n_k)&#x3D;(x^{*}(n_1,\cdots,n_k))_0$$<br>是遞歸函數.<br>從而在 $\mathcal{N}$ 無矛盾的前提下, 我們證明了可表示函數必是遞歸函數. 結合上面的結論就有 $\text{REC}&#x3D;\text{REP}$, 遞歸性與在 $K_N$ 中的可表示性是一回事. </p>
 <p>在這個證明中, 我們利用了 $\text{PRF}$ ($\text{PF}$) 的遞歸性, 而 $\text{PRF}$ 的遞歸性僅僅依賴於公理集的遞歸性, 所以如果對 $\mathcal{N}$ 進行無矛盾擴張 $\mathcal{N}^{*}$, 但保持 $\mathcal{N}^{*}$ 中公理的 Gödel 數集的遞歸性, 則對擴張後系統中的可表示函數, 上述結論仍然成立. </p>
 <h2 id="部分遞歸函數"><a href="#部分遞歸函數" class="headerlink" title="部分遞歸函數*"></a>部分遞歸函數*</h2><p>從程序語言的角度看, 原始遞歸函數相當於進行有界的循環, 即形如 “從 $i&#x3D;1$ 到 $n$ 執行…” 的一系列預先確定的運算; 而 $\mu$ 算子使得程序可以進行無界的循環, 即從 $i&#x3D;1$ 開始逐個檢驗, 直到搜索得最小根, 一個函數滿足根存在性條件, 就意味著循環必定有終點 (停機), 這樣的函數就是一般遞歸函數. 進而, 如果去除根存在性條件, 那麼這種循環就有可能不會終止. </p>

@@ -28,7 +28,7 @@
 <meta property="og:description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-02T15:06:07.969Z">
+<meta property="article:modified_time" content="2026-03-22T08:56:13.976Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -423,10 +423,10 @@
 <li>若 $\Gamma\models\varphi$, 則存在 $\Gamma$ 的某個子集 $\Gamma_0$ 使得 $\Gamma_0\models\varphi$; </li>
 <li>若 $\Gamma$ 的每一個有窮子集 $\Gamma_0$ 是可滿足的, 則 $\Gamma$ 是可滿足的.</li>
 </ol>
-<p>由這個定理可以得到<strong>非標準算術模型</strong>的存在性, 該模型與標準算術模型初等等價但不同構. </p>
+<p>由這個定理可以得到<strong>非標準算術模型</strong>的存在性, 該模型與標準算術模型初等等價, 但不同構. </p>
 <hr>
 
-<p>對給定結構 $A$, 我們稱所有在 $A$ 中成立的閉語句為 $A$ 的<strong>理論</strong>, 記作 $\text{Th}\thinspace A$. 容易證明, 如果同一個語言上的結構 $B$ 滿足 $\text{Th}\thinspace A$, 那麼就有 $A\equiv B$, 即 $A$ 和 $B$ 初等等價. </p>
+<p>對給定結構 $A$, 我們稱所有在 $A$ 中成立的閉語句為 $A$ 的<strong>理論</strong>, 記作 $\text{Th}\thinspace A$. 顯然, 如果同一個語言上的結構 $B$ 滿足 $\text{Th}\thinspace A$, 那麼就有 $A\equiv B$, 即 $A$ 和 $B$ 初等等價. </p>
 <p>現在考慮標準算術模型 $A&#x3D;(\mathbb{N},0,S,&lt;,+,\cdot)$. 首先擴展語言, 添加一個新的常數符號 $c$, 令公式集<br>$$\Sigma&#x3D;\left\{0&lt;c,\thinspace S0&lt;c,\thinspace SS0&lt;c,\thinspace \cdots\right\}$$<br>任何一個 $\Sigma\cup\text{Th}\thinspace A$ 的有窮子集 $\Sigma_0$ 都是可滿足的 (對 $\Sigma$ 中的有限個語句, 只需把 $c$ 解釋為一個充分大的自然數 $k$; 而 $\text{Th}\thinspace A$ 中的語句則根本不牽涉 $c$ ), 所以由緊緻性定理, $\Sigma\cup\text{Th}\thinspace A$ 也是可滿足的. </p>
 <p>設 $B$ 是 $\Sigma\cup\text{Th}\thinspace A$ 的一個模型, 由於 $B$ 是 $\text{Th}\thinspace A$ 的模型, 所以 $A\equiv B$. 假設存在同構 $h:B\to A$, 設 $m&#x3D;h(c^{A})$, 由於 $0&lt;c$, $S0&lt;c$, $\cdots$, $\underbrace{SS\cdots S}_{m}0&lt;c$ 在 $B$ 中成立, 所以 $h$ 誘導了一個從 $m+1$ 到 $m$ 的單射, 與抽屜原理矛盾. 因此, $B$ 就是我們要求的非標準模型. </p>
 <p>直觀來看, 非標準模型就是在標準模型中加入了大於任意標準自然數的 “非標準自然數”, 這樣的非標準自然數可用於構造 Gödel 句子的否定在其中成立的模型. </p>
