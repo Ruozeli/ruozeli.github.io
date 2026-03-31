@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/03/c4rC/c245291.png">
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/04/nh8H/Turing-machine.png">
 <meta property="article:published_time" content="2026-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-04T16:01:24.134Z">
+<meta property="article:modified_time" content="2026-03-28T10:50:36.182Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -275,7 +275,7 @@
 <p>但由此不能得出: $\mathcal{N}$ 的任何無矛盾擴張都不可能完備. 例如, 可以仿照證明 $K$ 的完全性時的做法, 在保證無矛盾的前提下遍歷 $K_N$ 的所有閉式, 歸納地定義出一串 $\mathcal{N}$ 的無矛盾擴張, 最後將這些擴張全都並起來得到 $\Gamma^{*}$. 若把 $\Gamma^{*}$ 作為擴張的算術公理集, 我們就達到了完備化. 但是, 由 Gödel-Rosser 定理, $\Gamma^{*}$ 中公理的 Gödel 數集必是非遞歸的, 故由 Church 論題, 不存在算法可用來確定任給的公式是不是 $\Gamma^{*}$ 中的公理, 也不存在算法可用來確定任給的有限公式序列是不是從 $\Gamma^{*}$ 的證明. </p>
 <p>把所有在 $\mathbb{N}$ 中恆真的 $K_N$ 的公式構成的集記作 $\text{Tr}$, 則 $\text{Tr}$ 也是 $\mathcal{N}$ 的無矛盾完備擴張. 但是由 Gödel-Rosser 定理, $\text{Tr}$ 中公式的 Gödel 數構成的集 $\text{TR}$ 必是非遞歸的. </p>
 <p>總之, 任何把 Peano 形式算術包含在內的數學形式系統, 只要有算法能用來確定該系統的任一篇文章 (公式的有限序列) 是不是一個證明 (這時說該系統是 “遞歸可公理化” 的), 這樣的系統一定不完備. </p>
-<h3 id="Godel-第二不完備性定理"><a href="#Godel-第二不完備性定理" class="headerlink" title="Gödel 第二不完備性定理"></a>Gödel 第二不完備性定理</h3><p>20世紀20年代初, Hilbert 提出了著名的有窮主義綱領, 其核心是要證明包含無窮的經典數學能夠幫助我們獲得關於具體, 有限事物的知識, 而這種證明方法自身必須是無疑議的. 為此, Hilbert 構建了原始遞歸算術 ($\text{PRA}$), 其中只包含原始遞歸函數, 於是目標就轉變為證明 Peano 算術 ($\text{PA}$) 相對於 $\text{PRA}$ 的保守性 (即對 $\text{PRA}$ 中任何公式 $\varphi$, 若 $\text{PA}\vdash\varphi$, 則 $\varphi$ ), 而保守性又可進一步歸約為 $\text{PA}$ 的無矛盾性. 所以 Hilbert 綱領的目標最終歸結為: 在 $\text{PRA}$ 中證明 $\text{PA}$ 的無矛盾性 (把這裡的 $\text{PRA}$ 換成比方說 $\text{ZFC}$, 就可以使綱領涵蓋更多數學領域, 而不僅僅是算術). 然而, Gödel 的第二不完備性定理否定了這個可能, 從而在一定程度上否定了 Hilbert 的有窮主義綱領. </p>
+<h3 id="Godel-第二不完備性定理"><a href="#Godel-第二不完備性定理" class="headerlink" title="Gödel 第二不完備性定理"></a>Gödel 第二不完備性定理</h3><p>20世紀20年代初, Hilbert 提出了著名的有窮主義綱領, 其核心是要證明包含無窮的經典數學能夠幫助我們獲得關於具體, 有限事物的知識, 而這種證明方法自身必須是無疑議的. 為此, Hilbert 構建了原始遞歸算術 ($\text{PRA}$), 其中只包含原始遞歸函數, 於是目標就轉變為證明 Peano 算術 ($\text{PA}$) 相對於 $\text{PRA}$ 的保守性 (即對 $\text{PRA}$ 中任何公式 $\varphi$, 若 $\text{PA}\vdash\varphi$, 則 $\varphi$ ), 而保守性又可進一步歸約為 $\text{PA}$ 的無矛盾性. 所以 Hilbert 綱領的目標最終歸結為: 在 $\text{PRA}$ 中證明 $\text{PA}$ 的無矛盾性 (把這裡的 $\text{PA}$ 換成比方說 $\text{ZFC}$, 就可以使綱領涵蓋更多數學領域, 而不僅僅是算術). 然而, Gödel 的第二不完備性定理否定了這個可能, 從而在一定程度上否定了 Hilbert 的有窮主義綱領. </p>
 <p>Gödel 第二不完備性定理斷言: 如果包括初等數論在內的數學形式系統是無矛盾的, 那麼這種無矛盾性就不可能在此系統中得到證明. 下面就形式系統 $K_N$ 證明第二不完備性定理的<strong>一種易證形式</strong>. 其證明需要把第一定理前半部分的證明在系統中再次形式化. </p>
 <p>我們已經知道, 二元關係<br>$\text{PRF}&#x3D;\{(n_1,n_2):n_1&#x3D;\text{g}(q)$, $n_2$ 是 $q$ 從 $\mathcal{N}$ 的證明的 Gödel 數 $\}$<br>是遞歸的. 設 $\text{PRF}$ 用公式 $\text{prf}(x_1,x_2)$ 可表示, 記 $\text{pr}(x_1)&#x3D;\exists x_2\thinspace\text{prf}(x_1,x_2)$. </p>
 <p>下面先證明兩個引理.<br><strong>第一可推性條件</strong>: 對任一公式 $q$,<br>$$\mathcal{N}\vdash q\enspace\Rightarrow\enspace\mathcal{N}\vdash\text{pr}(\ulcorner q\urcorner)$$<br>其中 $\ulcorner q\urcorner$ 是 $\overline{\text{g}(q)}$ 的簡寫. </p>
@@ -305,6 +305,12 @@
 
 <p>進而, 如果假定第二和第三可推性條件 (參見上文) 也成立, 那麼可以證明<br>$$\mathcal{N}\vdash\neg(\text{pr}(\ulcorner q_0\urcorner)\wedge\text{pr}^{*}(\ulcorner q_0\urcorner))\leftrightarrow\neg\text{pr}(\ulcorner \overline{0}\not\approx\overline{0}\urcorner)$$<br>後兩條可推性條件使得從 $\bot$ (矛盾) 推出公式 $\overline{0}\not\approx\overline{0}$ 的證明可在系統中再次形式化. </p>
 <p>這就給出了 Gödel 第二不完備性定理的一種通常的形式<br>$$\mathcal{N}\not\vdash \neg\text{pr}(\ulcorner \overline{0}\not\approx\overline{0}\urcorner)$$</p>
+<details class="note success"><summary><p>直觀理解</p>
+</summary>
+<p>對第二不完備性定理, 還有另一種 (不嚴格的) 直觀理解: 從 Gödel 句子 $p$ 出發, $p$ 等價於 “$p$ 不可證”, 所以如果 $\mathcal{N}$ 的無矛盾性在系統內可證, 那麼就能在系統內證明 “$p$ 不可證”, 也就證明了與之等價的 $p$. 這與 $p$ 的不可判定性矛盾. </p>
+
+</details>
+
 <h2 id="K-N-的不可判定性"><a href="#K-N-的不可判定性" class="headerlink" title="$K_N$ 的不可判定性"></a>$K_N$ 的不可判定性</h2><p>作為 Gödel-Rosser 定理的推論, 已經證明 $K_N$ 在 $\mathbb{N}$ 中恆真公式的 Gödel 數構成的集 $\text{TR}$ 是非遞歸的, 按 Church 論題, 不存在算法可以確定任給公式是否在 $\mathbb{N}$ 中恆真. 這一事實稱為 $K_N$ 的語義不可判定性, 而下面討論的是 $K_N$ 的語法不可判定性. </p>
 <p>把從 $\mathcal{N}$ 可證的公式 Gödel 數全體構成的集記作 $\text{TH}$:<br>$$\text{TH}&#x3D;\left\{\text{g}(p):\mathcal{N}\vdash p\right\}$$<br>由謂詞演算的可靠性定理知 $\text{TH}\subseteq\text{TR}$. </p>
 <p>$K_N$ 的語法不可判定性是指: 若 $\mathcal{N}$ 無矛盾, 則 $\text{TH}$ 是非遞歸集. </p>
@@ -329,7 +335,7 @@
 <p>上述命題的逆命題不成立, 存在非遞歸的遞歸可枚舉集. 例如 $\text{TH}$ 是遞歸可枚舉集, 任取 $m\in\text{TH}$ (如取 $m$ 為某公理的 Gödel 數), 則如下定義的遞歸函數 $f$ 的值域給出 $\text{TH}$:<br>$$f(n)&#x3D;(n)_{\text{lh}(n)\dot{-}1}\times C_{\text{PF}}(n)+m\thinspace\overline{\text{sg}}(C_{\text{PF}}(n))$$<br>直觀來看, 該算法的意思是: 逐一拿出從 $\mathcal{N}$ 的證明文章 (根據 $C_{\text{PF}}$ 的定義), 再取出文章的最後一個公式, 這樣就能枚舉出所有從 $\mathcal{N}$ 可證的公式. </p>
 <hr>
 
-<p>進而, 若 $A$ 和 $A$ 的餘集 $\overline{A}&#x3D;\mathbb{N}-A$ 都是遞歸可枚舉集, 則 $A$ 是遞歸集.<br>設非空集 $A$ 和非空集 $\overline{A}$ 分別是一元遞歸函數 $f$ 和 $h$ 的值域, 則 $A$ 的遞歸性由下式給出:<br>$$C_A(n)&#x3D;\overline{\text{sg}}\left(n\ddot{-}f\left(\mu\thinspace x\left[(f(x)\ddot{-}n)(h(x)\ddot{-}n)&#x3D;0\right]\right)\right)$$<br>其中 $f$ 和 $h$ 的根存在性條件顯然滿足. </p>
+<p>進而, 若 $A$ 和 $A$ 的餘集 $\overline{A}&#x3D;\mathbb{N}-A$ 都是遞歸可枚舉集, 則 $A$ 是遞歸集.<br>設非空集 $A$ 和非空集 $\overline{A}$ 分別是一元遞歸函數 $f$ 和 $h$ 的值域, 則 $A$ 的遞歸性由下式給出:<br>$$C_A(n)&#x3D;\overline{\text{sg}}\left(n\ddot{-}f\left(\mu x\left[(f(x)\ddot{-}n)(h(x)\ddot{-}n)&#x3D;0\right]\right)\right)$$<br>其中 $f$ 和 $h$ 的根存在性條件顯然滿足. </p>
 <p>直觀來看, 如果 $A$ 是遞歸可枚舉集, 我們就可以逐一枚舉其元素. 對於任給的元素 $a$, 若 $a\in A$, 則必能在有限步內確定 $a\in A$, 但若 $a\not\in A$, 則無法用枚舉 $A$ 的元素的方法在有限步內確定 $a\not\in A$. 反過來, 如果 $\overline{A}$ 也是遞歸可枚舉集, 我們就可以通過枚舉 $\overline{A}$ 的元素, 在有限步內確定 $a\not\in A$. 這時 $A$ 和 $\overline{A}$ 就都是遞歸集. </p>
 <h3 id="遞歸可枚舉集的算術可定義性"><a href="#遞歸可枚舉集的算術可定義性" class="headerlink" title="遞歸可枚舉集的算術可定義性"></a>遞歸可枚舉集的算術可定義性</h3><p>〔註: 另參見筆記第二篇<a href="https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/#可定義性">可定義性</a>. 〕</p>
 <p>$k$ 元函數 $f$ 是算術可定義函數, 指存在 $K_N$ 的含 $k+1$ 個自由變元的公式 $p(x_1\cdots,x_k,y)$, 對任意 $n_1,\cdots,n_k,m\in\mathbb{N}$, 滿足<br>$$f(n_1,\cdots,n_k)&#x3D;m\enspace\Leftrightarrow\enspace |p(\overline{n_1},\cdots,\overline{n_k},\overline{m})|_{\mathbb{N}}&#x3D;1$$<br>此時說 $f$ 用公式 $p(x_1\cdots,x_k,y)$ 在 $K_N$ 中可定義. </p>
