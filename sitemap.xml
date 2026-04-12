@@ -1559,6 +1559,13 @@
   </url>
   
   <url>
+    <loc>https://ruozeli.github.io/tags/trigonometry/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ruozeli.github.io/tags/school/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1567,13 +1574,6 @@
   
   <url>
     <loc>https://ruozeli.github.io/tags/critical/</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/tags/trigonometry/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1757,20 +1757,6 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Critical/</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/categories/Research/OperationAEOLUS/</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ruozeli.github.io/categories/Problem-Solving/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1778,7 +1764,21 @@
   </url>
   
   <url>
+    <loc>https://ruozeli.github.io/categories/Critical/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ruozeli.github.io/categories/Thoughts/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/categories/Research/OperationAEOLUS/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1827,14 +1827,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Writing/Poetry/</loc>
+    <loc>https://ruozeli.github.io/categories/Review/Art/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Review/Art/</loc>
+    <loc>https://ruozeli.github.io/categories/Writing/Poetry/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
