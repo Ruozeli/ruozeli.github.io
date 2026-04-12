@@ -28,7 +28,7 @@
 <meta property="og:description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-22T08:56:13.976Z">
+<meta property="article:modified_time" content="2026-04-12T06:06:48.263Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -244,7 +244,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="謂詞演算"><a href="#謂詞演算" class="headerlink" title="謂詞演算"></a>謂詞演算</h1><p>命題邏輯雖結構簡單易於研究, 但應用範圍較窄, 例如古典三段論推理就沒法用命題語言來形式化. 一階邏輯是對命題邏輯的細化, 我們在命題邏輯的基礎上引入謂詞和量詞, 以此來進一步研究 “原子命題” 的內部結構. 由此建立的新數學模型稱為 “謂詞演算”, 它具有更細緻, 複雜的結構, 能更深入地表現實際的推理過程. </p>
+    <div class="post-body" itemprop="articleBody"><p>上一篇: <a href="https://ruozeli.github.io/2026/01/30/Mathematical_Logic_1/">命題演算</a></p>
+<h1 id="謂詞演算"><a href="#謂詞演算" class="headerlink" title="謂詞演算"></a>謂詞演算</h1><p>命題邏輯雖結構簡單易於研究, 但應用範圍較窄, 例如古典三段論推理就沒法用命題語言來形式化. 一階邏輯是對命題邏輯的細化, 我們在命題邏輯的基礎上引入謂詞和量詞, 以此來進一步研究 “原子命題” 的內部結構. 由此建立的新數學模型稱為 “謂詞演算”, 它具有更細緻, 複雜的結構, 能更深入地表現實際的推理過程. </p>
 <p>需要注意的是, 在一階邏輯中, 變元僅僅指代個體, 量詞的控制範圍也僅限於個體, 這一點與討論 “(個體組成的)集合” 和 “(個體間的)關係” 的二階邏輯不同. 儘管二階邏輯的語言更豐富, 但一階邏輯仍然在邏輯學中佔有主導地位, 原因之一是一階邏輯有完全性, 而二階邏輯沒有. 也有哲學家認為二階邏輯本質上已經是數學和集合論, 並不是單純的邏輯. </p>
 <h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><h3 id="原子公式"><a href="#原子公式" class="headerlink" title="原子公式"></a>原子公式</h3><p>為形式化一個一般的數學命題, 我們總共需要4個集: 個體變元集 $X$, 個體常元集 $C$, 運算(函數)集 $F$, 謂詞集 $R$. </p>
 <ol>
@@ -310,13 +311,15 @@
 <li>$\exists_1$ <strong>規則</strong>: 設項 $t$ 對 $p(x)$ 中的 $x$ 自由, 則有 $\vdash p(t)\to\exists x p(x)$; </li>
 <li>$\exists_2$ <strong>規則</strong>: 設 $\Gamma\cup\left\{p\right\}\vdash q$, 其證明中所用 $\text{Gen}$ 變元不在 $p$ 中自由出現, 且 $x$ 不在 $q$ 中自由出現, 那麼有 $\Gamma\cup\left\{\exists x p\right\}\vdash q$, 且除 $x$ 不增加其他 $\text{Gen}$ 變元.</li>
 </ol>
+<hr>
+
 <p>$p$ 與 $q$ 可證等價(簡稱等價), 指 $\vdash p\leftrightarrow q$ 成立, 這個概念相當於命題演算中的等值公式. “可證等價” 給出了 $K(Y)$ 上的一個等價關係, 確定了 $K(Y)$ 的一個分類. 我們有 </p>
 <ol>
 <li>$\vdash \forall x\thinspace p(x)\leftrightarrow\forall y\thinspace p(y)$; </li>
 <li>$\vdash \exists x\thinspace p(x)\leftrightarrow\exists y\thinspace p(y)$,</li>
 </ol>
 <p>其中 $y$ 不在 $x$ 中出現. 這兩條可用來更換約束變元. </p>
-<p>在謂詞演算中, 我們同樣有對偶律. 設公式 $p$ 只含原子公式及 $\neg$, $\vee$, $\wedge$, $\forall$, $\exists$, 把原子公式換為其否定, $\vee$ 和 $\wedge$ 互換, $\forall$ 和 $\exists$ 互換, 得到公式 $p^{*}$, 則 $\vdash \neg p\leftrightarrow p^{*}$. </p>
+<p>在謂詞演算中, 我們同樣有對偶律. 設公式 $p$ 只含原子公式及 $\neg$, $\vee$, $\wedge$, $\forall$, $\exists$, 把原子公式換為其否定, $\vee$ 和 $\wedge$ 互換, $\forall$ 和 $\exists$ 互換, 得到公式 $p^{*}$, 則 $\vdash \neg p\leftrightarrow p^{*}$. 這與集合的 De Morgan 律類似. </p>
 <details class="note info"><summary><p>前束範式</p>
 </summary>
 <p><strong>前束範式</strong>指形如 $Q_1 x_1\cdots Q_n x_n\thinspace p$ 的公式, 其中 $Q_i$ 為 $\forall$ 或 $\exists$, $p$ 是不含量詞的公式. 可以歸納證明, 每一個公式都有與之等價的前束範式, 求出該前束範式的方法是多次使用如下等價推導規則: (用 $Q^{*}$ 表示 $Q$ 的對偶)</p>
@@ -336,7 +339,7 @@
 <li>對 $K$ 的每個運算符 $f^n_i$, 都有 $M$ 上的 $n$ 元運算 $\overline{f^n_i}$ 與之對應: $f^n_i\mapsto\overline{f^n_i}$; </li>
 <li>對 $K$ 的每個謂詞 $R^n_i$, 都有 $M$ 上的 $n$ 元關係 $\overline{R^n_i}$ 與之對應: $R^n_i\mapsto\overline{R^n_i}$.</li>
 </ol>
-<p>〔註: 後面出現多個解釋域時, 就把解釋域記為上標以示區分, 例如, 把 $\overline{c}$ 具體寫作 $\overline{c}^M$. 〕</p>
+<p>〔註: 下文涉及多個解釋域時, 就把解釋域記在上標以示區分. 例如, 把 $\overline{c}$ 具體寫作 $\overline{c}^M$. 〕</p>
 <p>帶有上述三個映射的非空集 $M$ 叫做 $K$ 的<strong>解釋域</strong>. 解釋域的元素叫做個體對象, 解釋域通常也叫做 “解釋” 或 <strong>“結構”</strong>.<br>解釋域是帶有特定內部結構的集合, 其結構與謂詞演算的語法結構具有一定對應性, 但集合內部的性質不一定都能被謂詞演算這種語言 “捕捉”. </p>
 <hr>
 
@@ -392,7 +395,8 @@
 <li>若 $h$ 是單射, 則 (2) 中公式 $p$ 可以包含等詞; </li>
 <li>若 $h$ 是滿射, 則 (2) 中公式 $p$ 可以包含量詞.</li>
 </ol>
-<p>進而, 我們稱 $L$ 上的兩個結構 $A$ 和 $B$ 是<strong>初等等價</strong>的, 記作 $A\equiv B$, 如果對 $L$ 中的任意閉式 $p$ 都有 $|p|_A&#x3D;1$ 當且僅當 $|p|_B&#x3D;1$.<br>由同態定理可知, 若存在雙射 $h:A\to B$, 那麼對任何公式 $p$ 都有 $|p|(\varphi)&#x3D;1$ 當且僅當 $|p|(h\circ\varphi)&#x3D;1$, 故 $A$ 和 $B$ 是初等等價的, 這是因為, 同構的兩個結構, 本質上其實是同一個結構. 然而反過來, 若 $A$ 和 $B$ 初等等價, 則不能得出 $A$ 和 $B$ 是同構的. 可能情況是, 兩個結構儘管不同, 但用我們的語言不能描述出它們的區別, 這只能說明語言的匱乏. </p>
+<p>證明略. </p>
+<p>我們稱 $L$ 上的兩個結構 $A$ 和 $B$ 是<strong>初等等價</strong>的, 記作 $A\equiv B$, 如果對 $L$ 中的任意閉式 $p$ 都有 $|p|_A&#x3D;1$ 當且僅當 $|p|_B&#x3D;1$.<br>由同態定理可知, 若存在雙射 $h:A\to B$, 那麼對任何公式 $p$ 都有 $|p|(\varphi)&#x3D;1$ 當且僅當 $|p|(h\circ\varphi)&#x3D;1$, 故 $A$ 和 $B$ 是初等等價的, 這是因為, 同構的兩個結構, 本質上其實是同一個結構. 然而反過來, 若 $A$ 和 $B$ 初等等價, 則不能得出 $A$ 和 $B$ 是同構的. 可能情況是, 兩個結構儘管不同, 但用我們的語言不能描述出它們的區別, 這只能說明語言的匱乏. </p>
 <hr>
 
 <p>結構 $A$ 上的一個<strong>自同構</strong>就是 $A$ 到 $A$ 自身的一個同構. 由同態定理可知, 任何自同構都保持可定義的關係. 令 $h:A\to A$ 是一個自同構, $R$ 是 $A$ 上的一個可定義的 $n$ 元關係, 則對任意 $a_1,\cdots,a_n\in A$ 都有<br>$$(a_1,\cdots,a_n)\in R\enspace\Leftrightarrow\enspace(h(a_1),\cdots,h(a_n))\in R$$<br>這個結果經常被用來證明某些關係的不可定義性. </p>
@@ -400,8 +404,8 @@
 <p>再比如, 加法函數的圖像 $\left\{(m,n,p):p&#x3D;m+n\right\}$ (作為三元關係) 在結構 $(\mathbb{N},\cdot)$ 中不可定義. 我們只需令 $h:\mathbb{N}\to\mathbb{N}$,<br>$$<br>h(x)&#x3D;\begin{cases}<br>2^b \cdot 3^a ,&amp;\text{if}\enspace x&#x3D;2^a \cdot 3^b\\<br>x,&amp;\text{if}\enspace 2\nmid x,\thinspace 3\nmid x<br>\end{cases}<br>$$<br>由唯一分解定理知 $h$ 是一個雙射, 故 $h$ 定義了 $\mathbb{N}$ 上的一個自同構. 如果有一個公式 $\alpha$ 定義了 $R&#x3D;\left\{(m,n,p):p&#x3D;m+n\right\}$, 則由 $(1,2,3)\in R$ 可以推出 $(h(1),h(2),h(3))&#x3D;(1,3,2)\in R$, 從而導出矛盾. </p>
 <h2 id="可靠性和完備性"><a href="#可靠性和完備性" class="headerlink" title="可靠性和完備性"></a>可靠性和完備性</h2><h3 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h3><p>可靠性定理是指: $\Gamma\vdash p\Rightarrow\Gamma\models p$. 證明類似命題邏輯, 驗證 $(K1)$~$(K5)$ 型公理的有效性, 然後歸納法. </p>
 <p>推論: $K$ 是無矛盾的, 即對任意公式 $p$, $\vdash p$ 和 $\vdash\neg p$ 不同時成立. 否則由可靠性定理就會有 $\models p$ 和 $\models\neg p$ 同時成立, 而這是不可能的. 類似地也可證明, 若公式集 $\Gamma$ 有模型, 則 $\Gamma$ 是無矛盾的. </p>
-<h3 id="完全性"><a href="#完全性" class="headerlink" title="完全性"></a>完全性</h3><p>完全性定理是指: $\Gamma\models p\Rightarrow\Gamma\vdash p$, 即 $K$ 的有效式一定是 $K$ 的定理. </p>
-<p>首先證明定理: <strong>無矛盾公式集一定有可數集模型</strong>.<br>證明分為六個步驟:<br><strong>(1) 作擴大的謂詞演算 $K^{+}$</strong><br>取可數個新的個體常元 $b_0,b_1,\cdots$, $B&#x3D;\left\{b_0,b_1,\cdots\right\}$ 與原個體常元集 $C&#x3D;\left\{c_0,c_1,\cdots\right\}$ 不相交. 擴大 $K$, 以 $C\cup B$ 為個體常元集, 其他保持不變, 得到新的謂詞演算記作 $K^{+}$, 其項集記作 $T^{+}$, 原子公式集記作 $Y^{+}$. 則 $T\subseteq T^{+}$, $Y\subseteq Y^{+}$, $K(Y)\subseteq K(Y^{+})$. </p>
+<h3 id="完全性"><a href="#完全性" class="headerlink" title="完全性"></a>完全性</h3><p>完全性定理是指: $\Gamma\models p\Rightarrow\Gamma\vdash p$, 即 $K$ 的有效式一定是 $K$ 的定理.<br>直觀上, 可靠性說的是若某個語句在公式集 $\Gamma$ 中可證, 則它必定在 $\Gamma$ 的所有模型中為真; 完全性則是反過來, 若某語句在 $\Gamma$ 的每個模型中為真, 則它一定在 $\Gamma$ 中可證. 所以, 為證完全性定理, 我們必須先構造公式集的一個理想的模型. </p>
+<p>定理: <strong>無矛盾公式集一定有可數集模型</strong>.<br>證明分為六個步驟(綱要):<br><strong>(1) 作擴大的謂詞演算 $K^{+}$</strong><br>取可數個新的個體常元 $b_0,b_1,\cdots$, $B&#x3D;\left\{b_0,b_1,\cdots\right\}$ 與原個體常元集 $C&#x3D;\left\{c_0,c_1,\cdots\right\}$ 不相交. 擴大 $K$, 以 $C\cup B$ 為個體常元集, 其他保持不變, 得到新的謂詞演算記作 $K^{+}$, 其項集記作 $T^{+}$, 原子公式集記作 $Y^{+}$. 則 $T\subseteq T^{+}$, $Y\subseteq Y^{+}$, $K(Y)\subseteq K(Y^{+})$. </p>
 <p><strong>(2) 作擴大的無矛盾公式集 $\Gamma’\supset\Gamma$</strong><br>把 $K^{+}$ 中所有只含一個自由變元的公式(可數個)全部取出排成不重複的一列: $p_0(y_0),\thinspace p_1(y_1),\cdots,\thinspace p_n(y_n),\cdots$, 其中 $y_n&#x3D;x_{i_n}\in X$ 這些變元可以重複出現. 在 $B$ 中取一串 $b_{i_0},\thinspace b_{i_1},\cdots$, 滿足: </p>
 <ol>
 <li>$b_{i_0}$ 不在 $p_0(y_0)$ 中出現; </li>
@@ -429,7 +433,8 @@
 <p>對給定結構 $A$, 我們稱所有在 $A$ 中成立的閉語句為 $A$ 的<strong>理論</strong>, 記作 $\text{Th}\thinspace A$. 顯然, 如果同一個語言上的結構 $B$ 滿足 $\text{Th}\thinspace A$, 那麼就有 $A\equiv B$, 即 $A$ 和 $B$ 初等等價. </p>
 <p>現在考慮標準算術模型 $A&#x3D;(\mathbb{N},0,S,&lt;,+,\cdot)$. 首先擴展語言, 添加一個新的常數符號 $c$, 令公式集<br>$$\Sigma&#x3D;\left\{0&lt;c,\thinspace S0&lt;c,\thinspace SS0&lt;c,\thinspace \cdots\right\}$$<br>任何一個 $\Sigma\cup\text{Th}\thinspace A$ 的有窮子集 $\Sigma_0$ 都是可滿足的 (對 $\Sigma$ 中的有限個語句, 只需把 $c$ 解釋為一個充分大的自然數 $k$; 而 $\text{Th}\thinspace A$ 中的語句則根本不牽涉 $c$ ), 所以由緊緻性定理, $\Sigma\cup\text{Th}\thinspace A$ 也是可滿足的. </p>
 <p>設 $B$ 是 $\Sigma\cup\text{Th}\thinspace A$ 的一個模型, 由於 $B$ 是 $\text{Th}\thinspace A$ 的模型, 所以 $A\equiv B$. 假設存在同構 $h:B\to A$, 設 $m&#x3D;h(c^{A})$, 由於 $0&lt;c$, $S0&lt;c$, $\cdots$, $\underbrace{SS\cdots S}_{m}0&lt;c$ 在 $B$ 中成立, 所以 $h$ 誘導了一個從 $m+1$ 到 $m$ 的單射, 與抽屜原理矛盾. 因此, $B$ 就是我們要求的非標準模型. </p>
-<p>直觀來看, 非標準模型就是在標準模型中加入了大於任意標準自然數的 “非標準自然數”, 這樣的非標準自然數可用於構造 Gödel 句子的否定在其中成立的模型. </p>
+<p>直觀來看, 非標準模型就是在標準模型中加入了大於任意標準自然數的 “非標準自然數”. 一個實際例子是, 如果我們把哥德爾句子的否定放進系統, 這樣得到的理論就只有非標準模型. </p>
+<p>下一篇: <a href="https://ruozeli.github.io/2026/02/24/Mathematical_Logic_3/">形式算術和遞歸函數</a></p>
 
     </div>
 

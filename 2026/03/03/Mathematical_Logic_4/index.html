@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/03/c4rC/c245291.png">
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/04/nh8H/Turing-machine.png">
 <meta property="article:published_time" content="2026-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-28T10:50:36.182Z">
+<meta property="article:modified_time" content="2026-04-12T06:20:13.035Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -247,7 +247,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Godel-不完備性定理"><a href="#Godel-不完備性定理" class="headerlink" title="Gödel 不完備性定理"></a>Gödel 不完備性定理</h1><h2 id="不完備性定理"><a href="#不完備性定理" class="headerlink" title="不完備性定理"></a>不完備性定理</h2><h3 id="Godel-第一不完備性定理"><a href="#Godel-第一不完備性定理" class="headerlink" title="Gödel 第一不完備性定理"></a>Gödel 第一不完備性定理</h3><p>$K_N$ 中公式集 $\Gamma$ 是完備的, 是指對 $K_N$ 中任一閉式 $p$, $\Gamma\vdash p$ 和 $\Gamma\vdash\neg p$ 必居其一. Gödel 第一不完備性定理斷言, $K_N$ 的公理集 $\mathcal{N}$ 是不完備的. 為證明這個結論, 只需構造出一個閉式, 它是 $\mathcal{N}$ 不可判定的, 即 $\Gamma\not\vdash p$ 且 $\Gamma\not\vdash\neg p$. </p>
+    <div class="post-body" itemprop="articleBody"><p>上一篇: <a href="https://ruozeli.github.io/2026/02/24/Mathematical_Logic_3/">形式算術和遞歸函數</a></p>
+<h1 id="Godel-不完備性定理"><a href="#Godel-不完備性定理" class="headerlink" title="Gödel 不完備性定理"></a>Gödel 不完備性定理</h1><h2 id="不完備性定理"><a href="#不完備性定理" class="headerlink" title="不完備性定理"></a>不完備性定理</h2><h3 id="Godel-第一不完備性定理"><a href="#Godel-第一不完備性定理" class="headerlink" title="Gödel 第一不完備性定理"></a>Gödel 第一不完備性定理</h3><p>$K_N$ 中公式集 $\Gamma$ 是完備的, 是指對 $K_N$ 中任一閉式 $p$, $\Gamma\vdash p$ 和 $\Gamma\vdash\neg p$ 必居其一. Gödel 第一不完備性定理斷言, $K_N$ 的公理集 $\mathcal{N}$ 是不完備的. 為證明這個結論, 只需構造出一個閉式, 它是 $\mathcal{N}$ 不可判定的, 即 $\Gamma\not\vdash p$ 且 $\Gamma\not\vdash\neg p$. </p>
 <p>由上一篇的分析可知, $K_N$ 上的結論可以通過 Gödel 配數轉化為關於自然數的結論, 而關於自然數的結論又可在 $K_N$ 中形式化. 利用兩個層次間的關聯及轉化, 構造出一種具有 “自相關” 特徵的公式, 這就是 Gödel 證明的核心. </p>
 <p>首先引入 “$\omega$ -無矛盾” 的概念, 這是一個比 “無矛盾” 更強的條件.<br>公式集 $\Gamma$ 是 $\omega$ -無矛盾的, 意為對 $K_N$ 中任一含自由變元的公式 $p(x)$, 以下兩條不同時成立: </p>
 <ol>
@@ -388,7 +389,7 @@
 <li>$f^{*}(n)&#x3D;0$ $\Leftrightarrow$ $T_n$ 輸入 $n$ 後會停機; </li>
 <li>$f^{*}(n)&#x3D;1$ $\Leftrightarrow$ $T_n$ 輸入 $n$ 後不停機.</li>
 </ol>
-<p>假設存在某個 Turing 機 $T$ 能計算函數 $f^{*}$. 由於 $f^{*}$ 是全函數, $T$ 對任何輸入都停機. 利用 $T$ 構造一個新的 Turing 機 $T’$, 它包含 $T$ 的全部四元組, 並增加兩個新的狀態 $q_{\alpha}$, $q_{\beta}$ 和一個新的字母 $A$, 然後增加四元組<br>$$q_{\alpha}0Aq_{\beta},\enspace q_{\beta}0Aq_{\alpha},\enspace q_{\alpha}ARq_{\alpha},\enspace q_{\beta}ALq_{\beta}$$<br>此外, 對 $T$ 原先沒有定義的每個 $q_i S$, 增加四元組 $q_i SRq_{\alpha}$. </p>
+<p>假設存在某個 Turing 機 $T$ 能計算函數 $f^{*}$. 由於 $f^{*}$ 是全函數, $T$ 對任何輸入都停機. 利用 $T$ 構造一個新的 Turing 機 $T’$, 它包含 $T$ 的全部四元組, 並增加兩個新的狀態 $q_{\alpha}$, $q_{\beta}$ 和一個新的字母 $A$, 然後增加四元組<br>$$q_{\alpha}0Aq_{\beta},\enspace q_{\beta}0Aq_{\alpha},\enspace q_{\alpha}ARq_{\alpha},\enspace q_{\beta}ALq_{\beta}$$<br>此外, 對 $T$ 原先沒有定義的每個 $q_i S$, 增加四元組 $q_i SRq_{\alpha}$. 這樣做的目的是使 $T$ 在輸出 $0$ 後轉接到循環狀態, 從而無法停機. </p>
 <p>由 $T’$ 的構造可知, $T$ 輸入 $n$ 後輸出 $1$ $\Leftrightarrow$ $T’$ 輸入 $n$ 後會停機.<br>$T’$ 必出現在 $T_0,T_1,T_2,\cdots$, 設 $T’&#x3D;T_k$. 向 $T_k$ (即 $T’$) 輸入 $k$, 立即就會出現矛盾. 因此, 函數 $f^{*}$ 不是 Turing 可計算函數. </p>
 <p>一個推論是: 停機問題是不可判定的. 即 “Turing 機 $T_m$ 在輸入 $n$ 後是否會停機” 這一問題類是不能用算法在有限步內判定的. 因為如果存在這樣的算法, 那麼 $f^{*}$ 也就有了計算其值的算法, 從而成了遞歸函數. </p>
 

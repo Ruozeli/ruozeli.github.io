@@ -28,7 +28,7 @@
 <meta property="og:description" content="Peano arithmetic; Recursive function; Gödel number.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-28T08:48:20.919Z">
+<meta property="article:modified_time" content="2026-04-12T06:11:35.696Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -244,7 +244,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="形式算術"><a href="#形式算術" class="headerlink" title="形式算術"></a>形式算術</h1><h2 id="等詞"><a href="#等詞" class="headerlink" title="等詞"></a>等詞</h2><p>在上一篇定義的謂詞演算基礎上, 我們引入一個特殊的二元謂詞: 等詞 $R^2_1$, 這個謂詞用以形式化表達我們心目中的 “相等” 概念, 形式算術 $K_N$ 即是一種帶等詞的謂詞演算. 下面把 $R^2_1$ 簡記為 “$\approx$”. </p>
+    <div class="post-body" itemprop="articleBody"><p>上一篇: <a href="https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/">謂詞演算</a></p>
+<h1 id="形式算術"><a href="#形式算術" class="headerlink" title="形式算術"></a>形式算術</h1><h2 id="等詞"><a href="#等詞" class="headerlink" title="等詞"></a>等詞</h2><p>在上一篇定義的謂詞演算基礎上, 我們引入一個特殊的二元謂詞: 等詞 $R^2_1$, 這個謂詞用以形式化表達我們心目中的 “相等” 概念, 形式算術 $K_N$ 即是一種帶等詞的謂詞演算. 下面把 $R^2_1$ 簡記為 “$\approx$”. </p>
 <p>在帶有等詞的謂詞演算 $K$ 中, 以下三種形式的公式叫做<strong>等詞公理</strong>:<br>$$<br>\begin{align*}<br>&amp;(E1)\quad t\approx t; \\<br>&amp;(E2)\quad t_k\approx u\to R^2_1(f^n_i(t_1,\cdots,t_k,\cdots,t_n),f^n_i(t_1,\cdots,u,\cdots,t_n)); \\<br>&amp;(E3)\quad t_k\approx u\to (R^n_i(t_1,\cdots,t_k,\cdots,t_n)\to R^n_i(t_1,\cdots,u,\cdots,t_n)).<br>\end{align*}<br>$$<br>其中 $t_1,\cdots,t_n$ 是任意的項, $k&#x3D;1,\cdots,n$. 記 $E&#x3D;\left\{E1,E2,E3\right\}$. </p>
 <p>需要注意的是, 這些等詞公理不是有效式, 即它並非在 $K$ 的任何解釋域中恆真. 但當 “$\approx$” 在解釋域中解釋為 “相等” 時, 該解釋域一定是 $E$ 的模型. </p>
 <p>容易證明: </p>
@@ -431,7 +432,7 @@
 <hr>
 
 <p>令 $\text{EA}_i$ 為 $(Ei)$ 型等詞公理 Gödel 數構成的集, $\text{NA}_i$ 為 $(Ni)$ 型算術公理 Gödel 數構成的集. 則仿照上面的分析可以得到 $\text{EA}_i$ 和 $\text{NA}_i$ 的遞歸性. </p>
-<p>從而 $\text{PA}&#x3D;\text{EA}_1\cup\text{EA}_2\cup\text{EA}_3\cup\text{NA}_1\cup\cdots\cup\text{NA}_7$ 也是遞歸集, 即 $\mathcal{N}$ 中公式的 Gödel 數集是遞歸集. 進而, $\text{AX}&#x3D;\text{LA}\cup\text{PA}$ 是遞歸集, 即包括邏輯公理和算術公理在內的所有 $K_N$ 公理的 Gödel 數構成的集是遞歸集. </p>
+<p>從而 $\text{PA}$ ($&#x3D;\text{EA}_1\cup\cdots\cup\text{EA}_3\cup\text{NA}_1\cup\cdots\cup\text{NA}_7$) 也是遞歸集, 即 $\mathcal{N}$ 中公式的 Gödel 數集是遞歸集. 進而, $\text{AX}&#x3D;\text{LA}\cup\text{PA}$ 是遞歸集, 即包括邏輯公理和算術公理在內的所有 $K_N$ 公理的 Gödel 數構成的集是遞歸集. </p>
 <hr>
 
 <p>以下關係和集是遞歸的: </p>
@@ -456,6 +457,9 @@
 <p>形成部分遞歸函數的這條規則, 可以作用在部分函數上, 也可以產生部分函數. 事實上, Turing 給出的可計算性概念面向的是 $\mathbb{N}$ 上的部分函數, 而不僅僅是全函數: 一個可計算函數可能並非在所有輸入值上都有定義, 對某些輸入, 一個計算程序可能會一直運行, 永不停止. 正是由於這個部分性特徵, Turing 的計算概念能避開 Gödel 的對角化難題 (對原始遞歸函數的任何枚舉總可以通過對角化增添新的可計算函數, 參見上文), 達成對可計算函數的完全的枚舉. 簡單來說, 假定我們枚舉所有的部分遞歸函數: $f_0, f_1, \cdots$, 並定義對角函數 $F:\mathbb{N}\to\mathbb{N}$ 為 $F(n)&#x3D;f_n(n)+1$, 則 $F$ 可以與列表中的某個 $f_{k}$ 相同, 因為 $f_k(k)$ 無定義. </p>
 <div class="note primary"><p><strong>Church 論題</strong>: 算法可計算函數 &#x3D; 遞歸函數.<br>這是一個經驗事實, 但還未發現反例. 上文已經證明 $\text{FM}$ 和 $\text{PF}$ 是遞歸集, 所以按 Church 論題, 存在算法能用來確定任給的 $n\in\mathbb{N}$ 是否屬於 $\text{FM}$ 或 $\text{PF}$, 即存在算法能確定任意字母串是不是 $K_N$ 的公式, 以及任給的有限公式序列是不是從 $\mathcal{N}$ 的一個證明. </p>
 </div>
+
+<p>下一篇: <a href="https://ruozeli.github.io/2026/03/03/Mathematical_Logic_4/">Gödel 不完備性定理和 Turing 機</a></p>
+
     </div>
 
     
