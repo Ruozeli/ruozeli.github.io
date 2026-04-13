@@ -28,7 +28,7 @@
 <meta property="og:description" content="Propositional logic; Basic modal logic.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-01-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-04T13:19:36.610Z">
+<meta property="article:modified_time" content="2026-04-13T04:39:36.078Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -327,11 +327,11 @@
 <p>“(1)$\Rightarrow$(2)”: 假定 $\Gamma$ 一致, 反設 $\Gamma$ 不可滿足, 那麼對任意公式 $p$ 都有 $\Gamma\vDash p$ (注意 “$\vDash$” 的定義), 由 $\Gamma\vDash p\enspace\Rightarrow\enspace\Gamma\vdash p$ 知 $\Gamma\vdash p$ 且 $\Gamma\vdash\neg p$, 故 $\Gamma$ 是不一致的. 矛盾. </p>
 <p>“(2)$\Rightarrow$(1)”: 假定 $\Gamma\vDash p$, 反設 $\Gamma\not\vdash p$, 則 $\Gamma\cup\left\{\neg p\right\}$ 是一致的, 由(2)知 $\Gamma\cup\left\{\neg p\right\}$ 可滿足, 故存在一個賦值 $v$ 使得 $\Gamma$ 中公式均為真而 $p$ 為假, 即 $\Gamma\not\vDash p$. 矛盾. </p>
 <p>隨後對一個無矛盾公式集進行擴張.<br>$L(X)$ 是可數的, 所以我們可以把其中公式枚舉為 $p_0,p_1,p_2,\cdots$, 任取一個無矛盾公式集 $\Gamma$, 遞歸定義一個公式集序列 $\left\{\Gamma_n\right\}$ 如下:<br>$$<br>\begin{align*}<br>\Gamma_0&amp;&#x3D;\Gamma;\\<br>\Gamma_n&amp;&#x3D;<br>\begin{cases}<br>\Gamma_{n-1},&amp;\text{if}\enspace\Gamma\vdash p_{n-1};\\<br>\Gamma_{n-1}\cup\left\{\neg p_{n-1}\right\},&amp;\text{if}\enspace\Gamma\not\vdash p_{n-1}.<br>\end{cases}<br>\end{align*}<br>$$<br>容易驗證, 序列中每一個公式集 $\Gamma_n$ 都是一致的. 令 $\Gamma^{*}&#x3D;\bigcup_{n&#x3D;0}^{\infty}\Gamma_n$, 則 $\Gamma^{*}$ 也是一致的. 由於我們遍歷了整個 $L(X)$, 在保證一致性的前提下將每一個公式或其否定都納入到 $\Gamma^{*}$ 之中, 所以對任意公式 $p$, $\Gamma^{*}\vdash p$ 和 $\Gamma^{*}\vdash\neg p$ 必居其一, 換句話說, $\Gamma^{*}\vdash p$ 是完備的(或<strong>極大一致</strong>的). 我們稱 $\Gamma^{*}$ 是 $\Gamma$ 的<strong>完備無矛盾擴張</strong>. 由構造過程可以得到定理(Lindenbaum): 無矛盾公式集必有完備無矛盾擴張. </p>
-<p>定義一個映射 $v:L(X)\to Z_2$, 使得 $v(p)&#x3D;1$ 當且僅當 $p\in\Gamma^{*}$, 容易證明這樣定義的 $v$ 具有保運算性, 所以是一個賦值. 存在賦值 $v$ 使 $\Gamma^{*}$ 中所有公式為真, 故 $\Gamma^{*}$ 是可滿足的. 又 $\Gamma\subseteq\Gamma^{*}$, 所以 $\Gamma$ 也是可滿足的. 因此, 我們證明了上面的等價表述(2), 也就證明了(1), 即 $L$ 的完全性. </p>
+<p>定義一個映射 $v:L(X)\to Z_2$, 使得 $v(p)&#x3D;1$ 當且僅當 $p\in\Gamma^{*}$, 容易證明這樣定義的 $v$ 具有保運算性, 所以是一個賦值. 存在賦值 $v$ 使 $\Gamma^{*}$ 中所有公式為真, 故 $\Gamma^{*}$ 是可滿足的. 又 $\Gamma\subseteq\Gamma^{*}$, 所以 $\Gamma$ 也是可滿足的. 因此, 我們證明了上面的等價表述(2), 也就證明了(1), 即 $L$ 的完全性. $\square$ </p>
 <details class="note info"><summary><p>完全性定理弱形式的證明</p>
 </summary>
 <p>復旦版數理邏輯給出了一個更直接和直觀的方法, 可證明完全性定理的弱形式: $\vDash p$ $\Rightarrow$ $\vdash p$. 思路如下. </p>
-<p>假設 $p$ 是僅包含命題變元 $x_1,\cdots,x_k$ 的一個公式, $v_0$ 是 $x_1,\cdots,x_k$ 的一個真值指派, $v$ 為其對應的賦值. 根據 $v_0$ 對 $x_i$ 做變形, 如果 $v_0(x_i)&#x3D;1$, 就令 $x_i’$ 為 $x_i$, 否則令 $x_i’$ 為 $\neg x_i$; 同樣指定 $p$ 的變形: 如果 $v(p)&#x3D;1$, 就令 $p’$ 為 $p$, 否則為 $\neg p$. 那麼我們有:<br>$$\left\{x_1’,x_2’,\cdots,x_k’\right\}\vdash p’$$<br>設 $\vDash p$, 則 $p’$ 就是 $p$, 所以有 $\left\{x_1’,x_2’,\cdots,x_k\right\}\vdash p$ 和 $\left\{x_1’,x_2’,\cdots,\neg x_k\right\}\vdash p$. 由演繹定理得 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash x_k\to p$ 和 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash\neg x_k\to p$, 所以有<br>$$\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash(x_k\to p)\to((\neg x_k\to p)\to p)$$<br>用兩次分離規則即得 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash p$. 多次重複該過程, 便可把命題變元一個個消去, 得到 $\vdash p$. </p>
+<p>假設 $p$ 是僅包含命題變元 $x_1,\cdots,x_k$ 的一個公式, $v_0$ 是 $x_1,\cdots,x_k$ 的一個真值指派, $v$ 為其對應的賦值. 根據 $v_0$ 對 $x_i$ 做變形, 如果 $v_0(x_i)&#x3D;1$, 就令 $x_i’$ 為 $x_i$, 否則令 $x_i’$ 為 $\neg x_i$; 同樣指定 $p$ 的變形: 如果 $v(p)&#x3D;1$, 就令 $p’$ 為 $p$, 否則為 $\neg p$. 那麼我們有:<br>$$\left\{x_1’,x_2’,\cdots,x_k’\right\}\vdash p’$$<br>設 $\vDash p$, 則 $p’$ 就是 $p$, 所以有 $\left\{x_1’,x_2’,\cdots,x_k\right\}\vdash p$ 和 $\left\{x_1’,x_2’,\cdots,\neg x_k\right\}\vdash p$. 由演繹定理得 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash x_k\to p$ 和 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash\neg x_k\to p$, 所以有<br>$$\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash(x_k\to p)\to((\neg x_k\to p)\to p)$$<br>用兩次分離規則即得 $\left\{x_1’,x_2’,\cdots,x_{k-1}’\right\}\vdash p$. 多次重複該過程, 便可把命題變元一個個消去, 得到 $\vdash p$. $\square$ </p>
 <p>這種弱形式之所以能如此簡單地得到證明, 是因為它只依賴於命題變元(第一層)的真值指派, 而不用關心由命題變元真值所決定的某些更高層次的公式的真值. </p>
 
 </details>
@@ -339,7 +339,7 @@
 <hr>
 
 <p>有了完全性定理, 我們很容易得到<strong>緊緻性定理</strong>: 公式集 $\Gamma$ 是可滿足的當且僅當 $\Gamma$ 的每一個有窮子集都是可滿足的. 這個定理可以看作拓撲中緊緻性定理的一個特殊情況. </p>
-<p>證明: 假設公式集 $\Gamma$ 的任意有窮子集都是可滿足的, 反設 $\Gamma$ 不可滿足. 則根據完全性定理, $\Gamma$ 也不一致, 所以 $\Gamma\vdash p\wedge\neg p$. 由於每一個證明的長度都是有限的, 所以存在 $\Gamma$ 的一個有窮子集 $\Gamma_0$ 使得 $\Gamma_0\vdash p\wedge\neg p$, 根據可靠性定理就有 $\Gamma_0\vDash p\wedge\neg p$, 故 $\Gamma_0$ 不可滿足, 與假設矛盾. </p>
+<p>證明: 假設公式集 $\Gamma$ 的任意有窮子集都是可滿足的, 反設 $\Gamma$ 不可滿足. 則根據完全性定理, $\Gamma$ 也不一致, 所以 $\Gamma\vdash p\wedge\neg p$. 由於每一個證明的長度都是有限的, 所以存在 $\Gamma$ 的一個有窮子集 $\Gamma_0$ 使得 $\Gamma_0\vdash p\wedge\neg p$, 根據可靠性定理就有 $\Gamma_0\vDash p\wedge\neg p$, 故 $\Gamma_0$ 不可滿足, 與假設矛盾. $\square$ </p>
 <details class="note success"><summary><p>Example</p>
 </summary>
 <p>復旦版數理邏輯給出了一個有趣的例子: 用緊緻性定理證明任何集合都可線序化.<br>給定集合 $M$, 指定命題變元集 $X&#x3D;\left\{x_{ab}:a,b\in M\right\}$, 其下標為 $M$ 中元素構成的有序對. 考慮 $X$ 的如下公式集 $\Gamma$:<br>$$<br>\begin{align*}<br>\Gamma&#x3D;&amp;\left\{\neg x_{aa}:a\in M\right\}\cup \\<br>&amp;\left\{x_{ab}\to x_{bc}\to x_{ac}:a,b,c\in M\right\}\cup \\<br>&amp;\left\{x_{ab}\vee x_{ba}:a,b\in M,a\not&#x3D;b\right\}<br>\end{align*}<br>$$</p>
@@ -394,7 +394,7 @@
 <div class="note primary"><p>定義 $K$ 的典範模型 $M&#x3D;(W,R,V)$ 為: $W&#x3D;\{\Gamma:\Gamma$ 是 $K$-極大一致集$\}$; $(\Gamma,\Gamma’)\in R$ 當且僅當 $\left\{\alpha:\Box\alpha\in\Gamma\right\}\subseteq\Gamma’$; $V(A_i)&#x3D;\left\{\Gamma\in W:A_i\in\Gamma\right\}$. </p>
 </div>
 
-<p>令 $M$ 為 $K$ 的典範模型, 則對任意模態公式 $\alpha$, 任意 $\Gamma\in W$, 我們有 $(M,\Gamma)\vDash\alpha$ 當且僅當 $\alpha\in\Gamma$, 即任意 $\Gamma$ 對語義推論是封閉的(依舊歸納證明). 假定 $\not\vdash_{K}\alpha$, 則 $\left\{\neg\alpha\right\}$ 是 $K$-一致的, 將其擴張為一個 $K$-極大一致集 $\Gamma$, 考慮典範模型 $M$ 中的世界 $\Gamma$, 則 $\neg\alpha\in\Gamma$, 故 $(M,\Gamma)\not\vDash\alpha$. 這樣就證明了 $K$ 的完全性. </p>
+<p>令 $M$ 為 $K$ 的典範模型, 則對任意模態公式 $\alpha$, 任意 $\Gamma\in W$, 我們有 $(M,\Gamma)\vDash\alpha$ 當且僅當 $\alpha\in\Gamma$, 即任意 $\Gamma$ 對語義推論是封閉的(依舊歸納證明). 假定 $\not\vdash_{K}\alpha$, 則 $\left\{\neg\alpha\right\}$ 是 $K$-一致的, 將其擴張為一個 $K$-極大一致集 $\Gamma$, 考慮典範模型 $M$ 中的世界 $\Gamma$, 則 $\neg\alpha\in\Gamma$, 故 $(M,\Gamma)\not\vDash\alpha$. 這樣就證明了 $K$ 的完全性. $\square$ </p>
 <hr>
 
 <p><strong>Remark.</strong> 按照可能世界的語義解釋, 模態邏輯看似只是把經典哲學關於可能、必然等問題的直觀理解進行了形式化, 但實際上, 模態邏輯的結構要比這複雜得多. 最有意思的一點或許是, 形如 $\Box\alpha$ 的句子看似只應該在跨可能世界(元語言)的層次上出現, 卻竟能在單個可能世界中有所斷言, 這似乎是缺乏解釋的. 另外, 按照公式的構成規則, $K$ 中將會出現如 $\Box\Box\alpha$ 這一類沒有明確直觀意義的公式, 這是否是形式化帶來的冗餘? 從數學角度看, 這些問題當然是沒有意義的, 我們關心的只是這個已經形式化的系統本身. 從哲學的角度看, 我們或許可以把每一個 “可能世界” 理解為 Leibniz 式的單子, 每一個單子都反映著整個世界, 也反映著其他單子中反映著其自身的映像, 形成無限遞歸的鏡面系統. </p>

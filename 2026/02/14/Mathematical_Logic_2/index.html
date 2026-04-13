@@ -28,7 +28,7 @@
 <meta property="og:description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-12T06:06:48.263Z">
+<meta property="article:modified_time" content="2026-04-13T04:35:40.121Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -425,10 +425,10 @@
 <p>對任意閉項 $t_1,\cdots,t_n\in M$,<br>當 $\Gamma^{*}\vdash_{K^{+}}R^n_i(t_1,\cdots,t_n)$ 時, 令 $(t_1,\cdots,t_n)\in\overline{R^n_i}$;<br>當 $\Gamma^{*}\vdash_{K^{+}}\neg R^n_i(t_1,\cdots,t_n)$ 時, 令 $(t_1,\cdots,t_n)\not\in\overline{R^n_i}$. </p>
 <p>定義的合理性由 $\Gamma^{*}$ 的完備無矛盾性保證. </p>
 <p><strong>(5) 完成證明</strong><br>歸納可證命題<br>$$(*)\quad \Gamma^{*}\vdash_{K^{+}}q\enspace\Leftrightarrow\enspace |q|_M&#x3D;1$$<br>其中 $q$ 是 $K^{+}$ 的任一閉式. </p>
-<p>任取 $p\in\Gamma\subseteq\Gamma^{*}$, 則 $\Gamma^{*}\vdash_{K^{+}} p$. 設 $p’$ 是 $p$ 的全稱閉式, 則有 $\Gamma^{*}\vdash_{K^{+}} p’$, 又由命題 $(*)$ 可得 $|p’|_M&#x3D;1$, 於是 $|p|_M&#x3D;1$. 這就證明了 $M$ 是 $\Gamma$ 的模型, 也即我們要找的可數模型. </p>
+<p>任取 $p\in\Gamma\subseteq\Gamma^{*}$, 則 $\Gamma^{*}\vdash_{K^{+}} p$. 設 $p’$ 是 $p$ 的全稱閉式, 則有 $\Gamma^{*}\vdash_{K^{+}} p’$, 又由命題 $(*)$ 可得 $|p’|_M&#x3D;1$, 於是 $|p|_M&#x3D;1$. 這就證明了 $M$ 是 $\Gamma$ 的模型, 也即我們要找的可數模型. $\square$ </p>
 <hr>
 
-<p>由這個定理, 我們能立即證明 $K$ 的完全性: $\Gamma\models p\Rightarrow\Gamma\vdash p$.<br>反設 $\Gamma\not\vdash p$, 令 $p’$ 為 $p$ 的全稱閉式, 則 $\Gamma\cup\left\{p’\right\}$ 是無矛盾的, 所以公式集 $\Gamma\cup\left\{p’\right\}$ 有可數模型, 設為 $M$. 於是有 $|\neg p’|_M&#x3D;1$, 從而 $|p’|_M&#x3D;0$, 由此可知 $\Gamma\not\models p$, 與假設矛盾. 這樣就證明了完全性. </p>
+<p>由這個定理, 我們能立即證明 $K$ 的完全性: $\Gamma\models p\Rightarrow\Gamma\vdash p$.<br>反設 $\Gamma\not\vdash p$, 令 $p’$ 為 $p$ 的全稱閉式, 則 $\Gamma\cup\left\{p’\right\}$ 是無矛盾的, 所以公式集 $\Gamma\cup\left\{p’\right\}$ 有可數模型, 設為 $M$. 於是有 $|\neg p’|_M&#x3D;1$, 從而 $|p’|_M&#x3D;0$, 由此可知 $\Gamma\not\models p$, 與假設矛盾. 這樣就證明了完全性. $\square$ </p>
 <p>把 $K$ 的可靠性和完全性結合起來, 我們就得到了關於謂詞演算 $K$ 的 Gödel 完備性定理: $\Gamma\models p\Leftrightarrow\Gamma\vdash p$. 這個定理指出了 $K$ 的語義和語法的一致性. </p>
 <h3 id="緊緻性定理"><a href="#緊緻性定理" class="headerlink" title="緊緻性定理*"></a>緊緻性定理*</h3><p>類似命題演算, 在謂詞演算中也有緊緻性定理: </p>
 <ol>
