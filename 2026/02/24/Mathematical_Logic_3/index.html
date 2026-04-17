@@ -28,7 +28,7 @@
 <meta property="og:description" content="Peano arithmetic; Recursive function; Gödel number.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-13T04:33:11.499Z">
+<meta property="article:modified_time" content="2026-04-14T07:40:18.417Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -399,7 +399,7 @@
 
 <p>由 $k$ 元函數 $g$ 和 $k+2$ 元函數 $h$ 使用規則 II 生成 $k+1$ 元函數 $f$ 時, $f$ 在點 $(\alpha,n+1)$ 的值依賴於 $f$ 在點 $(\alpha,n)$ 的值 ($\alpha$ 表示 $n_1,\cdots,n_k$ ). 而在分析 $K_N$ 的性質時, 常遇到另一種函數, 它在點 $(\alpha,n+1)$ 的值依賴於 $(\alpha,0)$, $\cdots$, $(\alpha,n)$ 這些點的值, 對於這一類函數有如下結論. </p>
 <p>設 $k+2$ 元函數 $h$ 是遞歸的, 且 $k+1$ 元函數 $f$ 滿足 <strong>“過程值遞歸條件”</strong>:<br>$$f(n_1,\cdots,n_k,n_{k+1})&#x3D;h(n_1,\cdots,n_k,n_{k+1},f^{\sharp}(n_1,\cdots,n_k,n_{k+1}))$$<br>其中<br>$$f^{\sharp}(n_1,\cdots,n_k,n_{k+1})&#x3D;\prod_{x&lt;n_{k+1}}p_x^{f(n_1,\cdots,n_k,x)}$$<br>那麼 $f$ 也是遞歸函數. </p>
-<p>證明: 我們有<br>$$<br>f^{\sharp}(\alpha,n_{k+1})&#x3D;\begin{cases}<br>2^{f(\alpha,0)}\cdots\thinspace p_{n_{k+1}-1}^{f(\alpha,n_{k+1}-1)}, &amp;n_{k+1}&gt;0, \\<br>1, &amp;n_{k+1}&#x3D;0<br>\end{cases}<br>$$<br>要證明 $f$ 是遞歸的, 只需證明 $f^{\sharp}$ 是遞歸的. 事實上,<br>$$<br>\begin{align*}<br>&amp;f^{\sharp}(\alpha,0) &#x3D; 1, \\<br>&amp;f^{\sharp}(\alpha,n+1) &#x3D; f^{\sharp}(\alpha,n)\times p_n^{f(\alpha,n)}&#x3D;f^{\sharp}(\alpha,n)\times p_n^{h(\alpha,n,f^{\sharp}(\alpha,n))}<br>\end{align*}<br>$$<br>根據規則 II, $f^{\sharp}$ 是遞歸的. </p>
+<p>證明: 我們有<br>$$<br>f^{\sharp}(\alpha,n_{k+1})&#x3D;\begin{cases}<br>2^{f(\alpha,0)}\cdots\thinspace p_{n_{k+1}-1}^{f(\alpha,n_{k+1}-1)}, &amp;n_{k+1}&gt;0, \\<br>1, &amp;n_{k+1}&#x3D;0<br>\end{cases}<br>$$<br>要證明 $f$ 是遞歸的, 只需證明 $f^{\sharp}$ 是遞歸的. 事實上,<br>$$<br>\begin{align*}<br>&amp;f^{\sharp}(\alpha,0) &#x3D; 1, \\<br>&amp;f^{\sharp}(\alpha,n+1) &#x3D; f^{\sharp}(\alpha,n)\times p_n^{f(\alpha,n)}&#x3D;f^{\sharp}(\alpha,n)\times p_n^{h(\alpha,n,f^{\sharp}(\alpha,n))}<br>\end{align*}<br>$$<br>根據規則 II, $f^{\sharp}$ 是遞歸的. $\square$ </p>
 <p>特別地, 設 $h$ 是二元遞歸函數, 一元函數 $f$ 滿足過程值遞歸條件:<br>$$f(n)&#x3D;h(n,f^{\sharp}(n))$$<br>其中<br>$$f^{\sharp}(n)&#x3D;2^{f(0)}\thinspace 3^{f(1)}\cdots\thinspace p_{n-1}^{f(n-1)}$$<br>則 $f$ 也是遞歸函數. </p>
 <p>顯然, 當 $x&lt;n_{k+1}$ 時, $f(\alpha,x)&#x3D;(f^{\sharp}(\alpha,n_{k+1}))_x$. $f(\alpha,x)$ 關於 $f^{\sharp}(\alpha,n_{k+1})$ 的表達式是遞歸的, 這給出了在遞推關係式中引用已有項的合法性. </p>
 <h3 id="K-N-的一些遞歸性質"><a href="#K-N-的一些遞歸性質" class="headerlink" title="$K_N$ 的一些遞歸性質"></a>$K_N$ 的一些遞歸性質</h3><p>$\mathbb{N}$ 的以下子集是遞歸集: </p>
