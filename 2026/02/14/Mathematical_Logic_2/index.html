@@ -28,7 +28,7 @@
 <meta property="og:description" content="First-order logic; Definability; Gödel&#39;s completeness theorem.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-02-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-13T04:35:40.121Z">
+<meta property="article:modified_time" content="2026-04-17T10:19:39.392Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -391,7 +391,7 @@
 
 <p>給定一個語言, 我們考慮其不同結構之間的關係. 令 $A$ 和 $B$ 是一個語言的兩個結構, 我們稱映射 $h:A\to B$ 為一個從 $A$ 到 $B$ 的<strong>同態</strong>, 如果它滿足: </p>
 <ol>
-<li>對每個(不是等詞的) $n$ 元謂詞 $R$ 和每組 $a_1,\cdots,a_n\in A$, 都有 $(a_1,\cdots,a_n)\in \overline{R}^A$ 當且僅當 $(h(a_1),\cdots,h(a_n))\in \overline{R}^B$, 其中 $n$ 取遍正整數; </li>
+<li>對每個 (不是等詞的) $n$ 元謂詞 $R$ 和每組 $a_1,\cdots,a_n\in A$, 都有 $(a_1,\cdots,a_n)\in \overline{R}^A$ 當且僅當 $(h(a_1),\cdots,h(a_n))\in \overline{R}^B$, 其中 $n$ 取遍正整數; </li>
 <li>對每個 $n$ 元運算符 $f$ 和每組 $a_1,\cdots,a_n\in A$, 都有 $h(\overline{f}^A(a_1,\cdots,a_n))&#x3D;\overline{f}^B(h(a_1),\cdots,h(a_n))$, 其中 $n$ 取遍正整數; </li>
 <li>對每個個體常元 $c$, 都有 $h(\overline{c}^A)&#x3D;\overline{c}^B$.</li>
 </ol>
@@ -404,7 +404,8 @@
 <li>若 $h$ 是滿射, 則 (2) 中公式 $p$ 可以包含量詞.</li>
 </ol>
 <p>證明略. </p>
-<p>我們稱 $L$ 上的兩個結構 $A$ 和 $B$ 是<strong>初等等價</strong>的, 記作 $A\equiv B$, 如果對 $L$ 中的任意閉式 $p$ 都有 $|p|_A&#x3D;1$ 當且僅當 $|p|_B&#x3D;1$.<br>由同態定理可知, 若存在雙射 $h:A\to B$, 那麼對任何公式 $p$ 都有 $|p|(\varphi)&#x3D;1$ 當且僅當 $|p|(h\circ\varphi)&#x3D;1$, 故 $A$ 和 $B$ 是初等等價的, 這是因為, 同構的兩個結構, 本質上其實是同一個結構. 然而反過來, 若 $A$ 和 $B$ 初等等價, 則不能得出 $A$ 和 $B$ 是同構的. 可能情況是, 兩個結構儘管不同, 但用我們的語言不能描述出它們的區別, 這只能說明語言的匱乏. </p>
+<p>稱 $L$ 上的兩個結構 $A$ 和 $B$ 是<strong>初等等價</strong>的, 記作 $A\equiv B$, 如果對 $L$ 中的任意閉式 $p$ 都有 $|p|_A&#x3D;1$ 當且僅當 $|p|_B&#x3D;1$. </p>
+<p>由同態定理可知, 若存在雙射 $h:A\to B$, 那麼對任何公式 $p$ 都有 $|p|(\varphi)&#x3D;1$ 當且僅當 $|p|(h\circ\varphi)&#x3D;1$, 故 $A$ 和 $B$ 是初等等價的, 這是因為, 同構的兩個結構, 本質上其實是同一個結構. 但反過來, 若 $A$ 和 $B$ 初等等價, 則不能得出 $A$ 和 $B$ 是同構的. 可能情況是, 兩個結構儘管不同, 但用我們的語言不能描述出它們的區別, 這只能說明語言的匱乏. </p>
 <hr>
 
 <p>結構 $A$ 上的一個<strong>自同構</strong>就是 $A$ 到 $A$ 自身的一個同構. 由同態定理可知, 任何自同構都保持可定義的關係. 令 $h:A\to A$ 是一個自同構, $R$ 是 $A$ 上的一個可定義的 $n$ 元關係, 則對任意 $a_1,\cdots,a_n\in A$ 都有<br>$$(a_1,\cdots,a_n)\in R\enspace\Leftrightarrow\enspace(h(a_1),\cdots,h(a_n))\in R$$<br>這個結果經常被用來證明某些關係的不可定義性. </p>

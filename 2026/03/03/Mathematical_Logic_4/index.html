@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/03/c4rC/c245291.png">
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/04/nh8H/Turing-machine.png">
 <meta property="article:published_time" content="2026-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-13T04:44:13.419Z">
+<meta property="article:modified_time" content="2026-04-17T10:32:00.019Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -348,11 +348,11 @@
 <p>直觀來看, 如果 $A$ 是遞歸可枚舉集, 我們就可以逐一枚舉其元素. 對於任給的元素 $a$, 若 $a\in A$, 則必能在有限步內確定 $a\in A$, 但若 $a\not\in A$, 則無法用枚舉 $A$ 的元素的方法在有限步內確定 $a\not\in A$. 反過來, 如果 $\overline{A}$ 也是遞歸可枚舉集, 我們就可以通過枚舉 $\overline{A}$ 的元素, 在有限步內確定 $a\not\in A$. 這時 $A$ 和 $\overline{A}$ 就都是遞歸集. </p>
 <h3 id="遞歸可枚舉集的算術可定義性"><a href="#遞歸可枚舉集的算術可定義性" class="headerlink" title="遞歸可枚舉集的算術可定義性"></a>遞歸可枚舉集的算術可定義性</h3><p>〔註: 另參見筆記第二篇<a href="https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/#可定義性">可定義性</a>. 〕</p>
 <p>$k$ 元函數 $f$ 是算術可定義函數, 指存在 $K_N$ 的含 $k+1$ 個自由變元的公式 $p(x_1\cdots,x_k,y)$, 對任意 $n_1,\cdots,n_k,m\in\mathbb{N}$, 滿足<br>$$f(n_1,\cdots,n_k)&#x3D;m\enspace\Leftrightarrow\enspace |p(\overline{n_1},\cdots,\overline{n_k},\overline{m})|_{\mathbb{N}}&#x3D;1$$<br>此時說 $f$ 用公式 $p(x_1\cdots,x_k,y)$ 在 $K_N$ 中可定義. </p>
-<p>$k$ 元關係 $R$ 是算術可定義關係 (簡稱算術關係), 指存在 $K_N$ 的含 $k$ 個自由變元的公式 $p(x_1\cdots,x_k)$, 對任意 $n_1,\cdots,n_k\in\mathbb{N}$, 滿足<br>$$(n_1,\cdots,n_k)\in R\enspace\Leftrightarrow\enspace |p(\overline{n_1},\cdots,\overline{n_k})|_{\mathbb{N}}&#x3D;1$$<br>此時說 $R$ 用公式 $p(x_1\cdots,x_k)$ 在 $K_N$ 中可定義. 一元算術關係簡稱算術集. </p>
+<p>類似的, $k$ 元關係 $R$ 是算術可定義關係 (簡稱算術關係), 指存在 $K_N$ 的含 $k$ 個自由變元的公式 $p(x_1\cdots,x_k)$, 對任意 $n_1,\cdots,n_k\in\mathbb{N}$, 滿足<br>$$(n_1,\cdots,n_k)\in R\enspace\Leftrightarrow\enspace |p(\overline{n_1},\cdots,\overline{n_k})|_{\mathbb{N}}&#x3D;1$$<br>此時說 $R$ 用公式 $p(x_1\cdots,x_k)$ 在 $K_N$ 中可定義. 一元算術關係簡稱算術集. </p>
 <hr>
 
 <p>可表示函數是算術可定義的, 且所用公式相同; 可表示關係也是用相同公式可定義的. 根據 $K_N$ 的可靠性, 這是容易驗證的. 進而, 遞歸函數必為算術可定義函數, 遞歸關係必為算術可定義關係, 特別地, 遞歸集必為算術集. </p>
-<p>還可以進一步得到: 遞歸可枚舉集必為算術集. 設非空集 $A$ 是遞歸可枚舉集, 並設它是一元遞歸函數 $f$ 的值域, 再設 $f$ 用公式 $p(x_1,y)$ 可表示. 則集合 $A$ 用公式 $\exists x\thinspace p(x,x_1)$ 可定義, 即 $A$ 滿足<br>$$n\in A\enspace\Leftrightarrow\enspace |\exists x\thinspace p(x,\overline{n})|_{\mathbb{N}}&#x3D;1$$<br>具體驗證過程略. </p>
+<p>還可以進一步得到: 遞歸可枚舉集必為算術集. 設非空集 $A$ 是遞歸可枚舉集, 並設它是一元遞歸函數 $f$ 的值域, 再設 $f$ 用公式 $p(x_1,y)$ 可表示. 則集合 $A$ 用公式 $\exists x\thinspace p(x,\overline{n})$ 可定義, 即 $A$ 滿足<br>$$n\in A\enspace\Leftrightarrow\enspace |\exists x\thinspace p(x,\overline{n})|_{\mathbb{N}}&#x3D;1$$<br>具體驗證過程略. $\square$ </p>
 <p>但算術集不一定是遞歸可枚舉集, 換句話說, 算術集的類比遞歸集的類要大.<br>已知 $\text{TH}$ 是遞歸可枚舉集, 而 $\overline{\text{TH}}$ 不是遞歸可枚舉集, 但 $\text{TH}$ 和 $\overline{\text{TH}}$ 都是算術集. 這是因為, 設 $\text{TH}$ 用公式 $p(x_1)$ 可定義, 則 $\overline{\text{TH}}$ 用公式 $\neg p(x_1)$ 可定義. </p>
 <h3 id="真公式集的非算術可定義性"><a href="#真公式集的非算術可定義性" class="headerlink" title="真公式集的非算術可定義性"></a>真公式集的非算術可定義性</h3><p>下證明真公式 (Gödel 數的) 集 $\text{TR}$ 是非算術集, 因而有 $\text{TH}\not&#x3D;\text{TR}$, 即從 $\mathcal{N}$ 可證的公式集是真公式集的真子集. </p>
 <p>定理(Tarski): $\text{TR}$ 不是算術集.<br>反設 $\text{TR}$ 是算術集, 並設它用公式 $p(x_1)$ 可定義:<br>$$n\in\text{TR}\enspace\Leftrightarrow\enspace |p(\overline{n})|_{\mathbb{N}}&#x3D;1$$<br>作一元遞歸函數 $f$:<br>$$f(n)&#x3D;\text{Sub}(2^{15+2},\text{Num}(n),n)$$<br>若 $n&#x3D;\text{g}(q(x_1))$, 則 $f(n)&#x3D;\text{g}(q(\overline{n}))$. </p>
