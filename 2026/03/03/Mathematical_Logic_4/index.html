@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/03/c4rC/c245291.png">
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/04/nh8H/Turing-machine.png">
 <meta property="article:published_time" content="2026-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-17T10:32:00.019Z">
+<meta property="article:modified_time" content="2026-04-18T15:18:50.864Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -258,36 +258,51 @@
     <div class="post-body" itemprop="articleBody"><p>上一篇: <a href="https://ruozeli.github.io/2026/02/24/Mathematical_Logic_3/">形式算術和遞歸函數</a></p>
 <h1 id="Godel-不完備性定理"><a href="#Godel-不完備性定理" class="headerlink" title="Gödel 不完備性定理"></a>Gödel 不完備性定理</h1><h2 id="不完備性定理"><a href="#不完備性定理" class="headerlink" title="不完備性定理"></a>不完備性定理</h2><h3 id="Godel-第一不完備性定理"><a href="#Godel-第一不完備性定理" class="headerlink" title="Gödel 第一不完備性定理"></a>Gödel 第一不完備性定理</h3><p>$K_N$ 中公式集 $\Gamma$ 是完備的, 是指對 $K_N$ 中任一閉式 $p$, $\Gamma\vdash p$ 和 $\Gamma\vdash\neg p$ 必居其一. Gödel 第一不完備性定理斷言, $K_N$ 的公理集 $\mathcal{N}$ 是不完備的. 為證明這個結論, 只需構造出一個閉式, 它是 $\mathcal{N}$ 不可判定的, 即 $\Gamma\not\vdash p$ 且 $\Gamma\not\vdash\neg p$. </p>
 <p>由上一篇的分析可知, $K_N$ 上的結論可以通過 Gödel 配數轉化為關於自然數的結論, 而關於自然數的結論又可在 $K_N$ 中形式化. 利用兩個層次間的關聯及轉化, 構造出一種具有 “自相關” 特徵的公式, 這就是 Gödel 證明的核心. </p>
-<p>首先引入 “$\omega$ -無矛盾” 的概念, 這是一個比 “無矛盾” 更強的條件.<br>公式集 $\Gamma$ 是 $\omega$ -無矛盾的, 意為對 $K_N$ 中任一含自由變元的公式 $p(x)$, 以下兩條不同時成立: </p>
+<hr>
+
+<p>首先引入 “$\omega$ -無矛盾” 的概念, 這是一個比 “無矛盾” 更強的條件. </p>
+<p>公式集 $\Gamma$ 是 $\omega$ -無矛盾的, 意為對 $K_N$ 中任一含自由變元的公式 $p(x)$, 以下兩條不同時成立: </p>
 <ol>
 <li>對所有 $n\in\mathbb{N}$, $\Gamma\vdash p(\overline{n})$; </li>
 <li>$\Gamma\vdash\neg\forall x\thinspace p(x)$.</li>
 </ol>
-<p>接下來開始構造具有 “自相關” 形式的公式.<br>定義二元關係 $W$: $(n_1,n_2)\in W$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $p(\overline{n_1})$ 從 $\mathcal{N}$ 的證明的 Gödel 數. 換一種寫法, 即<br>$$(n_1,n_2)\in W\enspace\Leftrightarrow\enspace n_1\in\text{FM}\wedge(\text{Sub}(2^{15+2},\text{Num}(n_1),n_1),n_2)\in\text{PRF}$$<br>由 $\text{FM}$, $\text{Sub}$, $\text{Num}$, $\text{PRF}$ 的遞歸性可得二元關係 $W$ 的遞歸性, 從而 $W$ 在 $K_N$ 中可表示. 設 $W$ 用公式 $w(x_1,x_2)$ 可表示:<br>$$<br>\begin{align*}<br>(n_1,n_2)\in W \enspace &amp;\Rightarrow \enspace \mathcal{N}\vdash w(\overline{n_1},\overline{n_2}) \\<br>(n_1,n_2)\not\in W \enspace &amp;\Rightarrow \enspace \mathcal{N}\not\vdash w(\overline{n_1},\overline{n_2})<br>\end{align*}<br>$$<br>記<br>$$\text{p}(x_1)&#x3D;\forall x_2\thinspace \neg w(x_1,x_2)$$<br>它只含一個自由變元 $x_1$. 令 $m&#x3D;\text{g}(\text{p}(x_1))$, 用 $\overline{m}$ 去替換 $\text{p}(x_1)$ 中所有自由出現的 $x_1$, 得一閉式:<br>$$\text{p}(\overline{m})&#x3D;\forall x_2\thinspace \neg w(\overline{m},x_2)$$<br>該公式的直觀含義是: 對任何自然數 $n$, 都有 $(m,n)\not\in W$, 而 $m$ 正是 $\text{p}(x_1)$ 的 Gödel 數. 所以, 公式 $\text{p}(\overline{m})$ 斷言, 不存在自然數 $n$, 使得 $n$ 成為 $\text{p}(\overline{m})$ 從 $\mathcal{N}$ 的證明的 Gödel 數, 換句話說, $\text{p}(\overline{m})$ 斷言其自身不可證. (注意 $W$ 的定義) </p>
 <hr>
 
-<p>Gödel 第一不完備性定理: </p>
+<p>接下來開始構造具有 “自相關” 形式的公式. </p>
+<p>定義二元關係 $W$: $(n_1,n_2)\in W$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $p(\overline{n_1})$ 從 $\mathcal{N}$ 的證明的 Gödel 數. 換一種寫法, 即<br>$$(n_1,n_2)\in W\enspace\Leftrightarrow\enspace n_1\in\text{FM}\wedge(\text{Sub}(2^{15+2},\text{Num}(n_1),n_1),n_2)\in\text{PRF}$$<br>由 $\text{FM}$, $\text{Sub}$, $\text{Num}$, $\text{PRF}$ 的遞歸性可得二元關係 $W$ 的遞歸性, 從而 $W$ 在 $K_N$ 中可表示. 設 $W$ 用公式 $w(x_1,x_2)$ 可表示:<br>$$<br>\begin{align*}<br>(n_1,n_2)\in W \enspace &amp;\Rightarrow \enspace \mathcal{N}\vdash w(\overline{n_1},\overline{n_2}) \\<br>(n_1,n_2)\not\in W \enspace &amp;\Rightarrow \enspace \mathcal{N}\not\vdash w(\overline{n_1},\overline{n_2})<br>\end{align*}<br>$$<br>記<br>$$\text{p}(x_1)&#x3D;\forall x_2\thinspace \neg w(x_1,x_2)$$<br>它只含一個自由變元 $x_1$. 令 $m&#x3D;\text{g}(\text{p}(x_1))$, 用 $\overline{m}$ 去替換 $\text{p}(x_1)$ 中所有自由出現的 $x_1$, 得一閉式:<br>$$\text{p}(\overline{m})&#x3D;\forall x_2\thinspace \neg w(\overline{m},x_2)$$<br>該公式的直觀含義是: 對任何自然數 $n$, 都有 $(m,n)\not\in W$, 而 $m$ 正是 $\text{p}(x_1)$ 的 Gödel 數. 所以, 公式 $\text{p}(\overline{m})$ 斷言, 不存在自然數 $n$, 使得 $n$ 成為 $\text{p}(\overline{m})$ 從 $\mathcal{N}$ 的證明的 Gödel 數, 換句話說, $\text{p}(\overline{m})$ 斷言其自身不可證. (注意 $W$ 的定義) </p>
+<hr>
+
+<div class="note primary"><p><strong>Gödel 第一不完備性定理</strong>: </p>
 <ol>
 <li>若 $\mathcal{N}$ 無矛盾, 則 $\mathcal{N}\not\vdash\text{p}(\overline{m})$, </li>
 <li>若 $\mathcal{N}$ $\omega$ -無矛盾, 則 $\mathcal{N}\not\vdash\neg\text{p}(\overline{m})$.</li>
 </ol>
+</div>
+
 <p>假設 $\mathcal{N}\vdash\text{p}(\overline{m})$, 即 $\mathcal{N}\vdash\forall x_2\thinspace \neg w(\overline{m},x_2)$, 則有 $\mathcal{N}\vdash\neg w(\overline{m},\overline{n})$.<br>把 $\text{p}(\overline{m})$ 從 $\mathcal{N}$ 的一個證明的 Gödel 數記為 $n$, 則 $(m,n)\in W$. 因 $W$ 用 $w(x_1,x_2)$ 可表示, 所以 $\mathcal{N}\vdash w(\overline{m},\overline{n})$, 於是可得 $\mathcal{N}$ 是有矛盾的. </p>
 <p>假設 $\mathcal{N}\vdash\neg\text{p}(\overline{m})$, 即 $\mathcal{N}\vdash\neg\forall x_2\thinspace \neg w(\overline{m},x_2)$. 由於已知 $\mathcal{N}\vdash\text{p}(\overline{m})$ 不成立, 所以根據 $W$ 的定義可知, 對任意自然數 $n$ 都有 $(m,n)\not\in W$, 即對任意 $n$ 都有 $\mathcal{N}\vdash\neg w(\overline{m},\overline{n})$, 這表明 $\mathcal{N}$ 不是 $\omega$ -無矛盾的. $\square$ </p>
 <h3 id="Godel-Rosser-定理"><a href="#Godel-Rosser-定理" class="headerlink" title="Gödel-Rosser 定理"></a>Gödel-Rosser 定理</h3><p>上一節在 $\omega$ -無矛盾的條件下證明了 $\mathcal{N}$ 的不完備性, 但這個更強的條件其實是不必要的. Gödel-Rosser 定理就是僅在 “無矛盾” 的假定下證明了 $\mathcal{N}$ 的不完備性. </p>
-<p><strong>Gödel-Rosser 定理</strong>:<br>$\mathcal{N}$ 的任何遞歸無矛盾擴張 $\mathcal{N}^{*}$ 都不完備, 即如果擴張的公理集 $\mathcal{N}^{*}$ 無矛盾, 且 $\text{PA}^{*}$ ($\mathcal{N}^{*}$ 中全部公理的 Gödel 數構成的集) 是遞歸集, 那麼 $\mathcal{N}^{*}$ 不完備. </p>
+<div class="note primary"><p><strong>Gödel-Rosser 定理</strong>:<br>$\mathcal{N}$ 的任何遞歸無矛盾擴張 $\mathcal{N}^{*}$ 都不完備. 即, 如果擴張的公理集 $\mathcal{N}^{*}$ 無矛盾, 且 $\text{PA}^{*}$ ($\mathcal{N}^{*}$ 中全部公理的 Gödel 數構成的集) 是遞歸集, 那麼 $\mathcal{N}^{*}$ 不完備. </p>
+</div>
+
 <p>把 $\text{PF}$ 和 $\text{PRF}$ 定義式 (參見上一篇) 中的 $\mathcal{N}$ 改為 $\mathcal{N}^{*}$, 這不改變 $\text{PF}$ 和 $\text{PRF}$ 的遞歸性.<br>作二元關係 $W$ 和 $W^{*}$:<br>$(n_1,n_2)\in W$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $p(\overline{n_1})$ 從 $\mathcal{N}^{*}$ 的證明的 Gödel 數.<br>$(n_1,n_2)\in W^{*}$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $\neg p(\overline{n_1})$ 從 $\mathcal{N}^{*}$ 的證明的 Gödel 數. </p>
 <p>則 $W$ 仍是遞歸的. $W^{*}$ 也是遞歸的, 因為其特徵函數滿足<br>$$C_{W^{*}}(n_1,n_2)&#x3D;C_{\text{FM}}(n_1)\times C_{\text{PRF}}(\text{Sub}(2^{15+2},\text{Num}(n_1),2^7 * n_1),n_2)$$</p>
 <p>設 $W$ 和 $W^{*}$ 分別用 $w(x_1,x_2)$ 和 $w^{*}(x_1,x_2)$ 可表示. 記<br>$$\text{p}(x_1)&#x3D;\forall x_2\left(w(x_1,x_2)\to\exists y(y\leq x_2 \wedge w^{*}(x_1,y))\right)$$<br>其中 $y$ 取不在 $w(x_1,x_2)$ 和 $w^{*}(x_1,x_2)$ 中出現的某個變元. 令 $m&#x3D;\text{g}(\text{p}(x_1))$, 則:<br>$$\text{p}(\overline{m})&#x3D;\forall x_2\left(w(\overline{m},x_2)\to\exists y(y\leq x_2 \wedge w^{*}(\overline{m},y))\right)$$<br>直觀上, $\text{p}(\overline{m})$ 斷言, 若其自身從 $\mathcal{N}^{*}$ 可證, 那麼其否定就也從 $\mathcal{N}^{*}$ 可證且證明更簡單 (對應 Gödel 數更小). </p>
-<p>容易從 $\mathcal{N}^{*}\vdash \text{p}(\overline{m})$ 和 $\mathcal{N}^{*}\vdash\neg\text{p}(\overline{m})$ 中分別推出矛盾, 從而在 $\mathcal{N}^{*}$ 無矛盾的前提下證明 $\mathcal{N}^{*}\not\vdash \text{p}(\overline{m})$ 且 $\mathcal{N}^{*}\not\vdash\neg\text{p}(\overline{m})$, 即 $\mathcal{N}^{*}$ 是不完備的. </p>
+<p>容易從 $\mathcal{N}^{*}\vdash \text{p}(\overline{m})$ 和 $\mathcal{N}^{*}\vdash\neg\text{p}(\overline{m})$ 中分別推出矛盾, 從而在 $\mathcal{N}^{*}$ 無矛盾的前提下證明 $\mathcal{N}^{*}\not\vdash \text{p}(\overline{m})$ 且 $\mathcal{N}^{*}\not\vdash\neg\text{p}(\overline{m})$, 即 $\mathcal{N}^{*}$ 是不完備的. $\square$ </p>
 <hr>
 
 <p>但由此不能得出: $\mathcal{N}$ 的任何無矛盾擴張都不可能完備. 例如, 可以仿照證明 $K$ 的完全性時的做法, 在保證無矛盾的前提下遍歷 $K_N$ 的所有閉式, 歸納地定義出一串 $\mathcal{N}$ 的無矛盾擴張, 最後將這些擴張全都並起來得到 $\Gamma^{*}$. 若把 $\Gamma^{*}$ 作為擴張的算術公理集, 我們就達到了完備化. 但是, 由 Gödel-Rosser 定理, $\Gamma^{*}$ 中公理的 Gödel 數集必是非遞歸的, 故由 Church 論題, 不存在算法可用來確定任給的公式是不是 $\Gamma^{*}$ 中的公理, 也不存在算法可用來確定任給的有限公式序列是不是從 $\Gamma^{*}$ 的證明. </p>
 <p>把所有在 $\mathbb{N}$ 中恆真的 $K_N$ 的公式構成的集記作 $\text{Tr}$, 則 $\text{Tr}$ 也是 $\mathcal{N}$ 的無矛盾完備擴張. 但是由 Gödel-Rosser 定理, $\text{Tr}$ 中公式的 Gödel 數構成的集 $\text{TR}$ 必是非遞歸的. </p>
-<p>總之, 任何把 Peano 形式算術包含在內的數學形式系統, 只要有算法能用來確定該系統的任一篇文章 (公式的有限序列) 是不是一個證明 (這時說該系統是 “遞歸可公理化” 的), 這樣的系統一定不完備. </p>
+<div class="note danger"><p>總之, 任何把 Peano 形式算術包含在內的數學形式系統, 只要有算法能用來確定該系統的任一篇文章 (公式的有限序列) 是不是一個證明 (這時說該系統是 “遞歸可公理化” 的), 這樣的系統一定不完備. </p>
+</div>
+
 <h3 id="Godel-第二不完備性定理"><a href="#Godel-第二不完備性定理" class="headerlink" title="Gödel 第二不完備性定理"></a>Gödel 第二不完備性定理</h3><p>20世紀20年代初, Hilbert 提出了著名的有窮主義綱領, 其核心是要證明包含無窮的經典數學能夠幫助我們獲得關於具體, 有限事物的知識, 而這種證明方法自身必須是無疑議的. 為此, Hilbert 構建了原始遞歸算術 ($\text{PRA}$), 其中只包含原始遞歸函數, 於是目標就轉變為證明 Peano 算術 ($\text{PA}$) 相對於 $\text{PRA}$ 的保守性 (即對 $\text{PRA}$ 中任何公式 $\varphi$, 若 $\text{PA}\vdash\varphi$, 則 $\varphi$ ), 而保守性又可進一步歸約為 $\text{PA}$ 的無矛盾性. 所以 Hilbert 綱領的目標最終歸結為: 在 $\text{PRA}$ 中證明 $\text{PA}$ 的無矛盾性 (把這裡的 $\text{PA}$ 換成比方說 $\text{ZFC}$, 就可以使綱領涵蓋更多數學領域, 而不僅僅是算術). 然而, Gödel 的第二不完備性定理否定了這個可能, 從而在一定程度上否定了 Hilbert 的有窮主義綱領. </p>
 <p>Gödel 第二不完備性定理斷言: 如果包括初等數論在內的數學形式系統是無矛盾的, 那麼這種無矛盾性就不可能在此系統中得到證明. 下面就形式系統 $K_N$ 證明第二不完備性定理的<strong>一種易證形式</strong>. 其證明需要把第一定理前半部分的證明在系統中再次形式化. </p>
 <p>我們已經知道, 二元關係<br>$\text{PRF}&#x3D;\{(n_1,n_2):n_1&#x3D;\text{g}(q)$, $n_2$ 是 $q$ 從 $\mathcal{N}$ 的證明的 Gödel 數 $\}$<br>是遞歸的. 設 $\text{PRF}$ 用公式 $\text{prf}(x_1,x_2)$ 可表示, 記 $\text{pr}(x_1)&#x3D;\exists x_2\thinspace\text{prf}(x_1,x_2)$. </p>
-<p>下面先證明兩個引理.<br><strong>第一可推性條件</strong>: 對任一公式 $q$,<br>$$\mathcal{N}\vdash q\enspace\Rightarrow\enspace\mathcal{N}\vdash\text{pr}(\ulcorner q\urcorner)$$<br>其中 $\ulcorner q\urcorner$ 是 $\overline{\text{g}(q)}$ 的簡寫. </p>
+<hr>
+
+<p>下面先證明兩個引理. </p>
+<p><strong>第一可推性條件</strong>: 對任一公式 $q$,<br>$$\mathcal{N}\vdash q\enspace\Rightarrow\enspace\mathcal{N}\vdash\text{pr}(\ulcorner q\urcorner)$$<br>其中 $\ulcorner q\urcorner$ 是 $\overline{\text{g}(q)}$ 的簡寫. </p>
 <p>證明: 記 $m&#x3D;\text{g}(q)$, 則 $\overline{m}&#x3D;\ulcorner q\urcorner$. 設 $n$ 是 $q$ 從 $\mathcal{N}$ 的一個證明的 Gödel 數, 則 $(m,n)\in\text{PRF}$, 進而有 $\mathcal{N}\vdash\text{prf}(\overline{m},\overline{n})$.<br>由此使用 $\exists_1$ 規則 (見筆記第2篇) 便得 $\mathcal{N}\vdash\exists x_2\thinspace\text{prf}(x_1,x_2)$, 即 $\mathcal{N}\vdash\text{pr}(\ulcorner q\urcorner)$. $\square$ </p>
 <details class="note info"><summary><p>可推性條件</p>
 </summary>
@@ -299,7 +314,8 @@
 
 <p>遞歸函數 $\text{Num}$ 和 $\text{Sub}$ 分別滿足:<br>$$<br>\begin{align*}<br>&amp;\text{Num}(n) &#x3D; \text{g}(\overline{n}) \\<br>&amp;\text{Sub}(\text{g}(x_i),\text{g}(t),\text{g}(p(x_i))) &#x3D; \text{g}(p(t))<br>\end{align*}<br>$$<br>用 $\text{Num}$ 和 $\text{Sub}$ 定義一個新的二元遞歸函數 $\text{Su}$:<br>$$\text{Su}(n_1,n_2)&#x3D;\text{Sub}\left(\text{g}(x_1),\text{Num}(n_1),n_2\right)$$<br>其中 $\text{g}(x_1)&#x3D;2^{17}$. 則 $\text{Su}$ 滿足<br>$$\text{Su}(n_1,\text{g}(p(x_1)))&#x3D;\text{g}(p(\overline{n_1}))$$<br>設 $\text{Su}$ 用公式 $\text{su}(x_1,x_2,y)$ 可表示. </p>
 <p><strong>對角線引理</strong>: 對任一以 $x_1$ 為僅有的自由變元的公式 $p(x_1)$, 必存在閉式 $q_0$ 滿足:<br>$$\mathcal{N}\vdash q_0\leftrightarrow p(\ulcorner q_0\urcorner)$$<br>我們把具有這種性質的 $q_0$ 叫做公式 $p(x_1)$ 的不動點. </p>
-<p>證明: 記<br>$$<br>\begin{align*}<br>&amp;r(x_1) &#x3D; \exists y(p(y)\wedge\text{su}(x_1,x_1,y)), \\<br>&amp;m &#x3D; \text{g}(r(x_1)), \\<br>&amp;q_0 &#x3D; r(\overline{m}), \\<br>&amp;k &#x3D; \text{g}(q_0).<br>\end{align*}<br>$$<br>下面來證明 $q_0$ 即為所要求的不動點.<br>由 $\text{Su}$ 的定義, $\text{Su}(m,m)&#x3D;\text{g}(r(\overline{m}))&#x3D;k$, 故 $\mathcal{N}\vdash\text{su}(\overline{m},\overline{m},\overline{k})$. 於是有:<br>$$\mathcal{N}\cup\{p(\overline{k})\}\vdash\exists y(p(y)\wedge\text{su}(\overline{m},\overline{m},y))$$<br>所以 $\mathcal{N}\vdash p(\overline{k})\to q_0$, 即 $\mathcal{N}\vdash p(\ulcorner q_0\urcorner)\to q_0$. </p>
+<p>證明: 記<br>$$<br>\begin{align*}<br>&amp;r(x_1) &#x3D; \exists y(p(y)\wedge\text{su}(x_1,x_1,y)), \\<br>&amp;m &#x3D; \text{g}(r(x_1)), \\<br>&amp;q_0 &#x3D; r(\overline{m}), \\<br>&amp;k &#x3D; \text{g}(q_0).<br>\end{align*}<br>$$<br>下面來證明 $q_0$ 即為所要求的不動點. </p>
+<p>由 $\text{Su}$ 的定義, $\text{Su}(m,m)&#x3D;\text{g}(r(\overline{m}))&#x3D;k$, 故 $\mathcal{N}\vdash\text{su}(\overline{m},\overline{m},\overline{k})$. 於是有:<br>$$\mathcal{N}\cup\{p(\overline{k})\}\vdash\exists y(p(y)\wedge\text{su}(\overline{m},\overline{m},y))$$<br>所以 $\mathcal{N}\vdash p(\overline{k})\to q_0$, 即 $\mathcal{N}\vdash p(\ulcorner q_0\urcorner)\to q_0$. </p>
 <p>另一方面, 有 $\mathcal{N}\vdash\text{su}(\overline{m},\overline{m},y)\to y\approx k$, 所以<br>$$\mathcal{N}\cup\{p(y)\wedge\text{su}(\overline{m},\overline{m},y)\}\vdash p(\overline{k})$$<br>用 $\exists_2$ 規則可得<br>$$\mathcal{N}\cup\{\exists y(p(y)\wedge\text{su}(\overline{m},\overline{m},y))\}\vdash p(\overline{k})$$<br>即得 $\mathcal{N}\vdash q_0\to p(\ulcorner q_0\urcorner)$. $\square$ </p>
 <hr>
 
@@ -307,16 +323,16 @@
 <p>現考慮公式 $\text{pr}(x_1)\to\text{pr}^{*}(x_1)$, $x_1$ 是其唯一的自由變元, 所以由對角線引理, 該公式有不動點 $q_0$:<br>$$\mathcal{N}\vdash q_0\leftrightarrow(\text{pr}(\ulcorner q_0\urcorner)\to\text{pr}^{*}(\ulcorner q_0\urcorner))\tag{1}$$</p>
 <hr>
 
-<p>利用這個不動點, 我們可以證明 Gödel 第二不完備性定理的一個易證形式: 若 $\mathcal{N}$ 無矛盾, 則 $\mathcal{N}\not\vdash \text{con}_{\mathcal{N}}$. </p>
+<p>利用這個不動點, 我們可以證明 Gödel 第二不完備性定理的如下形式: 若 $\mathcal{N}$ 無矛盾, 則 $\mathcal{N}\not\vdash \text{con}_{\mathcal{N}}$. </p>
 <p>反設 $\mathcal{N}\vdash \text{con}_{\mathcal{N}}$, 即 $\mathcal{N}\vdash\forall x_1\neg(\text{pr}(x_1)\wedge\text{pr}^{*}(x_1))$, 則有<br>$$\mathcal{N}\vdash\neg(\text{pr}(\ulcorner q_0\urcorner)\wedge\text{pr}^{*}(\ulcorner q_0\urcorner))\tag{2}$$<br>因此有<br>$$\mathcal{N}\cup\{\text{pr}(\ulcorner q_0\urcorner),q_0\}\vdash\neg\text{pr}^{*}(\ulcorner q_0\urcorner)\tag{3}$$<br>又由 $(1)$ 得<br>$$\mathcal{N}\cup\{\text{pr}(\ulcorner q_0\urcorner),q_0\}\vdash\text{pr}^{*}(\ulcorner q_0\urcorner)\tag{4}$$<br>結合 $(3)$, $(4)$ 用歸謬律可得<br>$$\mathcal{N}\vdash \text{pr}(\ulcorner q_0\urcorner))\to\neg q_0$$<br>令 $k$ 為公式 $\text{pr}(\ulcorner q_0\urcorner))\to\neg q_0$ 從 $\mathcal{N}$ 的一個證明的 Gödel 數. 則 $(\text{g}(q_0),k)\in\text{PRF}^{*}$, 所以有<br>$$\mathcal{N}\vdash \exists x_2\thinspace \text{prf}^{*}(\ulcorner q_0\urcorner,x_2)$$<br>即 $\mathcal{N}\vdash \text{pr}^{*}(\ulcorner q_0\urcorner))$.<br>由此可知, $\mathcal{N}\vdash \text{pr}(\ulcorner q_0\urcorner)\to\text{pr}^{*}(\ulcorner q_0\urcorner)$. 再結合 $(3)$ 即得 $\mathcal{N}\vdash q_0$, 進而由第一可推性條件得 $\mathcal{N}\vdash \text{pr}(\ulcorner q_0\urcorner))$. </p>
-<p>最後, 結合兩式便有 $\mathcal{N}\vdash\text{pr}(\ulcorner q_0\urcorner)\wedge\text{pr}^{*}(\ulcorner q_0\urcorner)$, 與 $(2)$ 產生矛盾. 若 $\mathcal{N}$ 無矛盾, 則 $\mathcal{N}\not\vdash \text{con}_{\mathcal{N}}$. 這就證明了第二不完備性定理的易證形式. $\square$ </p>
+<p>最後, 結合兩式便有 $\mathcal{N}\vdash\text{pr}(\ulcorner q_0\urcorner)\wedge\text{pr}^{*}(\ulcorner q_0\urcorner)$, 與 $(2)$ 產生矛盾. 若 $\mathcal{N}$ 無矛盾, 則 $\mathcal{N}\not\vdash \text{con}_{\mathcal{N}}$. 這就證明了第二不完備性定理. $\square$ </p>
 <hr>
 
 <p>進而, 如果假定第二和第三可推性條件 (參見上文) 也成立, 那麼可以證明<br>$$\mathcal{N}\vdash\neg(\text{pr}(\ulcorner q_0\urcorner)\wedge\text{pr}^{*}(\ulcorner q_0\urcorner))\leftrightarrow\neg\text{pr}(\ulcorner \overline{0}\not\approx\overline{0}\urcorner)$$<br>後兩條可推性條件使得從 $\bot$ (矛盾) 推出公式 $\overline{0}\not\approx\overline{0}$ 的證明可在系統中再次形式化. </p>
-<p>這就給出了 Gödel 第二不完備性定理的一種通常的形式<br>$$\mathcal{N}\not\vdash \neg\text{pr}(\ulcorner \overline{0}\not\approx\overline{0}\urcorner)$$</p>
+<p>這給出了 Gödel 第二不完備性定理的一種通常的形式<br>$$\mathcal{N}\not\vdash \neg\text{pr}(\ulcorner \overline{0}\not\approx\overline{0}\urcorner)$$</p>
 <details class="note success"><summary><p>直觀理解</p>
 </summary>
-<p>對第二不完備性定理, 還有另一種 (不嚴格的) 直觀理解: 從 Gödel 句子 $p$ 出發, $p$ 等價於 “$p$ 不可證”, 所以如果 $\mathcal{N}$ 的無矛盾性在系統內可證, 那麼就能在系統內證明 “$p$ 不可證”, 也就證明了與之等價的 $p$. 這與 $p$ 的不可判定性矛盾. </p>
+<p>對第二不完備性定理, 還有另一種 (不嚴格的) 直觀理解: 從 Gödel 句子 $p$ 出發, $p$ 等價於 “$p$ 不可證”, 所以如果 $\mathcal{N}$ 的無矛盾性在系統內可證, 那麼就能在系統內證明 “$p$ 不可證”, 也就證明了與之等價的 $p$. 這與 $p$ 的不可判定性矛盾. Hilbert 和 Bernays 最早完成了這種證明思路的嚴格化. </p>
 
 </details>
 
@@ -330,17 +346,17 @@
 <p>綜上所述, $\text{TH}$ 是非遞歸集. 從而沒有算法能用來確定任給公式是否從 $\mathcal{N}$ 可證. 綜合語義和語法兩方面便知, 沒有算法可以用來確定任給公式是不是 Peano 形式算術的定理. </p>
 <details class="note success"><summary><p>Hilbert 第十問題</p>
 </summary>
-<p>能否設計出一個通用算法, 在有限步內確定一個任給的多元整係數方程 (Diophantine 方程) 是否有整數解? 答案是否定的. </p>
-<p>首先容易看出, 原問題等價於要求用算法判定任給 Diophantine 方程是否有正整數解. 因為要檢驗 $p(x_1,\cdots,x_n)&#x3D;0$ 是否有整數解, 只需分別檢驗 $2^n$ 個方程<br>$$<br>\begin{align*}<br>&amp;p(x_1,x_2\cdots,x_n) &#x3D; 0 \\<br>&amp;p(-x_1,x_2\cdots,x_n) &#x3D; 0 \\<br>&amp;p(x_1,-x_2\cdots,x_n) &#x3D; 0 \\<br>&amp;\cdots\cdots \\<br>&amp;p(x_1,x_2\cdots,-x_n) &#x3D; 0<br>\end{align*}<br>$$<br>是否有正整數解. </p>
-<p>我們稱一個集合 $S$ 是 Diophantine 的, 當且僅當存在一個 Diophantine 方程 $p(x,y_1,\cdots,y_n)&#x3D;0$ 使得 $x\in S$ $\Leftrightarrow$ $x$ 是方程 $p(x,y_1,\cdots,y_n)&#x3D;0$ 的正整數解. 例如, 所有 $2$ 或 $3$ 的倍數構成的集 $A$ 是 Diophantine 集, 因為 $x\in A$ $\Leftrightarrow$ $x$ 是方程 $(x-2y_1)(x-3y_2)&#x3D;0$ 的正整數解. </p>
-<p>可以證明, 所有 Diophantine 集都是遞歸可枚舉的. 而 Matiyasevich 證明了其逆命題: 所有遞歸可枚舉集都是 Diophantine 集, 所以 Diophantine 集和遞歸可枚舉集是一回事. 我們已經證明了存在非遞歸的遞歸可枚舉集, 於是便可推知: 不存在 Hilbert 所要求的通用算法.</p>
+<p>能否設計出一個通用算法, 在有限步內確定一個任給的多元整係數方程 (丢番圖方程) 是否有整數解? 答案是否定的. </p>
+<p>首先容易看出, 原問題等價於要求用算法判定任給丢番圖方程是否有正整數解. 因為要檢驗 $p(x_1,\cdots,x_n)&#x3D;0$ 是否有整數解, 只需分別檢驗 $2^n$ 個方程<br>$$<br>\begin{align*}<br>&amp;p(x_1,x_2\cdots,x_n) &#x3D; 0 \\<br>&amp;p(-x_1,x_2\cdots,x_n) &#x3D; 0 \\<br>&amp;p(x_1,-x_2\cdots,x_n) &#x3D; 0 \\<br>&amp;\cdots\cdots \\<br>&amp;p(x_1,x_2\cdots,-x_n) &#x3D; 0<br>\end{align*}<br>$$<br>是否有正整數解. </p>
+<p>我們稱一個集合 $S$ 是丢番圖的, 當且僅當存在一個丢番圖方程 $p(x,y_1,\cdots,y_n)&#x3D;0$ 使得 $x\in S$ $\Leftrightarrow$ $x$ 是方程 $p(x,y_1,\cdots,y_n)&#x3D;0$ 的正整數解. 例如, 所有 $2$ 或 $3$ 的倍數構成的集 $A$ 是丢番圖集, 因為 $x\in A$ $\Leftrightarrow$ $x$ 是方程 $(x-2y_1)(x-3y_2)&#x3D;0$ 的正整數解. </p>
+<p>可以證明, 所有丢番圖集都是遞歸可枚舉的. 而 Matiyasevich 證明了其逆命題: 所有遞歸可枚舉集都是丢番圖集, 所以丢番圖集和遞歸可枚舉集是一回事. 我們已經證明了存在非遞歸的遞歸可枚舉集, 於是便可推知: 不存在 Hilbert 所要求的通用算法.</p>
 
 </details>
 
 <h2 id="遞歸可枚舉集與算術集"><a href="#遞歸可枚舉集與算術集" class="headerlink" title="遞歸可枚舉集與算術集"></a>遞歸可枚舉集與算術集</h2><h3 id="可證公式集的遞歸可枚舉性"><a href="#可證公式集的遞歸可枚舉性" class="headerlink" title="可證公式集的遞歸可枚舉性"></a>可證公式集的遞歸可枚舉性</h3><p>空集以及一元遞歸函數 (可以是部分遞歸函數) 的值域叫做<strong>遞歸可枚舉集</strong>. 非空集 $A$ 是遞歸可枚舉集, 意味著存在一元遞歸函數 $f$ 使<br>$$A&#x3D;\left\{a:\exists n\in\mathbb{N}\enspace\text{s.t.}\enspace a&#x3D;f(n)\right\}$$<br>根據 Church 論題, 存在算法能計算遞歸函數 $f$ 的函數值, 從而把 $A$ 的成員一個不漏 (但允許重複) 地列舉出來. </p>
 <hr>
 
-<p>命題: 遞歸集一定是遞歸可枚舉集.<br>設非空集 $A$ 是遞歸集, 任取 $A$ 的元素 $a_0$. 取定 $a_0$ 後, 下式定義的遞歸函數 $f$ 的值域就是 $A$:<br>$$f(n)&#x3D;nC_A(n)+a_0\thinspace\overline{\text{sg}}(C_A(n))$$<br>該函數相當於對自然數逐個檢驗的算法, 加上一項 $a_0\thinspace\overline{\text{sg}}(C_A(n))$ 是為了在輸入 $n_0\not\in A$ 時輸出 $a_0\in A$, 而非 $0$ (有可能 $0\not\in A$). </p>
+<p>命題: 遞歸集一定是遞歸可枚舉集.<br>設非空集 $A$ 是遞歸集, 任取 $A$ 的元素 $a_0$. 取定 $a_0$ 後, 下式定義的遞歸函數 $f$ 的值域就是 $A$:<br>$$f(n)&#x3D;nC_A(n)+a_0\thinspace\overline{\text{sg}}(C_A(n))$$<br>該函數相當於對自然數逐個檢驗的算法. 其中, 加上一項 $a_0\thinspace\overline{\text{sg}}(C_A(n))$ 是為了在輸入 $n_0\not\in A$ 時輸出 $a_0\in A$, 而非 $0$ (有可能 $0\not\in A$). $\square$ </p>
 <p>上述命題的逆命題不成立, 存在非遞歸的遞歸可枚舉集. 例如 $\text{TH}$ 是遞歸可枚舉集, 任取 $m\in\text{TH}$ (如取 $m$ 為某公理的 Gödel 數), 則如下定義的遞歸函數 $f$ 的值域給出 $\text{TH}$:<br>$$f(n)&#x3D;(n)_{\text{lh}(n)\dot{-}1}\times C_{\text{PF}}(n)+m\thinspace\overline{\text{sg}}(C_{\text{PF}}(n))$$<br>直觀來看, 該算法的意思是: 逐一拿出從 $\mathcal{N}$ 的證明文章 (根據 $C_{\text{PF}}$ 的定義), 再取出文章的最後一個公式, 這樣就能枚舉出所有從 $\mathcal{N}$ 可證的公式. </p>
 <hr>
 
