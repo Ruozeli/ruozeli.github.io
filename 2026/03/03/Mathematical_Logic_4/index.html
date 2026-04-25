@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/03/c4rC/c245291.png">
 <meta property="og:image" content="https://files.seeusercontent.com/2026/03/04/nh8H/Turing-machine.png">
 <meta property="article:published_time" content="2026-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-18T15:18:50.864Z">
+<meta property="article:modified_time" content="2026-04-22T15:41:37.797Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -285,7 +285,8 @@
 <div class="note primary"><p><strong>Gödel-Rosser 定理</strong>:<br>$\mathcal{N}$ 的任何遞歸無矛盾擴張 $\mathcal{N}^{*}$ 都不完備. 即, 如果擴張的公理集 $\mathcal{N}^{*}$ 無矛盾, 且 $\text{PA}^{*}$ ($\mathcal{N}^{*}$ 中全部公理的 Gödel 數構成的集) 是遞歸集, 那麼 $\mathcal{N}^{*}$ 不完備. </p>
 </div>
 
-<p>把 $\text{PF}$ 和 $\text{PRF}$ 定義式 (參見上一篇) 中的 $\mathcal{N}$ 改為 $\mathcal{N}^{*}$, 這不改變 $\text{PF}$ 和 $\text{PRF}$ 的遞歸性.<br>作二元關係 $W$ 和 $W^{*}$:<br>$(n_1,n_2)\in W$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $p(\overline{n_1})$ 從 $\mathcal{N}^{*}$ 的證明的 Gödel 數.<br>$(n_1,n_2)\in W^{*}$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $\neg p(\overline{n_1})$ 從 $\mathcal{N}^{*}$ 的證明的 Gödel 數. </p>
+<p>把 $\text{PF}$ 和 $\text{PRF}$ 定義式 (參見上一篇) 中的 $\mathcal{N}$ 改為 $\mathcal{N}^{*}$, 這不改變 $\text{PF}$ 和 $\text{PRF}$ 的遞歸性. </p>
+<p>作二元關係 $W$ 和 $W^{*}$:<br>$(n_1,n_2)\in W$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $p(\overline{n_1})$ 從 $\mathcal{N}^{*}$ 的證明的 Gödel 數.<br>$(n_1,n_2)\in W^{*}$ $\Leftrightarrow$ $n_1$ 是某個公式 $p(x_1)$ 的 Gödel 數, $n_2$ 是 $\neg p(\overline{n_1})$ 從 $\mathcal{N}^{*}$ 的證明的 Gödel 數. </p>
 <p>則 $W$ 仍是遞歸的. $W^{*}$ 也是遞歸的, 因為其特徵函數滿足<br>$$C_{W^{*}}(n_1,n_2)&#x3D;C_{\text{FM}}(n_1)\times C_{\text{PRF}}(\text{Sub}(2^{15+2},\text{Num}(n_1),2^7 * n_1),n_2)$$</p>
 <p>設 $W$ 和 $W^{*}$ 分別用 $w(x_1,x_2)$ 和 $w^{*}(x_1,x_2)$ 可表示. 記<br>$$\text{p}(x_1)&#x3D;\forall x_2\left(w(x_1,x_2)\to\exists y(y\leq x_2 \wedge w^{*}(x_1,y))\right)$$<br>其中 $y$ 取不在 $w(x_1,x_2)$ 和 $w^{*}(x_1,x_2)$ 中出現的某個變元. 令 $m&#x3D;\text{g}(\text{p}(x_1))$, 則:<br>$$\text{p}(\overline{m})&#x3D;\forall x_2\left(w(\overline{m},x_2)\to\exists y(y\leq x_2 \wedge w^{*}(\overline{m},y))\right)$$<br>直觀上, $\text{p}(\overline{m})$ 斷言, 若其自身從 $\mathcal{N}^{*}$ 可證, 那麼其否定就也從 $\mathcal{N}^{*}$ 可證且證明更簡單 (對應 Gödel 數更小). </p>
 <p>容易從 $\mathcal{N}^{*}\vdash \text{p}(\overline{m})$ 和 $\mathcal{N}^{*}\vdash\neg\text{p}(\overline{m})$ 中分別推出矛盾, 從而在 $\mathcal{N}^{*}$ 無矛盾的前提下證明 $\mathcal{N}^{*}\not\vdash \text{p}(\overline{m})$ 且 $\mathcal{N}^{*}\not\vdash\neg\text{p}(\overline{m})$, 即 $\mathcal{N}^{*}$ 是不完備的. $\square$ </p>
@@ -298,7 +299,7 @@
 
 <h3 id="Godel-第二不完備性定理"><a href="#Godel-第二不完備性定理" class="headerlink" title="Gödel 第二不完備性定理"></a>Gödel 第二不完備性定理</h3><p>20世紀20年代初, Hilbert 提出了著名的有窮主義綱領, 其核心是要證明包含無窮的經典數學能夠幫助我們獲得關於具體, 有限事物的知識, 而這種證明方法自身必須是無疑議的. 為此, Hilbert 構建了原始遞歸算術 ($\text{PRA}$), 其中只包含原始遞歸函數, 於是目標就轉變為證明 Peano 算術 ($\text{PA}$) 相對於 $\text{PRA}$ 的保守性 (即對 $\text{PRA}$ 中任何公式 $\varphi$, 若 $\text{PA}\vdash\varphi$, 則 $\varphi$ ), 而保守性又可進一步歸約為 $\text{PA}$ 的無矛盾性. 所以 Hilbert 綱領的目標最終歸結為: 在 $\text{PRA}$ 中證明 $\text{PA}$ 的無矛盾性 (把這裡的 $\text{PA}$ 換成比方說 $\text{ZFC}$, 就可以使綱領涵蓋更多數學領域, 而不僅僅是算術). 然而, Gödel 的第二不完備性定理否定了這個可能, 從而在一定程度上否定了 Hilbert 的有窮主義綱領. </p>
 <p>Gödel 第二不完備性定理斷言: 如果包括初等數論在內的數學形式系統是無矛盾的, 那麼這種無矛盾性就不可能在此系統中得到證明. 下面就形式系統 $K_N$ 證明第二不完備性定理的<strong>一種易證形式</strong>. 其證明需要把第一定理前半部分的證明在系統中再次形式化. </p>
-<p>我們已經知道, 二元關係<br>$\text{PRF}&#x3D;\{(n_1,n_2):n_1&#x3D;\text{g}(q)$, $n_2$ 是 $q$ 從 $\mathcal{N}$ 的證明的 Gödel 數 $\}$<br>是遞歸的. 設 $\text{PRF}$ 用公式 $\text{prf}(x_1,x_2)$ 可表示, 記 $\text{pr}(x_1)&#x3D;\exists x_2\thinspace\text{prf}(x_1,x_2)$. </p>
+<p>我們已經知道, 二元關係<br>$$\text{PRF}&#x3D;\lbrace(n_1,n_2):n_1&#x3D;\text{g}(q), n_2 \thinspace 是 \thinspace q \thinspace 從 \thinspace \mathcal{N} \thinspace 的證明的 \thinspace \text{Gödel}  \thinspace 數 \thinspace \rbrace$$<br>是遞歸的. 設 $\text{PRF}$ 用公式 $\text{prf}(x_1,x_2)$ 可表示, 記 $\text{pr}(x_1)&#x3D;\exists x_2\thinspace\text{prf}(x_1,x_2)$. </p>
 <hr>
 
 <p>下面先證明兩個引理. </p>
@@ -312,14 +313,14 @@
 
 <hr>
 
-<p>遞歸函數 $\text{Num}$ 和 $\text{Sub}$ 分別滿足:<br>$$<br>\begin{align*}<br>&amp;\text{Num}(n) &#x3D; \text{g}(\overline{n}) \\<br>&amp;\text{Sub}(\text{g}(x_i),\text{g}(t),\text{g}(p(x_i))) &#x3D; \text{g}(p(t))<br>\end{align*}<br>$$<br>用 $\text{Num}$ 和 $\text{Sub}$ 定義一個新的二元遞歸函數 $\text{Su}$:<br>$$\text{Su}(n_1,n_2)&#x3D;\text{Sub}\left(\text{g}(x_1),\text{Num}(n_1),n_2\right)$$<br>其中 $\text{g}(x_1)&#x3D;2^{17}$. 則 $\text{Su}$ 滿足<br>$$\text{Su}(n_1,\text{g}(p(x_1)))&#x3D;\text{g}(p(\overline{n_1}))$$<br>設 $\text{Su}$ 用公式 $\text{su}(x_1,x_2,y)$ 可表示. </p>
+<p>遞歸函數 $\text{Num}$ 和 $\text{Sub}$ 分別滿足: (具體定義參見上一篇)<br>$$<br>\begin{align*}<br>&amp;\text{Num}(n) &#x3D; \text{g}(\overline{n}) \\<br>&amp;\text{Sub}(\text{g}(x_i),\text{g}(t),\text{g}(p(x_i))) &#x3D; \text{g}(p(t))<br>\end{align*}<br>$$<br>用 $\text{Num}$ 和 $\text{Sub}$ 定義一個新的二元遞歸函數 $\text{Su}$:<br>$$\text{Su}(n_1,n_2)&#x3D;\text{Sub}\left(\text{g}(x_1),\text{Num}(n_1),n_2\right)$$<br>其中 $\text{g}(x_1)&#x3D;2^{15+2}$. 則 $\text{Su}$ 滿足<br>$$\text{Su}(n_1,\text{g}(p(x_1)))&#x3D;\text{g}(p(\overline{n_1}))$$<br>設 $\text{Su}$ 用公式 $\text{su}(x_1,x_2,y)$ 可表示. </p>
 <p><strong>對角線引理</strong>: 對任一以 $x_1$ 為僅有的自由變元的公式 $p(x_1)$, 必存在閉式 $q_0$ 滿足:<br>$$\mathcal{N}\vdash q_0\leftrightarrow p(\ulcorner q_0\urcorner)$$<br>我們把具有這種性質的 $q_0$ 叫做公式 $p(x_1)$ 的不動點. </p>
-<p>證明: 記<br>$$<br>\begin{align*}<br>&amp;r(x_1) &#x3D; \exists y(p(y)\wedge\text{su}(x_1,x_1,y)), \\<br>&amp;m &#x3D; \text{g}(r(x_1)), \\<br>&amp;q_0 &#x3D; r(\overline{m}), \\<br>&amp;k &#x3D; \text{g}(q_0).<br>\end{align*}<br>$$<br>下面來證明 $q_0$ 即為所要求的不動點. </p>
-<p>由 $\text{Su}$ 的定義, $\text{Su}(m,m)&#x3D;\text{g}(r(\overline{m}))&#x3D;k$, 故 $\mathcal{N}\vdash\text{su}(\overline{m},\overline{m},\overline{k})$. 於是有:<br>$$\mathcal{N}\cup\{p(\overline{k})\}\vdash\exists y(p(y)\wedge\text{su}(\overline{m},\overline{m},y))$$<br>所以 $\mathcal{N}\vdash p(\overline{k})\to q_0$, 即 $\mathcal{N}\vdash p(\ulcorner q_0\urcorner)\to q_0$. </p>
-<p>另一方面, 有 $\mathcal{N}\vdash\text{su}(\overline{m},\overline{m},y)\to y\approx k$, 所以<br>$$\mathcal{N}\cup\{p(y)\wedge\text{su}(\overline{m},\overline{m},y)\}\vdash p(\overline{k})$$<br>用 $\exists_2$ 規則可得<br>$$\mathcal{N}\cup\{\exists y(p(y)\wedge\text{su}(\overline{m},\overline{m},y))\}\vdash p(\overline{k})$$<br>即得 $\mathcal{N}\vdash q_0\to p(\ulcorner q_0\urcorner)$. $\square$ </p>
+<p>證明: 記<br>$$<br>\begin{align*}<br>&amp;r(x_1) &#x3D; \exists y(p(y)\wedge\text{su}(x_1,x_1,y)), \\<br>&amp;m &#x3D; \text{g}(r(x_1)), \\<br>&amp;q_0 &#x3D; r(\overline{m}), \\<br>&amp;k &#x3D; \text{g}(q_0).<br>\end{align*}<br>$$<br>則 $q_0$ 即為所要求的不動點. </p>
+<p>顯然, 我們有 $q_0&#x3D;r(\overline{m})&#x3D;\exists y(p(y)\wedge\text{su}(\overline{m},\overline{m},y))$, 又根據 $\text{Su}$ 的定義, $\text{Su}(m,m)&#x3D;\text{g}(r(\overline{m}))&#x3D;k$, 所以<br>$$<br>\begin{aligned}<br>q_0 &amp; \Leftrightarrow \exists y(p(y)\wedge y\approx \overline{k}) \\<br>&amp; \Leftrightarrow \exists y(p(y)\wedge y\approx \ulcorner r(\overline{m})\urcorner) \\<br>&amp; \Leftrightarrow \exists y(p(y)\wedge y\approx \ulcorner q_0\urcorner) \\<br>&amp; \Leftrightarrow p(\ulcorner q_0\urcorner)<br>\end{aligned}<br>$$<br>其中, 最後一行的 $\Rightarrow$ 使用了 $\exists_2$ 規則. $\square$ </p>
 <hr>
 
-<p>定義一個新的二元關係 $\text{PRF}^{*}$:<br>$\text{PRF}^{*}&#x3D;\{(n_1,n_2):n_1&#x3D;\text{g}(q),n_2$ 是 $\text{pr}(\overline{n_1})\to\neg q$ 從 $\mathcal{N}$ 的證明的 Gödel 數 $\}$<br>則易證 $\text{PRF}^{*}$ 是遞歸的. 設 $\text{PRF}^{*}$ 用公式 $\text{prf}^{*}(x_1,x_2)$ 可表示, 記<br>$$\text{pr}^{*}(x_1)&#x3D;\exists x_2\thinspace\text{prf}^{*}(x_1,x_2)$$<br>引入記號 $\text{con}_{\mathcal{N}}$:<br>$$\text{con}_{\mathcal{N}}&#x3D;\forall x_1\neg(\text{pr}(x_1)\wedge\text{pr}^{*}(x_1))$$<br>則公式 $\text{con}_{\mathcal{N}}$ 的直觀意思即是: $\mathcal{N}$ 無矛盾. 任何公式 $q$ 都不會使 $\mathcal{N}\vdash q$ 和 $\mathcal{N}\vdash\text{pr}(\ulcorner q\urcorner)\to\neg q$ 同時成立, 由第一可推性條件, 這也意味著, 任何公式 $q$ 都不會使 $\mathcal{N}\vdash q$ 和 $\mathcal{N}\vdash\neg q$ 同時成立. </p>
+<p>定義一個新的二元關係 $\text{PRF}^{*}$:<br>$$\text{PRF}^{*}&#x3D;\lbrace(n_1,n_2):n_1&#x3D;\text{g}(q), n_2 \thinspace 是 \thinspace \text{pr}(\overline{n_1})\to\neg q \thinspace 從 \thinspace \mathcal{N} \thinspace 的證明的 \thinspace \text{Gödel} \thinspace 數 \thinspace\rbrace$$<br>易證 $\text{PRF}^{*}$ 是遞歸的. </p>
+<p>設 $\text{PRF}^{*}$ 用公式 $\text{prf}^{*}(x_1,x_2)$ 可表示, 記<br>$$\text{pr}^{*}(x_1)&#x3D;\exists x_2\thinspace\text{prf}^{*}(x_1,x_2)$$<br>引入記號 $\text{con}_{\mathcal{N}}$:<br>$$\text{con}_{\mathcal{N}}&#x3D;\forall x_1\neg(\text{pr}(x_1)\wedge\text{pr}^{*}(x_1))$$<br>$\text{con}_{\mathcal{N}}$ 成立意味著任何公式 $q$ 都不會使 $\mathcal{N}\vdash q$ 和 $\mathcal{N}\vdash\text{pr}(\ulcorner q\urcorner)\to\neg q$ 同時成立, 根據第一可推性條件, 這也就意味著, 任何公式 $q$ 都不會使 $\mathcal{N}\vdash q$ 和 $\mathcal{N}\vdash\neg q$ 同時成立. 所以公式 $\text{con}_{\mathcal{N}}$ 的直觀意思就是: $\mathcal{N}$ 無矛盾. </p>
 <p>現考慮公式 $\text{pr}(x_1)\to\text{pr}^{*}(x_1)$, $x_1$ 是其唯一的自由變元, 所以由對角線引理, 該公式有不動點 $q_0$:<br>$$\mathcal{N}\vdash q_0\leftrightarrow(\text{pr}(\ulcorner q_0\urcorner)\to\text{pr}^{*}(\ulcorner q_0\urcorner))\tag{1}$$</p>
 <hr>
 
@@ -339,7 +340,7 @@
 <h2 id="K-N-的不可判定性"><a href="#K-N-的不可判定性" class="headerlink" title="$K_N$ 的不可判定性"></a>$K_N$ 的不可判定性</h2><p>作為 Gödel-Rosser 定理的推論, 已經證明 $K_N$ 在 $\mathbb{N}$ 中恆真公式的 Gödel 數構成的集 $\text{TR}$ 是非遞歸的, 按 Church 論題, 不存在算法可以確定任給公式是否在 $\mathbb{N}$ 中恆真. 這一事實稱為 $K_N$ 的語義不可判定性, 而下面討論的是 $K_N$ 的語法不可判定性. </p>
 <p>把從 $\mathcal{N}$ 可證的公式 Gödel 數全體構成的集記作 $\text{TH}$:<br>$$\text{TH}&#x3D;\left\{\text{g}(p):\mathcal{N}\vdash p\right\}$$<br>由謂詞演算的可靠性定理知 $\text{TH}\subseteq\text{TR}$. </p>
 <p>$K_N$ 的語法不可判定性是指: 若 $\mathcal{N}$ 無矛盾, 則 $\text{TH}$ 是非遞歸集. </p>
-<p>反設 $\text{TH}$ 是遞歸的, 並設它用公式 $p(x_1)$ 可表示. 作一元遞歸函數 $f$:<br>$$f(n)&#x3D;\text{Sub}(2^{15+2},\text{Num}(n),n)$$<br>直觀上, $f(n)$ 的意思是用 $\overline{n}$ 去替換 Gödel 數為 $n$ 的公式中所有自由出現的 $x_1$ 所得結果的 Gödel 數. 設 $f$ 用公式 $s(x_1,y)$ 可表示. </p>
+<p>反設 $\text{TH}$ 是遞歸的, 並設它用公式 $p(x_1)$ 可表示. 作一元遞歸函數 $f$:<br>$$f(n)&#x3D;\text{Sub}(2^{15+2},\text{Num}(n),n)$$<br>$f(n)$ 的意思是用 $\overline{n}$ 去替換 Gödel 數為 $n$ 的公式中所有自由出現的 $x_1$ 所得結果的 Gödel 數. 設 $f$ 用公式 $s(x_1,y)$ 可表示. </p>
 <p>記<br>$$<br>\begin{align*}<br>&amp;r(x_1) &#x3D; \forall x_2(s(x_1,x_2)\to\neg p(x_2)), \\<br>&amp;m &#x3D; \text{g}(r(x_1)), \\<br>&amp;k &#x3D; \text{g}(r(\overline{m})).<br>\end{align*}<br>$$<br>按 $f$ 的定義, $f(m)&#x3D;k$. 由此可得:<br>$$<br>\begin{align*}<br>&amp;\mathcal{N}\vdash s(\overline{m},\overline{k}), \tag{1} \\<br>&amp;\mathcal{N}\vdash s(\overline{m},x_2)\to x_2\approx\overline{k}, \tag{2} \\<br>&amp;r(\overline{m})&#x3D;\forall x_2(s(\overline{m},x_2)\to\neg p(x_2)). \tag{3}<br>\end{align*}<br>$$</p>
 <p>假設 $\mathcal{N}\vdash r(\overline{m})$, 即 $k\in\text{TH}$, 則 $\mathcal{N}\vdash p(\overline{k})$. 結合 $(3)$ 可得<br>$$\mathcal{N}\vdash s(\overline{m},\overline{k})\to\neg p(\overline{k})$$<br>再由 $(1)$ 又得 $\mathcal{N}\vdash\neg p(\overline{k})$, 於是產生矛盾. </p>
 <p>假設 $r(\overline{m})$ 從 $\mathcal{N}$ 中不可證, 即 $k\not\in\text{TH}$, 則 $\mathcal{N}\vdash\neg p(\overline{k})$, 於是有<br>$$\mathcal{N}\vdash \overline{k}\approx x_2\to\neg p(x_2)$$<br>結合 $(2)$ 得到<br>$$\mathcal{N}\vdash s(\overline{m},x_2)\to\neg p(x_2)$$<br>使用 $\text{Gen}$ 規則即得 $\mathcal{N}\vdash r(\overline{m})$, 與假設不可證相矛盾. $\square$ </p>
