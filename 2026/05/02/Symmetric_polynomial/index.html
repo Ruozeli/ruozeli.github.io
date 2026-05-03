@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Notes on symmetric polynomial and Newton&#39;s identities.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="對稱多項式與牛頓恆等式">
+<meta property="og:url" content="https://ruozeli.github.io/2026/05/02/Symmetric_polynomial/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="Notes on symmetric polynomial and Newton&#39;s identities.">
+<meta property="og:locale" content="de_DE">
+<meta property="article:published_time" content="2026-05-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-03T11:44:00.418Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="algebra">
+<meta property="article:tag" content="polynomial">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2026/05/02/Symmetric_polynomial/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2026/05/02/Symmetric_polynomial/","path":"2026/05/02/Symmetric_polynomial/","title":"對稱多項式與牛頓恆等式"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>對稱多項式與牛頓恆等式 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8D%E7%A8%B1%E5%A4%9A%E9%A0%85%E5%BC%8F"><span class="nav-text">對稱多項式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vieta-%E5%85%AC%E5%BC%8F"><span class="nav-text">Vieta 公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8D%E7%A8%B1%E5%A4%9A%E9%A0%85%E5%BC%8F-1"><span class="nav-text">對稱多項式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8D%E7%A8%B1%E5%A4%9A%E9%A0%85%E5%BC%8F%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-text">對稱多項式基本定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Newton-%E6%81%86%E7%AD%89%E5%BC%8F"><span class="nav-text">Newton 恆等式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A8%AE%E8%AD%89%E6%98%8E"><span class="nav-text">第一種證明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A8%AE%E8%AD%89%E6%98%8E"><span class="nav-text">第二種證明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%87%89%E7%94%A8"><span class="nav-text">應用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A8%88%E7%AE%97%E5%88%A4%E5%88%A5%E5%BC%8F"><span class="nav-text">計算判別式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8B%A5%E5%A4%9A%E9%A0%85%E5%BC%8F%E6%9C%89-n-%E5%80%8B%E5%AF%A6%E6%A0%B9%E2%80%A6"><span class="nav-text">若多項式有 $n$ 個實根…</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2026/05/02/Symmetric_polynomial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="對稱多項式與牛頓恆等式 | 若則理のBlog">
+      <meta itemprop="description" content="Notes on symmetric polynomial and Newton&#39;s identities.">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          對稱多項式與牛頓恆等式
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2026-05-02 00:00:00" itemprop="dateCreated datePublished" datetime="2026-05-02T00:00:00+08:00">2026-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Algebra/" itemprop="url" rel="index"><span itemprop="name">Algebra</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Aufrufe" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Aufrufe: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">Notes on symmetric polynomial and Newton's identities.</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="對稱多項式"><a href="#對稱多項式" class="headerlink" title="對稱多項式"></a>對稱多項式</h1><h2 id="Vieta-公式"><a href="#Vieta-公式" class="headerlink" title="Vieta 公式"></a>Vieta 公式</h2><p>Vieta 公式給出了多項式方程根與係數的關係, 而不必實際地把這些根求出來, 由於高次多項式方程的求解一般而言非常困難, 該公式極大地簡化了對多項式方程的研究. </p>
+<p>由代數基本定理知, 一個 $n$ 次多項式方程在複數域上必有 $n$ 個根 (含重根), 所以任何一個 $n$ 次首一多項式 $f(x)&#x3D;x^n+\sum_{i&#x3D;1}^{n}a_i x^{n-i}$ 必能表示為如下形式:<br>$$f(x)&#x3D;(x-x_1)(x-x_2)\cdots(x-x_n)$$<br>直接展開比較係數即得<br>$$<br>\begin{cases}<br>a_1 &#x3D; (-1)\sum_{i&#x3D;1}^n x_i \\<br>a_2 &#x3D; (-1)^2\sum_{i&lt;j} x_i\thinspace x_j \\<br>\cdots\cdots \\<br>a_k &#x3D; (-1)^k\sum_{i_1&lt;\cdots&lt;i_k} x_{i_1}x_{i_2}\cdots x_{i_k} \\<br>\cdots\cdots \\<br>a_n &#x3D; (-1)^n x_1 x_2\cdots x_n<br>\end{cases}<br>$$<br>我們得到 $n$ 個關於 $x_1,\cdots,x_n$ 的多項式, 分別記作<br>$$<br>\begin{cases}<br>s_1 &#x3D; \sum_{i&#x3D;1}^n x_i \\<br>s_2 &#x3D; \sum_{i&lt;j} x_i\thinspace x_j \\<br>\cdots\cdots \\<br>s_k &#x3D; \sum_{i_1&lt;\cdots&lt;i_k} x_{i_1}x_{i_2}\cdots x_{i_k} \\<br>\cdots\cdots \\<br>s_n &#x3D; x_1 x_2\cdots x_n<br>\end{cases}<br>$$<br>注意到 $s_k(x_1,\cdots,x_n)$ 在 $(x_1,\cdots,x_n)$ 的任意置換下保持不變, 即<br>$$s_k(x_1,x_2,\cdots,x_n)&#x3D;s_k\left(x_{\sigma(1)},x_{\sigma(2)},\cdots,x_{\sigma(n)}\right)$$<br>恆成立, 其中 $\sigma\in S_n$ 是 $(1,\cdots,n)$ 的任一置換. </p>
+<p>因此, 我們稱多項式 $s_k$ 為 $n$ 元初等對稱多項式 (elementary symmetric polynomial). </p>
+<h2 id="對稱多項式-1"><a href="#對稱多項式-1" class="headerlink" title="對稱多項式"></a>對稱多項式</h2><p>一般地, 設 $A$ 為整環, $n$ 元多項式 $f\in A\left[x_1,\cdots,x_n\right]$, 若對任意 $\sigma\in S_n$ 都有<br>$$f(x_1,x_2,\cdots,x_n) &#x3D; f\left(x_{\sigma(1)},x_{\sigma(2)},\cdots,x_{\sigma(n)}\right)$$<br>則稱 $f$ 為對稱多項式. </p>
+<p>對 $f\in A\left[x_1,\cdots,x_n\right]$ 和 $\sigma\in S_n$, 令<br>$$(\sigma\circ f)(x_1,x_2,\cdots,x_n) &#x3D; f\left(x_{\sigma(1)},x_{\sigma(2)},\cdots,x_{\sigma(n)}\right)$$<br>則 $\sum_{\sigma\in S_n}\sigma\circ f$ 和 $\prod_{\sigma\in S_n}\sigma\circ f$ 都是對稱多項式, 又<br>$$<br>\begin{align*}<br>\sigma\circ (fg) &amp;&#x3D; (\sigma\circ f)(\sigma\circ g) \\<br>\sigma\circ (f+g) &amp;&#x3D; \sigma\circ f+\sigma\circ g<br>\end{align*}<br>$$<br>所以 $A$ 上的全體 $n$ 元對稱多項式構成多項式環 $R&#x3D;A\left[x_1,\cdots,x_n\right]$ 的一個子環. 進而, 對任意 $F\in A\left[y_1,\cdots,y_m\right]$ 和對稱多項式 $f_1,\cdots,f_m\in R$, $F(f_1,\cdots,f_m)$ 是 $R$ 中的對稱多項式. </p>
+<h2 id="對稱多項式基本定理"><a href="#對稱多項式基本定理" class="headerlink" title="對稱多項式基本定理"></a>對稱多項式基本定理</h2><p>對稱多項式基本定理是說, 整環 $A$ 上的對稱多項式必可唯一表成初等對稱多項式的多項式, 即任意對稱多項式 $f\in A\left[x_1,\cdots,x_n\right]$, 必存在 $g\in A\left[y_1,\cdots,y_m\right]$ 使得<br>$$f(x_1,x_2,\cdots,x_n) &#x3D; g(s_{i_1},s_{i_2},\cdots,s_{i_m})$$<br>其中 $s_{i_1},\cdots,s_{i_m}$ ($0\leq i_1&lt;\cdots&lt;i_m\leq n$) 為 $m$ 個 $n$ 元初等對稱多項式. </p>
+<p>證明即給出表示法. 首先容易看出, 任意對稱多項式可以表為若干齊次對稱多項式之和, 故只需分別處理齊次部分即可. 設 $f(x_1,\cdots,x_n)$ 為齊次對稱多項式, 我們為它的每一項 $a_{i}x_1^{l_{i,1}}x_2^{l_{i,2}}\cdots x_n^{l_{i,n}}$ 指派一個有序多元組 $L_i&#x3D;(l_{i,1},\cdots,l_{i,n})$, 定義字典序如下: </p>
+<ol>
+<li>若 $l_{i,1}&lt;l_{j,1}$, 則 $L_i&lt;L_j$, </li>
+<li>若 $l_{i,1}&#x3D;l_{j,1}$, $\cdots$, $l_{i,k}&#x3D;l_{j,k}$, $l_{i,k+1}&lt;l_{j,k+1}$, 則 $L_i&lt;L_j$.</li>
+</ol>
+<p>按字典序由大到小排列 $f$ 的項, 那麼其首項 $a_1 x_1^{l_1}x_2^{l_2}\cdots x_n^{l_n}$ 必滿足 $l_1\geq\cdots\geq l_n\geq 0$, 否則由對稱性立即能推出矛盾. 令 $\varphi_1&#x3D;a_1 s_1^{l_1-l_2}s_2^{l_2-l_3}\cdots s_n^{l_n}$, 則 $\varphi_1$ 的首項恰為<br>$$a_1 x_1^{l_1-l_2}(x_1x_2)^{l_2-l_3}\cdots(x_1\cdots x_n)^{l_n}&#x3D;a_1 x_1^{l_1}x_2^{l_2}\cdots x_n^{l_n}$$<br>而 $\varphi_1$ 的其餘項按字典序均小於該項. 因此, $g_1&#x3D;f-\varphi_1$ 是一個有更 “小” 首項的對稱多項式 (對稱多項式之和仍為對稱多項式), 並且 $g_1$ 顯然是齊次的. </p>
+<p>這樣做下去便得到一串多項式 $g_1,g_2,\cdots$, 由每個 $g_i$ 的對稱性知, 其首項中 $x_1$ 的次數必不為 $0$ (除非 $g_i&#x3D;0$), 由於 $L_1$ 逐次減小, 在有限次操作後, 必然有 $l_{1,1}&#x3D;1$. 又因為 $l_{1,1}\geq\cdots\geq l_{1,n}\geq 0$, 不妨假設 $g_m$ 的首項為 $a_1’x_1\cdots x_r$, 其中 $r\leq n$, 由齊次性和對稱性可知, $g_m&#x3D;a_1’\sum_{i_1&lt;\cdots&lt;i_r} x_{i_1}x_{i_2}\cdots x_{i_r}$, 而這正是 $a_1’ s_r$, 只需再減一次就能得到 $0$. 把上述過程逆回去就得到要求的關於 $s$ 的多項式. </p>
+<h1 id="Newton-恆等式"><a href="#Newton-恆等式" class="headerlink" title="Newton 恆等式"></a>Newton 恆等式</h1><p>接下來引入一類特殊的對稱多項式 $p_k(x_1,\cdots,x_n)&#x3D;\sum_{i&#x3D;1}^n x_i$, 稱之為 $k$ 次等冪和. Newton 恆等式給出了等冪和 $p$ 與基本對稱多項式 $s$ 的關係. </p>
+<p>規定 $s_0&#x3D;1$, $s_m&#x3D;0$ $(m&gt;n)$, 則<br>$$ks_k + \sum_{i&#x3D;1}^k(-1)^i p_is_{k-i} &#x3D; 0$$<br>特別地, 當 $k&gt;n$ 時,<br>$$\sum_{i&#x3D;k-n}^k(-1)^i p_is_{k-i} &#x3D; 0$$<br>下面提供兩種證明. </p>
+<h2 id="第一種證明"><a href="#第一種證明" class="headerlink" title="第一種證明"></a>第一種證明</h2><p>(聽說這是 Kostrikin 的證法. )</p>
+<p>令 $f(x)&#x3D;\prod_{i&#x3D;1}^n(x-x_i)&#x3D;\sum_{i&#x3D;1}^n(-1)^i s_i x^{n-i}$, 兩邊對數求導得<br>$$\frac{f’(x)}{f(x)} &#x3D; \sum_{i&#x3D;1}^n \frac{1}{x-x_i}$$<br>把 $1&#x2F;(x-x_i)$ 展開為冪級數<br>$$\frac{1}{x-x_i} &#x3D; \frac{1}{x}\sum_{j&#x3D;0}^{\infty}\left(\frac{x_i}{x}\right)^j$$<br>所以<br>$$\text{RHS} &#x3D; \frac{1}{x}\sum_{i&#x3D;1}^n\sum_{j&#x3D;0}^{\infty}\frac{x_i^j}{x^j} &#x3D; \frac{1}{x}\sum_{j&#x3D;0}^{\infty}\frac{p_j}{x^j}$$<br>即<br>$$xf’(x) &#x3D; \sum_{i&#x3D;1}^n(-1)^i is_i x^{n-i} &#x3D; \left(\sum_{i&#x3D;1}^n(-1)^i s_i x^{n-i}\right)\left(\sum_{j&#x3D;0}^{\infty}\frac{p_j}{x^j}\right)$$<br>當 $k\leq n$ 時, 比較 $n-k$ 次項係數即得<br>$$(-1)^k ks_k &#x3D; \sum_{i&#x3D;0}^{k-1} (-1)^i p_{k-i} s_i$$<br>當 $k&gt;n$ 時, 左側負次冪項係數為 $0$, 所以<br>$$0 &#x3D; \sum_{i&#x3D;k-n}^k (-1)^i p_{k-i} s_i$$<br>(右式仍為 $n-k$ 次項係數和) $\square$ </p>
+<h2 id="第二種證明"><a href="#第二種證明" class="headerlink" title="第二種證明"></a>第二種證明</h2><p>下面是一種非常巧妙的組合證明, 由 Doron Zeilberger 發表於1984年. </p>
+<p>考慮由有序對 $(A,j^l)$ 構成的集合 $\mathscr{A}(n,k)$, 其中 </p>
+<ol>
+<li>$A$ 是 $\lbrace 1,\cdots,n\rbrace$ 的子集, </li>
+<li>$j\in\lbrace 1,\cdots,n\rbrace$, </li>
+<li>$|A|+l&#x3D;k$, 其中 $|A|$ 表示 $A$ 中元素個數, </li>
+<li>$l\geq 0$, 若 $l&#x3D;0$ 則 $j\in A$.</li>
+</ol>
+<p>定義 $(A,j^l)$ 的權重 $w(A,j^l)$ 為 $w(A,j^l)&#x3D;(-1)^{|A|}(\prod_{a\in A}x_a)x_j^l$. 那麼顯然,<br>$$\sum_{(A,j^l)\in\mathscr{A}}w(A,j^l) &#x3D; \sum_{i&#x3D;0}^{k-1} (-1)^i p_{k-i} s_i + (-1)^k ks_k$$<br>在右側和式中令 $i&#x3D;|A|&lt;k$, $k-i&#x3D;l$. </p>
+<p>故只需證明所有權重的和為 $0$ 即可. 為此, 我們定義映射 $T:\mathscr{A}\to\mathscr{A}$ 如下:<br>$$<br>T(A,j^l)&#x3D;\begin{cases}<br>(A\setminus\lbrace j\rbrace,j^{l+1}), &amp;j\in A \\<br>(A\cup\lbrace j\rbrace,j^{l-1}), &amp;j\not\in A<br>\end{cases}<br>$$<br>於是有 $w(A,j^l)&#x3D;-w(T(A,j^l))$, 且 $T\circ T&#x3D;\text{id}_{\mathscr{A}}$. 因此 $T$ 為雙射, $w(A,j^l)$ 和 $w(T(A,j^l))$ 可配成互相抵消的對, 所以權重的總和為 $0$. $\square$ </p>
+<p>這種證法也暗示了 Newton 恆等式在本質上是容斥原理的一種特殊形式. </p>
+<h2 id="應用"><a href="#應用" class="headerlink" title="應用"></a>應用</h2><p>通過 Newton 恆等式, 我們可以遞歸地用 $p$ 表示出 $s_k$<br>$$s_k&#x3D;\frac{1}{k}\sum_{i&#x3D;1}^k (-1)^{i-1}p_i s_{k-1}$$<br>前文已經證明, $A$ 上的任意對稱多項式可以表示為 $s$ 的多項式, 進而, 它們都能表示為 $p$ 的多項式. 因此, $k$ 次等冪和 ($k&#x3D;1,\cdots,n$) 之集生成了 $n$ 元對稱多項式環. 但需注意一點, 任何整係數對稱多項式表示為 $s$ 的多項式, 其係數仍是整數 (從構造過程可以看出), 而 $s_k$ 關於 $p$ 的多項式表示則不一定是整係數的. </p>
+<p>進一步地, 我們可以用行列式來求出 $s$ 與 $p$ 的顯式表達式. 根據 Newton 恆等式列出如下方程組:<br>$$<br>\begin{cases}<br>s_1 - p_1 &#x3D; 0 \\<br>2s_2 - p_1s_1 + p_2 &#x3D; 0 \\<br>3s_3 - p_1s_2 +p_2s_1 - p_3 &#x3D;0 \\<br>\cdots\cdots \\<br>ks_k - p_1s_{k-1} + \cdots + (-1)^k p_k &#x3D; 0<br>\end{cases}<br>$$<br>把 $p_1,\cdots,p_k$ 看作 $k$ 個未知數, 用 Cramer 法則解方程組<br>$$<br>\begin{pmatrix}<br>-1&amp;0&amp;0&amp;\cdots&amp;0\\<br>-s_1&amp;1&amp;0&amp;\cdots&amp;0\\<br>-s_2&amp;s_1&amp;-1&amp;\cdots&amp;0\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>-s_{k-1}&amp;s_{k-2}&amp;-s_{k-3}&amp;\cdots&amp;(-1)^k<br>\end{pmatrix}<br>\begin{pmatrix}p_1\\p_2\\p_3\\\vdots\\p_k\end{pmatrix}<br>&#x3D; \begin{pmatrix}-s_1\\-2s_2\\-3s_3\\\vdots\\-ks_k\end{pmatrix}<br>$$<br>得到<br>$$<br>\begin{align}<br>p_k &amp;&#x3D; \left.\begin{vmatrix}<br>-1&amp;0&amp;\cdots&amp;-s_1\\<br>-s_1&amp;1&amp;\cdots&amp;-2s_2\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>-s_{k-1}&amp;s_{k-2}&amp;\cdots&amp;-ks_k<br>\end{vmatrix} \middle&#x2F;<br>\begin{vmatrix}<br>-1&amp;0&amp;\cdots&amp;0\\<br>-s_1&amp;1&amp;\cdots&amp;0\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>-s_{k-1}&amp;s_{k-2}&amp;\cdots&amp;(-1)^k<br>\end{vmatrix}\right. \\<br>&amp;&#x3D; (-1)^{k-1} \begin{vmatrix}<br>1&amp;0&amp;\cdots&amp;s_1\\<br>s_1&amp;1&amp;\cdots&amp;2s_2\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>s_{k-1}&amp;s_{k-2}&amp;\cdots&amp;ks_k<br>\end{vmatrix} \\<br>&amp;&#x3D; \begin{vmatrix}<br>s_1&amp;1&amp;0&amp;0&amp;\cdots&amp;0\\<br>2s_2&amp;s_1&amp;1&amp;0&amp;\cdots&amp;0\\<br>3s_3&amp;s_2&amp;s_1&amp;1&amp;\cdots&amp;0\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>(k-1)s_{k-1}&amp;s_{k-2}&amp;s_{k-3}&amp;s_{k-4}&amp;\cdots&amp;1\\<br>ks_k&amp;s_{k-1}&amp;s_{k-2}&amp;s_{k-3}&amp;\cdots&amp;s_1<br>\end{vmatrix}<br>\end{align}<br>$$</p>
+<p>反過來把 $s_1,\cdots,s_k$ 看作未知數, 解方程組<br>$$<br>\begin{pmatrix}<br>1&amp;0&amp;0&amp;\cdots&amp;0\\<br>p_1&amp;-2&amp;0&amp;\cdots&amp;0\\<br>p_2&amp;-p_1&amp;3&amp;\cdots&amp;0\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>p_{k-1}&amp;-p_{k-2}&amp;p_{k-3}&amp;\cdots&amp;(-1)^{k-1}k<br>\end{pmatrix}<br>\begin{pmatrix}s_1\\s_2\\s_3\\\vdots\\s_k\end{pmatrix}<br>&#x3D; \begin{pmatrix}p_1\\p_2\\p_3\\\vdots\\p_k\end{pmatrix}<br>$$<br>得到<br>$$<br>\begin{align}<br>s_k &amp;&#x3D; (-1)^{k-1}\left.\begin{vmatrix}<br>1&amp;0&amp;\cdots&amp;p_1\\<br>p_1&amp;2&amp;\cdots&amp;p_2\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>p_{k-1}&amp;p_{k-2}&amp;\cdots&amp;p_k<br>\end{vmatrix} \middle&#x2F;<br>\begin{vmatrix}<br>1&amp;0&amp;\cdots&amp;0\\<br>p_1&amp;2&amp;\cdots&amp;0\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>p_{k-1}&amp;p_{k-2}&amp;\cdots&amp;k<br>\end{vmatrix}\right. \\<br>&amp;&#x3D; \frac{1}{k!} \begin{vmatrix}<br>p_1&amp;1&amp;0&amp;0&amp;\cdots&amp;0\\<br>p_2&amp;p_1&amp;2&amp;0&amp;\cdots&amp;0\\<br>p_3&amp;p_2&amp;p_1&amp;3&amp;\cdots&amp;0\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>p_{k-1}&amp;p_{k-2}&amp;p_{k-3}&amp;p_{k-4}&amp;\cdots&amp;k-1\\<br>p_k&amp;p_{k-1}&amp;p_{k-2}&amp;p_{k-3}&amp;\cdots&amp;p_1<br>\end{vmatrix}<br>\end{align}<br>$$</p>
+<p>例如當 $k&#x3D;3$ 時, 據此很容易就能求出<br>$$<br>s_3 &#x3D; \frac{1}{6}\begin{vmatrix}<br>p_1&amp;1&amp;0\\<br>p_2&amp;p_1&amp;2\\<br>p_3&amp;p_2&amp;p_1<br>\end{vmatrix}<br>&#x3D; \frac{1}{6}(p_1^3-3p_1p_2+2p_3)<br>$$</p>
+<h2 id="計算判別式"><a href="#計算判別式" class="headerlink" title="計算判別式"></a>計算判別式</h2><p>$n$ 次多項式 $f(x)&#x3D;x^n+\sum_{i&#x3D;1}^{n}a_i x^{n-i}$ 有重根的判別式 $D_f$ 定義為<br>$$<br>D_f &#x3D; \prod_{i&lt;j}(x_i-x_j)^2 &#x3D; \begin{vmatrix}<br>1&amp;1&amp;\cdots&amp;1\\<br>x_1&amp;x_2&amp;\cdots&amp;x_n\\<br>x_1^2&amp;x_2^2&amp;\cdots&amp;x_n^2\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>x_1^{n-1}&amp;x_2^{n-1}&amp;\cdots&amp;x_n^{n-1}<br>\end{vmatrix}^2<br>$$<br>其中,<br>$$<br>V &#x3D; \begin{vmatrix}<br>1&amp;1&amp;\cdots&amp;1\\<br>x_1&amp;x_2&amp;\cdots&amp;x_n\\<br>x_1^2&amp;x_2^2&amp;\cdots&amp;x_n^2\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>x_1^{n-1}&amp;x_2^{n-1}&amp;\cdots&amp;x_n^{n-1}<br>\end{vmatrix} &#x3D; \prod_{i&lt;j}(x_i-x_j)<br>$$<br>是一個 Vandermonde 行列式. 之所以要取平方, 是因為平方後成為一個對稱多項式, 更容易計算. 顯然, $f$ 有重根當且僅當 $D_f&#x3D;0$. </p>
+<p>根據 Vandermonde 行列式的性質, 我們有<br>$$<br>D_f &#x3D; \det(V\cdot V^T) &#x3D; \det\begin{pmatrix}<br>n&amp;p_1&amp;p_2&amp;\cdots&amp;p_{n-1}\\<br>p_1&amp;p_2&amp;p_3&amp;\cdots&amp;p_n\\<br>p_2&amp;p_3&amp;p_4&amp;\cdots&amp;p_{n+1}\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>p_{n-1}&amp;p_{n}&amp;p_{n+1}&amp;\cdots&amp;p_{2n-2}<br>\end{pmatrix}<br>$$<br>上文已給出 $p_k$ 關於 $s$ 的表達式, 又由 Vieta 公式 $s_k&#x3D;(-1)^k a_k$, 代入上式即可得到 $D_f$ 關於係數的表達式. </p>
+<h1 id="若多項式有-n-個實根…"><a href="#若多項式有-n-個實根…" class="headerlink" title="若多項式有 $n$ 個實根…"></a>若多項式有 $n$ 個實根…</h1><p>首先來看實係數二次方程 $a_0 x^2+a_1 x+a_2&#x3D;0$, 假設該方程有兩個非 $0$ 實根且 $a_1&#x3D;0$, 則必有 $a_0 a_2&lt;0$. 那麼, 對 $n$ 次多項式方程是否有類似的結論成立? </p>
+<p>——這是前不久我的一個同學遇到的面試題. 結論並不難猜, 若 $n$ 次實係數多項式 $f(x)&#x3D;\sum_{i&#x3D;0}^{n}a_i x^{n-i}&#x3D;0$ 有 $n$ 個非 $0$ 實根且 $a_k&#x3D;0$ ($k&lt;n$), 則必有 $a_{k-1}a_{k+1}&lt;0$, 問題在於該如何證明. 如果 $n$ 個實根都為正數, 那麼證明是很容易的, 只需直接計算 $s_{k-1}s_{k+1}-s_k^2$ 就能看出該值恆小於 $0$; 而對於一般情況, 我想了半個下午無果, 所以就去網上找答案了 (懶了). </p>
+<p>最後在 Hardy et al. 的名著《不等式》中找到了這個結論. 事實上, 書中證明的是一個更強的不等式, 但很容易從中推導出我們所需的結論. (書裡說這是 Newton 的結果, 但我沒有找到原始出處. )</p>
+<p>記 $\sum!F(a_1,\cdots,a_n)&#x3D;\sum_{\sigma\in S_n}F\left(a_{\sigma(1)},\cdots,a_{\sigma(n)}\right)$ 為對 $a$ 進行任意置換形成的 $n!$ 個項的和 (即對稱和). 令<br>$$\left[\alpha_1,\cdots,\alpha_n\right] &#x3D; \frac{1}{n!}\sum!F(a_1^{\alpha_1},\cdots,a_n^{\alpha_n})$$<br>為 $n$ 個不同 $a_i$ 的若干次冪相乘形成的 $n!$ 項的算術平均, 它在 $\alpha$ 的任意置換下保持不變, 故稱為對稱平均. </p>
+<p>設 $x_1,\cdots,x_n$ 是 $n$ 個非 $0$ 實數, 則<br>$$s_k &#x3D; \frac{1}{k!(n-k)!}\sum!x_1\cdots x_k$$<br>其中 $k!(n-k)!$ 為等價的項被計數的次數 (也就是組合數的分母). 令<br>$$d_k &#x3D; \frac{k!(n-k)!}{n!}s_k &#x3D; [\underbrace{1,\cdots,1}_{k},0,\cdots,0]$$<br>規定 $d_0&#x3D;s_0&#x3D;1$. 下面就來證明 $d_{k-1}d_{k+1}&lt;d_k^2$. </p>
+<p>令<br>$$<br>\begin{align}<br>f(x,y) &amp;&#x3D; (x-x_1 y)(x-x_2 y)\cdots(x-x_n y)\\<br>&amp;&#x3D; d_0 x^n+\binom{n}{1}d_1 x^{n-1}y+\binom{n}{2}d_2 x^{n-2}y^2+\cdots+d_n y^n<br>\end{align}<br>$$<br>對其多次微分得到導出方程<br>$$d_{k-1}x^2 + 2d_k xy + d_{k+1}y^2 &#x3D; 0$$<br>由於 $x_i\not&#x3D;0$, $x&#x2F;y&#x3D;0$ 不是原方程的根. 因此, $x&#x2F;y&#x3D;0$ 不是導出方程的重根, 所以任意兩個相鄰的 $d$ 不同時為 $0$, 故導出方程不是恆等方程. 根據廣義 Rolle 定理, 導出方程必有兩個實根. 於是有<br>$$d_{k-1}d_{k+1}\leq d_k^2$$<br>等號成立, 當且僅當所有 $x_i$ 均相等. </p>
+<p>進而,<br>$$<br>\begin{align}<br>s_{k-1}s_{k+1} &amp;&#x3D; \frac{n!}{(k-1)!(n-k+1)!}d_{k-1}\cdot\frac{n!}{(k+1)!(n-k-1)!}d_{k+1}\\<br>&amp;&#x3D; \frac{k}{k+1}\cdot\frac{n-k}{n-k+1}\cdot\left(\frac{k!(n-k)!}{n!}\right)^2 d_{k-1}d_{k+1}\\<br>&amp;&lt; \left(\frac{k!(n-k)!}{n!}\right)^2 d_{k-1}d_{k+1}\\<br>&amp;\leq \left(\frac{k!(n-k)!}{n!}\right)^2 d_k^2 &#x3D; s_k^2<br>\end{align}<br>$$<br>特別地, 當 $s_k&#x3D;0$ 時, $s_{k-1}s_{k+1}&lt;0$. $\square$ </p>
+<p>這樣, 原問題大致就解決了. 唯一留下的一個小瑕疵是所有實根都非 $0$ 這個條件, 書中說要求非 $0$ 是為了簡化取等條件的討論, 如果進一步推廣該結論, 應該可以把這個條件去掉. 另外, 這裡得到的僅僅是 $n$ 次多項式有 $n$ 個非 $0$ 實根的必要條件, 而不是充分條件, 是否能找到一個充分條件甚至充要條件? 這些問題就留待以後思考了. </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/algebra/" rel="tag"># algebra</a>
+              <a href="/tags/polynomial/" rel="tag"># polynomial</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/04/24/%E5%B0%8D%E4%B8%80%E5%80%8B%E6%B1%99%E6%BC%AC%E7%9A%84%E5%9B%9E%E6%86%B6/" rel="prev" title="對一個汙漬的回憶">
+                  <i class="fa fa-angle-left"></i> 對一個汙漬的回憶
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Alle Besucher">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Alle Aufrufe">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
