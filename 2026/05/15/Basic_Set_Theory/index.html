@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ruozeli.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Notes on basic set theory.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基礎集合論筆記">
+<meta property="og:url" content="https://ruozeli.github.io/2026/05/15/Basic_Set_Theory/index.html">
+<meta property="og:site_name" content="若則理のBlog">
+<meta property="og:description" content="Notes on basic set theory.">
+<meta property="og:locale" content="de_DE">
+<meta property="article:published_time" content="2026-05-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-15T09:07:37.557Z">
+<meta property="article:author" content="若則理">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="foundations">
+<meta property="article:tag" content="set theory">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ruozeli.github.io/2026/05/15/Basic_Set_Theory/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"de","comments":true,"permalink":"https://ruozeli.github.io/2026/05/15/Basic_Set_Theory/","path":"2026/05/15/Basic_Set_Theory/","title":"基礎集合論筆記"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>基礎集合論筆記 | 若則理のBlog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">若則理のBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">der Ursprung</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Suche" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-nonsense"><a href="/nonsense/" rel="section"><i class="fa fa-spider fa-fw"></i>Nonsense</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%AB%96%E5%85%AC%E7%90%86-ZFC"><span class="nav-text">集合論公理 (ZFC)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E7%84%B6%E6%95%B8%E7%9A%84%E6%80%A7%E8%B3%AA"><span class="nav-text">自然數的性質</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E6%B3%95%E5%92%8C%E4%B9%98%E6%B3%95"><span class="nav-text">加法和乘法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E7%84%B6%E6%95%B8%E7%9A%84%E5%BA%8F"><span class="nav-text">自然數的序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A7%8B%E9%80%A0%E6%95%B4%E6%95%B8%E5%92%8C%E6%9C%89%E7%90%86%E6%95%B8"><span class="nav-text">構造整數和有理數</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B4%E6%95%B8"><span class="nav-text">整數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E7%90%86%E6%95%B8"><span class="nav-text">有理數</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E8%A1%93%E8%B6%85%E6%BF%BE%E8%88%87%E5%AF%A6%E6%95%B8"><span class="nav-text">算術超濾與實數</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%BE%E5%AD%90"><span class="nav-text">濾子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E6%BF%BE%E8%AE%8A%E6%8F%9B"><span class="nav-text">超濾變換</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A7%8B%E9%80%A0%E9%9D%9E%E6%A8%99%E6%BA%96%E7%AE%97%E8%A1%93%E6%A8%A1%E5%9E%8B"><span class="nav-text">構造非標準算術模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A7%8B%E9%80%A0%E5%AF%A6%E6%95%B8"><span class="nav-text">構造實數</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F%E8%88%87%E5%BA%8F%E6%95%B8"><span class="nav-text">序與序數</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%81%8F%E5%BA%8F%E8%88%87%E5%85%A8%E5%BA%8F"><span class="nav-text">偏序與全序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%AF%E5%BA%8F"><span class="nav-text">良序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F%E6%95%B8"><span class="nav-text">序數</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B3%AA"><span class="nav-text">基本性質</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A7%8B%E9%80%A0%E6%96%B0%E5%BA%8F%E6%95%B8"><span class="nav-text">構造新序數</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8F%9B%E5%85%AC%E7%90%86"><span class="nav-text">替換公理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%8F%E6%95%B8%E5%AE%87%E5%AE%99"><span class="nav-text">序數宇宙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%89%87%E5%85%AC%E7%90%86"><span class="nav-text">正則公理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E5%85%AC%E7%90%86%E7%9A%84%E9%80%B2%E4%B8%80%E6%AD%A5%E8%A8%8E%E8%AB%96"><span class="nav-text">選擇公理的進一步討論</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E5%83%B9%E5%BD%A2%E5%BC%8F"><span class="nav-text">等價形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%BE%E5%AD%90%E6%93%B4%E5%BC%B5%E5%8E%9F%E5%89%87"><span class="nav-text">濾子擴張原則</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%95%B8"><span class="nav-text">基數</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9A%84%E5%8B%A2"><span class="nav-text">集合的勢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%95%B8-1"><span class="nav-text">基數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%95%B8%E7%AE%97%E8%A1%93"><span class="nav-text">基數算術</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">若則理</p>
+  <div class="site-description" itemprop="description">「捜して欲しいんだ。—私を。本当の、ね」</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">164</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="de">
+    <link itemprop="mainEntityOfPage" href="https://ruozeli.github.io/2026/05/15/Basic_Set_Theory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="若則理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="若則理のBlog">
+      <meta itemprop="description" content="「捜して欲しいんだ。—私を。本当の、ね」">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="基礎集合論筆記 | 若則理のBlog">
+      <meta itemprop="description" content="Notes on basic set theory.">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基礎集合論筆記
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Veröffentlicht am</span>
+
+      <time title="Erstellt: 2026-05-15 00:00:00" itemprop="dateCreated datePublished" datetime="2026-05-15T00:00:00+08:00">2026-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">in</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/" itemprop="url" rel="index"><span itemprop="name">Learning</span></a>
+        </span>
+          . 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learning/Foundations/" itemprop="url" rel="index"><span itemprop="name">Foundations</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Aufrufe" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Aufrufe: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">Notes on basic set theory.</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>〔主要參考汪芳庭《數學基礎》、Halmos《Naive Set Theory》〕</p>
+<p>現代集合論的研究開始於1870年代由 Cantor 和 Dedekind 提出的樸素集合論. 不久後, 樸素集合論產生的一些悖論陸續被發現, 最著名的如 Russell 悖論和 Cantor 悖論. 為解決悖論, 數學家在20世紀初提出了多種公理集合論, 其中最為常用的是包括選擇公理的 Zermelo-Fraenkel 集合論 ($\text{ZFC}$). 如今, 公理集合論已被公認為是數學的基礎理論之一. </p>
+<h1 id="集合論公理-ZFC"><a href="#集合論公理-ZFC" class="headerlink" title="集合論公理 (ZFC)"></a>集合論公理 (ZFC)</h1><p>集合公理系統 $\text{ZF}$ 對樸素集合論做出了必要的限制, 以避免悖論的產生. 下面逐條列出 $\text{ZF}$ 的公理: </p>
+<p>$\text{ZF0}$ (集存在公理) $\exists x(x&#x3D;x)$<br>這是為了保證系統論域非空. </p>
+<p>$\text{ZF1}$ (外延公理 Axiom of extensionality)<br>$$\forall x(x\in a\leftrightarrow x\in b)\to a&#x3D;b$$<br>其含義為: 集由外延完全確定. 這條公理也可以寫作<br>$$(a\subseteq b\wedge b\subseteq a)\to a&#x3D;b$$</p>
+<hr>
+
+<p>$\text{ZF2}$ (內涵公理 Axiom schema of comprehension)<br>設 $s$ 為已知集, 則<br>$$\exists y\forall x(x\in y\leftrightarrow x\in s\wedge p(x))$$<br>其中 $p(x)$ 是任一公式, $y$ 不在其中出現. </p>
+<p>該公理通常又稱作分離公理或概括公理, 它是一條公理模式, 其中含無窮多條公理. (對於不同的公式 $p(x)$ ) </p>
+<p>Russell 悖論的產生原因是對普遍概括公理的使用, 即可以指定任何由具有性質 $p(x)$ 的 $x$ 的集合; 而 $\text{ZF}$ 的內涵公理則要求預先有一個已知的集合 $s$, 才能定義其中具有 $p(x)$ 性質的 $x$ 組成的子集, 從而嚴格限定 $y$ 在 $s$ 中的規模. 公理要求 $y$ 不在 $p(x)$ 中出現, 是為了避免循環定義問題. </p>
+<p>仿照 Russell 悖論的做法, 我們定義 $B&#x3D;\lbrace x\in A:x\not\in x \rbrace$, 則有 $B\not\in A$. 如若不然, 則或者 $B\in B$ 或者 $B\not\in B$, 若 $B\in B$, 又 $B\in A$, 就有 $B\not\in B$, 矛盾; 若 $B\not\in B$, 又 $B\in A$, 就有 $B\in B$, 同樣推出矛盾. 由於 $A$ 是任意的, 我們在這裡證明了: 不存在全集 (universe). 這表明, 形如 $\lbrace x:\varphi(x) \rbrace$ 的定義方法一定不能隨便使用, 其存在性沒有公理的保證. 特別地, Russell 定義的集合 $\lbrace x:x\not\in x \rbrace$ 肯定不是集. </p>
+<p>藉助內涵公理, 我們可以定義集合<br>$$y&#x3D;\lbrace x\in s:x\not&#x3D; x \rbrace$$<br>其中 $s$ 是任意集(由 $\text{ZF0}$ 必存在). 這個集稱為空集(empty set), 記作 $\varnothing$, 它不包含任何元素. 這是目前為止第一個具體的集. </p>
+<p>事實上, 除了空集, 我們不需要再定義其他的 “基本元素”, 可以說, $\text{ZF}$ 的整個系統都是僅由空集生成的. 在 $\text{ZF}$ 系統中, 我們不會脫離集合孤立地定義對象; 同樣, 在範疇論中也不能脫離態射談論對象. 這反映了數學中的關係實在論原則. </p>
+<hr>
+
+<p>$\text{ZF3}$ (無序對公理 Axiom of pairing) 設 $a$, $b$ 是已知集, 則<br>$$\exists y\forall x(x\in y\leftrightarrow(x&#x3D;a\vee x&#x3D;b))$$<br>可簡寫為<br>$$\exists y\thinspace(y&#x3D;\lbrace a,b \rbrace)$$<br>集 $\lbrace a,b \rbrace$ 稱為 $a$, $b$ 的無序對. </p>
+<p>進而, 定義 $a$, $b$ 的有序對為<br>$$(a,b)&#x3D;\lbrace \lbrace a \rbrace,\lbrace a,b \rbrace \rbrace$$<br>有序對的定義方法不唯一, 只需用某種方式區分兩個元素的 “地位” 即可. </p>
+<hr>
+
+<p>$\text{ZF4}$ (並集公理 Axiom of union) 設 $a$ 為已知集, 則<br>$$\exists y\forall x(x\in y\leftrightarrow\exists t\in a(x\in t))$$<br>把 $\lbrace x:\exists t\in a(x\in t)\rbrace$ 記作 $\bigcup a$. 特別地, $\bigcup\lbrace a,b\rbrace$ 通常寫作 $a\cup b$. </p>
+<p>進而, 定義交集概念: 設 $a\not&#x3D;\varnothing$, 則<br>$$\bigcap a&#x3D;\left\lbrace x\in\bigcup a:\forall t\in a(x\in t) \right\rbrace$$<br>這是在 $\bigcup a$ 上用內涵公理定義的. $a$ 不能是空集, 否則 $\bigcap a$ 就會是 (實際並不存在的) 全集. </p>
+<hr>
+
+<p>$\text{ZF5}$ (冪集公理 Axiom of power set) 設 $a$ 為已知集, 則<br>$$\exists y\forall x(x\in y\leftrightarrow x\subseteq a)$$<br>該公理斷言存在的集叫做 $a$ 的冪集, 記作 $\mathcal{P}(a)$, 它由 $a$ 的所有子集組成. 特別地, $\varnothing\in\mathcal{P}(a)$, $a\in\mathcal{P}(a)$. </p>
+<p>對任意集 $a$, 顯然有: </p>
+<ol>
+<li>$\bigcup\mathcal{P}(a)&#x3D;a$, </li>
+<li>$\bigcap\mathcal{P}(a)&#x3D;\varnothing$, </li>
+<li>$a\subseteq\mathcal{P}(\bigcup a)$.</li>
+</ol>
+<hr>
+
+<p>集 $x$ 的後繼, 記為 $x’$, 是指集 $x’&#x3D;x\cup\lbrace x \rbrace$.<br>滿足如下條件的集 $a$ 叫做歸納集(inductive set): </p>
+<ol>
+<li>$\varnothing\in a$, </li>
+<li>若 $x\in a$, 則 $x’\in a$.</li>
+</ol>
+<p>$\text{ZF6}$ (無限公理 Axiom of infinity) 歸納集是存在的, 即<br>$$\exists s(\varnothing\in s\wedge\forall x(x\in s\to x’\in s))$$<br>令 $\omega$ 是所有歸納集的交集, 則容易知道, $\omega$ 是最小的歸納集. 我們可以按歸納集的定義逐個寫出 $\omega$ 的開頭幾個元素:<br>$$\varnothing,\enspace\lbrace \varnothing \rbrace,\enspace\lbrace \varnothing,\lbrace \varnothing \rbrace \rbrace,\enspace\lbrace \varnothing,\lbrace \varnothing \rbrace,\lbrace \varnothing,\lbrace \varnothing \rbrace \rbrace \rbrace,\enspace\cdots$$</p>
+<p>若集 $x$ 的元素的元素還是 $x$ 的元素, 則稱 $x$ 為<strong>可遞集</strong> (transitive set). 即<br>$$y\in t\in x\Rightarrow y\in x$$<br>換句話說, 可遞集 $x$ 的任意元素都是 $x$ 的子集. 可遞集關於後繼運算是封閉的, 從而 $\omega$ 的所有元素都是可遞集. (這裡的可遞性當然與後面定義序關係有關. )</p>
+<p>現規定 $0&#x3D;\varnothing$, 則可以用集合構造出直觀意義的自然數:<br>$$<br>\begin{align*}<br>&amp;0 &#x3D; \varnothing \\<br>&amp;1 &#x3D; 0’ &#x3D; 0\cup\lbrace 0 \rbrace &#x3D; \lbrace \varnothing \rbrace &#x3D; \lbrace 0 \rbrace \\<br>&amp;2 &#x3D; 1’ &#x3D; 1\cup\lbrace 1 \rbrace &#x3D; \lbrace \varnothing,\lbrace \varnothing \rbrace \rbrace &#x3D; \lbrace 0,1 \rbrace \\<br>&amp;\cdots\cdots<br>\end{align*}<br>$$<br>自然地, $\omega&#x3D;\lbrace 0,1,2,\cdots \rbrace$ 叫做自然數集, $\omega$ 中元素稱為自然數. 這種構造出自 von Neumann. 事實上, Zermelo 最初定義自然數時使用的是另一種構造: $n’&#x3D;\lbrace n \rbrace$, 但 von Neumann 的構造相對於 Zermelo 版本有許多優勢, 例如, 可以更方便地定義序關係: $x&lt;y\Leftrightarrow x\in y$. </p>
+<p>於是我們可以根據自然數的集合構造重寫 Peano 公理: </p>
+<ol>
+<li>$0\in\omega$, </li>
+<li>若 $n\in\omega$, 則 $n’\in\omega$, </li>
+<li>若 $S\subseteq\omega$, 且滿足 (i) $0\in S$, (ii) $n\in S\Rightarrow n’\in S$, 則 $S&#x3D;\omega$. </li>
+<li>對任意 $n\in\omega$, $n’\not&#x3D;0$, </li>
+<li>若 $m,n\in\omega$, $m’&#x3D;n’$, 則 $m&#x3D;n$,</li>
+</ol>
+<p>(3) 根據 $\omega$ 的最小性易證; (4) 是顯然的; 下面證明 (5). </p>
+<p>首先我們斷言: 對任意 $n\in\omega$, $n$ 不是 $n$ 的任何元素的子集; 特別地, $n\not\in n$. </p>
+<p>令 $S$ 為滿足上述條件的 $x$ 的集合, 只需證明 $S&#x3D;\omega$. 顯然 $0\in S$. 設 $n\in S$, 則 $n\not\in n$, 所以 $n’$ 不是 $n$ 的子集; 對任意集 $x$, 若 $n’\subseteq x$, 則 $n\subseteq x$, 由 $n\in S$ 知 $x\not\in n$, 所以 $n’$ 不是 $n$ 的任何元素的子集. 因此 $n’$ 不是 $n’$ 的任何元素的子集, 從而 $n’\in S$. 由 (3), $S&#x3D;\omega$. </p>
+<p>設 $m,n\in\omega$, 且 $m’&#x3D;n’$, 則 $n\in n’&#x3D;m’$, 所以或者 $n&#x3D;m$ 或者 $n\in m$. 同理, 或者 $m&#x3D;n$ 或者 $m\in n$. 若 $n\not&#x3D;m$, 則 $n\in m$ 和 $m\in n$ 同時成立, 由可遞性知 $n\in n$. 這與上述命題矛盾. $\square$ </p>
+<p>有了上述 Peano 公理, 我們可以期待這樣定義的集合在 “行為” 上與直觀的自然數無異. 因此, $\omega$ 一般也可記作 $\mathbb{N}$. (下文兩符號混用)</p>
+<p><strong>歸納定理</strong> (Recursion theorem): 設集 $a$ 和函數 $h:a\to a$ 已知, 且 $x_0\in a$, 則存在唯一函數 $f:\omega\to a$ 滿足 </p>
+<ol>
+<li>$f(0)&#x3D;x_0$, </li>
+<li>$f(n’)&#x3D;h(f(n))$.</li>
+</ol>
+<p>證明略. 該定理保證了遞歸定義的合理性. </p>
+<details class="note info"><summary><p>Dedekind-Peano 結構</p>
+</summary>
+<p>設集 $a$, 函數 $s:a\to a$ 和 $e\in a$ 滿足 </p>
+<ol>
+<li>$e\not\in s[a]$, </li>
+<li>$s$ 是單射, </li>
+<li>對任意 $b\subseteq a$, 若 $e\in b$ 且 $s[b]\subseteq b$, 則 $b&#x3D;a$.</li>
+</ol>
+<p>把 $\langle a,s,e\rangle$ 叫做 Dedekind-Peano 結構. </p>
+<p>可以證明 $a$ 和 $\omega$ 的同構性: 存在雙射 $f:\omega\to a$ 滿足<br>$$<br>\begin{cases}<br>f(0)&#x3D;e \\<br>f(n’)&#x3D;s(f(n))<br>\end{cases}<br>$$<br>也就是說, Dedekind-Peano 結構在同構意義下是唯一的. </p>
+
+</details>
+
+<hr>
+
+<p>以上的 $\text{ZF1}$ 至 $\text{ZF6}$ 是 Zermelo 於1908年提出的, 另外兩條公理則是為使系統更完備, 以及為排除異常集而後續追加的. 這裡先列出 $\text{ZF7}$ 和 $\text{ZF8}$, 其具體作用參見後文. </p>
+<p>$\text{ZF7}$ (替換公理 Axiom schema of replacement) 設集 $a$ 和公式 $\varphi(x,y)$ 滿足單值性條件:<br>$$\forall x\in a\thinspace(\exists!y\thinspace\varphi(x,y))$$<br>則如下對象也是集:<br>$$\lbrace y:\exists x\in a\thinspace\varphi(x,y) \rbrace$$</p>
+<p>$\text{ZF8}$ (正則公理 regularity axiom) 每個非空集都有 $\in$-極小元, 即<br>$$\forall a\not&#x3D;\varnothing\thinspace\exists x\in a\thinspace(x\cap a&#x3D;\varnothing) $$</p>
+<hr>
+
+<p>$\text{AC}$ (選擇公理 Axiom of choice) 設 $a$ 是由非空集組成的集族, 則存在以 $a$ 為定義域的函數 $f$ 滿足<br>$$\forall x\in a(f(x)\in x)$$<br>函數 $f$ 叫做族 $a$ 的選擇函數, 它從族 $a$ 的每個成員集 $x$ 內選出一個代表 $f(x)$. </p>
+<p>推論 (單值化原則): 對任意關係 $r\subseteq a\times b$, 若其定義域 $\text{Dom}(r)&#x3D;a$, 則 $r$ 可以單值化為以 $a$ 為定義域的函數, 即存在 $a$ 到 $b$ 的函數 $f\subseteq r$. 換句話說, 任何一個非單值的關係 $r$ 可以 “切削” 為一個函數 $f$. </p>
+<p>使用選擇公理, 我們能證明<strong>任意無限集都有可數子集</strong>. 這個問題在數學分析中往往被一筆帶過, 甚至不會提及證明中對選擇公理的隱含使用, 但如果要以真正嚴格的方式寫出證明, 其實並不那麼容易. </p>
+<p>證明: 設 $X$ 為無限集, $f$ 為 $X$ 的所有非空子集到 $X$ 的選擇函數, 即 $f:\mathcal{P}(X)\setminus\lbrace \varnothing \rbrace\to X$, $A\mapsto f(A)\in A$. 令 $\mathcal{C}$ 為 $X$ 的所有有窮子集構成的集, 則對任意 $A\in\mathcal{C}$, $X-A$ 非空, 所以 $X-A$ 屬於 $f$ 的定義域. 定義函數 $g:\mathcal{C}\to\mathcal{C}$, $g(A)&#x3D;A\cup\lbrace f(X-A) \rbrace$. 對 $g$ 使用歸納定理: 選定 $\varnothing$ 為初始值, 則存在函數 $h:\omega\to\mathcal{C}$, $h(0)&#x3D;\varnothing$, 且對任意 $n\in\omega$, $h(n’)&#x3D;h(n)\cup\lbrace f(X-h(n)) \rbrace$. 令 $v(n)&#x3D;f(X-h(n))$, 則容易看出 $v:\omega\to X$ 是一個單射, 從而必存在 $X$ 的子集 $S$ 可與 $\omega$ 建立雙射, 即 $S\subseteq X$ 是可數集. $\square$ </p>
+<h1 id="自然數的性質"><a href="#自然數的性質" class="headerlink" title="自然數的性質"></a>自然數的性質</h1><h2 id="加法和乘法"><a href="#加法和乘法" class="headerlink" title="加法和乘法"></a>加法和乘法</h2><p>根據歸納定理(參見上文), 對任意 $m\in\omega$, 存在唯一的函數 $f_m:\omega\to\omega$ 滿足<br>$$<br>\begin{align*}<br>&amp;f_m(0) &#x3D; m, \\<br>&amp;f_m(n’) &#x3D; (f(n))’<br>\end{align*}<br>$$<br>定義自然數加法為 $m+n&#x3D;f_m(n)$, 則有 $m+0&#x3D;m$, $m+n’&#x3D;(m+n)’$. </p>
+<p>同理, 對任意 $m\in\omega$, 存在唯一的函數 $g_m:\omega\to\omega$ 滿足<br>$$<br>\begin{align*}<br>&amp;g_m(0) &#x3D; 0, \\<br>&amp;g_m(n’) &#x3D; g_m(n)+m<br>\end{align*}<br>$$<br>定義自然數乘法為 $m\cdot n&#x3D;f_m(n)$. </p>
+<h2 id="自然數的序"><a href="#自然數的序" class="headerlink" title="自然數的序"></a>自然數的序</h2><p>稱兩自然數 $m$, $n$ 是可比的, 如果有 $m\in n$, $m&#x3D;n$, $n\in m$ 之一成立. 我們斷言: 任意兩個自然數都是可比的. 這一命題又叫做三分律. </p>
+<p>首先, 對任意 $n\in\omega$, 令 $S(n)$ 為所有與 $n$ 可比的 $m\in\omega$ 的集合; 進而令 $S$ 為所有使得 $S(n)&#x3D;\omega$ 的 $n$ 的集合. 只須證明 $S&#x3D;\omega$ 即可. 顯然, $0\in S(0)$, 假設 $m\in S(0)$, 由於 $m\not\in 0$, 或者 $0&#x3D;m$ 或者 $0\in m$, 不論如何都有 $0\in m’$, 歸納可知 $S(0)&#x3D;\omega$. 假設 $S(n)&#x3D;\omega$, 由 $n’\in S(0)$ 知 $0\in S(n’)$, 若 $m\in S(n’)$. 則可能有: $n’\in m$, $n’&#x3D;m$ 或 $m\in n’$, 前兩種情況下都有 $n’\in m’$. 在第三種情況下, 若 $m&#x3D;n$, 則 $m’&#x3D;n’$; 若 $m\in n$, 則由 $m’\in S(n)$ 知 $n\in m’$, $n&#x3D;m’$, $m’\in n$ 必居其一, 第一種情況是不可能的, 否則 $n\subseteq m$, 與 $m\in n$ 矛盾(任何自然數不能是其元素的子集). 因此在所有可能的情況下都有 $m’\in S(n’)$, 歸納知 $S(n’)&#x3D;0$. 最後, $S(0)&#x3D;\omega$, $S(n)&#x3D;\omega$ $\Rightarrow$ $S(n’)&#x3D;\omega$, 從而 $S&#x3D;\omega$. $\square$ </p>
+<p>由 $n\in\omega$ 的可遞性知 (參見上文), $m\in n$ 的一個必要條件是 $m\subseteq n$. 更確切地說, $m\in n$ $\Leftrightarrow$ $m\subseteq n$ 且 $m\not&#x3D;n$. 下面把 $m\in n$ 寫作 $m&lt;n$, 把 $m\subseteq n$ 寫作 $m\leq n$. 若 $m\leq n$ 且 $n\leq m$, 則 $m&#x3D;n$. </p>
+<h1 id="構造整數和有理數"><a href="#構造整數和有理數" class="headerlink" title="構造整數和有理數"></a>構造整數和有理數</h1><h2 id="整數"><a href="#整數" class="headerlink" title="整數"></a>整數</h2><p>考慮 $\mathbb{N}^2$ 上的二元關係 $R$:<br>$$R&#x3D;\lbrace ((m,n),(p,q)):m,n,p,q\in\mathbb{N},\thinspace m+q&#x3D;n+p \rbrace$$<br>把 $R$ 記作 $\sim$, 則<br>$$(m,n)\sim(p,q)\Leftrightarrow m+q&#x3D;n+p,\enspace m,n,p,q\in\mathbb{N}$$<br>顯然, $\sim$ 是一個等價關係. </p>
+<p>關於這個等價關係的所有等價類的集 (商集) 用 $\mathbb{Z}$ 來表示:<br>$$\mathbb{Z}&#x3D;\mathbb{N}^2&#x2F;\sim&#x3D;\lbrace \left[(m,n)\right]:m,n\in\mathbb{N} \rbrace$$</p>
+<hr>
+
+<p>$\mathbb{Z}$ 上加法定義為<br>$$\left[(m,n)\right]+\left[(p,q)\right]&#x3D;\left[(m+p,n+q)\right]$$<br>容易驗證, 這樣定義的加法是合理的, 且它滿足交換律和結合律. 把 $\left[(0,0)\right]$ 這個特殊的等價類叫做 $\mathbb{Z}$ 的零元, 記作 $\overline{0}$. $\forall a\in\mathbb{Z}\thinspace(a+\overline{0}&#x3D;a)$. </p>
+<p>$\mathbb{Z}$ 中每個元素都有唯一負元, 這條性質是自然數加法所不具備的:<br>$$-\left[(m,n)\right]&#x3D;\left[(n,m)\right]$$<br>據此可以在 $\mathbb{Z}$ 上定義減法: $b-a&#x3D;b+(-a)$. </p>
+<p>$\mathbb{Z}$ 上乘法定義為<br>$$\left[(m,n)\right]\cdot\left[(p,q)\right]&#x3D;\left[(mp+nq,mq+np)\right]$$<br>交換律, 結合律和分配律很容易驗證. 把 $\left[(1,0)\right]$ 叫做 $\mathbb{Z}$ 的乘法單位元, 記作 $\overline{1}$. $\forall a\in\mathbb{Z}\thinspace(a\cdot\overline{1}&#x3D;a)$. </p>
+<p>定義 $\mathbb{Z}$ 中的序如下:<br>$$\left[(m,n)\right]&lt;\left[(p,q)\right]\Leftrightarrow m+q&lt;n+p$$</p>
+<hr>
+
+<p>考慮 $\mathbb{Z}$ 的子集 $\overline{\mathbb{N}}$:<br>$$\overline{\mathbb{N}}&#x3D;\lbrace \left[(0,0)\right],\left[(1,0)\right],\cdots,\left[(n,0)\right],\cdots \rbrace$$<br>顯然, 可以在 $\overline{\mathbb{N}}$ 和自然數集 $\mathbb{N}$ 之間建立保運算, 保序的雙射 $f$, 這表明 $\overline{\mathbb{N}}$ 和 $\mathbb{N}$ 是同構的. 稱 $f$ 把 $\mathbb{N}$ 同構嵌入 $\mathbb{Z}$. </p>
+<h2 id="有理數"><a href="#有理數" class="headerlink" title="有理數"></a>有理數</h2><p>仿照定義整數集的做法, 首先定義 $\mathbb{Z}\times\left(\mathbb{Z}-\lbrace 0 \rbrace\right)$ 上的二元關係 $R$, 記作 $\sim$:<br>$$(a,b)\sim(c,d)\Leftrightarrow ad&#x3D;bc,\enspace a,b,c,d\in\mathbb{Z},\enspace b,d\not&#x3D;0$$<br>定義 $\mathbb{Q}&#x3D;(\mathbb{Z}\times\left(\mathbb{Z}-\lbrace 0 \rbrace\right))&#x2F;\sim$. </p>
+<p>$\mathbb{Q}$ 上加法定義為 $\left[(a,b)\right]+\left[(c,d)\right]&#x3D;\left[(ad+bc,bd)\right]$.<br>$\mathbb{Q}$ 上乘法定義為 $\left[(a,b)\right]\cdot\left[(c,d)\right]&#x3D;\left[(ac,bd)\right]$.<br>$\mathbb{Q}$ 中的序定義為 $\left[(a,b)\right]&lt;\left[(c,d)\right]\Leftrightarrow ad&lt;bc$. </p>
+<p>考慮 $\mathbb{Q}$ 的子集 $\overline{\mathbb{Z}}&#x3D;\lbrace \left[(p,1)\right]:p\in\mathbb{Z} \rbrace$. 則 $\overline{\mathbb{Z}}$ 與 $\mathbb{Z}$ 同構, 表明 $\mathbb{Z}$ 可以嵌入 $\mathbb{Q}$. </p>
+<h1 id="算術超濾與實數"><a href="#算術超濾與實數" class="headerlink" title="算術超濾與實數"></a>算術超濾與實數</h1><h2 id="濾子"><a href="#濾子" class="headerlink" title="濾子"></a>濾子</h2><p>設 $\mathbb{N}$ 上的子集族 $F\in\mathcal{P}(\mathbb{N})$ 滿足: </p>
+<ol>
+<li>$\varnothing\not\in F$, $\mathbb{N}\in F$, </li>
+<li>若 $a,b\in F$, 則 $a\cap b\in F$, </li>
+<li>若 $a\subseteq b\subseteq \mathbb{N}$ 且 $a\in F$, 則 $b\in F$.</li>
+</ol>
+<p>則稱 $F$ 為 $\mathbb{N}$ 上的<strong>濾子</strong>. 若濾子 $F$ 滿足條件4:<br>4. $\forall a\subseteq\mathbb{N}(a\in F\vee \mathbb{N}-a\in F)$ (極大性), </p>
+<p>則稱 $F$ 為 $\mathbb{N}$ 上的<strong>超濾</strong> (ultrafilter). 進而, 若超濾 $F$ 滿足條件5:<br>5. $\mathbb{N}$ 的任意有限子集不屬於 $F$, </p>
+<p>則稱 $F$ 為 $\mathbb{N}$ 上的<strong>自由超濾</strong>. </p>
+<p>令 $F_{\sigma}&#x3D;\lbrace a\subseteq \mathbb{N}:$ $\mathbb{N}-a$ 是有限集$\rbrace$, 則 $F_{\sigma}$ 滿足上面的條件1, 2, 3, 5. $F_{\sigma}$ 中任意集的餘集都是有限集, 所以我們把 $F_{\sigma}$ 稱作餘有限子集濾子或 Fréchet 濾子. </p>
+<p>子集族 $F_n&#x3D;\lbrace a\subseteq \mathbb{N}:n\in a\rbrace$ 是超濾, 但不是自由超濾. 這種超濾稱為 $\mathbb{N}$ 上的<strong>主超濾</strong>, 每個主超濾 $F_n$ 都含有單點集 $\lbrace n\rbrace$. </p>
+<hr>
+
+<p><strong>命題</strong>: 設 $F$ 是 $\mathbb{N}$ 上的超濾, 且 $a_1\cup a_2&#x3D;a\in F$, 則 $a_1\in F\vee a_2\in F$. </p>
+<p><strong>證明</strong>: $\mathbb{N}-a&#x3D;(\mathbb{N}-a_1)\cap(\mathbb{N}-a_2)\not\in F$, 所以有 $\mathbb{N}-a_1\not\in F$ 或 $\mathbb{N}-a_2\not\in F$, 即 $a_1\in F\vee a_2\in F$. $\square$ </p>
+<p>由上述命題知, 若有限集 $a&#x3D;\lbrace n_1\rbrace\vee\lbrace n_2\rbrace\vee\cdots\vee\lbrace n_k\rbrace\in F$, 則必有某個單點集 $\lbrace n_i\rbrace\in F$, 同時若有 $\lbrace n_i\rbrace$, $\lbrace n_j\rbrace$ 同時屬於 $F$, 就有 $\lbrace n_i\rbrace\wedge\lbrace n_j\rbrace&#x3D;\varnothing\in F$, 矛盾. 所以有且僅有一個單點集 $\lbrace n_i\rbrace\in F$, 即 $F$ 為 $\mathbb{N}$ 上的主超濾. 換句話說, $\mathbb{N}$ 上非自由的超濾一定是某個主超濾. 反過來, 要想得到 $\mathbb{N}$ 上的非主超濾, 我們把 Fréchet 濾子擴張為極大濾子, 使之成為一個超濾. 這一點的可行性由濾子擴張原則保證: 任何濾子都可以擴張成一個超濾, 它可以用選擇公理來證明 (參見下文). </p>
+<p>直觀來看, 濾子相應於自然數性質的相容組合 (關係網), 而超濾相應於自然數性質的極大相容組合 (極大關係網). 假定 $a&#x3D;\lbrace x\in\mathbb{N}:p(x)\rbrace$, $b&#x3D;\lbrace x\in\mathbb{N}:q(x)\rbrace$ 且 $a,b\in F$, 則 $a\cap b&#x3D;\lbrace x\in\mathbb{N}:p(x)\wedge q(x)\rbrace\in F$, 由於 $a\cap b\not&#x3D;\varnothing$, 必存在 $x\in\mathbb{N}$ 滿足 $p(x)\wedge q(x)$, 這就是 “相容” 性質的含義. 特別地, 主超濾 $F_n$ 相當於用自然數 $n$ 的所有性質 “濾” 出唯一的自然數, 其中必包含集 $\lbrace n\rbrace&#x3D;\lbrace x\in\mathbb{N}:x&#x3D;n\rbrace$ 和 $\mathbb{N}&#x3D;\lbrace x\in\mathbb{N}:x&#x3D;x\rbrace$ (作為最 “狹窄” 和最 “寬泛” 的性質). </p>
+<p><strong>命題</strong>: $F$ 是超濾 $\Leftrightarrow$ $F$ 是極大濾子.<br><strong>證明</strong>: 設 $F$ 為超濾, 若有更大的濾子 $G\supset F$. 因為 $G\not&#x3D;F$, 所以存在 $a\in G$ 且 $a\not\in F$, 則 $\mathbb{N}-a\in F\subset G$, $\mathbb{N}-a\cap a&#x3D;\varnothing\in G$, 矛盾. 反過來設 $F$ 是極大濾子, 若存在 $a\in F$ 使得 $\mathbb{N}-a\not\in F$, 故對任意 $b\in F$ 都有 $b\cap a\not&#x3D;\varnothing$. 拿 $a$ 與 $F$ 中元素分別取交, 並將交集與更大的集添加入 $F$, 便得到一個更大的濾子, 矛盾. $\square$ </p>
+<h2 id="超濾變換"><a href="#超濾變換" class="headerlink" title="超濾變換"></a>超濾變換</h2><p>把 $\mathbb{N}$ 上所有超濾組成的集記作 $\beta\mathbb{N}$. 設 $F\in\beta\mathbb{N}$, $f\in{}^{\mathbb{N}}{\mathbb{N}}$, 則如下子集族 $G$ 也是 $\mathbb{N}$ 上的超濾:<br>$$G&#x3D;\lbrace a\subseteq \mathbb{N}:f^{-1}\left[a\right]\in F\rbrace$$<br>若 $a\not\in G$, 則有 $f^{-1}\left[\mathbb{N}-a\right]&#x3D;\mathbb{N}-f^{-1}\left[a\right]\in F$ ($f\left[\mathbb{N}\right]\in\mathbb{N}$ $\Rightarrow$ $f^{-1}\left[\mathbb{N}\right]&#x3D;\mathbb{N}$), 即 $\mathbb{N}-a\in G$, 這保證了 $G$ 的極大性. 其餘幾條性質顯然滿足. </p>
+<p>稱這樣定義的 $G$ 為 $F$ 在變換 $f$ 下的像, 記作 $f(F)$. $\mathbb{N}$ 上的一元運算 $f$ 確定了 $\beta\mathbb{N}$ 上的一個一元運算, 稱作超濾空間的<strong>超濾變換</strong> $f:F\mapsto f(F)$. </p>
+<p>把 $\mathbb{N}$ 上的主超濾 $F_n$ 記作 $\overline{n}$, 那麼顯然有 $f(\overline{n})&#x3D;\overline{f(n)}$, 這表明自然數集 $\mathbb{N}$ 與所有主超濾組成的集是同構的. 若取 $f$ 為常函數 $f(x)&#x3D;m$, 則對任何超濾 $F$ 都有 $f(F)&#x3D;\overline{m}$, 故非主超濾在超濾變換下有可能退化為主超濾. 進而, 若 $f$ 在 $b\in F$ 上取常值 $m$, 同樣有 $f(F)&#x3D;\overline{m}$. 這是因為, 只要有某個 $b\in F$ 被 $f$ 映到單點集 $\lbrace m\rbrace$, 由超濾的性質, 我們立即能知道 $G&#x3D;f(F)$ 是主超濾 $\overline{m}$. </p>
+<p>若函數 $f\in{}^{\mathbb{N}}{\mathbb{N}}$ 滿足 $\lbrace n:f(n)&#x3D;m\rbrace\in F$, 則稱 $f$ 關於超濾 $F$ <strong>幾乎等於</strong> $m$, 記作 $f&#x3D;_{F} m$. 所以, 我們有<br>$$f&#x3D;_{F} m \Rightarrow f(F)&#x3D;\overline{m}$$<br>一般地, 若 $\lbrace n:f(n)&#x3D;g(n)\rbrace\in F$, 則稱 $f$ 和 $g$ 關於 $F$ 幾乎相等, 記作 $f&#x3D;_{F} g$.<br>$$f&#x3D;_{F} g \Rightarrow f(F)&#x3D;g(F)$$<br>如若不然, 假設 $b\in f(F)$ 且 $b\not\in g(F)$, 則 $g^{-1}\left[\mathbb{N}-b\right]&#x3D;\mathbb{N}-g^{-1}\left[b\right]\in F$, 所以有<br>$$f^{-1}\left[b\right]\cap\mathbb{N}-g^{-1}\left[b\right]\cap\lbrace n:f(n)&#x3D;g(n)\rbrace\in F$$<br>左式為 $\varnothing$, 矛盾. $\square$ </p>
+<h2 id="構造非標準算術模型"><a href="#構造非標準算術模型" class="headerlink" title="構造非標準算術模型"></a>構造非標準算術模型</h2><p>$\mathbb{N}$ 上的超濾 $F$ 若滿足如下性質, 則稱之為<strong>算術超濾</strong>:<br>$$f(F)&#x3D;g(F)\Rightarrow f&#x3D;_{F} g$$<br>並非每個超濾都是算術超濾, 但這一點的證明涉及較為複雜的構造技巧, 在此不多贅述. 顯然, 主超濾都是算術超濾; 若 $F$ 是算術超濾, 則 $f(F)$ 也是算術超濾. 嚴格來說, 此處並沒有證明非主算術超濾的存在性, 事實上, 連續統假設蘊涵了非主算術超濾的存在性, 但證明較為複雜, 在此從略.〔連續統假設可代之以其他集論公理, 如可數 Martin 公理, 參見汪芳庭《算術超濾》.〕</p>
+<p>每個非主算術超濾 $F$ 都聯繫著一個算術模型 $^{*}{\mathbb{N}}$:<br>$$^{*}{\mathbb{N}}&#x3D;\lbrace f(F):f\in {}^{\mathbb{N}}{\mathbb{N}}\rbrace$$<br>取定非主算術超濾 $F$, 定義 $^{*}{\mathbb{N}}$ 上的運算如下:<br>$$<br>\begin{align}<br>&amp;f(F)+g(F) &#x3D; (f+g)(F)\\<br>&amp;f(F)\cdot g(F) &#x3D; (f\cdot g)(F)<br>\end{align}<br>$$<br>設 $h$ 是 $\mathbb{N}$ 上的一元運算, 定義<br>$$h(f(F)) &#x3D; (h\circ f)(F)$$<br>這樣就把 $h$ 的定義域從 $\mathbb{N}$ 延拓到 $^{*}{\mathbb{N}}$ 上. </p>
+<p>$^{*}{\mathbb{N}}$ 中的序定義為<br>$$f(F)&lt;g(F) \Leftrightarrow \lbrace n:f(n)&lt;g(n)\rbrace\in F$$<br>又記作 $f&lt;_{F} g$ ($f$ 關於 $F$ 幾乎小於 $g$). $F$ 是非主超濾, 所以 $\lbrace n:f(n)&lt;g(n)\rbrace$ 是無限集, 我們可以把 $f(F)$ 和 $g(F)$ 想象成兩個數列, 那麼序的定義是很直觀的: $f(F)&lt;g(F)$ 當且僅當兩者的無窮多個 “分量” 具有此關係. </p>
+<hr>
+
+<p>令 $f&#x3D;m$ 為常函數, 則 $f(F)&#x3D;\overline{m}$ 是主超濾, 由所有主超濾構成的集記作 $\overline{\mathbb{N}}\in{}^{*}{\mathbb{N}}$, 記 $\mathbb{N}_{\infty}&#x3D;{}^{*}{\mathbb{N}}-\overline{\mathbb{N}}$. 如前文所述, $\mathbb{N}$ 與 $\overline{\mathbb{N}}$ 同構, 所以 $\mathbb{N}$ 可同構嵌入 $^{*}{\mathbb{N}}$. 如下命題表明, $\overline{\mathbb{N}}$ 是 $^{*}{\mathbb{N}}$ 的初始段. </p>
+<p><strong>命題</strong>: $\tau\in\mathbb{N}_{\infty}$ $\Rightarrow$ $\forall m\in \mathbb{N}(\tau&gt;\overline{m})$.<br><strong>證明</strong>: 反設 $\tau&#x3D;g(F)\leq\overline{m}$, 則 $\lbrace n:g(n)\leq m\rbrace\in F$, 即<br>$$\lbrace n:g(n)&#x3D;0\rbrace\cup\cdots\cup\lbrace n:g(n)&#x3D;m\rbrace\in F$$<br>由超濾的性質, 必有 $k\leq m$ 使得 $\lbrace n:g(n)&#x3D;k\rbrace\in F$, 即 $\tau&#x3D;g(F)&#x3D;\overline{k}$, 矛盾. $\square$ </p>
+<p>由此可知, 自然數的非標準模型 $^{*}{\mathbb{N}}$ 相對於 $\mathbb{N}$ 加入了 “無窮大自然數”. 因此 $^{*}{\mathbb{N}}$ 的形象為<br>$$0,1,2,\cdots,n,\cdots,\tau,\tau+1,\cdots$$<br>對於這些無窮大自然數, 容易驗證其具有如下性質: </p>
+<ol>
+<li>序保持:<br>$$\forall n\in\mathbb{N}(h(n)&lt;g(n)) \Rightarrow \forall \tau\in\mathbb{N}_{\infty}(h(\tau)&lt;g(\tau))$$</li>
+<li>單調性保持:<br>$$\forall i,j\in\mathbb{N}(i&lt;j\to h(i)&lt;h(j)) \Rightarrow \forall x,y\in\mathbb{N}_{\infty}(x&lt;y\to h(x)&lt;h(y))$$</li>
+<li>分數單調性保持:<br>$$\forall i,j\in\mathbb{N}(i&lt;j\to h(i)l(j)&lt;h(j)l(i)) \Rightarrow \forall x,y\in\mathbb{N}_{\infty}(x&lt;y\to h(x)l(y)&lt;h(y)l(x))$$</li>
+</ol>
+<p>〔自然數的非標準模型有另一種 (不那麼顯式的) 構造方法, 使用了一階邏輯的<a href="https://ruozeli.github.io/2026/02/14/Mathematical_Logic_2/#%E7%B7%8A%E7%B7%BB%E6%80%A7%E5%AE%9A%E7%90%86">緊緻性定理</a>〕</p>
+<h2 id="構造實數"><a href="#構造實數" class="headerlink" title="構造實數"></a>構造實數</h2><p>效仿上文從 $\mathbb{N}$ 構造整數和有理數的方法, 我們從 $^{*}{\mathbb{N}}$ 出發構造出整數和有理數的非標準模型:<br>$$^{*}{\mathbb{Z}} &#x3D; \lbrace\cdots,-\tau\cdots,-n,\cdots,-1,0,1,\cdots,n,\cdots,\tau,\cdots\rbrace$$<br>$$^{*}{\mathbb{Q}} &#x3D; \left\lbrace\frac{p}{q}:p,q\in{}^{*}{\mathbb{Z}},p\not&#x3D;0\right\rbrace$$<br>$^{*}{\mathbb{Q}}$ 中含兩類元素, 一類比任意自然數都要大, 另一類則是有限元素, 它們構成的集記作 $\mathbb{Q}_{&lt;}&#x3D;\lbrace x\in{}^{*}{\mathbb{Q}}:\exists k\in\mathbb{N}\thinspace|x|&lt;k\rbrace$, 稱為 $^{*}{\mathbb{Q}}$ 的 Archimedes 子集, 而 $^{*}{\mathbb{Q}}$ 自身則是一個非 Archimedes 序域. </p>
+<p>$^{*}{\mathbb{Q}}$ 的另一重要子集是<br>$$\mathbb{I}&#x3D;\left\lbrace \alpha\in{}^{*}{\mathbb{Q}}:\forall k\in \mathbb{N}-\lbrace 0\rbrace\left(|\alpha|&lt;\frac{1}{k}\right)\right\rbrace$$<br>$\mathbb{I}$ 中元素稱為無窮小, 其定義是直觀的.〔另一種構造方法是, 在系統中添加公式集 $\Sigma&#x3D;\lbrace |\alpha|&lt;1&#x2F;n:n\in\mathbb{N}\rbrace$, 隨後用緊緻性定理說明其可被滿足. 〕</p>
+<p>定義 $\mathbb{Q}_{&lt;}$ 上的二元關係 $\sim$: $x\sim y$ $\Leftrightarrow$ $x-y\in \mathbb{I}$, 則 $\sim$ 顯然是一個等價關係. 記 $x\in \mathbb{Q}_{&lt;}$ 所在等價類為 $\left[x\right]$, 所有等價類構成的集記作 $\mathbb{Q}_{&lt;}&#x2F;\sim$. </p>
+<p>在 $\mathbb{Q}_{&lt;}&#x2F;\sim$ 中定義運算:<br>$$<br>\begin{align}<br>&amp;\left[x\right]+\left[y\right] &#x3D; \left[x+y\right] \\<br>&amp;\left[x\right]\cdot\left[y\right] &#x3D; \left[x\cdot y\right]<br>\end{align}<br>$$<br>定義序:<br>$$\left[x\right]&lt;\left[y\right] \Leftrightarrow x&lt;y \wedge x\not\sim y$$<br>容易驗證, 結構 $\langle \mathbb{Q}_{&lt;}&#x2F;\sim,+,\cdot,&lt;,\left[0\right],\left[1\right]\rangle$ 是一個序域. 下面記<br>$$\mathbb{R} &#x3D; \mathbb{Q}_{&lt;}&#x2F;\sim &#x3D; \lbrace \left[x\right]:x\in\mathbb{Q}_{&lt;}\rbrace$$<br>下面來證明 $\mathbb{R}$ 的完備性. </p>
+<p><strong>引理1</strong>: $\mathbb{Q}$ 在 $\mathbb{R}$ 中稠: $\forall a,b\in\mathbb{R}(a&lt;b\to \exists r\in\mathbb{Q}(a&lt;r&lt;b))$.<br><strong>證明</strong>: 由 $\mathbb{R}$ 的 Archimedes 性易證. $\square$ </p>
+<p><strong>引理2</strong>: $\mathbb{R}$ 中嚴格單調遞增有上界的有理數列必有上確界.<br><strong>證明</strong>: 設有理數列 $r_i&#x3D;m_i&#x2F;n_i$ 滿足 $r_0&lt;r_1&lt;\cdots\leq k\in\mathbb{N}$, 不妨設 $r_1&gt;0$, 則有<br>$$\frac{m_i}{n_i}&lt;\frac{m_{\tau}}{n_{\tau}}\leq k,\enspace \tau\in\mathbb{N}_{\infty}$$<br>記 $a&#x3D;\left[m_{\tau}&#x2F;n_{\tau}\right]\in\mathbb{R}$, 則 $a$ 為數列 $r_i$ 的上界. 任取 $b&lt;a$, 因 $\mathbb{Q}$ 在 $\mathbb{R}$ 中稠, 可取 $p,q\in\mathbb{N}$ 使得 $b&lt;p&#x2F;q&lt;a$, 若對任意 $r_i$ 都有 $r_i&lt;p&#x2F;q$, 那麼就有 $r_{\tau}&lt;p&#x2F;q$, 故 $a&#x3D;\left[m_{\tau}&#x2F;n_{\tau}\right]\leq p&#x2F;q$, 矛盾. 因此, $b$ 不是 $r_i$ 的上界, 故 $a$ 是 $r_i$ 的上確界. $\square$ </p>
+<p><strong>定理</strong>: 單調遞增有上界的實數列必有上確界.<br><strong>證明</strong>: 設實數列 $x_n$ 滿足 $x_0\leq x_1\leq\cdots\leq k$, 若 $x_i$ 在某一項後恆為常數, 則該常數即為上確界; 若 $x_n$ 有嚴格單調遞增的子列, 則可以取有理數列 $r_i$ 滿足<br>$$x_{n_0}&lt;r_0&lt;x_{n_1}&lt;r_1&lt;\cdots&lt;r_i&lt;x_{n_i}&lt;\cdots\leq k$$<br>$r_i$ 的上確界即為 $x_n$ 的上確界. $\square$ </p>
+<p>這種構造方法將實數定義為有限分數的等價類, 其想法可以追溯到古希臘 (Eudoxus). 另外兩種常見的定義實數的方法是 Dedekind 分割和 Cantor 的有理數基本列構造法, 可以證明, 不同方法構造出的實數是同構的. 相比其他構造方法, 使用非主算術超濾的方法依賴於 (弱形式的) 選擇公理, 但在實數中添加了無窮小, 因而比一般的實數結構更加豐富, 可與非標準分析相聯繫. </p>
+<h1 id="序與序數"><a href="#序與序數" class="headerlink" title="序與序數"></a>序與序數</h1><h2 id="偏序與全序"><a href="#偏序與全序" class="headerlink" title="偏序與全序"></a>偏序與全序</h2><p>若集 $X$ 上的二元關係 $R$ 滿足自反性, 反對稱性 ($xRy$, $yRx$ $\Rightarrow$ $x&#x3D;y$) 和傳遞性 (傳遞性與集合的可遞性在英文裡是同一個詞, 在此作區別是為強調前者是關係的性質, 後者是集合的性質), 則稱 $R$ 為 $X$ 上的偏序 (partial order) 關係, 記作 $\leq$. 進而, 如果對任意 $x,y\in X$, 都有 $x\leq y$ 或 $y\leq x$, 則稱 $\leq$ 為一個全序 (total order), 有時也稱作線序. 一個全序集通常叫做一條鏈 (chain). 偏序集 $X$ 連同其上的偏序關係 $R$ 形成偏序結構 $\langle X,R\rangle$. 例如, 給定集 $a$, $\langle \mathcal{P}(a),\subseteq\rangle$ 就是一個偏序結構. 僅當 $a$ 為空集或單點集時, $\subseteq$ 是 $\mathcal{P}(a)$ 上的全序. </p>
+<p>若集 $X$ 上的二元關係 $R$ 滿足反自反性 ($x\not R x$), 非對稱性 ($xRy$ $\Rightarrow$ $y\not R x$) 和傳遞性, 則稱 $R$ 為 $X$ 上的嚴格偏序關係, 記作 $&lt;$; 相應地, 也把 $\leq$ 叫做弱偏序. </p>
+<p>顯然, 上文定義的自然數的序 $\in$ 和 $\subseteq$ 分別是嚴格偏序和弱偏序. </p>
+<hr>
+
+<p>設 $X$ 為偏序集, </p>
+<ol>
+<li>若 $\forall y\in a\thinspace y\not&lt;x$, 則稱 $x$ 是 $X$ 的極小元, </li>
+<li>若 $\forall y\in a\thinspace x\leq y$, 則稱 $x$ 是 $X$ 的最小元. ($y\leq x$ $\Rightarrow$ $y&#x3D;x$)</li>
+</ol>
+<p>極大元和最大元的定義類似. 最小元一定是極小元, 但反之不一定; 最小元若存在必唯一, 極小元則可能不唯一. 設非空集 $A$ 不是單點集, 考慮 $A$ 的所有非空子集的集合 $\mathcal{C}$, 以 $\subseteq$ 為 $\mathcal{C}$ 上的偏序, 則 $\mathcal{C}$ 中的每個單點集都是極小元, 但 $\mathcal{C}$ 沒有最小元. </p>
+<p>設 $E$ 為偏序集 $X$ 的子集, $a\in X$, 若對任何 $x\in E$ 都有 $a\leq x$, 則稱 $a$ 為 $E$ 的一個下界. 把 $E$ 的所有下界的集合記作 $\underline{E}$, 若 $\underline{E}$ 有最大元 $a^{*}$, 則稱 $a^{*}$ 為 $E$ 的下确界, 記作 $\inf E$. 類似地, $E$ 的上確界定義為它的所有上界構成的集合的最小元, 記作 $\sup E$. </p>
+<p>設 $A$ 為全序集, $B\subsetneq A$, 若 $B$ 滿足<br>$$\forall x\in B\thinspace\forall y\in A\thinspace(y&lt;x\to y\in b)$$<br>則稱 $B$ 為 $A$ 的初始段 (initial segment). 例如, 開區間 $(-\infty,0)$ 是 $\mathbb{R}$ 的初始段. </p>
+<h2 id="良序"><a href="#良序" class="headerlink" title="良序"></a>良序</h2><p>若集 $X$ 上的二元關係 $R$ 滿足如下性質, 就叫做 $X$ 上的良序 (well-order): </p>
+<ol>
+<li>反自反性: $\forall x\in X\thinspace\neg(xRx)$, </li>
+<li>傳遞性: $\forall x,y,z\in X\thinspace(xRy\wedge yRz\to xRz)$, </li>
+<li>三分律: $\forall x,y\in X\thinspace(xRy\vee x&#x3D;y\vee yRx)$, </li>
+<li>良基性: $X$ 的任意非空子集都有 $R$-極小元.</li>
+</ol>
+<p>良序集 $X$ 連同其上的良序 $R$ 形成良序結構 $\langle X,R\rangle$. 因為有三分律, 極小元即是最小元, 所以良序集的任意非空子集都有最小元. </p>
+<p>若 $S$ 是良序集, $x\in S$, 則 $S$ 的初始段可以更容易地表示為<br>$$S_x&#x3D;\lbrace t\in X:t&lt;x \rbrace$$<br>全序集的初始段不一定能這樣表示. 例如, 帶通常序的有理數集 $\mathbb{Q}$ 是全序集, 但不滿足良基性, 其初始段 $\lbrace x\in\mathbb{Q}:x&lt;0\vee x^2&lt;2 \rbrace$ 就不能表示為上述形式. </p>
+<p><strong>命題</strong>: 設 $S$ 為良序集, $f:S\to S$ 是增函數, 則對任意 $x\in S$ 都有 $f(x)\geq x$. </p>
+<p><strong>證明</strong>: 假設 $X&#x3D;\lbrace x\in S:f(x)&lt;x \rbrace$ 非空, 則它必有最小元 $m$. 因為 $f(m)&lt;m$, 所以 $f(f(m))&lt;f(m)$, 而這與 $m$ 的最小性矛盾. $\square$ </p>
+<p>兩個推論: </p>
+<ol>
+<li>良序集到自身的同構映射只有恆同映射. 這是因為, 對任意 $x\in S$ 都有 $f(x)\geq x$, $f^{-1}(x)\geq x$ $\Rightarrow$ $f(x)&#x3D;x$; </li>
+<li>良序集不能與自身的初始段同構. 否則, 同構映射 $f:S\cong S_u$ 的值域為 $\lbrace x:x&lt;u \rbrace$, 所以有 $f(u)&lt;u$, 與上述命題矛盾.</li>
+</ol>
+<hr>
+
+<p>自然數集 $\mathbb{N}$ 上的歸納法很容易推廣到一般的良序集. 我們有<strong>超限歸納法</strong>: 設 $X$ 是良序集, $p(x)$ 是 $x$ 的某個性質, 則<br>$$\forall x\in X\thinspace((\forall y&lt;x:p(y))\to p(x))\Rightarrow \forall x\in X:p(x)$$<br>換句話說, 設 $X$ 的子集 $S&#x3D;\lbrace x\in X:p(x) \rbrace$, 若對任意 $x\in X$, 都有 $s(x)\in S$, 則 $S&#x3D;X$. 證明幾乎是顯然的: 反設 $S\not&#x3D;X$, 則 $X-S$ 非空, 由良基性知必有最小元 $x_0\in X-S$; 但 $s(x_0)\subseteq S$, 由歸納假設可知 $x_0\in S$, 矛盾. $\square$ </p>
+<p>自然數的第二歸納法 (強歸納法) 是超限歸納法的直接推論. </p>
+<p><strong>良序集基本定理</strong>: 對任意良序集 $A$ 和 $B$, 有<br>$$A\cong B\vee \exists y\in B\thinspace(A\cong B_y)\vee\exists x\in A\thinspace(B\cong A_x)$$<br>即: $A$ 與 $B$ 同構, $A$ 與 $B$ 的初始段同構, 或 $B$ 與 $A$ 的初始段同構, 三者必居其一. 證明略 (在直觀上是顯然的). 該定理保證了序數的可比性. </p>
+<h2 id="序數"><a href="#序數" class="headerlink" title="序數"></a>序數</h2><p>$\in$-良序的可遞集叫做序數 (ordinal). 設集 $\alpha$ 是一個序數, 則它滿足 </p>
+<ol>
+<li>$\in$-反自反性: $\forall x\in\alpha\thinspace(x\not\in x)$, </li>
+<li>$\in$-傳遞性: $\forall x,y,z\in\alpha\thinspace(x\in y\wedge y\in z\to x\in z)$, </li>
+<li>$\in$-三分律: $\forall x,y\in\alpha\thinspace(x\in y\vee x&#x3D;y\vee y\in x)$, </li>
+<li>$\in$-良基性: $\alpha$ 的任意非空子集有 $\in$-極小元,</li>
+<li>$\alpha$ 是可遞集: $y\in x\wedge x\in\alpha\to y\in\alpha$.</li>
+</ol>
+<h3 id="基本性質"><a href="#基本性質" class="headerlink" title="基本性質"></a>基本性質</h3><p>下面是序數的幾個簡單性質. </p>
+<p><strong>性質1</strong>: 若 $\alpha\not&#x3D;0$, 則 $0\in\alpha$. 這一點由 $\in$-最小元的存在性容易看出. </p>
+<p><strong>性質2</strong>: 序數的元素也是序數: $x\in\alpha$ $\Rightarrow$ $x$ 是序數.<br>證明: 由 $\alpha$ 的可遞性知 $x\in\alpha$ $\Rightarrow$ $x\subseteq\alpha$, 所以 $x$ 是 $\in$-良序集 (良序集的子集也是良序集). 設 $z\in y$, $y\in x$, 則由 $\alpha$ 的可遞性知 $y\in\alpha$, $z\in\alpha$, 又由 $\in$-傳遞性得 $z\in x$, 從而 $x$ 也是可遞集. 故 $x$ 是序數. $\square$ </p>
+<p><strong>性質3</strong>: 設 $\alpha$ 為序數, $\xi\in\alpha$, 則 $\alpha_{\xi}&#x3D;\xi$, 換句話說, 序數的初始段就是其端點.<br>證明: $\xi$ 為端點的初始段恰為 $\lbrace t\in\alpha:t\in\xi \rbrace$, 所以對任意 $t\in\alpha_{\xi}$ 都有 $t\in\xi$, 即 $\alpha_{\xi}\subseteq\xi$; 又由 $\alpha$ 的可遞性知, $t\in\xi\in\alpha$ $\Rightarrow$ $t\in\alpha$, 所以對任意 $t\in\xi$ 都有 $t\in\alpha_{\xi}&#x3D;\lbrace t\in\alpha:t\in\xi \rbrace$, 即 $\xi\subseteq\alpha_{\xi}$. $\square$ </p>
+<p><strong>性質4</strong>: 若序數 $\alpha$ 和 $\beta$ 同構 ($\alpha\cong\beta$), 則 $\alpha&#x3D;\beta$.<br>證明: 設 $f:\alpha\cong\beta$, 我們證明 $\forall x\in\alpha\thinspace(f(x)&#x3D;x)$. 記 $S&#x3D;\lbrace \xi\in\alpha:f(\xi)&#x3D;\xi \rbrace$, 對任意 $\xi\in\alpha$, $\alpha-\alpha_{\xi}$ 的最小元就是 $\xi$, 由 $f$ 的保序性知, $\beta-f\left[\alpha_{\xi}\right]$ 的最小元應為 $f(\xi)$. 所以若 $\alpha_{\xi}\subseteq S$, 則 $f(\xi)$ 和 $\xi$ 有相同的初始段, 因此有 $f(\xi)&#x3D;\xi$. 由超限歸納法原理, $S&#x3D;\alpha$, 從而 $\alpha\subseteq\beta$. 完全對稱地有 $\beta\subseteq\alpha$, 所以 $\alpha&#x3D;\beta$. $\square$ </p>
+<p><strong>性質5</strong>: 由良序集基本定理, 結合上述性質, 立即有<br>$$\alpha\in\beta\vee \alpha&#x3D;\beta\vee \beta\in\alpha$$<br>三者必居其一 (否則與 $\in$-反自反性矛盾). 這給出了序數的可比性. </p>
+<p><strong>性質6</strong>: 若集 $A$ 由序數組成, 那麼 $a$ 是 $\in$-良序集, 因為它滿足: </p>
+<ol>
+<li>$\in$-反自反性: 假設 $\alpha\in\alpha$, 則由序數的 $\in$-反自反性即有 $\alpha\not\in\alpha$, </li>
+<li>$\in$-傳遞性: 由序數的可遞性即得, </li>
+<li>$\in$-三分律: 由序數的可比性即得, </li>
+<li>$\in$-良基性: 設 $B$ 為 $A$ 的任意非空子集, 任取 $\alpha\in B$, 若 $\alpha\cap B&#x3D;\varnothing$, 則 $\alpha$ 自身是極小元; 否則由 $\alpha\cap B$ 的良基性知 $\alpha\cap B$ 有極小元 $\beta$, 顯然, $\beta$ 是 $B$ 的極小元. $\square$</li>
+</ol>
+<h3 id="構造新序數"><a href="#構造新序數" class="headerlink" title="構造新序數"></a>構造新序數</h3><p>顯然, 所有自然數和 $\omega$ 都是序數. 注意, 自然數集 $\omega$ 自身也是一個序數, 對任意自然數 $n$, 由於 $n\in\omega$, 我們可以說 $\omega$ 是一個比任何自然數都大的序數, 同時也是最小的超限序數. 那麼自然要問: 除自然數和 $\omega$ 外, 是否還存在其他的序數? 答案是肯定的. </p>
+<p>下面給出兩種構造新序數的規則:<br>(1) 序數 $\alpha$ 的後繼 $\alpha’$ 也是序數. 形如 $\alpha’$ 的序數稱為<strong>後繼序數</strong>.<br>證明: 顯然 $\alpha’$ 是 $\in$-良序集; 設 $x\in y\in\alpha’$, 當 $y&#x3D;\alpha$ 時, 顯然有 $x\in\alpha\subseteq\alpha’$, 即 $x\in\alpha’$, 當 $y\in\alpha$ 時, 由 $\alpha$ 的可遞性, 同樣由 $x\in\alpha\subseteq\alpha’$. $\square$ </p>
+<p>(2) 若集 $a$ 的元素都是序數, 則 $\bigcup a$ 也是序數, 且是 $a$ 的上確界.<br>證明: $\bigcup a$ 的元素都是序數, 所以 $\bigcup a$ 是序數. $\bigcup a$ 是 $a$ 的上確界, 因為 $\alpha\in a$ $\Rightarrow$ $\alpha\subseteq\bigcup a$, 即 $\alpha\leq \bigcup a$, 故 $\bigcup a$ 是 $a$ 的上界; 若 $\beta\in\bigcup a$, 則 $\exists\alpha\in a\thinspace(\beta\in\alpha)$, 即 $\beta&lt;\alpha$, 故 $\beta$ 不是 $a$ 的上界. $\square$ </p>
+<p>除 $0$ 以外的所有自然數都是後繼序數. 對自然數集 $\omega$ 使用規則(2), 得到 $\bigcup\omega&#x3D;\omega$ 是序數, 這是不同於 $0$ 和後繼序數的第三類序數, 稱作<strong>極限序數</strong>. 設序數 $\alpha\not&#x3D;0$, 則 $\alpha$ 是極限序數的一個充要條件是<br>$$\beta\in\alpha\Rightarrow \beta’\in\alpha$$<br>證明略. 這表明極限序數必是歸納集. </p>
+<p><strong>命題</strong>: $\alpha$ ($\not&#x3D;0$) 是極限序數的一個充要條件是 $\alpha&#x3D;\bigcup\alpha$. 因此, 極限序數是它自身的上確界. </p>
+<p><strong>證明</strong>: ($\Rightarrow$) 設 $\alpha$ 是極限序數, 由 $\alpha$ 的可遞性知 $\bigcup\alpha\subseteq\alpha$; 另一方面, 設 $x\in\alpha$, 則由上一命題知 $x\in x’\in\alpha$, 於是有 $x\in\bigcup\alpha$, 故 $\alpha\subseteq\bigcup\alpha$, 從而有 $\alpha&#x3D;\bigcup\alpha$.<br>($\Leftarrow$) 反設 $\alpha&#x3D;\bigcup\alpha$ 但 $\alpha$ 不是極限序數, 則 $\alpha&#x3D;\beta’$, 由 $\bigcup\beta’&#x3D;\beta$, 得<br>$$\alpha&#x3D;\bigcup\alpha&#x3D;\bigcup\beta’&#x3D;\beta\in\beta’&#x3D;\alpha$$<br>與 $\in$-反自反性矛盾. $\square$ </p>
+<h3 id="替換公理"><a href="#替換公理" class="headerlink" title="替換公理"></a>替換公理</h3><p>使用後繼規則, 我們可以得到 $\omega$ 之後的一些超限序數:<br>$$\omega,\omega’,\omega’’,\cdots,\omega^{(n)},\cdots\tag{1}$$<br>隨後一個很自然的想法是把它們並起來得到更大的序數<br>$$\bigcup\lbrace \omega^{(n)}:n\in\omega \rbrace&#x3D;\omega\cup\omega’\cup\omega’’\cup\cdots\tag{2}$$<br>直觀上看, 上面的序數序列能與自然數集一一對應, 二者規模相同, 所以序列中的全部序數應當構成一個集. 但問題是, 僅使用最初版本的 Zermelo 公理 ($\text{ZF1}$ 至 $\text{ZF6}$), 我們無法斷言它的確是集. 為完善序數理論, Fraenkel 和 Skolem 分別於1922和1923年提出了替換公理, 也就是 $\text{ZF7}$. </p>
+<p>$\text{ZF7}$ (替換公理 Axiom schema of replacement) 設集 $a$ 和公式 $\varphi(x,y)$ 滿足單值性條件:<br>$$\forall x\in a\thinspace(\exists!y\thinspace\varphi(x,y))$$<br>則如下對象也是集:<br>$$\lbrace y:\exists x\in a\thinspace\varphi(x,y) \rbrace$$<br>其含義為: 已知集上可定義函數的值域也是集. </p>
+<p>有了這條公理, 我們就可以斷言序數序列 $(1)$ 中的全部序數構成集, 從而根據並集公理可得到集合 $(2)$, 它是一個新的序數. 該序數沒有最大元, 所以它是極限序數. 這個序數一般記作 $\omega2$ ($\not&#x3D;2\omega&#x3D;\omega$), 它同構於字典序的集 $2\times\omega$. </p>
+<hr>
+
+<p>下面是替換公理的一個重要應用: </p>
+<p><strong>序型定理</strong>: 每個良序集都有與之同構的唯一序數: $A$ 是良序集 $\Rightarrow$ $\exists!\alpha\thinspace(A\cong\alpha)$. </p>
+<p><strong>證明</strong>: 唯一性顯然. 存在性: 用序數依次給 $A$ 的初始段進行編號, 即作 $A$ 的子集 $B&#x3D;\lbrace x\in A:\exists\beta\thinspace A_x\cong\beta \rbrace$, 則由替換公理知 $\alpha&#x3D;\lbrace \beta:\exists x\in A\thinspace \beta\cong A_x \rbrace$ 也是集. $\alpha$ 的元素都是序數, 所以它是 $\in$-良序集; 設 $\gamma\in\beta\in\alpha$, 則 $\gamma&#x3D;\beta_{\gamma}$, 且存在序同構 $f:\beta\cong A_x$, 把 $f$ 限制在 $\beta_{\gamma}$ 上即有 $\gamma\cong (A_{x})_{f(\gamma)}&#x3D;A_{f(\gamma)}$, 所以 $\gamma\in\alpha$, 這就證明了 $\alpha$ 是可遞集, 即它是一個序數. 現假設 $\alpha\cong A_{y}$, 由於存在某個 $\beta\cong A_y$, 所以就有 $\alpha&#x3D;\beta\in\alpha$, 這與 $\in$-反自反性矛盾; 再假設 $A\cong\alpha_{\xi}\in\alpha$, 就必存在 $w\in A$ 使得 $A_w\cong\alpha_{\xi}$. $A_w\cong A$, 矛盾. 所以由良序集基本定理, 必有 $\alpha\cong A$. $\square$ </p>
+<p>這個與良序集同構的序數叫做該良序集的<strong>序型</strong> (order type), 有相同序型的良序集必同構, 據此可以對良序集進行分類. 序型相當於在良序集的同構類中選出的一個代表元. </p>
+<h3 id="序數宇宙"><a href="#序數宇宙" class="headerlink" title="序數宇宙"></a>序數宇宙</h3><p>用 $\textbf{On}$ 表示所有序數構成的對象. 稱 $\textbf{On}$ 為序數宇宙, $\alpha$ 是序數, 可以寫作 $\alpha\in\textbf{On}$. 那麼, $\textbf{On}$ 是不是集? </p>
+<p>假設 $\textbf{On}$ 是集, 因為 $\textbf{On}$ 的元素都是序數, 它必是 $\in$-良序集. 又由於序數的元素也是序數, 所以有 $x\in y\in\textbf{On}$ $\Rightarrow$ $x\in\textbf{On}$, 即 $\textbf{On}$ 是可遞集. 由此可知, $\textbf{On}$ 自身也是序數, $\textbf{On}\in\textbf{On}$, 這與序數的反自反性矛盾. 這就是 Burali-Forti 悖論. 悖論產生的原因是假定了 $\textbf{On}$ 是集, 因此 $\textbf{On}$ 不能是集. 我們一般稱它為一個真類. </p>
+<p>$\textbf{On}$ 上的超限歸納法: 若 $\forall\alpha((\forall\beta&lt;\alpha:p(\beta))\to p(\alpha))$, 則 $\forall\alpha p(\alpha)$.<br>證明方法與通常的第二歸納法證明類似. $\square$ </p>
+<p>從而, 我們有一般序數 $\delta$ 上的歸納定義: 對任給的集運算 $\varphi$, 唯一存在序數 $\delta$ 上的函數 $\psi_{\delta}$ 滿足<br>$$\forall \alpha&lt;\delta(\psi_{\delta}(\alpha)&#x3D;\varphi(\psi_{\delta}\upharpoonright \alpha))$$<br>其中, 集運算 $\varphi$ 是指, 對任意集 $x$, 唯一指定一個集 $y$ 與之對應. (之所以不稱之為函數, 是因為其 “定義域” 不是集而是整個集宇宙, 基於此, 集運算也常稱作類函數.) 符號 $\psi\upharpoonright\alpha$ 表示把函數 $\psi$ 限制在集 $\alpha$ 上, $\alpha$ 是集, 由替換公理, $\psi\upharpoonright\alpha$ 也是集. </p>
+<p>證明: 唯一性由 $\textbf{On}$ 上的超限歸納法易證. 存在性: 對 $\delta\in\textbf{On}$ 作歸納. $\delta&#x3D;0$ 時取 $\psi_0&#x3D;0$; $\delta&gt;0$ 時, 假設對每個 $\gamma&lt;\delta$ 都存在 $\gamma$ 上的函數 $\psi_{\gamma}$ 滿足<br>$$\psi_{\gamma}(\alpha)&#x3D;\varphi(\psi_{\gamma}\upharpoonright \alpha),\quad \alpha&lt;\gamma$$<br>當 $\delta$ 是後繼序數時, 設 $\delta&#x3D;\gamma’$, 定義 $\psi_{\delta}$ 如下:<br>$$\forall \alpha&lt;\delta(\psi_{\delta}(\alpha)&#x3D;\varphi(\psi_{\gamma}\upharpoonright \alpha))$$<br>當 $\delta$ 是極限序數時, 對任意 $\alpha&lt;\delta$ 都有 $\alpha’&lt;\delta$, 按歸納假設可定義 $\psi_{\alpha’}$, 令<br>$$\psi_{\delta}(\alpha)&#x3D;\psi_{\alpha’}(\alpha)$$<br>容易驗證, 這樣定義的 $\psi_{\delta}$ 符合要求. 由超限歸納法原理得證. $\square$ </p>
+<p>進一步可以將歸納定義推廣到 $\textbf{On}$ 上. 對任意給定的集運算 $\varphi$, 唯一存在序數函數 $\psi$ 滿足<br>$$\psi(\alpha)&#x3D;\varphi(\psi\upharpoonright\alpha)$$<br>證明: 取 $\delta&#x3D;\alpha’$, 則唯一存在 $\alpha’$ 上的函數 $\psi_{\alpha’}$ 滿足<br>$$\psi_{\alpha’}(\gamma)&#x3D;\varphi(\psi_{\alpha’}\upharpoonright \gamma),\quad \gamma&lt;\alpha’$$<br>令 $\psi(\alpha)&#x3D;\psi_{\alpha’}(\alpha)$ 即可. $\square$ </p>
+<hr>
+
+<p>歸納定義序數的加法如下: </p>
+<ol>
+<li>$\alpha+0&#x3D;\alpha$, </li>
+<li>$\alpha+\beta’&#x3D;(\alpha+\beta)’$, </li>
+<li>$\alpha+\beta&#x3D;\bigcup\lbrace\alpha+\gamma:\gamma&lt;\beta\rbrace$, 當 $\beta$ 是極限序數時.</li>
+</ol>
+<p>由(3)可知, $1+\omega&#x3D;\omega\not&#x3D;\omega+1$, 故交換律對序數加法不成立. 直觀來看, 這就相當於在無窮序列的開頭和末尾添加一個元素的區別. </p>
+<p>乘法定義如下: </p>
+<ol>
+<li>$\alpha\cdot 0&#x3D;0$, </li>
+<li>$\alpha\cdot\beta’&#x3D;\alpha\cdot\beta+\beta$, </li>
+<li>$\alpha\cdot\beta&#x3D;\bigcup\lbrace\alpha\cdot\gamma:\gamma&lt;\beta\rbrace$, 當 $\beta$ 是極限序數時.</li>
+</ol>
+<p>同樣, 由 $2\omega&#x3D;\omega\not&#x3D;\omega2&#x3D;\omega+\omega$ 可知交換律不成立. 直觀來看, 這種區別仍然是不同排序方式造成的, 例如, $1,2,3,4,\cdots$ 和 $1,3,5,\cdots,2,4,6\cdots$ 顯然是不同的. (兩者分別同構於字典序的 $\omega\times2$ 和 $2\times\omega$) </p>
+<h3 id="正則公理"><a href="#正則公理" class="headerlink" title="正則公理"></a>正則公理</h3><p>1917年, Dmitry Mirimanoff 發現 Zermelo 的公理系統不能排除一種異常集的存在, 這種集形成 $\in$-降鏈:<br>$$\cdots\in x_{n+1}\in x_n\in \cdots\in x_2\in x_1\in x_0$$<br>特殊情況是 $x\in x$. $\in$-降鏈的存在意味著集的原始組成可以不存在. 為消除這種異常集, von Neumann 於1925年提出正則公理. </p>
+<p>$\text{ZF8}$ (正則公理 regularity axiom) 每個非空集都有 $\in$-極小元, 即<br>$$\forall a\not&#x3D;\varnothing\thinspace\exists x\in a\thinspace(x\cap a&#x3D;\varnothing) $$<br>其中, $x\cap a&#x3D;\varnothing$ 意思是: $x$ 是 $a$ 的 $\in$-極小元, $\forall t\in a\thinspace t\not\in x$. </p>
+<p>$\in$-極小元的存在使得 $\in$-降鏈不能出現. 特別地, $\forall x(x\not\in x)$ (注意, 我們先前排除 Russell 悖論時並沒有排除一個集合可以屬於其自身). 設 $a&#x3D;\lbrace x\rbrace$, 則 $x$ 為 $a$ 的 $\in$-極小元, 若 $x\in x$, 則 $x\not\in a$, 矛盾. $\square$ </p>
+<p>反過來, 在承認選擇公理的前提下, “$\in$-降鏈不存在” 蘊含正則公理. 假設非空集 $S$ 不滿足正則公理, 即任意 $x\in S$, $x\cap S\not&#x3D;\varnothing$, 設 $g$ 為 $S$ 的一個選擇函數, 歸納定義函數 $f$ 如下:<br>$$<br>\begin{align*}<br>&amp;f(0)&#x3D;g(S) \\<br>&amp;f(n+1)&#x3D;g(f(n)\cap S)<br>\end{align*}<br>$$<br>則 $\cdots\in f(n+1)\in f(n)\in\cdots\in f(1)\in f(0)$ 形成一 $\in$-降鏈, 與假定 $\in$-降鏈不存在矛盾. $\square$ </p>
+<p>不存在 $\in$-降鏈 $\cdots\in x_2\in x_1\in x_0$ 的集合 $x_0$ 稱為良基集. 使用正則公理可以證明, $\text{ZFC}$ 集宇宙中的所有集都是良基集, 這也就印證了上文的斷言, 所有集都是在空集上反覆應用集運算得到的. (當然, 也存在接受非良基集的集論系統.) </p>
+<p>有了正則公理, $\in$-反自反性和 $\in$-良基性自動滿足, 序數的定義可以簡化成: 滿足 $\in$-三分律的可遞集. </p>
+<h1 id="選擇公理的進一步討論"><a href="#選擇公理的進一步討論" class="headerlink" title="選擇公理的進一步討論"></a>選擇公理的進一步討論</h1><h2 id="等價形式"><a href="#等價形式" class="headerlink" title="等價形式"></a>等價形式</h2><p>下面我們證明幾個選擇公理的重要等價形式. </p>
+<p><strong>良序定理</strong> ($\text{WO}$): 任何非空集上都有良序. (注意不要與斷言自然數集的任意非空子集都有最小元的良序原理混淆.) </p>
+<p><strong>證明</strong>: 設 $S$ 為非空集, 我們斷言 $S$ 和某個序數 $\theta$ 之間存在雙射. 選取元素 $\Omega\not\in S$. 設 $g$ 為 $S$ 的一個選擇函數, $g(S)&#x3D;a_0$, 歸納定義 $a_{\alpha}$ 如下:<br>$$<br>a_{\alpha}&#x3D;\begin{cases}<br>g(S\setminus\lbrace \alpha_{\beta}:\beta&lt;\alpha\rbrace),&amp;S\not&#x3D;\lbrace \alpha_{\beta}:\beta&lt;\alpha\rbrace \\<br>\Omega,&amp;S&#x3D;\lbrace \alpha_{\beta}:\beta&lt;\alpha\rbrace<br>\end{cases}<br>$$<br>由於 $S$ 是集合 (而 $\textbf{On}$ 的規模遠大於集), 所以必存在極小的 $\theta$ 使得 $a_{\theta}&#x3D;\Omega$, $S&#x3D;\lbrace \alpha_{\beta}:\beta&lt;\theta\rbrace$ 與 $\theta&#x3D;\lbrace \beta:\beta&lt;\theta\rbrace$ 之間存在雙射, 於是導出 $S$ 上的良序. $\square$ </p>
+<p>〔另一種證明參見<a href="https://ruozeli.github.io/2026/01/30/Mathematical_Logic_1/#%E5%8F%AF%E9%9D%A0%E6%80%A7%E5%92%8C%E5%AE%8C%E5%85%A8%E6%80%A7">命題演算的緊緻性定理</a>, 這表明命題演算的緊緻性定理依賴於選擇公理.〕</p>
+<p>反過來, 設 $S$ 為非空集組成的集族, 我們用良序定理在 $\bigcup S$ 上建立一個良序, 並定義選擇函數為: 從每個 $x\in S$ ($x\subseteq\bigcup S$) 中選出最小元. 即 $\text{WO}\Rightarrow\text{AC}$. </p>
+<hr>
+
+<p><strong>Zorn 引理</strong>: 若非空偏序集 $S$ 的每個全序子集 (每一條鏈) 在 $S$ 中都有上界, 則 $S$ 必有極大元. </p>
+<p><strong>證明</strong>: 反設 $S$ 沒有極大元. 任取 $a_0\in S$, 歸納定義 $a_\alpha\in S$ 使得 $\alpha&lt;\beta$ $\Rightarrow$ $a_{\alpha}&lt;a_{\beta}$ (這裡使用了選擇公理). 假定對任意 $\beta&lt;\alpha$ 都定義了 $a_{\beta}$, 則 $\lbrace a_{\beta}\rbrace_{\beta&lt;\alpha}$ 是 $S$ 中的一條鏈. 若 $\alpha$ 是極限序數, 則該鏈必有上界 $a_{\alpha}\not\in\lbrace a_{\beta}\rbrace_{\beta&lt;\alpha}$, 且 $a_{\alpha}\in S$; 若 $\alpha&#x3D;\gamma+1$ 是後繼序數, 由假設 $S$ 無極大元知必存在 $a_{\alpha}\in S$ 使得 $a_{\alpha}&gt;a_{\gamma}$. 由此真類 $\textbf{On}$ 可嵌入集 $S$, 矛盾. $\square$ </p>
+<hr>
+
+<p><strong>Tukey 引理</strong>: 設非空集 $S$ 滿足 $x\in S$ $\Leftrightarrow$ $x$ 所有有限子集都屬於 $S$ (該條件一般稱作 “有限特徵”), 則 $S$ 按 $\subseteq$ 有極大元. </p>
+<p><strong>證明</strong>: 我們用 Zorn 引理來證明 Tukey 引理. $S$ 按 $\subseteq$ 成非空偏序集, 任取 $S$ 的全序子集 $b$, 由並集的性質, $x\in b$ $\Rightarrow$ $x\subseteq\bigcup b$, 即 $\bigcup b$ 是 $b$ 的上界. 只需證 $\bigcup b\in S$, 由 Zorn 引理即可知 $S$ 有 $\subseteq$-極大元. 由於 $b$ 是全序子集, $\bigcup b$ 的任意有限子集必為 $b$ 的某個子集 $x$ 的有限子集, 故必屬於 $S$, 由 $S$ 的有限特徵知, $\bigcup b\in S$. $\square$ </p>
+<p>Tukey 引理的一個應用是證明任意向量空間都有基. 令向量空間 $V$ 的線性無關組的集合為 $S$, 則 $S$ 顯然具有有限特徵, 故 $S$ 按 $\subseteq$ 有極大元 $w$, 這就是向量空間的一組基. </p>
+<hr>
+
+<p>最後, 我們用 Tukey 引理證明選擇公理. 這表明選擇公理, Zorn 引理和 Tukey 引理的等價性. </p>
+<p><strong>證明</strong>: 設 $a$ 為非空集組成的集族, 作 $b&#x3D;\lbrace g:$ $g$ 是 $a$ 的某個子族的選擇函數 $\rbrace$, 顯然 $b$ 具有有限特徵. 由 Tukey 引理, $b$ 按 $\subseteq$ 有極大元 $f$. 只需證 $\text{Dom}(f)&#x3D;a$ 即可. 反設存在 $x\in a-\text{Dom}(f)$, 取 $y\in x$, 則 $f\cup\lbrace (x,y)\rbrace\in b$, 與 $f$ 的極大性矛盾. 故 $f$ 即為要求的 $a$ 的選擇函數. $\square$ </p>
+<h2 id="濾子擴張原則"><a href="#濾子擴張原則" class="headerlink" title="濾子擴張原則"></a>濾子擴張原則</h2><p>濾子擴張原則: 設 $F_0$ 是集 $a$ 上的濾子, 則存在 $a$ 上的超濾 $F\supseteq F_0$. 該定理保證列非主算術超濾的存在性. </p>
+<p>證明: 我們用 Zorn 引理證明濾子擴張原則. 設 $F_0$ 是集 $a$ 上的濾子, 作偏序集 $P&#x3D;\lbrace G\supseteq F_0:G$ 是 $a$ 上的濾子$\rbrace$, 任取 $P$ 的鏈 $L$, 只需證明 $L$ 在 $P$ 中有上界. $L&#x3D;\varnothing$ 時, $P$ 中任何元素都是 $L$ 的上界; $L\not&#x3D;\varnothing$ 時, $L$ 在 $P$ 中的上界為 $\bigcup L$: 首先容易驗證 $\bigcup L$ 是濾子, 進而因 $F_0\subseteq \bigcup L$, 所以 $\bigcup L\in P$, 最後由並集的性質知 $G\in L$ $\Rightarrow$ $G\subseteq \bigcup L$, 即 $\bigcup L$ 是 $L$ 的上界. 使用 Zorn 引理便知 $P$ 有極大元 $F$, $F$ 必為某個極大濾子, 故為超濾. $\square$ </p>
+<p>設 $A$ 為 $\mathbb{N}$ 的非空子集族, 且滿足<br>$$\forall a_1,\cdots,a_n\in A(a_1\cap\cdots\cap a_n\not&#x3D;\varnothing)$$<br>則稱 $A$ 具有<strong>有限交性質</strong>. 設 $A$ 具有有限交性質, 令<br>$$F&#x3D;\lbrace x\supseteq a:\exists a_1,\cdots,a_n\in A(x\supseteq a_1\cap\cdots\cap a_n)\rbrace$$<br>則 $F$ 是一個濾子. 由濾子擴張原則, 濾子 $F$ 可擴張為一個超濾. 特別地, 主超濾 $F_n$ 可視為單點集 $\lbrace n\rbrace$ 生成的超濾. </p>
+<h1 id="基數"><a href="#基數" class="headerlink" title="基數"></a>基數</h1><h2 id="集合的勢"><a href="#集合的勢" class="headerlink" title="集合的勢"></a>集合的勢</h2><p>集 $A$ 與集 $B$ 等勢, 是指存在 $A$ 到 $B$ 的雙射, 記作 $A\approx B$. 例如, $\mathbb{N}\approx \mathbb{Z}\approx \mathbb{Q}$, $\mathbb{R}\approx \mathcal{P}(\mathbb{N})$. 符號 $A\preccurlyeq B$ 表示存在集 $A$ 到集 $B$ 的單射, $A\prec B$ 表示 $A\preccurlyeq B$ 但 $A\not\approx B$. </p>
+<p><strong>定理</strong>: 對任意集 $A$, 都有 $A\prec \mathcal{P}(A)$.<br><strong>證明</strong>: $A\preccurlyeq \mathcal{P}(A)$ 是顯然的, 只需證 $A\not\approx \mathcal{P}(A)$. 假設存在滿射 $f:A\to \mathcal{P}(A)$, 令 $B&#x3D;\lbrace x\in A:x\not\in f(x)\rbrace$, 因為 $B\in\mathcal{P}(A)$, 所以 $B$ 必有原像. 設 $f(x_0)&#x3D;B$, 若 $x_0\in f(x_0)&#x3D;B$, 則 $x_0\not\in B$; 若 $x_0\not\in B$, 則由 $B$ 的定義知 $x_0\in B$, 矛盾. $\square$ </p>
+<p><strong>Cantor-Bernstein-Schröder 定理</strong>: $X\preccurlyeq Y\wedge Y\preccurlyeq X$ $\Rightarrow$ $X\approx Y$.<br><strong>證明</strong>: 設 $f:X\to Y$, $g:Y\to X$ 是單射, 令<br>$$<br>\begin{align}<br>&amp;\lbrace A_i\rbrace:\enspace A_0&#x3D;X,\enspace A_{i+1}&#x3D;(g\circ f)(A_i) \\<br>&amp;\lbrace B_i\rbrace:\enspace B_0&#x3D;g(Y),\enspace B_{i+1}&#x3D;(g\circ f)(B_i) \\<br>&amp;\lbrace C_i\rbrace:\enspace C_0&#x3D;Y,\enspace C_{i+1}&#x3D;(f\circ g)(C_i) \\<br>&amp;\lbrace D_i\rbrace:\enspace D_0&#x3D;f(X),\enspace D_{i+1}&#x3D;(f\circ g)(D_i)<br>\end{align}<br>$$<br>則<br>$$<br>\begin{align}<br>&amp;X&#x3D;A_0\supseteq B_0\supseteq A_1\supseteq B_1\supseteq \cdots \\<br>&amp;Y&#x3D;C_0\supseteq D_0\supseteq C_1\supseteq D_1\supseteq \cdots<br>\end{align}<br>$$<br>定義函數<br>$$<br>h(x) &#x3D; \begin{cases}<br>f(x),&amp;\exists n\in\mathbb{N}\enspace\text{s.t.}\enspace x\in A_n-B_n\\<br>g^{-1}(x),&amp;\text{otherwise}.<br>\end{cases}<br>$$<br>容易驗證,<br>$$<br>\begin{align}<br>&amp;h(A_i-B_i) &#x3D; D_i-C_{i+1} \\<br>&amp;h(B_i-A_{i+1}) &#x3D; C_{i}-D_{i} \\<br>&amp;h\left(\bigcap_{i&#x3D;1}^{\infty}A_i\right) &#x3D; \bigcap_{i&#x3D;1}^{\infty}C_i<br>\end{align}<br>$$<br>所以 $h:A\to B$ 是雙射. $\square$ </p>
+<p>推論: 若 $A\subseteq B\subseteq C$ 且 $A\approx C$, 則 $A\approx B\approx C$. </p>
+<h2 id="基數-1"><a href="#基數-1" class="headerlink" title="基數"></a>基數</h2><p>若序數 $\kappa$ 滿足 $\forall \alpha&lt;\kappa(\alpha\not\approx \kappa)$, 則稱 $\kappa$ 是一個<strong>基數</strong>. 例如, 自然數 $n$, $\omega$ 都是基數, 但 $\omega+1$ 不是基數, 因為 $\omega+1\approx \omega$. 簡單來說, 基數是用於計數的數, 序數是用於編號的數; 序數與元素的排列次序有關, 而基數只關心集合的規模大小 (元素多少), 所以在對無限集計數時, 我們只需使用互相等勢的序數中最小的一個即可, 這就是要求基數與更小的序數不等勢的原因. 超限基數 $\kappa$ 作為序數一定是極限序數, 否則假設 $\kappa&#x3D;\alpha+1$, 有如下雙射 $f:\kappa\to\alpha$:<br>$$<br>f(\beta)&#x3D;\begin{cases}<br>0, &amp;\beta&#x3D;\alpha \\<br>\beta, &amp;\omega\leq\beta&lt;\alpha \\<br>\beta+1, &amp;\beta&lt;\omega<br>\end{cases}<br>$$</p>
+<p>用 $|A|$ 表示集 $A$ 的基數, 若 $A\approx \kappa$, 則 $|A|&#x3D;\kappa$. 在承認良序定理 (選擇公理) 的前提下, 任意集都有基數. 首先, 任取集 $A$, 可以用良序定理使其成為良序集, 那麼必存在序數 $\alpha$ 與之同構, 與 $\alpha$ 等勢的最小序數即是 $A$ 的基數; 反過來, 若任意集 $A$ 都有基數 $\kappa$, 由於存在雙射 $A\to \kappa$, $\kappa$ 的 $\in$-良序就誘導了 $A$ 的良序. 由此可知, 良序定理與命題 “任意集都有基數” 等價. </p>
+<p>基數的可比性是顯然的:<br>$$<br>\begin{align}<br>\kappa\approx \lambda\enspace\Leftrightarrow\enspace \kappa&#x3D;\lambda \\<br>\kappa\preccurlyeq \lambda\enspace\Leftrightarrow\enspace \kappa\leq\lambda \\<br>\kappa\prec \lambda\enspace\Leftrightarrow\enspace \kappa&lt;\lambda<br>\end{align}<br>$$<br>由於任何集都有基數, 集合的勢也一定是可比的.〔這一點也可以直接用 Zorn 引理證明: 對任意集 $X$, $Y$, 考慮 $\Sigma&#x3D;\lbrace (A,f)\mid A\subseteq X,f:A\hookrightarrow Y\rbrace$. 〕</p>
+<hr>
+
+<p><strong>定理</strong>: 比 $\kappa$ 大的最小基數是 $\kappa^{+}&#x3D;\lbrace \beta:\beta\preccurlyeq\kappa\rbrace$.<br><strong>證明</strong>: 首先, $\kappa^{+}$ 的元素都為序數, 所以它是 $\in$-良序集. 進而對任意 $\gamma\in\beta\in\kappa^{+}$, 有 $\gamma\subseteq\beta\preccurlyeq\kappa$, 所以 $\gamma\in\kappa^{+}$, 故 $\kappa^{+}$ 是序數. 任取 $\beta\in\kappa^{+}$, $\beta\preccurlyeq\kappa$, 顯然 $\beta\not\approx\kappa^{+}$, 所以 $\kappa^{+}$ 是一個基數. 又由於 $\lambda&lt;\kappa^{+}$ $\Rightarrow$ $\lambda\preccurlyeq\kappa$ $\Rightarrow$ $\lambda\leq\kappa$, 故 $\kappa^{+}$ 是大於 $\kappa$ 的最小基數. $\square$ </p>
+<p><strong>命題</strong>: 設集 $a$ 的元素都是基數, 則 $\bigcup a$ 也是基數, 且是 $a$ 的上確界.<br><strong>證明</strong>: 已知 (參見上文) $\bigcup a$ 是序數且是 $a$ 的上確界, 故只需證 $\bigcup a$ 是基數. 任取 $\alpha\in\bigcup a$, 存在某個 $\kappa\in a$ 使得 $\alpha\in\kappa$, 於是 $\alpha\subseteq\kappa\subseteq\bigcup a$, 若 $\alpha\approx\bigcup a$, 便有 $\alpha\approx \kappa$ 與 $\kappa$ 是基數矛盾. $\square$ </p>
+<p>據此, 可以讓每個序數 $\alpha$ 聯繫到一個基數: </p>
+<ol>
+<li>$\omega_0 &#x3D; \omega$, </li>
+<li>$\omega_{\alpha+1} &#x3D; \omega_{\alpha}^{+} &#x3D; \lbrace \beta:\beta\preccurlyeq\omega_{\alpha}\rbrace$, ($\omega_{\alpha+1}$ 稱作 $\omega_{\alpha}$ 的後繼基數)</li>
+<li>$\omega_{\alpha} &#x3D; \bigcup\lbrace\omega_{\gamma}:\gamma&lt;\alpha\rbrace$, 其中 $\alpha$ 是極限序數. (此時, $\omega_{\alpha}$ 稱作極限基數)</li>
+</ol>
+<p>$\omega_{\alpha}$ 也寫作 $\aleph_{\alpha}$. 可以證明, 每個比 $\omega$ 大的基數都是某個 $\aleph_{\alpha}$. </p>
+<h2 id="基數算術"><a href="#基數算術" class="headerlink" title="基數算術"></a>基數算術</h2><p><strong>Hessenberg 定理</strong>: $\kappa\geq\omega$ $\Rightarrow$ $\kappa\times\kappa\approx\kappa$.<br><strong>證明</strong>: $\kappa&#x3D;\kappa\times\lbrace0\rbrace\subseteq\kappa\times\kappa$, 故只需歸納證明 $\kappa\times\kappa\preccurlyeq\kappa$ 即可. 假設 $\omega\leq\lambda&lt;\kappa$ 時有 $\lambda\times\lambda\preccurlyeq\lambda$. 首先定義 $\kappa\times\kappa$ 上的 “標準序”: $(\alpha_1,\beta_1)&lt;(\alpha_2,\beta_2)$ 當且僅當 </p>
+<ol>
+<li>$\max\lbrace\alpha_1,\beta_1\rbrace&lt;\max\lbrace\alpha_2,\beta_2\rbrace$, 或 </li>
+<li>$\max\lbrace\alpha_1,\beta_1\rbrace&#x3D;&lt;&#x3D;\max\lbrace\alpha_2,\beta_2\rbrace$ 且 $\alpha_1&lt;\alpha_2$, 或 </li>
+<li>$\max\lbrace\alpha_1,\beta_1\rbrace&lt;\max\lbrace\alpha_2,\beta_2\rbrace$, $\alpha_1&#x3D;\alpha_2$ 且 $\beta_1&lt;\beta_2$.</li>
+</ol>
+<p>即先按 $\max\lbrace\alpha,\beta\rbrace$, 然後按字典序排序. $\kappa$ 的良序性保證了該標準序是良序, 所以存在唯一的序數 $\gamma$ 與 $\kappa\times\kappa$ 同構, 下面只需證明 $\gamma\leq\kappa$. 反設 $\gamma&gt;\kappa$, 取 $\gamma$ 到 $\kappa\times\kappa$ 的同構映射 $f$, 設 $f(\kappa)&#x3D;(\alpha,\beta)$, 則 $\kappa$ 與 $\kappa\times\kappa$ 中以 $(\alpha,\beta)$ 為端點的初始段 $A$ 同構. 若 $\alpha$, $\beta$ 都為有限數, 則其確定的初始段也為有限, 不可能與 $\kappa$ 同構, 所以其中至少有一比 $\omega$ 大. 令 $\delta&#x3D;\max\lbrace \alpha,\beta\rbrace+1$, 由於 $\kappa$ 是極限序數, $\alpha,\beta\in\kappa$, 所以有 $\omega\leq\delta&lt;\kappa$, 由歸納假設就有 $\delta\times\delta\approx\delta\prec\kappa$. 因為 $(\alpha,\beta)&lt;(\delta,\delta)$, 所以 $\kappa\approx A\approx\delta\times\delta$, 矛盾. 故 $\kappa\times\kappa\preccurlyeq\kappa$. $\square$ </p>
+<p>定義基數的加法和乘法如下:<br>$$<br>\begin{align}<br>\kappa+\lambda &amp;&#x3D; |\kappa\times\lbrace0\rbrace\cup\lambda\times\lbrace1\rbrace| \\<br>\kappa\cdot\lambda &amp;&#x3D; |\kappa\times\lambda|<br>\end{align}<br>$$<br>容易驗證, 基數的加法和乘法滿足交換律, 結合律和分配律. </p>
+<p>由 Hessenberg 定理可得基數計算的基本公式: 設 $\kappa\geq\omega$ 且 $\kappa\geq\lambda$, 則 </p>
+<ol>
+<li>$\kappa+\lambda&#x3D;\kappa$, </li>
+<li>$\kappa\cdot\lambda&#x3D;\kappa$.</li>
+</ol>
+<p>基數的指數運算定義為: $\kappa^{\lambda}&#x3D;|{}^{\lambda}{\kappa}|$, 其中 $^{\lambda}{\kappa}&#x3D;\lbrace f\mid f:\lambda\to\kappa\rbrace$. 則顯然有 $\kappa^{\lambda+\mu}&#x3D;\kappa^{\lambda}\cdot\kappa^{\mu}$, $(\kappa^{\lambda})^{\mu}&#x3D;\kappa^{\lambda\cdot\mu}$. </p>
+<p><strong>命題</strong>: 若 $2\leq \kappa\leq\lambda$ 且 $\lambda\geq\omega$, 則 $\kappa^{\lambda}&#x3D;2^{\lambda}&#x3D;|\mathcal{P}(\lambda)|$.<br><strong>證明</strong>: 對每個映射 $f:\lambda\to\lambda$, 有 $f\subseteq\lambda\times\lambda$, 於是 $^{\lambda}{\lambda}\subseteq\mathcal{P}(\lambda\times\lambda)$. 所以有 $^{\lambda}{2}\subseteq{}^{\lambda}{\kappa}\subseteq{}^{\lambda}{\lambda}\subseteq\mathcal{P}(\lambda\times\lambda)\approx\mathcal{P}(\lambda)\approx{}^{\lambda}{2}$. $\square$ </p>
+<p>$\text{CH}$ (連續統假設)<br>$$2^{\omega_0}&#x3D;\omega_1$$<br>$\text{GCH}$ (廣義連續統假設)<br>$$\forall\alpha(2^{\omega_{\alpha}}&#x3D;\omega_{\alpha+1})$$<br>根據 Gödel 和 Cohen 的工作, 連續統假設成立與否獨立於 $\text{ZFC}$. </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+              <a href="/tags/foundations/" rel="tag"># foundations</a>
+              <a href="/tags/set-theory/" rel="tag"># set theory</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/05/04/%E8%AB%96%E6%96%87%E7%A7%91%E7%9F%A5%E8%AD%98%E8%88%87%E7%90%86%E7%A7%91%E7%9F%A5%E8%AD%98/" rel="prev" title="論文科知識與理科知識">
+                  <i class="fa fa-angle-left"></i> 論文科知識與理科知識
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若則理</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Alle Besucher">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Alle Aufrufe">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
