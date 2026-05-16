@@ -28,7 +28,7 @@
 <meta property="og:description" content="Notes on basic set theory.">
 <meta property="og:locale" content="de_DE">
 <meta property="article:published_time" content="2026-05-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-05-15T09:07:37.557Z">
+<meta property="article:modified_time" content="2026-05-15T09:23:16.119Z">
 <meta property="article:author" content="若則理">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="foundations">
@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">164</span>
+          <span class="site-state-item-count">165</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
@@ -519,6 +519,8 @@
 <p>設 $A$ 為 $\mathbb{N}$ 的非空子集族, 且滿足<br>$$\forall a_1,\cdots,a_n\in A(a_1\cap\cdots\cap a_n\not&#x3D;\varnothing)$$<br>則稱 $A$ 具有<strong>有限交性質</strong>. 設 $A$ 具有有限交性質, 令<br>$$F&#x3D;\lbrace x\supseteq a:\exists a_1,\cdots,a_n\in A(x\supseteq a_1\cap\cdots\cap a_n)\rbrace$$<br>則 $F$ 是一個濾子. 由濾子擴張原則, 濾子 $F$ 可擴張為一個超濾. 特別地, 主超濾 $F_n$ 可視為單點集 $\lbrace n\rbrace$ 生成的超濾. </p>
 <h1 id="基數"><a href="#基數" class="headerlink" title="基數"></a>基數</h1><h2 id="集合的勢"><a href="#集合的勢" class="headerlink" title="集合的勢"></a>集合的勢</h2><p>集 $A$ 與集 $B$ 等勢, 是指存在 $A$ 到 $B$ 的雙射, 記作 $A\approx B$. 例如, $\mathbb{N}\approx \mathbb{Z}\approx \mathbb{Q}$, $\mathbb{R}\approx \mathcal{P}(\mathbb{N})$. 符號 $A\preccurlyeq B$ 表示存在集 $A$ 到集 $B$ 的單射, $A\prec B$ 表示 $A\preccurlyeq B$ 但 $A\not\approx B$. </p>
 <p><strong>定理</strong>: 對任意集 $A$, 都有 $A\prec \mathcal{P}(A)$.<br><strong>證明</strong>: $A\preccurlyeq \mathcal{P}(A)$ 是顯然的, 只需證 $A\not\approx \mathcal{P}(A)$. 假設存在滿射 $f:A\to \mathcal{P}(A)$, 令 $B&#x3D;\lbrace x\in A:x\not\in f(x)\rbrace$, 因為 $B\in\mathcal{P}(A)$, 所以 $B$ 必有原像. 設 $f(x_0)&#x3D;B$, 若 $x_0\in f(x_0)&#x3D;B$, 則 $x_0\not\in B$; 若 $x_0\not\in B$, 則由 $B$ 的定義知 $x_0\in B$, 矛盾. $\square$ </p>
+<hr>
+
 <p><strong>Cantor-Bernstein-Schröder 定理</strong>: $X\preccurlyeq Y\wedge Y\preccurlyeq X$ $\Rightarrow$ $X\approx Y$.<br><strong>證明</strong>: 設 $f:X\to Y$, $g:Y\to X$ 是單射, 令<br>$$<br>\begin{align}<br>&amp;\lbrace A_i\rbrace:\enspace A_0&#x3D;X,\enspace A_{i+1}&#x3D;(g\circ f)(A_i) \\<br>&amp;\lbrace B_i\rbrace:\enspace B_0&#x3D;g(Y),\enspace B_{i+1}&#x3D;(g\circ f)(B_i) \\<br>&amp;\lbrace C_i\rbrace:\enspace C_0&#x3D;Y,\enspace C_{i+1}&#x3D;(f\circ g)(C_i) \\<br>&amp;\lbrace D_i\rbrace:\enspace D_0&#x3D;f(X),\enspace D_{i+1}&#x3D;(f\circ g)(D_i)<br>\end{align}<br>$$<br>則<br>$$<br>\begin{align}<br>&amp;X&#x3D;A_0\supseteq B_0\supseteq A_1\supseteq B_1\supseteq \cdots \\<br>&amp;Y&#x3D;C_0\supseteq D_0\supseteq C_1\supseteq D_1\supseteq \cdots<br>\end{align}<br>$$<br>定義函數<br>$$<br>h(x) &#x3D; \begin{cases}<br>f(x),&amp;\exists n\in\mathbb{N}\enspace\text{s.t.}\enspace x\in A_n-B_n\\<br>g^{-1}(x),&amp;\text{otherwise}.<br>\end{cases}<br>$$<br>容易驗證,<br>$$<br>\begin{align}<br>&amp;h(A_i-B_i) &#x3D; D_i-C_{i+1} \\<br>&amp;h(B_i-A_{i+1}) &#x3D; C_{i}-D_{i} \\<br>&amp;h\left(\bigcap_{i&#x3D;1}^{\infty}A_i\right) &#x3D; \bigcap_{i&#x3D;1}^{\infty}C_i<br>\end{align}<br>$$<br>所以 $h:A\to B$ 是雙射. $\square$ </p>
 <p>推論: 若 $A\subseteq B\subseteq C$ 且 $A\approx C$, 則 $A\approx B\approx C$. </p>
 <h2 id="基數-1"><a href="#基數-1" class="headerlink" title="基數"></a>基數</h2><p>若序數 $\kappa$ 滿足 $\forall \alpha&lt;\kappa(\alpha\not\approx \kappa)$, 則稱 $\kappa$ 是一個<strong>基數</strong>. 例如, 自然數 $n$, $\omega$ 都是基數, 但 $\omega+1$ 不是基數, 因為 $\omega+1\approx \omega$. 簡單來說, 基數是用於計數的數, 序數是用於編號的數; 序數與元素的排列次序有關, 而基數只關心集合的規模大小 (元素多少), 所以在對無限集計數時, 我們只需使用互相等勢的序數中最小的一個即可, 這就是要求基數與更小的序數不等勢的原因. 超限基數 $\kappa$ 作為序數一定是極限序數, 否則假設 $\kappa&#x3D;\alpha+1$, 有如下雙射 $f:\kappa\to\alpha$:<br>$$<br>f(\beta)&#x3D;\begin{cases}<br>0, &amp;\beta&#x3D;\alpha \\<br>\beta, &amp;\omega\leq\beta&lt;\alpha \\<br>\beta+1, &amp;\beta&lt;\omega<br>\end{cases}<br>$$</p>
@@ -550,6 +552,8 @@
 </ol>
 <p>基數的指數運算定義為: $\kappa^{\lambda}&#x3D;|{}^{\lambda}{\kappa}|$, 其中 $^{\lambda}{\kappa}&#x3D;\lbrace f\mid f:\lambda\to\kappa\rbrace$. 則顯然有 $\kappa^{\lambda+\mu}&#x3D;\kappa^{\lambda}\cdot\kappa^{\mu}$, $(\kappa^{\lambda})^{\mu}&#x3D;\kappa^{\lambda\cdot\mu}$. </p>
 <p><strong>命題</strong>: 若 $2\leq \kappa\leq\lambda$ 且 $\lambda\geq\omega$, 則 $\kappa^{\lambda}&#x3D;2^{\lambda}&#x3D;|\mathcal{P}(\lambda)|$.<br><strong>證明</strong>: 對每個映射 $f:\lambda\to\lambda$, 有 $f\subseteq\lambda\times\lambda$, 於是 $^{\lambda}{\lambda}\subseteq\mathcal{P}(\lambda\times\lambda)$. 所以有 $^{\lambda}{2}\subseteq{}^{\lambda}{\kappa}\subseteq{}^{\lambda}{\lambda}\subseteq\mathcal{P}(\lambda\times\lambda)\approx\mathcal{P}(\lambda)\approx{}^{\lambda}{2}$. $\square$ </p>
+<hr>
+
 <p>$\text{CH}$ (連續統假設)<br>$$2^{\omega_0}&#x3D;\omega_1$$<br>$\text{GCH}$ (廣義連續統假設)<br>$$\forall\alpha(2^{\omega_{\alpha}}&#x3D;\omega_{\alpha+1})$$<br>根據 Gödel 和 Cohen 的工作, 連續統假設成立與否獨立於 $\text{ZFC}$. </p>
 
     </div>
@@ -574,6 +578,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2026/05/16/%E5%B7%A5%E4%BD%9C%E8%88%87%E4%BA%AB%E6%A8%82/" rel="next" title="工作與享樂">
+                  工作與享樂 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
