@@ -1113,7 +1113,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #e9ff6e;
+    background: #a63eff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2271,13 +2271,6 @@ mark.search-keyword {
   color: #ff2a2a;
   font-weight: bold;
 }
-mjx-container[jax='CHTML'][display='true'],
-.has-jax {
-  overflow: auto hidden;
-}
-mjx-container[display='true'] + br {
-  display: none;
-}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -2546,4 +2539,17 @@ body {
 }
 mjx-container.MathJax.CtxtMenu_Attached_0 {
   min-width: 0 !important;
+}
+.katex-display {
+  overflow: auto hidden;
+  padding: 1px 0;
+}
+.katex {
+  font-size: 1em !important;
+}
+@media screen and (max-width: 768px) {
+  .post-body img {
+    width: 100%;
+    height: 100%;
+  }
 }
