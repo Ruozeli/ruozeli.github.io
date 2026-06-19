@@ -1113,7 +1113,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #3dcf75;
+    background: #d0ff81;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2556,7 +2556,21 @@ mjx-container.MathJax.CtxtMenu_Attached_0 {
   font-style: normal;
   font-display: swap;
 }
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&display=swap");
 body {
+  font-family: 'LXGWWenKaiTC', sans-serif;
+}
+.post-body,
+.posts-expand .post-meta-container,
+.site-title {
+  font-family: 'LXGWWenKaiTC', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'LXGWWenKaiTC', sans-serif;
 }
 table {

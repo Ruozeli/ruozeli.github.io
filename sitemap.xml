@@ -1566,20 +1566,6 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/algebra/</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/tags/polynomial/</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ruozeli.github.io/tags/foundations/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1594,7 +1580,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/logic/</loc>
+    <loc>https://ruozeli.github.io/tags/algebra/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/tags/polynomial/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1602,6 +1595,13 @@
   
   <url>
     <loc>https://ruozeli.github.io/tags/code/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/tags/logic/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
