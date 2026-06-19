@@ -1566,13 +1566,6 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/algebra/</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ruozeli.github.io/tags/foundations/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1587,7 +1580,7 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/code/</loc>
+    <loc>https://ruozeli.github.io/tags/algebra/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1595,6 +1588,13 @@
   
   <url>
     <loc>https://ruozeli.github.io/tags/polynomial/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/tags/code/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1799,14 +1799,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Learning/Algebra/</loc>
+    <loc>https://ruozeli.github.io/categories/Learning/Foundations/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Learning/Foundations/</loc>
+    <loc>https://ruozeli.github.io/categories/Learning/Algebra/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1855,14 +1855,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Research/OperationAEOLUS/</loc>
+    <loc>https://ruozeli.github.io/categories/Writing/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Writing/</loc>
+    <loc>https://ruozeli.github.io/categories/Research/OperationAEOLUS/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

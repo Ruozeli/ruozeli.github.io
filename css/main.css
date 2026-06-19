@@ -187,7 +187,7 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: LXGW WenKai TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1.03em;
+  font-size: 1em;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -1113,7 +1113,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #678bbe;
+    background: #261fd6;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2542,7 +2542,6 @@ mjx-container.MathJax.CtxtMenu_Attached_0 {
 }
 .post-body {
   overflow-wrap: break-word;
-  word-break: break-all;
 }
 .katex-display {
   overflow: auto hidden;
@@ -2556,4 +2555,28 @@ mjx-container.MathJax.CtxtMenu_Attached_0 {
     width: 100%;
     height: 100%;
   }
+}
+@font-face {
+  font-family: 'LXGWWenKaiTC';
+  src: url("/fonts/LXGWWenKaiTC-Light.ttf") format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LXGWWenKaiTC';
+  src: url("/fonts/LXGWWenKaiTC-Regular.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LXGWWenKaiTC';
+  src: url("/fonts/LXGWWenKaiTC-Medium.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: 'LXGWWenKaiTC', sans-serif;
 }
