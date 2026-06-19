@@ -1113,7 +1113,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #7187a2;
+    background: #678bbe;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2540,12 +2540,16 @@ body {
 mjx-container.MathJax.CtxtMenu_Attached_0 {
   min-width: 0 !important;
 }
+.post-body {
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
 .katex-display {
   overflow: auto hidden;
   padding: 1px 0;
 }
 .katex {
-  font-size: 1em !important;
+  font-size: 1.03em !important;
 }
 @media screen and (max-width: 768px) {
   .post-body img {
