@@ -911,7 +911,7 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/posts/OpAEOLUS/OpAEOLUS-5/</loc>
+    <loc>https://ruozeli.github.io/posts/OpAEOLUS/OpAEOLUS-7/</loc>
     
     <lastmod>2026-07-27</lastmod>
     
@@ -920,7 +920,7 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/posts/OpAEOLUS/OpAEOLUS-7/</loc>
+    <loc>https://ruozeli.github.io/posts/OpAEOLUS/OpAEOLUS-5/</loc>
     
     <lastmod>2026-07-27</lastmod>
     
@@ -1262,7 +1262,7 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/posts/Computer-assisted%20proof/</loc>
+    <loc>https://ruozeli.github.io/posts/Computer_assisted_proof/</loc>
     
     <lastmod>2026-06-19</lastmod>
     
@@ -1555,13 +1555,6 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/polynomial/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ruozeli.github.io/tags/reading/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -1570,6 +1563,13 @@
   
   <url>
     <loc>https://ruozeli.github.io/tags/literature/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/tags/philosophy/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1590,14 +1590,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/philosophy/</loc>
+    <loc>https://ruozeli.github.io/tags/logic/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/logic/</loc>
+    <loc>https://ruozeli.github.io/tags/polynomial/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1660,14 +1660,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/writing/</loc>
+    <loc>https://ruozeli.github.io/tags/fiction/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/tags/fiction/</loc>
+    <loc>https://ruozeli.github.io/tags/writing/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1809,14 +1809,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Learning/Algebra/</loc>
+    <loc>https://ruozeli.github.io/categories/Learning/Foundations/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Learning/Foundations/</loc>
+    <loc>https://ruozeli.github.io/categories/Learning/Algebra/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1830,14 +1830,14 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Code/</loc>
+    <loc>https://ruozeli.github.io/categories/Review/Philosophy/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Review/Philosophy/</loc>
+    <loc>https://ruozeli.github.io/categories/Code/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1865,13 +1865,6 @@
   </url>
   
   <url>
-    <loc>https://ruozeli.github.io/categories/Review/Movies/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ruozeli.github.io/categories/Review/Poetry/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -1879,7 +1872,28 @@
   </url>
   
   <url>
+    <loc>https://ruozeli.github.io/categories/Review/Movies/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ruozeli.github.io/categories/Review/Society/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/categories/Writing/Fiction/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ruozeli.github.io/categories/Writing/Poetry/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1894,20 +1908,6 @@
   
   <url>
     <loc>https://ruozeli.github.io/categories/Review/Art/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/categories/Writing/Poetry/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ruozeli.github.io/categories/Writing/Fiction/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
