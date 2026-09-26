@@ -1113,7 +1113,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #e78f2a;
+    background: #63a7bf;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2549,6 +2549,9 @@ mjx-container.MathJax.CtxtMenu_Attached_0 {
 }
 table {
   font-size: 1em;
+}
+pre {
+  font-size: 0.9em !important;
 }
 @media screen and (max-width: 768px) {
   .post-body img {
